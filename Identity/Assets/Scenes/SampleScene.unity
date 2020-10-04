@@ -1250,14 +1250,14 @@ MonoBehaviour:
   layerPlayerAttack:
     serializedVersion: 2
     m_Bits: 1024
-  fBallShootForce: 15
   tTwistPoint: {fileID: 848049413}
   fKnockbackForce: 18
   goBall: {fileID: 45801962}
+  fBallShootForce: 15
   fBallHitForce: 20
   fBallCd: 3
-  fDashTime: 0.2
-  fDashForce: 50
+  fDashTime: 0.15
+  fDashForce: 40
   fDashCd: 3
   tModel: {fileID: 786742646}
 --- !u!1 &1650693076

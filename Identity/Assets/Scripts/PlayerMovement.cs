@@ -42,18 +42,16 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] LayerMask layerPlayerAttack;
     float fAttackControl = 0;
 
-    [Header("Disparo")]
-    [SerializeField] float fBallShootForce;
-    bool bBallOn;
-
     [Header("Knockback")]
     [SerializeField] Transform tTwistPoint;
     [SerializeField] float fKnockbackForce;
 
     [Header("Ball")]
     [SerializeField] GameObject goBall;
+    [SerializeField] float fBallShootForce;
     [SerializeField] float fBallHitForce;
-    [SerializeField] float fBallCd;
+    [SerializeField] float fBallCd;    
+    bool bBallOn;
     Rigidbody2D rbBall;
     float fBallCdControl = 0;
 
@@ -116,7 +114,13 @@ public class PlayerMovement : MonoBehaviour
 
     void Knockback(Vector3 hitPoint)
     {
-        rbPlayer.velocity = new Vector2(-hitPoint.x * fKnockbackForce, -hitPoint.y * fKnockbackForce);
+        Vector3 v3PlayerPos = transform.position;
+        v3PlayerPos.Normalize();
+        if (hitPoint.y <= v3PlayerPos.y)
+        {
+            rbPlayer.velocity = new Vector2(-hitPoint.x * fKnockbackForce, -hitPoint.y * fKnockbackForce);
+        }
+        
     }
 
     void Aim()

@@ -196,9 +196,9 @@ public class PlayerMovement : MonoBehaviour
 
             if (fDashTimeControl <= 0)
             {
-                rbPlayer.velocity = Vector3.zero;
+                //rbPlayer.velocity = Vector3.zero;
                 fDashTimeControl = fDashTime;
-                bGravitySwap = true;
+                //bGravitySwap = true;
                 bDashing = false;
             }
             

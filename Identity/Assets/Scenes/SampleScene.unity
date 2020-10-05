@@ -922,7 +922,7 @@ MonoBehaviour:
   fBallHitForce: 20
   fBallCd: 3
   fDashTime: 0.15
-  fDashForce: 40
+  fDashForce: 20
   fDashCd: 3
   tModel: {fileID: 786742646}
 --- !u!4 &1873349783 stripped

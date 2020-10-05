@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Spikes
   - Ball
+  - Enemy
   layers:
   - Default
   - TransparentFX

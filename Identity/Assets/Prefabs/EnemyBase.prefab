@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7820568448239223176}
   - component: {fileID: 7820568448239223174}
   - component: {fileID: 7820568448239223177}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: EnemyBase
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -46,11 +46,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c909ef7177b1cd4f8e8993f3d7e2866, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  goModel: {fileID: 7820568448878023210}
   iMaxHealth: 100
-  fSpeed: 5
-  tPointA: {fileID: 7820568449828875557}
-  tPointB: {fileID: 7820568449879573300}
   bMove: 0
 --- !u!95 &7820568448239223177
 Animator:
@@ -81,9 +77,9 @@ GameObject:
   m_Component:
   - component: {fileID: 7820568448878023212}
   - component: {fileID: 7820568448878023213}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Model
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -138,7 +134,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7820568448932526986}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Points
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -171,7 +167,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7820568449765748146}
   - component: {fileID: 7820568449765748149}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: slime
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -251,7 +247,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7820568449828875557}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: A
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -281,7 +277,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7820568449879573300}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: B
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -250,6 +250,10 @@ public class PlayerMovement : MonoBehaviour
                             rbBall.velocity = new Vector2(v3HitDirection.x, v3HitDirection.y) * fBallHitForce;
                             Knockback(v3HitDirection);
                         }
+                        if (playerAttackArea[i].gameObject.tag == "Enemy")
+                        {
+                            Knockback(v3HitDirection);
+                        }
                     }
                     fAttackControl = 0;
                 }

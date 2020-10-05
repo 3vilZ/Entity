@@ -30,7 +30,7 @@ public class Ball : MonoBehaviour
         }
         else if(other.gameObject.tag == "Enemy")
         {
-            other.gameObject.GetComponent<EnemyBase>().GetDamage(iDamage);
+            other.gameObject.GetComponentInParent<EnemyBase>().GetDamage(iDamage);
         }
     }
 }

@@ -4,13 +4,10 @@ using UnityEngine;
 
 public class CameraJoyStick : MonoBehaviour
 {
-    public float sensibility;
+    [SerializeField] Transform tPlayer;
 
     private void Update()
     {
-        float xInput = Input.GetAxis("CameraX");
-        float yInput = Input.GetAxis("CameraY");
-
-        transform.position += new Vector3(yInput, 0, 0) * sensibility;
+        transform.position = new Vector3(tPlayer.position.x, transform.position.y, transform.position.z);
     }
 }

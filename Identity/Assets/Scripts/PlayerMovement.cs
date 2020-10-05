@@ -338,8 +338,10 @@ public class PlayerMovement : MonoBehaviour
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.yellow;
-        Gizmos.DrawWireCube(v2GroundedPositionControl, v2GroundedScaleControl);
         Gizmos.DrawWireSphere(tAttackPos.position, fAttackRangeX);
+
+        Gizmos.color = Color.blue;
+        Gizmos.DrawWireCube(v2GroundedPositionControl, v2GroundedScaleControl);
     }
 }
 

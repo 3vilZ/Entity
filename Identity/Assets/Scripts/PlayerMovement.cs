@@ -58,6 +58,7 @@ public class PlayerMovement : MonoBehaviour
     [Header("Dash")]
     [SerializeField] float fDashTime;
     [SerializeField] float fDashForce;
+    [SerializeField] float fDashEnd;
     [SerializeField] float fDashCd;
     float fDashTimeControl = 0;
     float fDashCdControl = 0;
@@ -196,7 +197,7 @@ public class PlayerMovement : MonoBehaviour
 
             if (fDashTimeControl <= 0)
             {
-                //rbPlayer.velocity = Vector3.zero;
+                rbPlayer.velocity = rbPlayer.velocity * fDashEnd;
                 fDashTimeControl = fDashTime;
                 //bGravitySwap = true;
                 bDashing = false;

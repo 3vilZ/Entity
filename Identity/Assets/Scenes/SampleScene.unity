@@ -3150,8 +3150,9 @@ MonoBehaviour:
   fBallShootForce: 15
   fBallHitForce: 20
   fBallCd: 3
-  fDashTime: 0.01
-  fDashForce: 40
+  fDashTime: 0.1
+  fDashForce: 60
+  fDashEnd: 0
   fDashCd: 3
   tModel: {fileID: 786742646}
 --- !u!1001 &1697426526

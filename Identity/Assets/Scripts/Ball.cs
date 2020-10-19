@@ -26,7 +26,7 @@ public class Ball : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            other.gameObject.GetComponent<PlayerMovement>().CatchBall();
+            other.gameObject.GetComponent<PlayerController>().CatchBall();
         }
         else if(other.gameObject.tag == "Enemy")
         {

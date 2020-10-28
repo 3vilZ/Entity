@@ -1,0 +1,1001 @@
+fileFormatVersion: 2
+guid: e277622bd5420b34c85a884982e1e37c
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3170241334783370237
+    second: ConceptSheet_0
+  - first:
+      213: 4508897388039543540
+    second: ConceptSheet_1
+  - first:
+      213: 3838864161601406114
+    second: ConceptSheet_2
+  - first:
+      213: -1147654178875372343
+    second: ConceptSheet_3
+  - first:
+      213: -7749242220811733946
+    second: ConceptSheet_4
+  - first:
+      213: 6502408575431227650
+    second: ConceptSheet_5
+  - first:
+      213: 4634113756445100446
+    second: ConceptSheet_6
+  - first:
+      213: -1957816326872545852
+    second: ConceptSheet_7
+  - first:
+      213: -2700775847196200026
+    second: ConceptSheet_8
+  - first:
+      213: 160597602723508217
+    second: ConceptSheet_9
+  - first:
+      213: 8509573385764559668
+    second: ConceptSheet_10
+  - first:
+      213: -7863690271362392327
+    second: ConceptSheet_11
+  - first:
+      213: -1787613022791807739
+    second: ConceptSheet_12
+  - first:
+      213: 719946373517644713
+    second: ConceptSheet_13
+  - first:
+      213: 2630148536075546294
+    second: ConceptSheet_14
+  - first:
+      213: 9207352946856502586
+    second: ConceptSheet_15
+  - first:
+      213: -3485327112392000970
+    second: ConceptSheet_16
+  - first:
+      213: -3916178926148270991
+    second: ConceptSheet_17
+  - first:
+      213: -4758213431942302133
+    second: ConceptSheet_18
+  - first:
+      213: 2370927010514085945
+    second: ConceptSheet_19
+  - first:
+      213: 957308968726692090
+    second: ConceptSheet_20
+  - first:
+      213: -8059117974392102750
+    second: ConceptSheet_21
+  - first:
+      213: 9086411856819233121
+    second: ConceptSheet_22
+  - first:
+      213: 1944676415856765667
+    second: ConceptSheet_23
+  - first:
+      213: 7639334549346703217
+    second: ConceptSheet_24
+  - first:
+      213: -6862121341477733645
+    second: ConceptSheet_25
+  - first:
+      213: -4585280644202296265
+    second: ConceptSheet_26
+  - first:
+      213: -6282238834164104265
+    second: ConceptSheet_27
+  - first:
+      213: -2417305584701336026
+    second: ConceptSheet_28
+  - first:
+      213: 9133218686485524157
+    second: ConceptSheet_29
+  - first:
+      213: -2626288887233573130
+    second: ConceptSheet_30
+  - first:
+      213: -4603743049898217918
+    second: ConceptSheet_31
+  - first:
+      213: 4458436061555277142
+    second: ConceptSheet_32
+  - first:
+      213: -2339789838457305556
+    second: ConceptSheet_33
+  - first:
+      213: -834104891269100295
+    second: ConceptSheet_34
+  - first:
+      213: -870039173018809408
+    second: ConceptSheet_35
+  - first:
+      213: 3028940462502982868
+    second: ConceptSheet_36
+  - first:
+      213: -742130393102580466
+    second: ConceptSheet_37
+  - first:
+      213: 270994303243839615
+    second: ConceptSheet_38
+  - first:
+      213: 2663575572134896346
+    second: ConceptSheet_39
+  - first:
+      213: 6823050865591289253
+    second: ConceptSheet_40
+  - first:
+      213: 385061312035909055
+    second: ConceptSheet_41
+  - first:
+      213: 2668837661280961392
+    second: ConceptSheet_42
+  - first:
+      213: 110744436706194274
+    second: ConceptSheet_43
+  - first:
+      213: 5573503561733487131
+    second: ConceptSheet_44
+  - first:
+      213: 2438023564133374523
+    second: ConceptSheet_45
+  - first:
+      213: 4225782401373128147
+    second: ConceptSheet_46
+  - first:
+      213: 8752345714656988155
+    second: ConceptSheet_47
+  - first:
+      213: -4590850038777931580
+    second: ConceptSheet_48
+  - first:
+      213: -6559928206025563040
+    second: ConceptSheet_49
+  - first:
+      213: -4107117213682410110
+    second: ConceptSheet_50
+  - first:
+      213: -265577602654349712
+    second: ConceptSheet_51
+  - first:
+      213: 5048684725449420528
+    second: ConceptSheet_52
+  - first:
+      213: -7883081762333244316
+    second: ConceptSheet_53
+  - first:
+      213: 1222499427950523745
+    second: ConceptSheet_54
+  - first:
+      213: -6431285779989724702
+    second: ConceptSheet_55
+  - first:
+      213: -4969282659233427455
+    second: ConceptSheet_56
+  - first:
+      213: -3429268736735779849
+    second: ConceptSheet_57
+  - first:
+      213: 106046755927552774
+    second: ConceptSheet_58
+  - first:
+      213: 4185744564973833303
+    second: ConceptSheet_59
+  - first:
+      213: 4537275173648451783
+    second: ConceptSheet_60
+  - first:
+      213: -4635937751937704417
+    second: ConceptSheet_61
+  - first:
+      213: -3309345087261367789
+    second: ConceptSheet_62
+  - first:
+      213: -6257842995007372238
+    second: ConceptSheet_63
+  - first:
+      213: -3771687749548012398
+    second: ConceptSheet_64
+  - first:
+      213: -3194423892483298296
+    second: ConceptSheet_65
+  - first:
+      213: 3200328810453843538
+    second: ConceptSheet_66
+  - first:
+      213: -4134940900258408353
+    second: ConceptSheet_67
+  - first:
+      213: -2028329606670676131
+    second: ConceptSheet_68
+  - first:
+      213: 9131633541066892676
+    second: ConceptSheet_69
+  - first:
+      213: -8543446747293960108
+    second: ConceptSheet_70
+  - first:
+      213: 662437767528531837
+    second: ConceptSheet_71
+  - first:
+      213: -6020885441789001313
+    second: ConceptSheet_72
+  - first:
+      213: -7004875320185016289
+    second: ConceptSheet_73
+  - first:
+      213: 4157788364498467947
+    second: ConceptSheet_74
+  - first:
+      213: -6821317116426177467
+    second: ConceptSheet_75
+  - first:
+      213: -8430780678478459683
+    second: ConceptSheet_76
+  - first:
+      213: -7676106991792687677
+    second: ConceptSheet_77
+  - first:
+      213: 8393804493949102763
+    second: ConceptSheet_78
+  - first:
+      213: 8680381119962454686
+    second: ConceptSheet_79
+  - first:
+      213: 7015355673051309100
+    second: ConceptSheet_80
+  - first:
+      213: 3319745196656545349
+    second: ConceptSheet_81
+  - first:
+      213: 4129222837365834892
+    second: ConceptSheet_82
+  - first:
+      213: -8136057589296210298
+    second: ConceptSheet_83
+  - first:
+      213: 1365117478991668467
+    second: ConceptSheet_84
+  - first:
+      213: 7408930030725702210
+    second: ConceptSheet_85
+  - first:
+      213: 3906711424417482163
+    second: ConceptSheet_86
+  - first:
+      213: -6731445515284058375
+    second: ConceptSheet_87
+  - first:
+      213: -879620408215172094
+    second: ConceptSheet_88
+  - first:
+      213: -7517148649868753338
+    second: ConceptSheet_89
+  - first:
+      213: -3663879748545721880
+    second: ConceptSheet_90
+  - first:
+      213: -4605379938818610068
+    second: ConceptSheet_91
+  - first:
+      213: -1304134818845750574
+    second: ConceptSheet_92
+  - first:
+      213: -7844094072106042363
+    second: ConceptSheet_93
+  - first:
+      213: 8821614588325253679
+    second: ConceptSheet_94
+  - first:
+      213: -3402284123740668404
+    second: ConceptSheet_95
+  - first:
+      213: -7344769399729404596
+    second: ConceptSheet_96
+  - first:
+      213: 629039000316081002
+    second: ConceptSheet_97
+  - first:
+      213: 8267322744139284531
+    second: ConceptSheet_98
+  - first:
+      213: 1058854714304493132
+    second: ConceptSheet_99
+  - first:
+      213: 4264852075715594012
+    second: ConceptSheet_100
+  - first:
+      213: -6810882162276714011
+    second: ConceptSheet_101
+  - first:
+      213: -7262583829072492533
+    second: ConceptSheet_102
+  - first:
+      213: 4389513610644833157
+    second: ConceptSheet_103
+  - first:
+      213: -2087026185215163800
+    second: ConceptSheet_104
+  - first:
+      213: -2725272124943857340
+    second: ConceptSheet_105
+  - first:
+      213: 8039525534906728818
+    second: ConceptSheet_106
+  - first:
+      213: -7983643746460525708
+    second: ConceptSheet_107
+  - first:
+      213: -8086484977994985370
+    second: ConceptSheet_108
+  - first:
+      213: 6067535347436123373
+    second: ConceptSheet_109
+  - first:
+      213: -7426064849858399638
+    second: ConceptSheet_110
+  - first:
+      213: 5816861796270038504
+    second: ConceptSheet_111
+  - first:
+      213: -1297153917136528263
+    second: ConceptSheet_112
+  - first:
+      213: -773988039021434452
+    second: ConceptSheet_113
+  - first:
+      213: 7657800601719716973
+    second: ConceptSheet_114
+  - first:
+      213: -5613667204531721457
+    second: ConceptSheet_115
+  - first:
+      213: -6154445475908213175
+    second: ConceptSheet_116
+  - first:
+      213: 2737430039724238199
+    second: ConceptSheet_117
+  - first:
+      213: 1696649037342457872
+    second: ConceptSheet_118
+  - first:
+      213: 2330706343518441870
+    second: ConceptSheet_119
+  - first:
+      213: -3592691919644098901
+    second: ConceptSheet_120
+  - first:
+      213: -2219968448477547426
+    second: ConceptSheet_121
+  - first:
+      213: -2743263218916801084
+    second: ConceptSheet_122
+  - first:
+      213: 8392990451357555133
+    second: ConceptSheet_123
+  - first:
+      213: 6705058462966624565
+    second: ConceptSheet_124
+  - first:
+      213: -7503392728041373645
+    second: ConceptSheet_125
+  - first:
+      213: 1450217859863310652
+    second: ConceptSheet_126
+  - first:
+      213: -6807839293650084901
+    second: ConceptSheet_127
+  - first:
+      213: 3532736323482661866
+    second: ConceptSheet_128
+  - first:
+      213: -967875224423616063
+    second: ConceptSheet_129
+  - first:
+      213: 1032670279316914913
+    second: ConceptSheet_130
+  - first:
+      213: 2981274806907599605
+    second: ConceptSheet_131
+  - first:
+      213: -413238805619249193
+    second: ConceptSheet_132
+  - first:
+      213: -7394787304041217238
+    second: ConceptSheet_133
+  - first:
+      213: 7433056301044049241
+    second: ConceptSheet_134
+  - first:
+      213: 3089601145459482441
+    second: ConceptSheet_135
+  - first:
+      213: -3979636702610781229
+    second: ConceptSheet_136
+  - first:
+      213: -318327920093944885
+    second: ConceptSheet_137
+  - first:
+      213: -3895221813495653620
+    second: ConceptSheet_138
+  - first:
+      213: -3589089080532353478
+    second: ConceptSheet_139
+  - first:
+      213: -502200648811565452
+    second: ConceptSheet_140
+  - first:
+      213: 8842945249059327782
+    second: ConceptSheet_141
+  - first:
+      213: 5136807777107898668
+    second: ConceptSheet_142
+  - first:
+      213: 645453620454703789
+    second: ConceptSheet_143
+  - first:
+      213: -5424913203240089347
+    second: ConceptSheet_144
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ConceptSheet_0
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 607
+        width: 120
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df3e50482b5fefb20800000000000000
+      internalID: 3170241334783370237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConceptSheet_1
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 614
+        width: 120
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fa98c60942d29e30800000000000000
+      internalID: 4508897388039543540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConceptSheet_2
+      rect:
+        serializedVersion: 2
+        x: 482
+        y: 614
+        width: 120
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a4ca35ad92664530800000000000000
+      internalID: 3838864161601406114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConceptSheet_3
+      rect:
+        serializedVersion: 2
+        x: 649
+        y: 614
+        width: 120
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9cc0427da96b210f0800000000000000
+      internalID: -1147654178875372343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConceptSheet_4
+      rect:
+        serializedVersion: 2
+        x: 481
+        y: 626
+        width: 120
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 644be06e149257490800000000000000
+      internalID: -7749242220811733946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConceptSheet_5
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 459
+        width: 120
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 209380be5223d3a50800000000000000
+      internalID: 6502408575431227650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConceptSheet_6
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 459
+        width: 120
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9949ada8edaf4040800000000000000
+      internalID: 4634113756445100446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConceptSheet_7
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 455
+        width: 120
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c54d457c6074d4e0800000000000000
+      internalID: -1957816326872545852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConceptSheet_8
+      rect:
+        serializedVersion: 2
+        x: 481
+        y: 460
+        width: 120
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a37ae12daae48ad0800000000000000
+      internalID: -2700775847196200026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConceptSheet_9
+      rect:
+        serializedVersion: 2
+        x: 649
+        y: 459
+        width: 120
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ff2d163bae8a3200800000000000000
+      internalID: 160597602723508217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConceptSheet_10
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 300
+        width: 120
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43b5d90a8e3181670800000000000000
+      internalID: 8509573385764559668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConceptSheet_11
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 296
+        width: 120
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fedfbf9c5f8ed290800000000000000
+      internalID: -7863690271362392327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConceptSheet_12
+      rect:
+        serializedVersion: 2
+        x: 481
+        y: 296
+        width: 120
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50dc1ac4d6f1137e0800000000000000
+      internalID: -1787613022791807739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConceptSheet_13
+      rect:
+        serializedVersion: 2
+        x: 649
+        y: 296
+        width: 120
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a399da8963cdf900800000000000000
+      internalID: 719946373517644713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConceptSheet_14
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 154
+        width: 120
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6beeb4f882a208420800000000000000
+      internalID: 2630148536075546294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConceptSheet_15
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 155
+        width: 120
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a352707f8b617cf70800000000000000
+      internalID: 9207352946856502586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConceptSheet_16
+      rect:
+        serializedVersion: 2
+        x: 481
+        y: 155
+        width: 120
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63a36d31571a1afc0800000000000000
+      internalID: -3485327112392000970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConceptSheet_17
+      rect:
+        serializedVersion: 2
+        x: 649
+        y: 155
+        width: 120
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 174cf06f300f6a9c0800000000000000
+      internalID: -3916178926148270991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConceptSheet_18
+      rect:
+        serializedVersion: 2
+        x: 848
+        y: 517
+        width: 430
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b46369ff71e67fdb0800000000000000
+      internalID: -4758213431942302133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConceptSheet_19
+      rect:
+        serializedVersion: 2
+        x: 921
+        y: 277
+        width: 298
+        height: 208
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 938221aed8937e020800000000000000
+      internalID: 2370927010514085945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConceptSheet_20
+      rect:
+        serializedVersion: 2
+        x: 983
+        y: 59
+        width: 151
+        height: 159
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af0004d5f6b094d00800000000000000
+      internalID: 957308968726692090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConceptSheet_21
+      rect:
+        serializedVersion: 2
+        x: 1284
+        y: 259
+        width: 200
+        height: 362
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a0a46db6e2482090800000000000000
+      internalID: -8059117974392102750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: fa33201ea3d636f4292066bf2176b292
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

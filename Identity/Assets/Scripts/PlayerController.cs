@@ -143,10 +143,12 @@ public class PlayerController : MonoBehaviour
             if(currentPower == 1)
             {
                 bJumpPowerOn = true;
+                rbPlayer.velocity = new Vector2(rbPlayer.velocity.x, 0);
                 rbPlayer.velocity = v2BallToPlayer * fReloadJumpPower;
             }
             else
             {
+                rbPlayer.velocity = new Vector2(rbPlayer.velocity.x, 0);
                 rbPlayer.velocity = Vector2.up * fReloadJump;
             }
             
@@ -222,15 +224,15 @@ public class PlayerController : MonoBehaviour
 
         if (Mathf.Abs(Input.GetAxisRaw("Horizontal")) < 0.01f)
         {
-            fHorizontalVelocity *= Mathf.Pow(1f - fStopControl, Time.deltaTime * fSpeedDrag);
+            fHorizontalVelocity *= Mathf.Pow(1f - fStopControl, fSpeedDrag);
         }
         else if (Mathf.Sign(Input.GetAxisRaw("Horizontal")) != Mathf.Sign(fHorizontalVelocity))
         {
-            fHorizontalVelocity *= Mathf.Pow(1f - fTurnControl, Time.deltaTime * fSpeedDrag);
+            fHorizontalVelocity *= Mathf.Pow(1f - fTurnControl, fSpeedDrag);
         }
         else
         {
-            fHorizontalVelocity *= Mathf.Pow(1f - fMoveControl, Time.deltaTime * fSpeedDrag);
+            fHorizontalVelocity *= Mathf.Pow(1f - fMoveControl, fSpeedDrag);
         }
 
         if(bJumpPowerOn)
@@ -306,6 +308,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    /*
     private void OnTriggerStay2D(Collider2D other)
     {
 
@@ -318,6 +321,13 @@ public class PlayerController : MonoBehaviour
                 print(currentPower);
             }
         }
+    }
+    */
+
+    public void ChangePower(int power)
+    {
+        currentPower = power;
+        print(currentPower);
     }
 
     private void OnDrawGizmosSelected()

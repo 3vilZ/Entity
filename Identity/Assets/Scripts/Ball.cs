@@ -22,15 +22,25 @@ public class Ball : MonoBehaviour
         print(v3BallSpeed);
         */
     }
-    private void OnCollisionEnter2D(Collision2D other)
+    /*
+    private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.tag == "Player")
         {
-            other.gameObject.GetComponent<PlayerController>().CatchBall();
+            other.gameObject.GetComponent<PlayerControllerV2>().CatchBall();
         }
         else if(other.gameObject.tag == "Enemy")
         {
             other.gameObject.GetComponentInParent<EnemyBase>().GetDamage(iDamage);
         }
+    }
+    */
+
+    private void OnDrawGizmosSelected()
+    {
+
+        
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, 10);
     }
 }

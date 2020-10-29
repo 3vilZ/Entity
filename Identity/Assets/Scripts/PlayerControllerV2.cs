@@ -27,10 +27,12 @@ public class PlayerControllerV2 : MonoBehaviour
     [SerializeField] float fWallJumpforce;
     [SerializeField] float fWallRangeX;
     [SerializeField] float fWallRangeY;
+    [SerializeField] float fWallJumpTime;
     [SerializeField] Vector2 v2WallJumpdir;
     [SerializeField] LayerMask layerWall;
-    
     Vector2 v2WallDetectScale;
+    float fWallJumpTimeControl = 0;
+    bool bWallJump = false;
 
     [Header("Movement")]
     [SerializeField] float fSpeedDrag = 10;
@@ -78,6 +80,7 @@ public class PlayerControllerV2 : MonoBehaviour
         rbPlayer.gravityScale = fNormalGravity;
         CatchBall();
         fSuspensionTimeControl = fSuspensionTime;
+        fWallJumpTimeControl = fWallJumpTime;
         v2WallJumpdir.Normalize();
     }
 
@@ -102,12 +105,11 @@ public class PlayerControllerV2 : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if(!bSlingDone)
+
+        if(!bSlingDone && !bWallJump || bRecovering)
         {
             Movement();
         }
-        
-
 
         v2GroundedPositionControl = (Vector2)transform.position + new Vector2(0, -0.1f);
         v2GroundedScaleControl = new Vector2(fGroundRangeX, fGroundRangeY);
@@ -172,6 +174,15 @@ public class PlayerControllerV2 : MonoBehaviour
         }
         if(bSlingDone)
         {
+            if(rbPlayer.velocity.x >= -0.5f && rbPlayer.velocity.x <= 0.5f  || rbPlayer.velocity.y >= -0.5f && rbPlayer.velocity.y <= 0.5f)
+            {
+                bSlingDone = false;
+                bRecovering = true;
+            }
+
+
+            bSlingRDY = false;
+
             Collider2D[] colBallCatch = Physics2D.OverlapCircleAll(transform.position, 1.2f, layerBall);
 
             for (int i = 0; i < colBallCatch.Length; i++)
@@ -180,7 +191,7 @@ public class PlayerControllerV2 : MonoBehaviour
                 {
                     CatchBall();
                 }
-            }
+            }           
         } 
 
         if (fPlayerBallDistance >= fSlingDistance || Input.GetAxis("Dash") == 0)
@@ -208,92 +219,9 @@ public class PlayerControllerV2 : MonoBehaviour
                 float forceToApply = fPlayerBallDistance * fSlingForce;
                 rbPlayer.velocity = v2PlayerToBall * forceToApply;
                 bSlingOn = false;
-                bSlingRDY = false;
                 bSlingDone = true;
             }
         }
-
-        
-
-
-        /*
-        v2PlayerToBall = goBall.transform.position - transform.position;
-        v2PlayerToBall.Normalize();
-        v2BallToPlayer = transform.position - goBall.transform.position;
-        v2BallToPlayer.Normalize();
-        fPlayerBallDistance = Vector2.Distance(goBall.transform.position, transform.position);
-
-        if (fPlayerBallDistance >= fSlingDistance)
-        {
-            bRecovering = true;
-            bSlingOn = false;
-            bSlingFail = true;
-            bSlingRDY = false;
-        }
-        if (bRecovering)
-        {
-            rbBall.velocity = v2BallToPlayer * 50;
-        }
-
-        if (Input.GetAxis("Dash") != 0 && !bSlingDone && !bSlingFail && bSlingRDY)
-        {
-            goBall.transform.parent = null;
-            rbBall.velocity = Vector2.zero;
-            //rbBall.bodyType = RigidbodyType2D.Kinematic;
-            goBall.GetComponent<CircleCollider2D>().enabled = true;
-            bSlingOn = true;
-
-            if (Input.GetButtonDown("Jump") && bSlingOn)
-            {
-                float forceToApply = fPlayerBallDistance * fSlingForce;
-                rbPlayer.velocity = v2PlayerToBall * forceToApply;
-                bSlingOn = false;
-                bSlingDone = true;
-                bSlingRDY = false;
-            }
-        }
-
-        if (Input.GetAxis("Dash") == 0)
-        {
-            bRecovering = true;
-            bSlingOn = false;
-            //bSlingRDY = false;
-        }
-
-
-
-
-
-        /*
-        if(bSlingOn)
-        {
-            goBall.transform.parent = null;
-            rbBall.velocity = Vector2.zero;
-            rbBall.bodyType = RigidbodyType2D.Kinematic;
-            goBall.GetComponent<CircleCollider2D>().enabled = true;
-
-            Vector2 v2PlayerToBall = goBall.transform.position - transform.position;
-            v2PlayerToBall.Normalize();
-            float fPlayerBallDistance = Vector2.Distance(goBall.transform.position, transform.position);
-
-            if (Input.GetButtonDown("Jump"))
-            {
-                rbPlayer.velocity = v2PlayerToBall * fSlingForce;
-                bSlingDone = true;
-                bSlingOn = false;
-            }
-
-            if(fPlayerBallDistance > fSlingDistance)
-            {
-                bSlingDone = true;
-                bSlingOn = false;
-            }
-        }
-        else
-        {
-            rbBall.velocity = (transform.position - goBall.transform.position) * 10;
-        }
-        */
     }
 
     private void Movement()
@@ -332,7 +260,7 @@ public class PlayerControllerV2 : MonoBehaviour
 
     private void WallJump()
     {
-        if(!bGrounded && !bSlingOn && Input.GetButtonDown("Jump"))
+        if(!bGrounded && !bSlingDone && Input.GetButtonDown("Jump"))
         {
             Collider2D[] wallDetect = Physics2D.OverlapBoxAll(transform.position, v2WallDetectScale, 0, layerWall);
 
@@ -340,12 +268,25 @@ public class PlayerControllerV2 : MonoBehaviour
             {
                 if (wallDetect[i].gameObject.GetComponent<WallJump>().colRight)
                 {
+                    bWallJump = true;
                     rbPlayer.velocity = new Vector2(v2WallJumpdir.x, v2WallJumpdir.y) * fWallJumpforce;
                 }
                 else
                 {
+                    bWallJump = true;
                     rbPlayer.velocity = new Vector2(-v2WallJumpdir.x, v2WallJumpdir.y) * fWallJumpforce;
                 }
+            }
+        }
+
+        if(bWallJump)
+        {
+            fWallJumpTimeControl -= Time.deltaTime;
+
+            if (fWallJumpTimeControl <= 0)
+            {
+                fWallJumpTimeControl = fWallJumpTime;
+                bWallJump = false;
             }
         }
     }
@@ -359,13 +300,13 @@ public class PlayerControllerV2 : MonoBehaviour
         }
 
         fJumpRefControl -= Time.deltaTime;
-        if (!bSlingOn && Input.GetButtonDown("Jump"))
+        if (!bSlingDone && Input.GetButtonDown("Jump"))
         {
             fJumpRefControl = fJumpControl;
 
         }
 
-        if (!bSlingOn && Input.GetButtonUp("Jump"))
+        if (!bSlingDone && Input.GetButtonUp("Jump"))
         {
             if (rbPlayer.velocity.y > 0)
             {

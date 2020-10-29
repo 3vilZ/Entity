@@ -43,15 +43,26 @@ public class PlayerControllerV2 : MonoBehaviour
     float fGroundedRefControl = 0;
     bool facingRight = true;
 
+    [Header("Shoot&Reload")]
+    [SerializeField] float fBallShootForce;
+    [SerializeField] float fPlayerShootForce;
+    [SerializeField] float fBallReloadForce;
+    [SerializeField] float fPlayerReloadForce;
+    [SerializeField] float fShootDoneTime;
+    bool bBallOn = false;
+    bool bShootDone = false;
+    bool bShootRDY = false;
+    bool bReloading = false;
+    float fShootDoneTimeControl = 0;
+
+
     [Header("Slingshot")]
     [SerializeField] float fSlingForce;
     [SerializeField] float fSlingDistance;
-    [SerializeField] GameObject goLimit;
-    [SerializeField] LayerMask layerBall;
     bool bSlingOn = false;
     bool bSlingDone = false;
     bool bSlingRDY = true;
-    bool bRecovering = false;
+    bool bSlingReloading = false;
     Vector2 v2PlayerToBall;
     Vector2 v2BallToPlayer;
     float fPlayerBallDistance;
@@ -62,7 +73,10 @@ public class PlayerControllerV2 : MonoBehaviour
     [SerializeField] Transform tAttackPos;
     [SerializeField] Transform tTwistPoint;
     [SerializeField] GameObject goBall;
+    [SerializeField] GameObject goLimit;
+    [SerializeField] LayerMask layerBall;
     Rigidbody2D rbBall;
+    bool bBallDetecion = false;
 
 
     [Header("General")]
@@ -81,6 +95,7 @@ public class PlayerControllerV2 : MonoBehaviour
         CatchBall();
         fSuspensionTimeControl = fSuspensionTime;
         fWallJumpTimeControl = fWallJumpTime;
+        fShootDoneTimeControl = fShootDoneTime;
         v2WallJumpdir.Normalize();
     }
 
@@ -101,12 +116,15 @@ public class PlayerControllerV2 : MonoBehaviour
         WallJump();
         Aim();
         Slingshot();
+        BallDetection();
+        Shoot();
+        Reload();
     }
 
     private void FixedUpdate()
     {
 
-        if(!bSlingDone && !bWallJump || bRecovering)
+        if(!bSlingDone && !bWallJump && !bShootDone || bSlingReloading && !bShootDone)
         {
             Movement();
         }
@@ -119,6 +137,7 @@ public class PlayerControllerV2 : MonoBehaviour
         if(bGrounded)
         {
             bSlingRDY = true;
+            bShootRDY = true;
         }
     }
 
@@ -134,13 +153,23 @@ public class PlayerControllerV2 : MonoBehaviour
     {
         if(!bSlingOn)
         {
-            bRecovering = false;
+            bBallOn = true;
+            bSlingReloading = false;
             bSlingOn = false;
             bSlingDone = false;
+            bBallDetecion = false;
             rbBall.velocity = Vector2.zero;
+            rbBall.bodyType = RigidbodyType2D.Kinematic;
             goBall.GetComponent<CircleCollider2D>().enabled = false;
             goBall.transform.parent = transform;
             goBall.transform.position = transform.position;
+        }
+
+        if (bReloading)
+        {
+            rbPlayer.velocity = new Vector2(rbPlayer.velocity.x, 0);
+            rbPlayer.velocity = Vector2.up * fPlayerReloadForce;
+            bReloading = false;
         }
     }
 
@@ -151,38 +180,10 @@ public class PlayerControllerV2 : MonoBehaviour
         tTwistPoint.transform.eulerAngles = new Vector3(0f, 0f, Mathf.Atan2(-fHorizontalStick, -fVerticalStick) * 180 / Mathf.PI);
     }
 
-    void Slingshot()
+    void BallDetection()
     {
-        v2PlayerToBall = goBall.transform.position - transform.position;
-        v2PlayerToBall.Normalize();
-        v2BallToPlayer = transform.position - goBall.transform.position;
-        v2BallToPlayer.Normalize();
-        fPlayerBallDistance = Vector2.Distance(goBall.transform.position, transform.position);
-
-        if (bRecovering)
+        if(bBallDetecion)
         {
-            rbBall.velocity = v2BallToPlayer * 40;
-            Collider2D[] colBallCatch = Physics2D.OverlapCircleAll(transform.position, 1.2f, layerBall);
-
-            for (int i = 0; i < colBallCatch.Length; i++)
-            {
-                if(colBallCatch[i].gameObject == goBall)
-                {
-                    CatchBall();
-                }
-            }
-        }
-        if(bSlingDone)
-        {
-            if(rbPlayer.velocity.x >= -0.5f && rbPlayer.velocity.x <= 0.5f  || rbPlayer.velocity.y >= -0.5f && rbPlayer.velocity.y <= 0.5f)
-            {
-                bSlingDone = false;
-                bRecovering = true;
-            }
-
-
-            bSlingRDY = false;
-
             Collider2D[] colBallCatch = Physics2D.OverlapCircleAll(transform.position, 1.2f, layerBall);
 
             for (int i = 0; i < colBallCatch.Length; i++)
@@ -191,7 +192,35 @@ public class PlayerControllerV2 : MonoBehaviour
                 {
                     CatchBall();
                 }
-            }           
+            }
+        }
+    }
+
+    void Slingshot()
+    {
+        v2PlayerToBall = goBall.transform.position - transform.position;
+        v2PlayerToBall.Normalize();
+        v2BallToPlayer = transform.position - goBall.transform.position;
+        v2BallToPlayer.Normalize();
+        fPlayerBallDistance = Vector2.Distance(goBall.transform.position, transform.position);
+
+        if (bSlingReloading)
+        {
+            rbBall.velocity = v2BallToPlayer * 40;
+            bBallDetecion = true;
+        }
+        if(bSlingDone)
+        {
+            if(rbPlayer.velocity.x >= -0.5f && rbPlayer.velocity.x <= 0.5f  || rbPlayer.velocity.y >= -0.5f && rbPlayer.velocity.y <= 0.5f)
+            {
+                bSlingDone = false;
+                bSlingReloading = true;
+            }
+
+
+            bSlingRDY = false;
+
+            bBallDetecion = true;
         } 
 
         if (fPlayerBallDistance >= fSlingDistance || Input.GetAxis("Dash") == 0)
@@ -199,12 +228,11 @@ public class PlayerControllerV2 : MonoBehaviour
             if(bSlingOn)
             {
                 goLimit.SetActive(false);
-                bRecovering = true;
+                bSlingReloading = true;
                 bSlingOn = false;
             }
         }
-        //bool down
-        else if (Input.GetAxis("Dash") != 0 && !bRecovering && bSlingRDY)
+        else if (Input.GetAxis("Dash") != 0 && !bSlingReloading && bSlingRDY && !bReloading)
         {
             goLimit.SetActive(true);
             bSlingOn = true;
@@ -220,6 +248,65 @@ public class PlayerControllerV2 : MonoBehaviour
                 rbPlayer.velocity = v2PlayerToBall * forceToApply;
                 bSlingOn = false;
                 bSlingDone = true;
+            }
+        }
+    }
+
+    void Shoot()
+    {
+        if(bShootDone)
+        {
+            fShootDoneTimeControl -= Time.deltaTime;
+
+            if(fShootDoneTimeControl <= 0)
+            {
+                fShootDoneTimeControl = fShootDoneTime;
+                bShootDone = false;
+            }
+        }
+
+        if (Input.GetButtonDown("Shoot"))
+        {
+            Vector3 v3HitDirection = tAttackPos.position - transform.position;
+            v3HitDirection.Normalize();
+
+            if (bBallOn && bShootRDY)
+            {
+                bShootDone = true;
+                rbBall.bodyType = RigidbodyType2D.Dynamic;
+                goBall.GetComponent<CircleCollider2D>().enabled = true;
+                goBall.transform.parent = null;
+                rbBall.velocity = new Vector2(v3HitDirection.x, v3HitDirection.y) * fBallShootForce;
+
+                Vector3 v3PlayerPos = transform.position;
+                v3PlayerPos.Normalize();
+                if (v3HitDirection.y <= v3PlayerPos.y)
+                {
+                    rbPlayer.velocity = new Vector2(-v3HitDirection.x * fPlayerShootForce, -v3HitDirection.y * fPlayerShootForce);
+                }
+
+                bBallOn = false;
+                bShootRDY = false;
+            }
+        }
+    }
+
+    public void Reload()
+    {
+        if (!bBallOn)
+        {
+            if (Input.GetAxis("Reload") != 0)
+            {
+                v2BallToPlayer = transform.position - goBall.transform.position;
+                v2BallToPlayer.Normalize();
+
+                rbBall.velocity = v2BallToPlayer * fBallReloadForce;
+                bBallDetecion = true;
+                bReloading = true;
+            }
+            else
+            {
+                bReloading = false;
             }
         }
     }

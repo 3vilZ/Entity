@@ -79,7 +79,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a77323bd1038d5b4eae1cc83cedb3812, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fJumpVelocity: 25
+  fJumpVelocity: 24
   fJumpControl: 0.1
   fJumpCapControl: 0.5
   fGroundedControl: 0.1
@@ -87,7 +87,7 @@ MonoBehaviour:
   fGroundRangeY: 1.9
   fSuspensionRange: 0.5
   fSuspensionTime: 0.1
-  fSuspensionGravity: 1
+  fSuspensionGravity: 2
   fNormalGravity: 5
   layerGround:
     serializedVersion: 2
@@ -95,15 +95,16 @@ MonoBehaviour:
   fWallJumpforce: 25
   fWallRangeX: 1.2
   fWallRangeY: 1
-  v2WallJumpdir: {x: 1.2, y: 1}
+  fWallJumpTime: 0.2
+  v2WallJumpdir: {x: 0.9, y: 1}
   layerWall:
     serializedVersion: 2
     m_Bits: 2048
-  fSpeedDrag: 2
-  fMoveControl: 0.8
+  fSpeedDrag: 16
+  fMoveControl: 0.2
   fStopControl: 0.95
-  fTurnControl: 0.8
-  fSlingForce: 5
+  fTurnControl: 0.95
+  fSlingForce: 4.2
   fSlingDistance: 10
   goLimit: {fileID: 0}
   layerBall:
@@ -445,7 +446,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 10
+  orthographic size: 12
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2

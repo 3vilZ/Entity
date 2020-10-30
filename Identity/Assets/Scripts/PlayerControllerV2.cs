@@ -83,7 +83,8 @@ public class PlayerControllerV2 : MonoBehaviour
     [SerializeField] Transform tModel;
     Rigidbody2D rbPlayer;
 
-    
+    [Header("Particles")]
+    [SerializeField] ParticleSystem PsystLanded;
 
     void Start()
     {
@@ -138,6 +139,7 @@ public class PlayerControllerV2 : MonoBehaviour
         {
             bSlingRDY = true;
             bShootRDY = true;
+            
         }
     }
 

@@ -4932,7 +4932,7 @@ MonoBehaviour:
   fWallRangeX: 1.2
   fWallRangeY: 1
   fWallJumpTime: 0.2
-  v2WallJumpdir: {x: 0, y: 0}
+  v2WallJumpdir: {x: 0.9, y: 1}
   layerWall:
     serializedVersion: 2
     m_Bits: 2048

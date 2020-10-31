@@ -104,16 +104,22 @@ MonoBehaviour:
   fMoveControl: 0.2
   fStopControl: 0.95
   fTurnControl: 0.95
+  fBallShootForce: 15
+  fPlayerShootForce: 20
+  fBallReloadForce: 50
+  fPlayerReloadForce: 20
+  fShootDoneTime: 0.2
   fSlingForce: 4.2
   fSlingDistance: 10
+  tAttackPos: {fileID: 3463263249374370158}
+  tTwistPoint: {fileID: 3463263249254507887}
+  goBall: {fileID: 0}
   goLimit: {fileID: 0}
   layerBall:
     serializedVersion: 2
     m_Bits: 4096
-  tAttackPos: {fileID: 3463263249374370158}
-  tTwistPoint: {fileID: 3463263249254507887}
-  goBall: {fileID: 0}
   tModel: {fileID: 3463263249046334748}
+  PsystLanded: {fileID: 0}
 --- !u!50 &3463263247882982010
 Rigidbody2D:
   serializedVersion: 4

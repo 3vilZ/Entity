@@ -1604,6 +1604,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1735827430120491618, guid: 3f1f23b0c9f65704c978d581cf146e45,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1735827430120491620, guid: 3f1f23b0c9f65704c978d581cf146e45,
         type: 3}
       propertyPath: m_Name
@@ -1787,35 +1792,10 @@ PrefabInstance:
       propertyPath: goLimit
       value: 
       objectReference: {fileID: 581579319}
-    - target: {fileID: 1241753179352631353, guid: 53e9a29b62f71d84fa50eb96f4201b66,
+    - target: {fileID: 3463263247360308447, guid: 53e9a29b62f71d84fa50eb96f4201b66,
         type: 3}
-      propertyPath: v2WallJumpdir.x
-      value: 0.9
-      objectReference: {fileID: 0}
-    - target: {fileID: 1241753179352631353, guid: 53e9a29b62f71d84fa50eb96f4201b66,
-        type: 3}
-      propertyPath: fBallShootForce
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 1241753179352631353, guid: 53e9a29b62f71d84fa50eb96f4201b66,
-        type: 3}
-      propertyPath: fPlayerShootForce
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 1241753179352631353, guid: 53e9a29b62f71d84fa50eb96f4201b66,
-        type: 3}
-      propertyPath: fBallReloadForce
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 1241753179352631353, guid: 53e9a29b62f71d84fa50eb96f4201b66,
-        type: 3}
-      propertyPath: fPlayerReloadForce
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 1241753179352631353, guid: 53e9a29b62f71d84fa50eb96f4201b66,
-        type: 3}
-      propertyPath: fShootDoneTime
-      value: 0.2
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 3463263247882981988, guid: 53e9a29b62f71d84fa50eb96f4201b66,
         type: 3}
@@ -1876,6 +1856,41 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlayerV2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3463263247882981991, guid: 53e9a29b62f71d84fa50eb96f4201b66,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 3463263248057060461, guid: 53e9a29b62f71d84fa50eb96f4201b66,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 3463263248697198217, guid: 53e9a29b62f71d84fa50eb96f4201b66,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 3463263249046334751, guid: 53e9a29b62f71d84fa50eb96f4201b66,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 3463263249254507886, guid: 53e9a29b62f71d84fa50eb96f4201b66,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 3463263249340824859, guid: 53e9a29b62f71d84fa50eb96f4201b66,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 3463263249374370153, guid: 53e9a29b62f71d84fa50eb96f4201b66,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 53e9a29b62f71d84fa50eb96f4201b66, type: 3}

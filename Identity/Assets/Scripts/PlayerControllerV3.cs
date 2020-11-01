@@ -27,12 +27,13 @@ public class PlayerControllerV3 : MonoBehaviour
     [SerializeField] float fWallJumpforce;
     [SerializeField] float fWallRangeX;
     [SerializeField] float fWallRangeY;
-    [SerializeField] float fWallJumpTime;
+    [SerializeField] float fWallJumpCapMoveTime;
     [SerializeField] Vector2 v2WallJumpdir;
     [SerializeField] LayerMask layerWall;
     Vector2 v2WallDetectScale;
-    float fWallJumpTimeControl = 0;
-    bool bWallJump = false;
+    bool bWallJumpDone = false;
+    float fWallJumpCapMoveTimeControl = 0;
+    
 
     [Header("Movement")]
     [SerializeField] float fSpeedDrag = 10;
@@ -46,16 +47,34 @@ public class PlayerControllerV3 : MonoBehaviour
     [Header("Shoot&Reload")]
     [SerializeField] float fBallShootForce;
     [SerializeField] float fPlayerShootForce;
+    [SerializeField] float fShootDistance;
     [SerializeField] float fBallReloadForce;
     [SerializeField] float fPlayerReloadForce;
-    [SerializeField] float fShootDoneTime;
+    [SerializeField] float fShootCapMoveTime;
+    [SerializeField] float fChargeMinTime;
+    [SerializeField] float fChargeMaxTime;
+    [SerializeField] float fChargeTimeScale;
+    [SerializeField] GameObject goArrows;
     bool bBallOn = false;
     bool bShootDone = false;
     bool bShootRDY = false;
     bool bReloading = false;
-    float fShootDoneTimeControl = 0;
+    bool bCharging = false;
+    float fShootCapMoveTimeControl = 0;
+    float fChargeMinTimeControl = 0;
+    float fChargeMaxTimeControl = 0;
+
+    [Header("Dash")]
+    [SerializeField] float fDashForce;
+    [SerializeField] float fDashDistance;
+    [SerializeField] float fDashCapMoveTime;
+    [SerializeField] float fDashGravity;
+    bool bDashDone = false;
+    bool bDashRDY = false;
+    float fDashCapMoveTimeControl = 0;
 
 
+    /*
     [Header("Slingshot")]
     [SerializeField] float fSlingForce;
     [SerializeField] float fSlingDistance;
@@ -66,7 +85,7 @@ public class PlayerControllerV3 : MonoBehaviour
     Vector2 v2PlayerToBall;
     Vector2 v2BallToPlayer;
     float fPlayerBallDistance;
-
+    */
 
 
     [Header("Ball")]
@@ -82,22 +101,36 @@ public class PlayerControllerV3 : MonoBehaviour
     [Header("General")]
     [SerializeField] Transform tModel;
     Rigidbody2D rbPlayer;
+    Vector2 v2PlayerToBall;
+    Vector2 v2BallToPlayer;
+    float fPlayerBallDistance;
 
     [Header("Particles")]
-    [SerializeField] ParticleSystem PsystLanded;
+    [SerializeField] ParticleSystem psLanded;
 
     void Start()
     {
         rbPlayer = GetComponent<Rigidbody2D>();
         rbBall = goBall.GetComponent<Rigidbody2D>();
+
         goLimit.SetActive(false);
+        goArrows.SetActive(false);
 
         rbPlayer.gravityScale = fNormalGravity;
+
         CatchBall();
-        fSuspensionTimeControl = fSuspensionTime;
-        fWallJumpTimeControl = fWallJumpTime;
-        fShootDoneTimeControl = fShootDoneTime;
+        
         v2WallJumpdir.Normalize();
+
+        fChargeMaxTime = (fChargeMaxTime * fChargeTimeScale) + fChargeMinTime;
+
+        //Timers Control Setup
+        fSuspensionTimeControl = fSuspensionTime;
+        fWallJumpCapMoveTimeControl = fWallJumpCapMoveTime;
+        fShootCapMoveTimeControl = fShootCapMoveTime;
+        fChargeMinTimeControl = fChargeMinTime;
+        fChargeMaxTimeControl = fChargeMaxTime;
+        fDashCapMoveTimeControl = fDashCapMoveTime;
     }
 
     void Update()
@@ -112,20 +145,25 @@ public class PlayerControllerV3 : MonoBehaviour
             //print(fPlayerBallDistance);
         }
 
+        if(!bDashDone)
+        {
+            Jump();
+        }
         
-        Jump();
+
         WallJump();
-        Aim();
-        Slingshot();
+        UpdatePlayerAndBallState();
+        //Slingshot();
         BallDetection();
         Shoot();
         Reload();
+        Dash();
     }
 
     private void FixedUpdate()
     {
 
-        if(!bSlingDone && !bWallJump && !bShootDone || bSlingReloading && !bShootDone)
+        if(!bWallJumpDone && !bShootDone && !bDashDone)
         {
             Movement();
         }
@@ -137,9 +175,8 @@ public class PlayerControllerV3 : MonoBehaviour
 
         if(bGrounded)
         {
-            bSlingRDY = true;
             bShootRDY = true;
-            
+            bDashRDY = true;
         }
     }
 
@@ -153,19 +190,13 @@ public class PlayerControllerV3 : MonoBehaviour
 
     public void CatchBall()
     {
-        if(!bSlingOn)
-        {
-            bBallOn = true;
-            bSlingReloading = false;
-            bSlingOn = false;
-            bSlingDone = false;
-            bBallDetecion = false;
-            rbBall.velocity = Vector2.zero;
-            rbBall.bodyType = RigidbodyType2D.Kinematic;
-            goBall.GetComponent<CircleCollider2D>().enabled = false;
-            goBall.transform.parent = transform;
-            goBall.transform.position = transform.position;
-        }
+        bBallOn = true;
+        bBallDetecion = false;
+        rbBall.velocity = Vector2.zero;
+        rbBall.bodyType = RigidbodyType2D.Kinematic;
+        goBall.GetComponent<CircleCollider2D>().enabled = false;
+        goBall.transform.parent = transform;
+        goBall.transform.position = transform.position;
 
         if (bReloading)
         {
@@ -175,11 +206,13 @@ public class PlayerControllerV3 : MonoBehaviour
         }
     }
 
-    void Aim()
+    void UpdatePlayerAndBallState()
     {
         float fHorizontalStick = Input.GetAxis("HorizontalRightStick");
         float fVerticalStick = Input.GetAxis("VerticalRightStick");
         tTwistPoint.transform.eulerAngles = new Vector3(0f, 0f, Mathf.Atan2(-fHorizontalStick, -fVerticalStick) * 180 / Mathf.PI);
+
+        fPlayerBallDistance = Vector2.Distance(goBall.transform.position, transform.position);
     }
 
     void BallDetection()
@@ -198,6 +231,7 @@ public class PlayerControllerV3 : MonoBehaviour
         }
     }
 
+    /*
     void Slingshot()
     {
         v2PlayerToBall = goBall.transform.position - transform.position;
@@ -253,42 +287,143 @@ public class PlayerControllerV3 : MonoBehaviour
             }
         }
     }
+    */
+
+
+
+    void Dash()
+    {
+        if (fPlayerBallDistance <= fDashDistance && !bBallOn)
+        {
+            goLimit.SetActive(true);
+
+            if (Input.GetAxis("Dash") != 0 && !bBallOn && bDashRDY)
+            {
+                bDashDone = true;
+                bDashRDY = false;
+                v2PlayerToBall = goBall.transform.position - transform.position;
+                v2PlayerToBall.Normalize();
+
+                float fForceToApply = fPlayerBallDistance * fDashForce;
+                if(fForceToApply < 40)
+                {
+                    fForceToApply = 40;
+                }
+                rbPlayer.velocity = v2PlayerToBall * fForceToApply;
+                print(fForceToApply);
+            }
+        }
+        else
+        {
+            goLimit.SetActive(false);
+        }
+        
+        if(bDashDone)
+        {
+            rbPlayer.gravityScale = fDashGravity;
+            fDashCapMoveTimeControl -= Time.deltaTime;
+            if(fDashCapMoveTimeControl <= 0)
+            {
+                rbPlayer.gravityScale = fNormalGravity;
+                rbPlayer.velocity = Vector2.zero;
+                fDashCapMoveTimeControl = fDashCapMoveTime;
+                bDashDone = false;
+            }
+        }
+    }
 
     void Shoot()
     {
         if(bShootDone)
         {
-            fShootDoneTimeControl -= Time.deltaTime;
+            fShootCapMoveTimeControl -= Time.deltaTime;
 
-            if(fShootDoneTimeControl <= 0)
+            if(fShootCapMoveTimeControl <= 0)
             {
-                fShootDoneTimeControl = fShootDoneTime;
+                fShootCapMoveTimeControl = fShootCapMoveTime;
                 bShootDone = false;
             }
         }
-
-        if (Input.GetButtonDown("Shoot"))
+        
+        if (Input.GetButtonDown("Shoot") && bShootRDY)
         {
-            Vector3 v3HitDirection = tAttackPos.position - transform.position;
-            v3HitDirection.Normalize();
-
-            if (bBallOn && bShootRDY)
+            
+            if (fPlayerBallDistance <= fShootDistance)
             {
+                goArrows.SetActive(true);
+                bCharging = true;
+            }
+            else
+            {
+                rbBall.velocity = Vector3.zero;
+            }
+        }
+
+        if(bCharging)
+        {
+            fChargeMinTimeControl -= Time.deltaTime;
+            fChargeMaxTimeControl -= Time.deltaTime;
+
+            if (fChargeMinTimeControl <= 0)
+            {
+                Time.timeScale = fChargeTimeScale;
+            }
+            
+            if(fChargeMaxTimeControl <= 0)
+            {
+                goArrows.SetActive(false);
+                bCharging = false;
+                fChargeMinTimeControl = fChargeMinTime;
+                fChargeMaxTimeControl = fChargeMaxTime;
+                Time.timeScale = 1;
+
+                Vector3 v3HitDirection = tAttackPos.position - transform.position;
+                v3HitDirection.Normalize();
+
+
                 bShootDone = true;
                 rbBall.bodyType = RigidbodyType2D.Dynamic;
                 goBall.GetComponent<CircleCollider2D>().enabled = true;
                 goBall.transform.parent = null;
+
                 rbBall.velocity = new Vector2(v3HitDirection.x, v3HitDirection.y) * fBallShootForce;
 
-                Vector3 v3PlayerPos = transform.position;
-                v3PlayerPos.Normalize();
-                if (v3HitDirection.y <= v3PlayerPos.y)
-                {
-                    rbPlayer.velocity = new Vector2(-v3HitDirection.x * fPlayerShootForce, -v3HitDirection.y * fPlayerShootForce);
-                }
+                rbPlayer.velocity = new Vector2(-v3HitDirection.x * fPlayerShootForce, -v3HitDirection.y * fPlayerShootForce);
 
-                bBallOn = false;
-                bShootRDY = false;
+                if (bBallOn)
+                {
+                    bBallOn = false;
+                }
+            }
+        }
+
+        if (Input.GetButtonUp("Shoot"))
+        {
+            if (bCharging)
+            {
+                goArrows.SetActive(false);
+                bCharging = false;
+                fChargeMinTimeControl = fChargeMinTime;
+                fChargeMaxTimeControl = fChargeMaxTime;
+                Time.timeScale = 1;
+
+                Vector3 v3HitDirection = tAttackPos.position - transform.position;
+                v3HitDirection.Normalize();
+
+
+                bShootDone = true;
+                rbBall.bodyType = RigidbodyType2D.Dynamic;
+                goBall.GetComponent<CircleCollider2D>().enabled = true;
+                goBall.transform.parent = null;
+
+                rbBall.velocity = new Vector2(v3HitDirection.x, v3HitDirection.y) * fBallShootForce;
+
+                rbPlayer.velocity = new Vector2(-v3HitDirection.x * fPlayerShootForce, -v3HitDirection.y * fPlayerShootForce);
+
+                if (bBallOn)
+                {
+                    bBallOn = false;
+                }
             }
         }
     }
@@ -297,18 +432,19 @@ public class PlayerControllerV3 : MonoBehaviour
     {
         if (!bBallOn)
         {
-            if (Input.GetAxis("Reload") != 0)
+            if (Input.GetButtonDown("Ball"))
+            {
+                bShootRDY = false;
+                bBallDetecion = true;
+                bReloading = true;
+            }
+
+            if(bReloading)
             {
                 v2BallToPlayer = transform.position - goBall.transform.position;
                 v2BallToPlayer.Normalize();
 
                 rbBall.velocity = v2BallToPlayer * fBallReloadForce;
-                bBallDetecion = true;
-                bReloading = true;
-            }
-            else
-            {
-                bReloading = false;
             }
         }
     }
@@ -349,7 +485,7 @@ public class PlayerControllerV3 : MonoBehaviour
 
     private void WallJump()
     {
-        if(!bGrounded && !bSlingDone && Input.GetButtonDown("Jump"))
+        if(!bGrounded && Input.GetButtonDown("Jump"))
         {
             Collider2D[] wallDetect = Physics2D.OverlapBoxAll(transform.position, v2WallDetectScale, 0, layerWall);
 
@@ -357,25 +493,25 @@ public class PlayerControllerV3 : MonoBehaviour
             {
                 if (wallDetect[i].gameObject.GetComponent<WallJump>().colRight)
                 {
-                    bWallJump = true;
+                    bWallJumpDone = true;
                     rbPlayer.velocity = new Vector2(v2WallJumpdir.x, v2WallJumpdir.y) * fWallJumpforce;
                 }
                 else
                 {
-                    bWallJump = true;
+                    bWallJumpDone = true;
                     rbPlayer.velocity = new Vector2(-v2WallJumpdir.x, v2WallJumpdir.y) * fWallJumpforce;
                 }
             }
         }
 
-        if(bWallJump)
+        if(bWallJumpDone)
         {
-            fWallJumpTimeControl -= Time.deltaTime;
+            fWallJumpCapMoveTimeControl -= Time.deltaTime;
 
-            if (fWallJumpTimeControl <= 0)
+            if (fWallJumpCapMoveTimeControl <= 0)
             {
-                fWallJumpTimeControl = fWallJumpTime;
-                bWallJump = false;
+                fWallJumpCapMoveTimeControl = fWallJumpCapMoveTime;
+                bWallJumpDone = false;
             }
         }
     }
@@ -389,13 +525,13 @@ public class PlayerControllerV3 : MonoBehaviour
         }
 
         fJumpRefControl -= Time.deltaTime;
-        if (!bSlingDone && Input.GetButtonDown("Jump"))
+        if (Input.GetButtonDown("Jump"))
         {
             fJumpRefControl = fJumpControl;
 
         }
 
-        if (!bSlingDone && Input.GetButtonUp("Jump"))
+        if (Input.GetButtonUp("Jump"))
         {
             if (rbPlayer.velocity.y > 0)
             {

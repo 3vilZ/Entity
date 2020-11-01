@@ -173,6 +173,8 @@ public class PlayerControllerV3 : MonoBehaviour
             bShootRDY = true;
             bDashRDY = true;
         }
+
+
     }
 
     private void FlipX()

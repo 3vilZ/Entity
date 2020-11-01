@@ -7,6 +7,8 @@ public class Ball : MonoBehaviour
     Rigidbody2D rbBall;
     Vector3 v3BallSpeed;
     [SerializeField] int iDamage;
+    [SerializeField] ParticleSystem BallPS;
+
 
     private void Start()
     {
@@ -43,4 +45,19 @@ public class Ball : MonoBehaviour
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, 10);
     }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        print("collision");
+        Quaternion rotToLook = Quaternion.LookRotation(collision.contacts[0].normal);
+        Vector3 m = rotToLook.eulerAngles;
+        m.z = 90;
+
+        rotToLook = Quaternion.Euler(m);
+        
+        ParticleSystem j = Instantiate(BallPS, collision.contacts[0].point, rotToLook);
+        
+    }
+
+    
 }

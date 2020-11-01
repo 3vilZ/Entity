@@ -145,12 +145,7 @@ public class PlayerControllerV3 : MonoBehaviour
             //print(fPlayerBallDistance);
         }
 
-        if(!bDashDone)
-        {
-            Jump();
-        }
-        
-
+        Jump();
         WallJump();
         UpdatePlayerAndBallState();
         //Slingshot();

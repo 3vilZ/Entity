@@ -53,16 +53,19 @@ public class PlayerControllerV3 : MonoBehaviour
     [SerializeField] float fShootCapMoveTime;
     [SerializeField] float fChargeMinTime;
     [SerializeField] float fChargeMaxTime;
+    [SerializeField] float fChargeReloadTime;
     [SerializeField] float fChargeTimeScale;
     [SerializeField] GameObject goArrows;
     bool bBallOn = false;
     bool bShootDone = false;
     bool bShootRDY = false;
     bool bReloading = false;
-    bool bCharging = false;
+    bool bChargingShoot = false;
+    bool bChargingReload = false;
     float fShootCapMoveTimeControl = 0;
     float fChargeMinTimeControl = 0;
     float fChargeMaxTimeControl = 0;
+    float fChargeReloadTimeControl = 0;
 
     [Header("Dash")]
     [SerializeField] float fDashForce;
@@ -131,6 +134,7 @@ public class PlayerControllerV3 : MonoBehaviour
         fChargeMinTimeControl = fChargeMinTime;
         fChargeMaxTimeControl = fChargeMaxTime;
         fDashCapMoveTimeControl = fDashCapMoveTime;
+        fChargeReloadTimeControl = fChargeReloadTime;
     }
 
     void Update()
@@ -344,19 +348,14 @@ public class PlayerControllerV3 : MonoBehaviour
         
         if (Input.GetButtonDown("Shoot") && bShootRDY)
         {
-            
             if (fPlayerBallDistance <= fShootDistance)
             {
                 goArrows.SetActive(true);
-                bCharging = true;
-            }
-            else
-            {
-                rbBall.velocity = Vector3.zero;
+                bChargingShoot = true;
             }
         }
 
-        if(bCharging)
+        if(bChargingShoot)
         {
             fChargeMinTimeControl -= Time.deltaTime;
             fChargeMaxTimeControl -= Time.deltaTime;
@@ -369,7 +368,7 @@ public class PlayerControllerV3 : MonoBehaviour
             if(fChargeMaxTimeControl <= 0)
             {
                 goArrows.SetActive(false);
-                bCharging = false;
+                bChargingShoot = false;
                 fChargeMinTimeControl = fChargeMinTime;
                 fChargeMaxTimeControl = fChargeMaxTime;
                 Time.timeScale = 1;
@@ -396,10 +395,10 @@ public class PlayerControllerV3 : MonoBehaviour
 
         if (Input.GetButtonUp("Shoot"))
         {
-            if (bCharging)
+            if (bChargingShoot)
             {
                 goArrows.SetActive(false);
-                bCharging = false;
+                bChargingShoot = false;
                 fChargeMinTimeControl = fChargeMinTime;
                 fChargeMaxTimeControl = fChargeMaxTime;
                 Time.timeScale = 1;
@@ -429,11 +428,17 @@ public class PlayerControllerV3 : MonoBehaviour
     {
         if (!bBallOn)
         {
-            if (Input.GetButtonDown("Ball"))
+            if(bChargingReload)
             {
-                bShootRDY = false;
-                bBallDetecion = true;
-                bReloading = true;
+                fChargeReloadTimeControl -= Time.deltaTime;
+                if (fChargeReloadTimeControl <= 0)
+                {
+                    fChargeReloadTimeControl = fChargeReloadTime;
+                    bShootRDY = false;
+                    bBallDetecion = true;
+                    bReloading = true;
+                    bChargingReload = false;
+                }
             }
 
             if(bReloading)
@@ -442,6 +447,20 @@ public class PlayerControllerV3 : MonoBehaviour
                 v2BallToPlayer.Normalize();
 
                 rbBall.velocity = v2BallToPlayer * fBallReloadForce;
+            }
+
+            if (Input.GetButtonDown("Ball"))
+            {
+                bChargingReload = true;
+            }
+            if (Input.GetButtonUp("Ball"))
+            {
+                if(fChargeReloadTimeControl > 0 )
+                {
+                    fChargeReloadTimeControl = fChargeReloadTime;
+                    bChargingReload = false;
+                    rbBall.velocity = Vector3.zero;
+                }
             }
         }
     }

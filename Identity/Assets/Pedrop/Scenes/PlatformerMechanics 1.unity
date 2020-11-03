@@ -530,6 +530,16 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4864544104472665192, guid: 03ee45188e762e34ea09571c26627322,
         type: 3}
+      propertyPath: fAirJumpMinTime.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4864544104472665192, guid: 03ee45188e762e34ea09571c26627322,
+        type: 3}
+      propertyPath: fAirJumpCap.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4864544104472665192, guid: 03ee45188e762e34ea09571c26627322,
+        type: 3}
       propertyPath: goBall
       value: 
       objectReference: {fileID: 1081315453}
@@ -541,12 +551,117 @@ PrefabInstance:
     - target: {fileID: 4864544104472665192, guid: 03ee45188e762e34ea09571c26627322,
         type: 3}
       propertyPath: fBallShootForce
-      value: 44.63
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 4864544104472665192, guid: 03ee45188e762e34ea09571c26627322,
         type: 3}
       propertyPath: fChargeTimeScale
       value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4864544104472665192, guid: 03ee45188e762e34ea09571c26627322,
+        type: 3}
+      propertyPath: fChargeReloadTime
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4864544104472665192, guid: 03ee45188e762e34ea09571c26627322,
+        type: 3}
+      propertyPath: fChargeShootMinTime
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4864544104472665192, guid: 03ee45188e762e34ea09571c26627322,
+        type: 3}
+      propertyPath: fChargeShootMaxTime
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4864544104472665192, guid: 03ee45188e762e34ea09571c26627322,
+        type: 3}
+      propertyPath: fChargeReloadMinTime
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4864544104472665192, guid: 03ee45188e762e34ea09571c26627322,
+        type: 3}
+      propertyPath: fJumpSecure
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4864544104472665192, guid: 03ee45188e762e34ea09571c26627322,
+        type: 3}
+      propertyPath: fGroundedSecure
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4864544104472665192, guid: 03ee45188e762e34ea09571c26627322,
+        type: 3}
+      propertyPath: fBallReloadForce
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 4864544104472665192, guid: 03ee45188e762e34ea09571c26627322,
+        type: 3}
+      propertyPath: bGROUNDJump
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4864544104472665192, guid: 03ee45188e762e34ea09571c26627322,
+        type: 3}
+      propertyPath: fAirJumpForce
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 4864544104472665192, guid: 03ee45188e762e34ea09571c26627322,
+        type: 3}
+      propertyPath: fAirJumpMinTime.Array.data[0]
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4864544104472665192, guid: 03ee45188e762e34ea09571c26627322,
+        type: 3}
+      propertyPath: fAirJumpMinTime.Array.data[1]
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4864544104472665192, guid: 03ee45188e762e34ea09571c26627322,
+        type: 3}
+      propertyPath: fAirJumpMinTime.Array.data[2]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4864544104472665192, guid: 03ee45188e762e34ea09571c26627322,
+        type: 3}
+      propertyPath: fAirJumpCap.Array.data[0]
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4864544104472665192, guid: 03ee45188e762e34ea09571c26627322,
+        type: 3}
+      propertyPath: fAirJumpCap.Array.data[1]
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4864544104472665192, guid: 03ee45188e762e34ea09571c26627322,
+        type: 3}
+      propertyPath: fAirJumpCap.Array.data[2]
+      value: 0.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4864544104472665192, guid: 03ee45188e762e34ea09571c26627322,
+        type: 3}
+      propertyPath: fAirJumpCap
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4864544104472665192, guid: 03ee45188e762e34ea09571c26627322,
+        type: 3}
+      propertyPath: fAirJumpMinTime
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4864544104472665192, guid: 03ee45188e762e34ea09571c26627322,
+        type: 3}
+      propertyPath: fJumpForce
+      value: 24
+      objectReference: {fileID: 0}
+    - target: {fileID: 4864544104472665192, guid: 03ee45188e762e34ea09571c26627322,
+        type: 3}
+      propertyPath: fAirJumpMaxTime
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4864544104472665192, guid: 03ee45188e762e34ea09571c26627322,
+        type: 3}
+      propertyPath: fShootExploitTime
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4864544104472665192, guid: 03ee45188e762e34ea09571c26627322,
+        type: 3}
+      propertyPath: fDashTimeScale
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 7262353355502546676, guid: 03ee45188e762e34ea09571c26627322,
         type: 3}

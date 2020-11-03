@@ -5,23 +5,32 @@ using UnityEngine;
 public class PlayerControllerV3 : MonoBehaviour
 {
     [Header("Jump")]
-    [SerializeField] private float fJumpVelocity = 5;
-    [SerializeField] float fJumpControl = 0.2f;
-    [SerializeField] [Range(0, 1)] float fJumpCapControl = 0.5f;
-    [SerializeField] float fGroundedControl = 0.25f;
+    [SerializeField] private float fJumpForce = 5;
     [SerializeField] float fGroundRangeX;
     [SerializeField] float fGroundRangeY;
+    [SerializeField] float fJumpSecure = 0.2f;
+    [SerializeField] float fGroundedSecure = 0.25f;
+    [SerializeField] [Range(0, 1)] float fJumpCap = 0.5f;
+    [SerializeField] LayerMask layerGround;
+    [SerializeField] bool bGROUNDJump;
+    [Space(10)]
     [SerializeField] float fSuspensionRange;
     [SerializeField] float fSuspensionTime;
     [SerializeField] float fSuspensionGravity;
     [SerializeField] float fNormalGravity;
-    [SerializeField] LayerMask layerGround;
+    [Space(10)]
+    [SerializeField] float fAirJumpForce;
+    [SerializeField] float fAirJumpMaxTime;
     Vector2 v2GroundedPositionControl;
     Vector2 v2GroundedScaleControl;
     bool bGrounded;
+    bool bAirJumpDone = false;
+    bool bAirJumpRDY = false;
     bool bGravitySwap = false;
-    float fJumpRefControl = 0;
+    float fJumpSecureControl = 0;
+    float fGroundedSecureControl = 0;
     float fSuspensionTimeControl = 0;
+    float fAirJumpMinTimeControl;
 
     [Header("WallJump")]
     [SerializeField] float fWallJumpforce;
@@ -41,24 +50,27 @@ public class PlayerControllerV3 : MonoBehaviour
     [SerializeField] [Range(0, 1)] float fStopControl = 0.5f;
     [SerializeField] [Range(0, 1)] float fTurnControl = 0.5f;
     float fHorizontalVelocity;
-    float fGroundedRefControl = 0;
     bool facingRight = true;
 
     [Header("Shoot&Reload")]
     [SerializeField] float fBallShootForce;
     [SerializeField] float fPlayerShootForce;
     [SerializeField] float fShootDistance;
-    [SerializeField] float fBallReloadForce;
-    [SerializeField] float fPlayerReloadForce;
     [SerializeField] float fShootCapMoveTime;
-    [SerializeField] float fChargeMinTime;
-    [SerializeField] float fChargeMaxTime;
-    [SerializeField] float fChargeReloadTime;
+    [SerializeField] float fChargeShootMinTime;
+    [SerializeField] float fChargeShootMaxTime;
+    [SerializeField] float fShootExploitTime;
     [SerializeField] float fChargeTimeScale;
     [SerializeField] GameObject goArrows;
+    [Space(10)]
+    [SerializeField] float fBallReloadForce;
+    [SerializeField] float fPlayerReloadForce;
+    [SerializeField] float fChargeReloadMinTime;
+    [SerializeField] bool bCOLLIDEOnReload;
     bool bBallOn = false;
     bool bShootDone = false;
     bool bShootRDY = false;
+    bool bShootExploit = false;
     bool bReloading = false;
     bool bChargingShoot = false;
     bool bChargingReload = false;
@@ -66,12 +78,14 @@ public class PlayerControllerV3 : MonoBehaviour
     float fChargeMinTimeControl = 0;
     float fChargeMaxTimeControl = 0;
     float fChargeReloadTimeControl = 0;
+    float fShootExploitTimeControl = 0;
 
     [Header("Dash")]
     [SerializeField] float fDashForce;
     [SerializeField] float fDashDistance;
     [SerializeField] float fDashCapMoveTime;
     [SerializeField] float fDashGravity;
+    [SerializeField] float fDashTimeScale;
     bool bDashDone = false;
     bool bDashRDY = false;
     float fDashCapMoveTimeControl = 0;
@@ -125,16 +139,18 @@ public class PlayerControllerV3 : MonoBehaviour
         
         v2WallJumpdir.Normalize();
 
-        fChargeMaxTime = (fChargeMaxTime * fChargeTimeScale) + fChargeMinTime;
+        fChargeShootMaxTime = (fChargeShootMaxTime * fChargeTimeScale) + fChargeShootMinTime;
 
         //Timers Control Setup
         fSuspensionTimeControl = fSuspensionTime;
         fWallJumpCapMoveTimeControl = fWallJumpCapMoveTime;
         fShootCapMoveTimeControl = fShootCapMoveTime;
-        fChargeMinTimeControl = fChargeMinTime;
-        fChargeMaxTimeControl = fChargeMaxTime;
+        fChargeMinTimeControl = fChargeShootMinTime;
+        fChargeMaxTimeControl = fChargeShootMaxTime;
         fDashCapMoveTimeControl = fDashCapMoveTime;
-        fChargeReloadTimeControl = fChargeReloadTime;
+        fChargeReloadTimeControl = fChargeReloadMinTime;
+        fAirJumpMinTimeControl = fAirJumpMaxTime;
+        fShootExploitTimeControl = fShootExploitTime;
     }
 
     void Update()
@@ -148,9 +164,8 @@ public class PlayerControllerV3 : MonoBehaviour
         {
             //print(fPlayerBallDistance);
         }
-
-        Jump();
         WallJump();
+        Jump();
         UpdatePlayerAndBallState();
         //Slingshot();
         BallDetection();
@@ -172,10 +187,11 @@ public class PlayerControllerV3 : MonoBehaviour
         bGrounded = Physics2D.OverlapBox(v2GroundedPositionControl, v2GroundedScaleControl, 0, layerGround);
         v2WallDetectScale = new Vector2(fWallRangeX, fWallRangeY);
 
-        if(bGrounded)
+        if(bGrounded || bWallJumpDone)
         {
             bShootRDY = true;
             bDashRDY = true;
+            bAirJumpRDY = true;
         }
 
 
@@ -196,6 +212,7 @@ public class PlayerControllerV3 : MonoBehaviour
         rbBall.velocity = Vector2.zero;
         rbBall.bodyType = RigidbodyType2D.Kinematic;
         goBall.GetComponent<CircleCollider2D>().enabled = false;
+        if (!bCOLLIDEOnReload) { goBall.GetComponent<CircleCollider2D>().isTrigger = false; }
         goBall.transform.parent = transform;
         goBall.transform.position = transform.position;
 
@@ -298,6 +315,20 @@ public class PlayerControllerV3 : MonoBehaviour
         {
             goLimit.SetActive(true);
 
+            if (bDashDone)
+            {
+                rbPlayer.gravityScale = fDashGravity;
+                fDashCapMoveTimeControl -= Time.deltaTime / fDashTimeScale;
+                if (fDashCapMoveTimeControl <= 0)
+                {
+                    rbPlayer.gravityScale = fNormalGravity;
+                    Time.timeScale = 1;
+                    rbPlayer.velocity = Vector2.zero;
+                    fDashCapMoveTimeControl = fDashCapMoveTime;
+                    bDashDone = false;
+                }
+            }
+
             if (Input.GetAxis("Dash") != 0 && !bBallOn && bDashRDY)
             {
                 bDashDone = true;
@@ -311,25 +342,15 @@ public class PlayerControllerV3 : MonoBehaviour
                     fForceToApply = 40;
                 }
                 rbPlayer.velocity = v2PlayerToBall * fForceToApply;
-                print(fForceToApply);
+
+                Time.timeScale = fDashTimeScale;
+
+                rbPlayer.velocity = rbPlayer.velocity / fDashTimeScale;
             }
         }
         else
         {
             goLimit.SetActive(false);
-        }
-        
-        if(bDashDone)
-        {
-            rbPlayer.gravityScale = fDashGravity;
-            fDashCapMoveTimeControl -= Time.deltaTime;
-            if(fDashCapMoveTimeControl <= 0)
-            {
-                rbPlayer.gravityScale = fNormalGravity;
-                rbPlayer.velocity = Vector2.zero;
-                fDashCapMoveTimeControl = fDashCapMoveTime;
-                bDashDone = false;
-            }
         }
     }
 
@@ -345,17 +366,18 @@ public class PlayerControllerV3 : MonoBehaviour
                 bShootDone = false;
             }
         }
-        
-        if (Input.GetButtonDown("Shoot") && bShootRDY)
+
+        if (bShootExploit)
         {
-            if (fPlayerBallDistance <= fShootDistance)
+            fShootExploitTimeControl -= Time.deltaTime;
+            if (fShootExploitTimeControl <= 0)
             {
-                goArrows.SetActive(true);
-                bChargingShoot = true;
+                fShootExploitTimeControl = fShootExploitTime;
+                bShootExploit = false;
             }
         }
 
-        if(bChargingShoot)
+        if (bChargingShoot)
         {
             fChargeMinTimeControl -= Time.deltaTime;
             fChargeMaxTimeControl -= Time.deltaTime;
@@ -369,13 +391,12 @@ public class PlayerControllerV3 : MonoBehaviour
             {
                 goArrows.SetActive(false);
                 bChargingShoot = false;
-                fChargeMinTimeControl = fChargeMinTime;
-                fChargeMaxTimeControl = fChargeMaxTime;
+                fChargeMinTimeControl = fChargeShootMinTime;
+                fChargeMaxTimeControl = fChargeShootMaxTime;
                 Time.timeScale = 1;
 
                 Vector3 v3HitDirection = tAttackPos.position - transform.position;
                 v3HitDirection.Normalize();
-
 
                 bShootDone = true;
                 rbBall.bodyType = RigidbodyType2D.Dynamic;
@@ -393,14 +414,24 @@ public class PlayerControllerV3 : MonoBehaviour
             }
         }
 
+        if (Input.GetButtonDown("Shoot") && bShootRDY && !bShootExploit || Input.GetButton("Shoot") && bShootRDY && !bShootExploit)
+        {
+            if (fPlayerBallDistance <= fShootDistance)
+            {
+                goArrows.SetActive(true);
+                bChargingShoot = true;
+                bShootExploit = true;
+            }
+        }
+
         if (Input.GetButtonUp("Shoot"))
         {
             if (bChargingShoot)
             {
                 goArrows.SetActive(false);
                 bChargingShoot = false;
-                fChargeMinTimeControl = fChargeMinTime;
-                fChargeMaxTimeControl = fChargeMaxTime;
+                fChargeMinTimeControl = fChargeShootMinTime;
+                fChargeMaxTimeControl = fChargeShootMaxTime;
                 Time.timeScale = 1;
 
                 Vector3 v3HitDirection = tAttackPos.position - transform.position;
@@ -433,7 +464,7 @@ public class PlayerControllerV3 : MonoBehaviour
                 fChargeReloadTimeControl -= Time.deltaTime;
                 if (fChargeReloadTimeControl <= 0)
                 {
-                    fChargeReloadTimeControl = fChargeReloadTime;
+                    fChargeReloadTimeControl = fChargeReloadMinTime;
                     bShootRDY = false;
                     bBallDetecion = true;
                     bReloading = true;
@@ -443,6 +474,7 @@ public class PlayerControllerV3 : MonoBehaviour
 
             if(bReloading)
             {
+                if (!bCOLLIDEOnReload) { goBall.GetComponent<CircleCollider2D>().isTrigger = true; }
                 v2BallToPlayer = transform.position - goBall.transform.position;
                 v2BallToPlayer.Normalize();
 
@@ -455,9 +487,9 @@ public class PlayerControllerV3 : MonoBehaviour
             }
             if (Input.GetButtonUp("Ball"))
             {
-                if(fChargeReloadTimeControl > 0 )
+                if(fChargeReloadTimeControl > 0 && bShootRDY)
                 {
-                    fChargeReloadTimeControl = fChargeReloadTime;
+                    fChargeReloadTimeControl = fChargeReloadMinTime;
                     bChargingReload = false;
                     rbBall.velocity = Vector3.zero;
                 }
@@ -534,33 +566,66 @@ public class PlayerControllerV3 : MonoBehaviour
 
     private void Jump()
     {
-        fGroundedRefControl -= Time.deltaTime;
-        if (bGrounded)
+        if(bGROUNDJump)
         {
-            fGroundedRefControl = fGroundedControl;
-        }
-
-        fJumpRefControl -= Time.deltaTime;
-        if (Input.GetButtonDown("Jump"))
-        {
-            fJumpRefControl = fJumpControl;
-
-        }
-
-        if (Input.GetButtonUp("Jump"))
-        {
-            if (rbPlayer.velocity.y > 0)
+            fGroundedSecureControl -= Time.deltaTime;
+            if (bGrounded)
             {
-                rbPlayer.velocity = new Vector2(rbPlayer.velocity.x, rbPlayer.velocity.y * fJumpCapControl);
+                fGroundedSecureControl = fGroundedSecure;
+            }
+
+            fJumpSecureControl -= Time.deltaTime;
+
+            if (Input.GetButtonDown("Jump"))
+            {
+                fJumpSecureControl = fJumpSecure;
+            }
+
+            if (Input.GetButtonUp("Jump"))
+            {
+                if (rbPlayer.velocity.y > 0)
+                {
+                    rbPlayer.velocity = new Vector2(rbPlayer.velocity.x, rbPlayer.velocity.y * fJumpCap);
+                }
+            }
+
+            if ((fJumpSecureControl > 0) && (fGroundedSecureControl > 0))
+            {
+                fJumpSecureControl = 0;
+                fGroundedSecureControl = 0;
+                rbPlayer.velocity = new Vector2(rbPlayer.velocity.x, fJumpForce);
             }
         }
-
-        if ((fJumpRefControl > 0) && (fGroundedRefControl > 0))
+        else
         {
-            fJumpRefControl = 0;
-            fGroundedRefControl = 0;
-            rbPlayer.velocity = new Vector2(rbPlayer.velocity.x, fJumpVelocity);
+            if (bAirJumpDone)
+            {
+                fAirJumpMinTimeControl -= Time.deltaTime;
+                rbPlayer.velocity = new Vector2(rbPlayer.velocity.x, fAirJumpForce);
+
+                if (fAirJumpMinTimeControl <= 0)
+                {
+                    //rbPlayer.velocity = new Vector2(rbPlayer.velocity.x, fAirJumpForce * fAirJumpCap);
+                    fAirJumpMinTimeControl = fAirJumpMaxTime;
+                    bAirJumpDone = false;
+                }
+            }
+            if (Input.GetButtonDown("Jump") && bAirJumpRDY && !bWallJumpDone && !bGrounded)
+            {
+                bAirJumpDone = true;
+                bAirJumpRDY = false;
+            }
+
+            if (Input.GetButtonUp("Jump"))
+            {
+                if(bAirJumpDone)
+                {
+                    fAirJumpMinTimeControl = fAirJumpMaxTime;
+                    bAirJumpDone = false;
+                }
+            }
         }
+        
 
         
         //Suspension

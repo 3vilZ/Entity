@@ -187,7 +187,7 @@ public class PlayerControllerV3 : MonoBehaviour
         bGrounded = Physics2D.OverlapBox(v2GroundedPositionControl, v2GroundedScaleControl, 0, layerGround);
         v2WallDetectScale = new Vector2(fWallRangeX, fWallRangeY);
 
-        if(bGrounded || bWallJumpDone)
+        if(bGrounded)
         {
             bShootRDY = true;
             bDashRDY = true;
@@ -519,7 +519,7 @@ public class PlayerControllerV3 : MonoBehaviour
 
         rbPlayer.velocity = new Vector2(fHorizontalVelocity, rbPlayer.velocity.y);
         
-        
+
 
         if (!facingRight && fHorizontalVelocity > 0)
         {

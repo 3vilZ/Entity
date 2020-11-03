@@ -551,7 +551,7 @@ PrefabInstance:
     - target: {fileID: 4864544104472665192, guid: 03ee45188e762e34ea09571c26627322,
         type: 3}
       propertyPath: fBallShootForce
-      value: 30
+      value: 42.7
       objectReference: {fileID: 0}
     - target: {fileID: 4864544104472665192, guid: 03ee45188e762e34ea09571c26627322,
         type: 3}
@@ -591,7 +591,7 @@ PrefabInstance:
     - target: {fileID: 4864544104472665192, guid: 03ee45188e762e34ea09571c26627322,
         type: 3}
       propertyPath: fBallReloadForce
-      value: 40
+      value: 91.69
       objectReference: {fileID: 0}
     - target: {fileID: 4864544104472665192, guid: 03ee45188e762e34ea09571c26627322,
         type: 3}
@@ -662,6 +662,11 @@ PrefabInstance:
         type: 3}
       propertyPath: fDashTimeScale
       value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4864544104472665192, guid: 03ee45188e762e34ea09571c26627322,
+        type: 3}
+      propertyPath: fSpeedDrag
+      value: 12.26
       objectReference: {fileID: 0}
     - target: {fileID: 7262353355502546676, guid: 03ee45188e762e34ea09571c26627322,
         type: 3}

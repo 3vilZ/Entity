@@ -61,11 +61,11 @@ public class PlayerControllerV3 : MonoBehaviour
     [SerializeField] float fChargeShootMaxTime;
     [SerializeField] float fShootExploitTime;
     [SerializeField] float fChargeTimeScale;
-    [SerializeField] GameObject goArrows;
+    [SerializeField] GameObject goPlayerArrow;
+    [SerializeField] GameObject goBallArrow;
     [Space(10)]
     [SerializeField] float fBallReloadForce;
     [SerializeField] float fPlayerReloadForce;
-    [SerializeField] float fChargeReloadMinTime;
     [SerializeField] bool bCOLLIDEOnReload;
     bool bBallOn = false;
     bool bShootDone = false;
@@ -73,11 +73,9 @@ public class PlayerControllerV3 : MonoBehaviour
     bool bShootExploit = false;
     bool bReloading = false;
     bool bChargingShoot = false;
-    bool bChargingReload = false;
     float fShootCapMoveTimeControl = 0;
     float fChargeMinTimeControl = 0;
     float fChargeMaxTimeControl = 0;
-    float fChargeReloadTimeControl = 0;
     float fShootExploitTimeControl = 0;
 
     [Header("Dash")]
@@ -85,11 +83,12 @@ public class PlayerControllerV3 : MonoBehaviour
     [SerializeField] float fDashDistance;
     [SerializeField] float fDashCapMoveTime;
     [SerializeField] float fDashGravity;
-    [SerializeField] float fDashTimeScale;
+    [SerializeField] float fDashExploitTime;
     bool bDashDone = false;
     bool bDashRDY = false;
+    bool bDashExploit = false;
     float fDashCapMoveTimeControl = 0;
-
+    float fDashExploitTimeControl = 0;
 
     /*
     [Header("Slingshot")]
@@ -104,10 +103,10 @@ public class PlayerControllerV3 : MonoBehaviour
     float fPlayerBallDistance;
     */
 
-
     [Header("Ball")]
     [SerializeField] Transform tAttackPos;
-    [SerializeField] Transform tTwistPoint;
+    [SerializeField] Transform tPlayerAttackPivot;
+    [SerializeField] Transform tBallAttackPivot;
     [SerializeField] GameObject goBall;
     [SerializeField] GameObject goLimit;
     [SerializeField] LayerMask layerBall;
@@ -131,7 +130,8 @@ public class PlayerControllerV3 : MonoBehaviour
         rbBall = goBall.GetComponent<Rigidbody2D>();
 
         goLimit.SetActive(false);
-        goArrows.SetActive(false);
+        goPlayerArrow.SetActive(false);
+        goBallArrow.SetActive(false);
 
         rbPlayer.gravityScale = fNormalGravity;
 
@@ -148,9 +148,9 @@ public class PlayerControllerV3 : MonoBehaviour
         fChargeMinTimeControl = fChargeShootMinTime;
         fChargeMaxTimeControl = fChargeShootMaxTime;
         fDashCapMoveTimeControl = fDashCapMoveTime;
-        fChargeReloadTimeControl = fChargeReloadMinTime;
         fAirJumpMinTimeControl = fAirJumpMaxTime;
         fShootExploitTimeControl = fShootExploitTime;
+        fDashExploitTimeControl = fDashExploitTime;
     }
 
     void Update()
@@ -228,7 +228,8 @@ public class PlayerControllerV3 : MonoBehaviour
     {
         float fHorizontalStick = Input.GetAxis("HorizontalRightStick");
         float fVerticalStick = Input.GetAxis("VerticalRightStick");
-        tTwistPoint.transform.eulerAngles = new Vector3(0f, 0f, Mathf.Atan2(-fHorizontalStick, -fVerticalStick) * 180 / Mathf.PI);
+        tPlayerAttackPivot.transform.eulerAngles = new Vector3(0f, 0f, Mathf.Atan2(-fHorizontalStick, -fVerticalStick) * 180 / Mathf.PI);
+        tBallAttackPivot.transform.eulerAngles = new Vector3(0f, 0f, Mathf.Atan2(-fHorizontalStick, -fVerticalStick) * 180 / Mathf.PI);
 
         fPlayerBallDistance = Vector2.Distance(goBall.transform.position, transform.position);
     }
@@ -249,90 +250,42 @@ public class PlayerControllerV3 : MonoBehaviour
         }
     }
 
-    /*
-    void Slingshot()
-    {
-        v2PlayerToBall = goBall.transform.position - transform.position;
-        v2PlayerToBall.Normalize();
-        v2BallToPlayer = transform.position - goBall.transform.position;
-        v2BallToPlayer.Normalize();
-        fPlayerBallDistance = Vector2.Distance(goBall.transform.position, transform.position);
-
-        if (bSlingReloading)
-        {
-            rbBall.velocity = v2BallToPlayer * 40;
-            bBallDetecion = true;
-        }
-        if(bSlingDone)
-        {
-            if(rbPlayer.velocity.x >= -0.5f && rbPlayer.velocity.x <= 0.5f  || rbPlayer.velocity.y >= -0.5f && rbPlayer.velocity.y <= 0.5f)
-            {
-                bSlingDone = false;
-                bSlingReloading = true;
-            }
-
-
-            bSlingRDY = false;
-
-            bBallDetecion = true;
-        } 
-
-        if (fPlayerBallDistance >= fSlingDistance || Input.GetAxis("Dash") == 0)
-        {
-            if(bSlingOn)
-            {
-                goLimit.SetActive(false);
-                bSlingReloading = true;
-                bSlingOn = false;
-            }
-        }
-        else if (Input.GetAxis("Dash") != 0 && !bSlingReloading && bSlingRDY && !bReloading)
-        {
-            goLimit.SetActive(true);
-            bSlingOn = true;
-            goBall.GetComponent<CircleCollider2D>().enabled = true;
-            goBall.transform.parent = null;
-            rbBall.velocity = Vector2.zero;
-            
-
-            if (Input.GetButtonDown("Jump"))
-            {
-                goLimit.SetActive(false);
-                float forceToApply = fPlayerBallDistance * fSlingForce;
-                rbPlayer.velocity = v2PlayerToBall * forceToApply;
-                bSlingOn = false;
-                bSlingDone = true;
-            }
-        }
-    }
-    */
-
-
-
     void Dash()
     {
         if (fPlayerBallDistance <= fDashDistance && !bBallOn)
         {
             goLimit.SetActive(true);
 
+            if(bDashExploit)
+            {
+                fDashExploitTimeControl -= Time.deltaTime;
+                if(fDashExploitTimeControl <= Time.deltaTime)
+                {
+                    fDashExploitTimeControl = fDashExploitTime;
+                    bDashExploit = false;
+                }
+            }
+
             if (bDashDone)
             {
                 rbPlayer.gravityScale = fDashGravity;
-                fDashCapMoveTimeControl -= Time.deltaTime / fDashTimeScale;
+                fDashCapMoveTimeControl -= Time.deltaTime;
                 if (fDashCapMoveTimeControl <= 0)
                 {
                     rbPlayer.gravityScale = fNormalGravity;
-                    Time.timeScale = 1;
                     rbPlayer.velocity = Vector2.zero;
                     fDashCapMoveTimeControl = fDashCapMoveTime;
                     bDashDone = false;
                 }
             }
 
-            if (Input.GetAxis("Dash") != 0 && !bBallOn && bDashRDY)
+            if (Input.GetAxis("Dash") != 0 && !bBallOn && bDashRDY && !bReloading && !bDashExploit)
             {
                 bDashDone = true;
                 bDashRDY = false;
+                bDashExploit = true;
+                rbBall.velocity = Vector3.zero;
+
                 v2PlayerToBall = goBall.transform.position - transform.position;
                 v2PlayerToBall.Normalize();
 
@@ -342,10 +295,6 @@ public class PlayerControllerV3 : MonoBehaviour
                     fForceToApply = 40;
                 }
                 rbPlayer.velocity = v2PlayerToBall * fForceToApply;
-
-                Time.timeScale = fDashTimeScale;
-
-                rbPlayer.velocity = rbPlayer.velocity / fDashTimeScale;
             }
         }
         else
@@ -389,7 +338,8 @@ public class PlayerControllerV3 : MonoBehaviour
             
             if(fChargeMaxTimeControl <= 0)
             {
-                goArrows.SetActive(false);
+                goPlayerArrow.SetActive(false);
+                goBallArrow.SetActive(false);
                 bChargingShoot = false;
                 fChargeMinTimeControl = fChargeShootMinTime;
                 fChargeMaxTimeControl = fChargeShootMaxTime;
@@ -418,7 +368,8 @@ public class PlayerControllerV3 : MonoBehaviour
         {
             if (fPlayerBallDistance <= fShootDistance)
             {
-                goArrows.SetActive(true);
+                goPlayerArrow.SetActive(true);
+                goBallArrow.SetActive(true);
                 bChargingShoot = true;
                 bShootExploit = true;
             }
@@ -428,7 +379,8 @@ public class PlayerControllerV3 : MonoBehaviour
         {
             if (bChargingShoot)
             {
-                goArrows.SetActive(false);
+                goPlayerArrow.SetActive(false);
+                goBallArrow.SetActive(false);
                 bChargingShoot = false;
                 fChargeMinTimeControl = fChargeShootMinTime;
                 fChargeMaxTimeControl = fChargeShootMaxTime;
@@ -459,6 +411,7 @@ public class PlayerControllerV3 : MonoBehaviour
     {
         if (!bBallOn)
         {
+            /*
             if(bChargingReload)
             {
                 fChargeReloadTimeControl -= Time.deltaTime;
@@ -471,6 +424,7 @@ public class PlayerControllerV3 : MonoBehaviour
                     bChargingReload = false;
                 }
             }
+            */
 
             if(bReloading)
             {
@@ -483,8 +437,11 @@ public class PlayerControllerV3 : MonoBehaviour
 
             if (Input.GetButtonDown("Ball"))
             {
-                bChargingReload = true;
+                //bChargingReload = true;
+                bReloading = true;
             }
+
+            /*
             if (Input.GetButtonUp("Ball"))
             {
                 if(fChargeReloadTimeControl > 0 && bShootRDY)
@@ -494,6 +451,7 @@ public class PlayerControllerV3 : MonoBehaviour
                     rbBall.velocity = Vector3.zero;
                 }
             }
+            */
         }
     }
 
@@ -657,5 +615,63 @@ public class PlayerControllerV3 : MonoBehaviour
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(transform.position, 1.2f);
     }
+
+    /*
+    void Slingshot()
+    {
+        v2PlayerToBall = goBall.transform.position - transform.position;
+        v2PlayerToBall.Normalize();
+        v2BallToPlayer = transform.position - goBall.transform.position;
+        v2BallToPlayer.Normalize();
+        fPlayerBallDistance = Vector2.Distance(goBall.transform.position, transform.position);
+
+        if (bSlingReloading)
+        {
+            rbBall.velocity = v2BallToPlayer * 40;
+            bBallDetecion = true;
+        }
+        if(bSlingDone)
+        {
+            if(rbPlayer.velocity.x >= -0.5f && rbPlayer.velocity.x <= 0.5f  || rbPlayer.velocity.y >= -0.5f && rbPlayer.velocity.y <= 0.5f)
+            {
+                bSlingDone = false;
+                bSlingReloading = true;
+            }
+
+
+            bSlingRDY = false;
+
+            bBallDetecion = true;
+        } 
+
+        if (fPlayerBallDistance >= fSlingDistance || Input.GetAxis("Dash") == 0)
+        {
+            if(bSlingOn)
+            {
+                goLimit.SetActive(false);
+                bSlingReloading = true;
+                bSlingOn = false;
+            }
+        }
+        else if (Input.GetAxis("Dash") != 0 && !bSlingReloading && bSlingRDY && !bReloading)
+        {
+            goLimit.SetActive(true);
+            bSlingOn = true;
+            goBall.GetComponent<CircleCollider2D>().enabled = true;
+            goBall.transform.parent = null;
+            rbBall.velocity = Vector2.zero;
+            
+
+            if (Input.GetButtonDown("Jump"))
+            {
+                goLimit.SetActive(false);
+                float forceToApply = fPlayerBallDistance * fSlingForce;
+                rbPlayer.velocity = v2PlayerToBall * forceToApply;
+                bSlingOn = false;
+                bSlingDone = true;
+            }
+        }
+    }
+    */
 }
 

@@ -236,10 +236,14 @@ public class PlayerControllerV3 : MonoBehaviour
         goBall.transform.parent = transform;
         goBall.transform.position = transform.position;
 
-        if (bReloading)
+        if (bReloading && !bGrounded)
         {
             rbPlayer.velocity = new Vector2(rbPlayer.velocity.x, fPlayerReloadForce);
             //rbPlayer.velocity = Vector2.up * fPlayerReloadForce;
+            bReloading = false;
+        }
+        else if (bReloading)
+        {
             bReloading = false;
         }
     }

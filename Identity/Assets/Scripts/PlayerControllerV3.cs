@@ -123,8 +123,7 @@ public class PlayerControllerV3 : MonoBehaviour
     float fBugTest = .5f;
     public bool bBugTest;
 
-    [Header("Particles")]
-    [SerializeField] ParticleSystem psLanded;
+
 
     void Start()
     {

@@ -439,6 +439,8 @@ public class PlayerControllerV3 : MonoBehaviour
             {
                 //bChargingReload = true;
                 bReloading = true;
+                bShootRDY = false;
+                bBallDetecion = true;
             }
 
             /*

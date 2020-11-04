@@ -121,6 +121,12 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!4 &27661081 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4973832974928822177, guid: 3f1f23b0c9f65704c978d581cf146e45,
+    type: 3}
+  m_PrefabInstance: {fileID: 1081315452}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &166767981
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -769,12 +775,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ball
       objectReference: {fileID: 0}
-    - target: {fileID: 1735827430120491646, guid: 3f1f23b0c9f65704c978d581cf146e45,
-        type: 3}
-      propertyPath: BallPS
-      value: 
-      objectReference: {fileID: 1677406864432396962, guid: 2d0bc22fed41c6448a6ea1ae112f38ea,
-        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3f1f23b0c9f65704c978d581cf146e45, type: 3}
 --- !u!1 &1081315453 stripped
@@ -1977,6 +1977,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d1af8a45b535c24587554488ad94883, type: 3}
+--- !u!1 &2014980466 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8041483319651575294, guid: 3f1f23b0c9f65704c978d581cf146e45,
+    type: 3}
+  m_PrefabInstance: {fileID: 1081315452}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2119903517
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2065,14 +2071,14 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4864544104472665192, guid: 03ee45188e762e34ea09571c26627322,
         type: 3}
-      propertyPath: fAirJumpMinTime.Array.size
-      value: 3
-      objectReference: {fileID: 0}
+      propertyPath: goBallArrow
+      value: 
+      objectReference: {fileID: 2014980466}
     - target: {fileID: 4864544104472665192, guid: 03ee45188e762e34ea09571c26627322,
         type: 3}
-      propertyPath: fAirJumpCap.Array.size
-      value: 3
-      objectReference: {fileID: 0}
+      propertyPath: tBallAttackPivot
+      value: 
+      objectReference: {fileID: 27661081}
     - target: {fileID: 4864544104472665192, guid: 03ee45188e762e34ea09571c26627322,
         type: 3}
       propertyPath: goBall
@@ -2083,131 +2089,6 @@ PrefabInstance:
       propertyPath: goLimit
       value: 
       objectReference: {fileID: 581579319}
-    - target: {fileID: 4864544104472665192, guid: 03ee45188e762e34ea09571c26627322,
-        type: 3}
-      propertyPath: fBallShootForce
-      value: 42.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 4864544104472665192, guid: 03ee45188e762e34ea09571c26627322,
-        type: 3}
-      propertyPath: fChargeTimeScale
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4864544104472665192, guid: 03ee45188e762e34ea09571c26627322,
-        type: 3}
-      propertyPath: fChargeReloadTime
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4864544104472665192, guid: 03ee45188e762e34ea09571c26627322,
-        type: 3}
-      propertyPath: fChargeShootMinTime
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4864544104472665192, guid: 03ee45188e762e34ea09571c26627322,
-        type: 3}
-      propertyPath: fChargeShootMaxTime
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4864544104472665192, guid: 03ee45188e762e34ea09571c26627322,
-        type: 3}
-      propertyPath: fChargeReloadMinTime
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4864544104472665192, guid: 03ee45188e762e34ea09571c26627322,
-        type: 3}
-      propertyPath: fJumpSecure
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4864544104472665192, guid: 03ee45188e762e34ea09571c26627322,
-        type: 3}
-      propertyPath: fGroundedSecure
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4864544104472665192, guid: 03ee45188e762e34ea09571c26627322,
-        type: 3}
-      propertyPath: fBallReloadForce
-      value: 91.69
-      objectReference: {fileID: 0}
-    - target: {fileID: 4864544104472665192, guid: 03ee45188e762e34ea09571c26627322,
-        type: 3}
-      propertyPath: bGROUNDJump
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4864544104472665192, guid: 03ee45188e762e34ea09571c26627322,
-        type: 3}
-      propertyPath: fAirJumpForce
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 4864544104472665192, guid: 03ee45188e762e34ea09571c26627322,
-        type: 3}
-      propertyPath: fAirJumpMinTime.Array.data[0]
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4864544104472665192, guid: 03ee45188e762e34ea09571c26627322,
-        type: 3}
-      propertyPath: fAirJumpMinTime.Array.data[1]
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4864544104472665192, guid: 03ee45188e762e34ea09571c26627322,
-        type: 3}
-      propertyPath: fAirJumpMinTime.Array.data[2]
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4864544104472665192, guid: 03ee45188e762e34ea09571c26627322,
-        type: 3}
-      propertyPath: fAirJumpCap.Array.data[0]
-      value: 0.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4864544104472665192, guid: 03ee45188e762e34ea09571c26627322,
-        type: 3}
-      propertyPath: fAirJumpCap.Array.data[1]
-      value: 0.6
-      objectReference: {fileID: 0}
-    - target: {fileID: 4864544104472665192, guid: 03ee45188e762e34ea09571c26627322,
-        type: 3}
-      propertyPath: fAirJumpCap.Array.data[2]
-      value: 0.9
-      objectReference: {fileID: 0}
-    - target: {fileID: 4864544104472665192, guid: 03ee45188e762e34ea09571c26627322,
-        type: 3}
-      propertyPath: fAirJumpCap
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4864544104472665192, guid: 03ee45188e762e34ea09571c26627322,
-        type: 3}
-      propertyPath: fAirJumpMinTime
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4864544104472665192, guid: 03ee45188e762e34ea09571c26627322,
-        type: 3}
-      propertyPath: fJumpForce
-      value: 24
-      objectReference: {fileID: 0}
-    - target: {fileID: 4864544104472665192, guid: 03ee45188e762e34ea09571c26627322,
-        type: 3}
-      propertyPath: fAirJumpMaxTime
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4864544104472665192, guid: 03ee45188e762e34ea09571c26627322,
-        type: 3}
-      propertyPath: fShootExploitTime
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4864544104472665192, guid: 03ee45188e762e34ea09571c26627322,
-        type: 3}
-      propertyPath: fDashTimeScale
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4864544104472665192, guid: 03ee45188e762e34ea09571c26627322,
-        type: 3}
-      propertyPath: fSpeedDrag
-      value: 12.26
-      objectReference: {fileID: 0}
-    - target: {fileID: 4864544104472665192, guid: 03ee45188e762e34ea09571c26627322,
-        type: 3}
-      propertyPath: fDashExploitTime
-      value: 0.5
-      objectReference: {fileID: 0}
     - target: {fileID: 7262353355502546676, guid: 03ee45188e762e34ea09571c26627322,
         type: 3}
       propertyPath: m_Name
@@ -2266,21 +2147,6 @@ PrefabInstance:
     - target: {fileID: 7262353355502546679, guid: 03ee45188e762e34ea09571c26627322,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7262353356461212042, guid: 03ee45188e762e34ea09571c26627322,
-        type: 3}
-      propertyPath: m_BackGroundColor.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7262353356461212042, guid: 03ee45188e762e34ea09571c26627322,
-        type: 3}
-      propertyPath: m_BackGroundColor.g
-      value: 0.38953525
-      objectReference: {fileID: 0}
-    - target: {fileID: 7262353356461212042, guid: 03ee45188e762e34ea09571c26627322,
-        type: 3}
-      propertyPath: m_BackGroundColor.b
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

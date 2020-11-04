@@ -381,6 +381,13 @@ public class PlayerControllerV3 : MonoBehaviour
                 {
                     bBallOn = false;
                 }
+
+                if (bDashDone)
+                {
+                    rbPlayer.gravityScale = fNormalGravity;
+                    fDashCapMoveTimeControl = fDashCapMoveTime;
+                    bDashDone = false;
+                }
             }
         }
 
@@ -422,6 +429,13 @@ public class PlayerControllerV3 : MonoBehaviour
                 if (bBallOn)
                 {
                     bBallOn = false;
+                }
+
+                if (bDashDone)
+                {
+                    rbPlayer.gravityScale = fNormalGravity;
+                    fDashCapMoveTimeControl = fDashCapMoveTime;
+                    bDashDone = false;
                 }
             }
         }

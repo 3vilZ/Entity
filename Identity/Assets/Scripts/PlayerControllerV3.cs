@@ -120,6 +120,8 @@ public class PlayerControllerV3 : MonoBehaviour
     Vector2 v2PlayerToBall;
     Vector2 v2BallToPlayer;
     float fPlayerBallDistance;
+    float fBugTest = .5f;
+    public bool bBugTest;
 
     [Header("Particles")]
     [SerializeField] ParticleSystem psLanded;
@@ -155,15 +157,30 @@ public class PlayerControllerV3 : MonoBehaviour
 
     void Update()
     {
+        if(bBugTest)
+        {
+            if (Input.GetKeyDown(KeyCode.B))
+            {
+                print(fPlayerBallDistance);
+            }
+
+            fBugTest -= Time.deltaTime;
+            if (fBugTest <= 0)
+            {
+                print(bDashRDY);
+
+                fBugTest = .5f;
+            }
+        }
         if (Input.GetAxis("Hold") == 0)
         {
             
         }
 
-        if (Input.GetKeyDown(KeyCode.K))
-        {
-            //print(fPlayerBallDistance);
-        }
+        
+        
+
+
         WallJump();
         Jump();
         UpdatePlayerAndBallState();
@@ -190,8 +207,12 @@ public class PlayerControllerV3 : MonoBehaviour
         if(bGrounded)
         {
             bShootRDY = true;
-            bDashRDY = true;
+            
             bAirJumpRDY = true;
+        }
+        if (bGrounded && !bDashDone)
+        {
+            bDashRDY = true;
         }
 
 
@@ -252,32 +273,32 @@ public class PlayerControllerV3 : MonoBehaviour
 
     void Dash()
     {
+        if (bDashExploit)
+        {
+            fDashExploitTimeControl -= Time.deltaTime;
+            if (fDashExploitTimeControl <= Time.deltaTime)
+            {
+                fDashExploitTimeControl = fDashExploitTime;
+                bDashExploit = false;
+            }
+        }
+
+        if (bDashDone)
+        {
+            rbPlayer.gravityScale = fDashGravity;
+            fDashCapMoveTimeControl -= Time.deltaTime;
+            if (fDashCapMoveTimeControl <= 0)
+            {
+                rbPlayer.gravityScale = fNormalGravity;
+                rbPlayer.velocity = Vector2.zero;
+                fDashCapMoveTimeControl = fDashCapMoveTime;
+                bDashDone = false;
+            }
+        }
+
         if (fPlayerBallDistance <= fDashDistance && !bBallOn)
         {
             goLimit.SetActive(true);
-
-            if(bDashExploit)
-            {
-                fDashExploitTimeControl -= Time.deltaTime;
-                if(fDashExploitTimeControl <= Time.deltaTime)
-                {
-                    fDashExploitTimeControl = fDashExploitTime;
-                    bDashExploit = false;
-                }
-            }
-
-            if (bDashDone)
-            {
-                rbPlayer.gravityScale = fDashGravity;
-                fDashCapMoveTimeControl -= Time.deltaTime;
-                if (fDashCapMoveTimeControl <= 0)
-                {
-                    rbPlayer.gravityScale = fNormalGravity;
-                    rbPlayer.velocity = Vector2.zero;
-                    fDashCapMoveTimeControl = fDashCapMoveTime;
-                    bDashDone = false;
-                }
-            }
 
             if (Input.GetAxis("Dash") != 0 && !bBallOn && bDashRDY && !bReloading && !bDashExploit)
             {

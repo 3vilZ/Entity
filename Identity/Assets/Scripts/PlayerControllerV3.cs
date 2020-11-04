@@ -239,8 +239,8 @@ public class PlayerControllerV3 : MonoBehaviour
 
         if (bReloading)
         {
-            rbPlayer.velocity = new Vector2(rbPlayer.velocity.x, 0);
-            rbPlayer.velocity = Vector2.up * fPlayerReloadForce;
+            rbPlayer.velocity = new Vector2(rbPlayer.velocity.x, fPlayerReloadForce);
+            //rbPlayer.velocity = Vector2.up * fPlayerReloadForce;
             bReloading = false;
         }
     }
@@ -520,7 +520,7 @@ public class PlayerControllerV3 : MonoBehaviour
 
             for (int i = 0; i < wallDetect.Length; i++)
             {
-                if (wallDetect[i].gameObject.GetComponent<WallJump>().colRight)
+                if (wallDetect[i].GetComponent<BoxCollider2D>() == wallDetect[i].gameObject.GetComponentInParent<WallJump>().colRight)
                 {
                     bWallJumpDone = true;
                     rbPlayer.velocity = new Vector2(v2WallJumpdir.x, v2WallJumpdir.y) * fWallJumpforce;

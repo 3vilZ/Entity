@@ -5082,6 +5082,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4096
   tModel: {fileID: 7262353356686954895}
+  bBugTest: 0
   psLanded: {fileID: 3726262550078053969}
 --- !u!50 &7262353355502546665
 Rigidbody2D:

@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Pedrop/Scenes/PlatformerMechanics 1.unity
+    guid: 55ae330c7ccaa1a4a9450214fc76d39d
   m_configObjects: {}

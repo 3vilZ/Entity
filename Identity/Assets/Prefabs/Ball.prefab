@@ -264,7 +264,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   iDamage: 25
-  BallPS: {fileID: 1677406864432396962, guid: 2d0bc22fed41c6448a6ea1ae112f38ea, type: 3}
+  BallPS: {fileID: 0}
 --- !u!58 &1735827430120491618
 CircleCollider2D:
   m_ObjectHideFlags: 0

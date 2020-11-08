@@ -5027,7 +5027,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f476212854bc3bb4698c6e4326536a28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fJumpForce: 24
+  fJumpForce: 22
   fGroundRangeX: 0.98
   fGroundRangeY: 1.9
   fJumpSecure: 0.1
@@ -5040,23 +5040,23 @@ MonoBehaviour:
   fSuspensionRange: 0.5
   fSuspensionTime: 0.1
   fSuspensionGravity: 2
-  fNormalGravity: 5
+  fNormalGravity: 4.5
   fAirJumpForce: 15
   fAirJumpMaxTime: 0.2
-  fWallJumpforce: 25
+  fWallJumpforce: 22
   fWallRangeX: 1.2
   fWallRangeY: 1
-  fWallJumpCapMoveTime: 0.2
+  fWallJumpCapMoveTime: 0.22
   v2WallJumpdir: {x: 0.9, y: 1}
   layerWall:
     serializedVersion: 2
     m_Bits: 2048
-  fSpeedDrag: 12.26
-  fMoveControl: 0.2
-  fStopControl: 0.95
+  fSpeedDrag: 12.5
+  fMoveControl: 0.18
+  fStopControl: 0.9
   fTurnControl: 0.95
-  fBallShootForce: 42.7
-  fPlayerShootForce: 20
+  fBallShootForce: 35
+  fPlayerShootForce: 22
   fShootDistance: 5
   fShootCapMoveTime: 0.26
   fChargeShootMinTime: 0.1
@@ -5065,7 +5065,7 @@ MonoBehaviour:
   fChargeTimeScale: 0.1
   goPlayerArrow: {fileID: 3499238845520689686}
   goBallArrow: {fileID: 0}
-  fBallReloadForce: 91.69
+  fBallReloadForce: 100
   fPlayerReloadForce: 20
   bCOLLIDEOnReload: 0
   fDashForce: 8
@@ -5274,7 +5274,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6072757574936302478}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 3.6000004, z: -10}
+  m_LocalPosition: {x: 0, y: 3.6000013, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6072757573977701617}

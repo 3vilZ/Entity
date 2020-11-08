@@ -84,12 +84,14 @@ public class PlayerControllerV3 : MonoBehaviour
     [SerializeField] float fDashCapMoveTime;
     [SerializeField] float fDashGravity;
     [SerializeField] float fDashExploitTime;
+    [SerializeField] float fDashBeforeShootCd;
     bool bDashDone = false;
     bool bDashRDY = false;
     bool bDashExploit = false;
+    bool bDashBeforeShootCd = false;
     float fDashCapMoveTimeControl = 0;
     float fDashExploitTimeControl = 0;
-
+    float fDashBeforeShootCdControl = 0;
     /*
     [Header("Slingshot")]
     [SerializeField] float fSlingForce;
@@ -152,6 +154,7 @@ public class PlayerControllerV3 : MonoBehaviour
         fAirJumpMinTimeControl = fAirJumpMaxTime;
         fShootExploitTimeControl = fShootExploitTime;
         fDashExploitTimeControl = fDashExploitTime;
+        fDashBeforeShootCdControl = fDashBeforeShootCd;
     }
 
     void Update()
@@ -301,9 +304,12 @@ public class PlayerControllerV3 : MonoBehaviour
 
         if (fPlayerBallDistance <= fDashDistance && !bBallOn)
         {
-            goLimit.SetActive(true);
+            if(!bReloading)
+            {
+                goLimit.SetActive(true);
+            }
 
-            if (Input.GetAxis("Dash") != 0 && !bBallOn && bDashRDY && !bReloading && !bDashExploit)
+            if (Input.GetAxis("Dash") != 0 && !bBallOn && bDashRDY && !bReloading && !bDashExploit && !bDashBeforeShootCd)
             {
                 bDashDone = true;
                 bDashRDY = false;
@@ -350,6 +356,17 @@ public class PlayerControllerV3 : MonoBehaviour
             }
         }
 
+        if(bDashBeforeShootCd)
+        {
+            fDashBeforeShootCdControl -= Time.deltaTime;
+
+            if(fDashBeforeShootCdControl <= 0)
+            {
+                fDashBeforeShootCdControl = fDashBeforeShootCd;
+                bDashBeforeShootCd = false;
+            }
+        }
+
         if (bChargingShoot)
         {
             fChargeMinTimeControl -= Time.deltaTime;
@@ -372,6 +389,7 @@ public class PlayerControllerV3 : MonoBehaviour
                 Vector3 v3HitDirection = tAttackPos.position - transform.position;
                 v3HitDirection.Normalize();
 
+                bDashBeforeShootCd = true;
                 bShootDone = true;
                 rbBall.bodyType = RigidbodyType2D.Dynamic;
                 goBall.GetComponent<CircleCollider2D>().enabled = true;
@@ -420,7 +438,7 @@ public class PlayerControllerV3 : MonoBehaviour
                 Vector3 v3HitDirection = tAttackPos.position - transform.position;
                 v3HitDirection.Normalize();
 
-
+                bDashBeforeShootCd = true;
                 bShootDone = true;
                 rbBall.bodyType = RigidbodyType2D.Dynamic;
                 goBall.GetComponent<CircleCollider2D>().enabled = true;

@@ -11,6 +11,7 @@ public class PlayerControllerV3 : MonoBehaviour
     [SerializeField] float fJumpSecure = 0.2f;
     [SerializeField] float fGroundedSecure = 0.25f;
     [SerializeField] [Range(0, 1)] float fJumpCap = 0.5f;
+    [SerializeField] float fMaxFallSpeed;
     [SerializeField] LayerMask layerGround;
     [SerializeField] bool bGROUNDJump;
     [Space(10)]
@@ -163,13 +164,13 @@ public class PlayerControllerV3 : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.B))
             {
-                print(fPlayerBallDistance);
+                print(rbPlayer.velocity.y);
             }
 
             fBugTest -= Time.deltaTime;
             if (fBugTest <= 0)
             {
-                print(bDashRDY);
+                //print(bDashRDY);
 
                 fBugTest = .5f;
             }
@@ -661,6 +662,13 @@ public class PlayerControllerV3 : MonoBehaviour
             }
         }
         
+        //FallingCap
+        /*
+        if(rbPlayer.velocity.y <= fMaxFallSpeed)
+        {
+            rbPlayer.velocity = new Vector2( rbPlayer.velocity.x , fMaxFallSpeed);
+        }
+        */
     }
 
     private void OnDrawGizmosSelected()

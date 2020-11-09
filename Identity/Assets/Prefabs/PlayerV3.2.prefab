@@ -4996,7 +4996,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6072757573977701617
 Transform:
   m_ObjectHideFlags: 0
@@ -5033,6 +5033,7 @@ MonoBehaviour:
   fJumpSecure: 0.1
   fGroundedSecure: 0.1
   fJumpCap: 0.5
+  fMaxFallSpeed: 0
   layerGround:
     serializedVersion: 2
     m_Bits: 256

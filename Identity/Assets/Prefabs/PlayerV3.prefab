@@ -5033,6 +5033,7 @@ MonoBehaviour:
   fJumpSecure: 0.1
   fGroundedSecure: 0.1
   fJumpCap: 0.5
+  fMaxFallSpeed: -50
   layerGround:
     serializedVersion: 2
     m_Bits: 256
@@ -5065,7 +5066,7 @@ MonoBehaviour:
   fChargeTimeScale: 0.1
   goPlayerArrow: {fileID: 865773584}
   goBallArrow: {fileID: 0}
-  fBallReloadForce: 91.69
+  fBallReloadForce: 100
   fPlayerReloadForce: 20
   bCOLLIDEOnReload: 0
   fDashForce: 8
@@ -5083,7 +5084,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4096
   tModel: {fileID: 7262353356686954895}
-  bBugTest: 0
+  bBugTest: 1
 --- !u!50 &7262353355502546665
 Rigidbody2D:
   serializedVersion: 4
@@ -5274,7 +5275,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7262353356461212040}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 3.6000004, z: -10}
+  m_LocalPosition: {x: 0, y: 3.5999994, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7262353355502546679}

@@ -563,11 +563,11 @@ MonoBehaviour:
   fNormalGravity: 5
   fAirJumpForce: 15
   fAirJumpMaxTime: 0.2
-  fWallJumpforce: 22
+  fWallJumpforce: 24.23
   fWallRangeX: 1.2
   fWallRangeY: 1
-  fWallJumpCapMoveTime: 0.22
-  v2WallJumpdir: {x: 0.92, y: 1}
+  fWallJumpCapMoveTime: 0.2
+  v2WallJumpdir: {x: 0.9, y: 0.97}
   layerWall:
     serializedVersion: 2
     m_Bits: 2048

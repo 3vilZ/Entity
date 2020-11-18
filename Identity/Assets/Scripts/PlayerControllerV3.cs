@@ -128,6 +128,7 @@ public class PlayerControllerV3 : MonoBehaviour
 
 
 
+
     void Start()
     {
         rbPlayer = GetComponent<Rigidbody2D>();
@@ -139,7 +140,7 @@ public class PlayerControllerV3 : MonoBehaviour
 
         rbPlayer.gravityScale = fNormalGravity;
 
-        CatchBall();
+        //CatchBall();
         
         v2WallJumpdir.Normalize();
 
@@ -180,18 +181,22 @@ public class PlayerControllerV3 : MonoBehaviour
             
         }
 
-        
-        
-
-
         WallJump();
         Jump();
         UpdatePlayerAndBallState();
-        //Slingshot();
         BallDetection();
-        Shoot();
-        Reload();
-        Dash();
+
+        if (GameManager.Instance.BSkill[0])
+        {
+            Shoot();
+            Reload();
+        }   
+        if (GameManager.Instance.BSkill[2])
+        {
+            Dash();
+        }
+
+        //Slingshot();
     }
 
     private void FixedUpdate()
@@ -240,7 +245,7 @@ public class PlayerControllerV3 : MonoBehaviour
         goBall.transform.parent = transform;
         goBall.transform.position = transform.position;
 
-        if (bReloading && !bGrounded)
+        if (bReloading && !bGrounded && GameManager.Instance.BSkill[1])
         {
             rbPlayer.velocity = new Vector2(rbPlayer.velocity.x, fPlayerReloadForce);
             //rbPlayer.velocity = Vector2.up * fPlayerReloadForce;
@@ -670,6 +675,8 @@ public class PlayerControllerV3 : MonoBehaviour
         }
         */
     }
+
+
 
     private void OnDrawGizmosSelected()
     {

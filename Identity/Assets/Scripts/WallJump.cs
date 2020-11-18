@@ -5,7 +5,6 @@ using UnityEngine;
 public class WallJump : MonoBehaviour
 {
     [SerializeField] bool bAutoWall;
-    //[SerializeField] SortingLayer layerWall;
 
     GameObject goRight;
     GameObject goLeft;

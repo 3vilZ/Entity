@@ -62,8 +62,6 @@ public class PlayerControllerV3 : MonoBehaviour
     [SerializeField] float fChargeShootMaxTime;
     [SerializeField] float fShootExploitTime;
     [SerializeField] float fChargeTimeScale;
-    [SerializeField] GameObject goPlayerArrow;
-    [SerializeField] GameObject goBallArrow;
     [Space(10)]
     [SerializeField] float fBallReloadForce;
     [SerializeField] float fPlayerReloadForce;
@@ -107,18 +105,22 @@ public class PlayerControllerV3 : MonoBehaviour
     */
 
     [Header("Ball")]
-    [SerializeField] Transform tAttackPos;
-    [SerializeField] Transform tPlayerAttackPivot;
-    [SerializeField] Transform tBallAttackPivot;
-    [SerializeField] GameObject goBall;
-    [SerializeField] GameObject goLimit;
-    [SerializeField] LayerMask layerBall;
+    GameObject goBall;
+    GameObject goLimit;
+    GameObject goBallArrow;
+    Transform tBallAttackPivot;
+    Ball scriptBall;
     Rigidbody2D rbBall;
     bool bBallDetecion = false;
 
 
     [Header("General")]
+    [SerializeField] GameObject goPlayerArrow;
     [SerializeField] Transform tModel;
+    [SerializeField] Transform tPlayerAttackPos;
+    [SerializeField] Transform tPlayerAttackPivot;
+    [SerializeField] LayerMask layerBall;
+
     Rigidbody2D rbPlayer;
     Vector2 v2PlayerToBall;
     Vector2 v2BallToPlayer;
@@ -127,13 +129,21 @@ public class PlayerControllerV3 : MonoBehaviour
     public bool bBugTest;
 
 
-
-
-    void Start()
+    private void Awake()
     {
         rbPlayer = GetComponent<Rigidbody2D>();
         rbBall = goBall.GetComponent<Rigidbody2D>();
 
+        //BallElements
+        goBall = GameManager.Instance.GoBall;
+        scriptBall = goBall.GetComponent<Ball>();
+        goLimit = scriptBall.goLimit;
+        goBallArrow = scriptBall.goBallArrow;
+        tBallAttackPivot = scriptBall.tBallAttackPivot;
+    }
+
+    void Start()
+    {
         goLimit.SetActive(false);
         goPlayerArrow.SetActive(false);
         goBallArrow.SetActive(false);
@@ -392,7 +402,7 @@ public class PlayerControllerV3 : MonoBehaviour
                 fChargeMaxTimeControl = fChargeShootMaxTime;
                 Time.timeScale = 1;
 
-                Vector3 v3HitDirection = tAttackPos.position - transform.position;
+                Vector3 v3HitDirection = tPlayerAttackPos.position - transform.position;
                 v3HitDirection.Normalize();
 
                 bDashBeforeShootCd = true;
@@ -441,7 +451,7 @@ public class PlayerControllerV3 : MonoBehaviour
                 fChargeMaxTimeControl = fChargeShootMaxTime;
                 Time.timeScale = 1;
 
-                Vector3 v3HitDirection = tAttackPos.position - transform.position;
+                Vector3 v3HitDirection = tPlayerAttackPos.position - transform.position;
                 v3HitDirection.Normalize();
 
                 bDashBeforeShootCd = true;

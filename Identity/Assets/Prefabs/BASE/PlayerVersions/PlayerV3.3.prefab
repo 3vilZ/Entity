@@ -583,8 +583,6 @@ MonoBehaviour:
   fChargeShootMaxTime: 1
   fShootExploitTime: 0.5
   fChargeTimeScale: 0.1
-  goPlayerArrow: {fileID: 8603509684256796975}
-  goBallArrow: {fileID: 0}
   fBallReloadForce: 100
   fPlayerReloadForce: 20
   bCOLLIDEOnReload: 0
@@ -594,15 +592,13 @@ MonoBehaviour:
   fDashGravity: 0
   fDashExploitTime: 0.5
   fDashBeforeShootCd: 0.5
-  tAttackPos: {fileID: 1417720872086830274}
+  goPlayerArrow: {fileID: 8603509684256796975}
+  tModel: {fileID: 1417720872414333104}
+  tPlayerAttackPos: {fileID: 1417720872086830274}
   tPlayerAttackPivot: {fileID: 1417720871937720515}
-  tBallAttackPivot: {fileID: 0}
-  goBall: {fileID: 0}
-  goLimit: {fileID: 0}
   layerBall:
     serializedVersion: 2
     m_Bits: 4096
-  tModel: {fileID: 1417720872414333104}
   bBugTest: 1
 --- !u!50 &1417720873242114006
 Rigidbody2D:

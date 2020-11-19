@@ -265,6 +265,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   iDamage: 25
   BallPS: {fileID: 0}
+  goLimit: {fileID: 4166586261862966774}
+  goBallArrow: {fileID: 8041483319651575294}
+  tBallAttackPivot: {fileID: 4973832974928822177}
 --- !u!58 &1735827430120491618
 CircleCollider2D:
   m_ObjectHideFlags: 0

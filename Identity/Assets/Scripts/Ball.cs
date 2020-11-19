@@ -8,6 +8,10 @@ public class Ball : MonoBehaviour
     Vector3 v3BallSpeed;
     [SerializeField] int iDamage;
     [SerializeField] ParticleSystem BallPS;
+    [Space(10)]
+    public GameObject goLimit;
+    public GameObject goBallArrow;
+    public Transform tBallAttackPivot;
 
 
     private void Start()

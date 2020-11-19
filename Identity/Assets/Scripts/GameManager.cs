@@ -26,14 +26,17 @@ public class GameManager : MonoBehaviour
         goBall = GameObject.FindGameObjectWithTag("Ball");
         goVirtualCamera = GameObject.FindGameObjectWithTag("VirtualCamera");
 
-        goBall.SetActive(false);
-
         tCurrentCheckPointPos = goPlayer.transform.position;
 
         for (int i = 0; i < bSkill.Length; i++)
         {
             bSkill[i] = false;
         }
+    }
+
+    private void Start()
+    {
+        goBall.SetActive(false);
     }
 
     public void GetSkill(int value)

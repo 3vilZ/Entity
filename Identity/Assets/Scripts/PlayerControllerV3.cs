@@ -131,24 +131,30 @@ public class PlayerControllerV3 : MonoBehaviour
 
     private void Awake()
     {
-        rbPlayer = GetComponent<Rigidbody2D>();
-        rbBall = goBall.GetComponent<Rigidbody2D>();
-
-        //BallElements
-        goBall = GameManager.Instance.GoBall;
-        scriptBall = goBall.GetComponent<Ball>();
-        goLimit = scriptBall.goLimit;
-        goBallArrow = scriptBall.goBallArrow;
-        tBallAttackPivot = scriptBall.tBallAttackPivot;
+        
     }
 
     void Start()
     {
+        //BallElements
+        goBall = GameManager.Instance.GoBall.gameObject;
+        scriptBall = goBall.GetComponent<Ball>();
+        goLimit = scriptBall.goLimit;
+        goBallArrow = scriptBall.goBallArrow;
+        tBallAttackPivot = scriptBall.tBallAttackPivot;
+
+        //Rigidbodies
+        rbPlayer = GetComponent<Rigidbody2D>();
+        rbBall = goBall.GetComponent<Rigidbody2D>();
+
+        rbPlayer.gravityScale = fNormalGravity;
+
+
         goLimit.SetActive(false);
         goPlayerArrow.SetActive(false);
         goBallArrow.SetActive(false);
 
-        rbPlayer.gravityScale = fNormalGravity;
+        
 
         //CatchBall();
         

@@ -21,7 +21,6 @@ public class HeartFraction : MonoBehaviour
 
             if (Input.GetButtonDown("Y"))
             {
-                print("tt");
                 GameManager.Instance.GetSkill(iValue);
             }
         }

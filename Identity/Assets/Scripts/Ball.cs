@@ -52,7 +52,7 @@ public class Ball : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        print("collision");
+        //print("collision");
         Quaternion rotToLook = Quaternion.LookRotation(collision.contacts[0].normal);
         Vector3 m = rotToLook.eulerAngles;
         m.z = 90;

@@ -12,9 +12,9 @@ public class WallJump : MonoBehaviour
     public BoxCollider2D colRight;
     public BoxCollider2D colLeft;
 
-    void Start()
+    private void Awake()
     {
-        if(bAutoWall)
+        if (bAutoWall)
         {
             goRight = new GameObject("Right");
             goLeft = new GameObject("Left");

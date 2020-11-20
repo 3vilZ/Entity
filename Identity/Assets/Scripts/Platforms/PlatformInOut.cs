@@ -24,6 +24,9 @@ public class PlatformInOut : MonoBehaviour
         scriptWallJump = GetComponent<WallJump>();
         colGround = GetComponent<Collider2D>();
 
+        fTimeToOutControl = fTimeToOut;
+        fTimeToIncontrol = fTimeToIn;
+
         //Anim
         sprColor = GetComponent<SpriteRenderer>().color;
     }

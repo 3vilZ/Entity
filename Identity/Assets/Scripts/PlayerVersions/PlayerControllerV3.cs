@@ -128,6 +128,8 @@ public class PlayerControllerV3 : MonoBehaviour
     Vector2 v2BallToPlayer;
     float fPlayerBallDistance;
     float fBugTest = .5f;
+    [HideInInspector] public bool bCollecting = false;
+    GameObject goCurrentCollectable;
     public bool bBugTest;
 
 
@@ -203,6 +205,7 @@ public class PlayerControllerV3 : MonoBehaviour
         Jump();
         UpdatePlayerAndBallState();
         BallDetection();
+        Collecting();
 
         if (GameManager.Instance.BSkill[0])
         {
@@ -260,6 +263,23 @@ public class PlayerControllerV3 : MonoBehaviour
         Vector3 scaler = tModel.transform.localScale;
         scaler.x *= -1;
         tModel.transform.localScale = scaler;
+    }
+    public void SetCollectable(GameObject collectable)
+    {
+        goCurrentCollectable = collectable;
+    }
+
+    void Collecting()
+    {
+        if(bCollecting)
+        {
+            if(bGrounded)
+            {
+                goCurrentCollectable.SetActive(false);
+                GameManager.Instance.GetCollectable();
+                bCollecting = false;
+            }
+        }
     }
 
     public void CatchBall()

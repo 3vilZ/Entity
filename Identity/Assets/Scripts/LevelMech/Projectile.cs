@@ -6,11 +6,12 @@ public class Projectile : MonoBehaviour
 {
     [SerializeField] public float fBulletSpeed;
     [SerializeField] float fBulletCd;
+    [SerializeField] float fPlayerDistance;
     [SerializeField] Transform tAttackPos;
     [SerializeField] GameObject goBullet;
     [SerializeField] GameObject goCarcaj;
     Vector3 v3BulletDirection;
-    float fPlayerDistance;
+    float fPlayerDistanceControl;
     float fbulletCdControl = 0;
 
 
@@ -26,9 +27,9 @@ public class Projectile : MonoBehaviour
 
     void Update()
     {
-        fPlayerDistance = Vector3.Distance(GameManager.Instance.GoPlayer.transform.position, transform.position);
+        fPlayerDistanceControl = Vector3.Distance(GameManager.Instance.GoPlayer.transform.position, transform.position);
 
-        if(fPlayerDistance <= 30)
+        if(fPlayerDistanceControl <= fPlayerDistance)
         {
             fbulletCdControl -= Time.deltaTime;
 

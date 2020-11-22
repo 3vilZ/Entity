@@ -120,7 +120,9 @@ public class PlayerControllerV3 : MonoBehaviour
     [SerializeField] Transform tPlayerAttackPos;
     [SerializeField] Transform tPlayerAttackPivot;
     [SerializeField] LayerMask layerBall;
+    [SerializeField] LayerMask layerPlatformMove;
 
+    //GameObject goPlatformMove;
     Rigidbody2D rbPlayer;
     Vector2 v2PlayerToBall;
     Vector2 v2BallToPlayer;
@@ -213,6 +215,23 @@ public class PlayerControllerV3 : MonoBehaviour
         }
 
         //Slingshot();
+
+
+        /*
+        Collider2D goPlatformMove = Physics2D.OverlapBox(v2GroundedPositionControl, v2GroundedScaleControl, 0, layerPlatformMove);
+
+        if (goPlatformMove != null)
+        {
+            bShootRDY = true;
+            bAirJumpRDY = true;
+            transform.parent = goPlatformMove.transform;
+        }
+        else
+        {
+            goPlatformMove = null;
+            transform.parent = null;
+        }
+        */
     }
 
     private void FixedUpdate()
@@ -228,7 +247,9 @@ public class PlayerControllerV3 : MonoBehaviour
         bGrounded = Physics2D.OverlapBox(v2GroundedPositionControl, v2GroundedScaleControl, 0, layerGround);
         v2WallDetectScale = new Vector2(fWallRangeX, fWallRangeY);
 
-        if(bGrounded)
+        
+
+        if (bGrounded)
         {
             bShootRDY = true;
             
@@ -238,8 +259,6 @@ public class PlayerControllerV3 : MonoBehaviour
         {
             bDashRDY = true;
         }
-
-
     }
 
     private void FlipX()

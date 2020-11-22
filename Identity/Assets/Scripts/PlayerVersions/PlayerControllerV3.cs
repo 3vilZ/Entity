@@ -216,22 +216,15 @@ public class PlayerControllerV3 : MonoBehaviour
 
         //Slingshot();
 
-
-        /*
-        Collider2D goPlatformMove = Physics2D.OverlapBox(v2GroundedPositionControl, v2GroundedScaleControl, 0, layerPlatformMove);
-
-        if (goPlatformMove != null)
+        if (!facingRight && fHorizontalVelocity > 0)
         {
-            bShootRDY = true;
-            bAirJumpRDY = true;
-            transform.parent = goPlatformMove.transform;
+            FlipX();
         }
-        else
+        else if (facingRight && fHorizontalVelocity < 0)
         {
-            goPlatformMove = null;
-            transform.parent = null;
+            FlipX();
         }
-        */
+
     }
 
     private void FixedUpdate()
@@ -575,17 +568,6 @@ public class PlayerControllerV3 : MonoBehaviour
         }
 
         rbPlayer.velocity = new Vector2(fHorizontalVelocity, rbPlayer.velocity.y);
-        
-
-
-        if (!facingRight && fHorizontalVelocity > 0)
-        {
-            FlipX();
-        }
-        else if (facingRight && fHorizontalVelocity < 0)
-        {
-            FlipX();
-        }
     }
 
     private void WallJump()

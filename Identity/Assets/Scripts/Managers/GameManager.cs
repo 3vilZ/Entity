@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     GameObject goBall;
     GameObject goVirtualCamera;
     bool[] bSkill = new bool[3];
+    int iCollectables;
     Vector2 tCurrentCheckPointPos;
 
     public bool[] BSkill { get => bSkill; set => bSkill = value; }
@@ -17,6 +18,7 @@ public class GameManager : MonoBehaviour
     public GameObject GoPlayer { get => goPlayer; set => goPlayer = value; }
     public GameObject GoBall { get => goBall; set => goBall = value; }
     public GameObject GoVirtualCamera { get => goVirtualCamera; set => goVirtualCamera = value; }
+    public int ICollectables { get => iCollectables; set => iCollectables = value; }
 
     private void Awake()
     {
@@ -48,6 +50,11 @@ public class GameManager : MonoBehaviour
             goBall.SetActive(true);
             goPlayer.GetComponent<PlayerControllerV3>().CatchBall();
         }
+    }
+
+    public void GetCollectable()
+    {
+        iCollectables++;
     }
 
     public void SetCheckPoint(Vector2 newPosition)

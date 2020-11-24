@@ -121,6 +121,11 @@ public class PlayerControllerV3 : MonoBehaviour
     [SerializeField] Transform tPlayerAttackPivot;
     [SerializeField] LayerMask layerBall;
     [SerializeField] LayerMask layerPlatformMove;
+    [SerializeField]  LayerMask layerTrajectoryHit;
+    [SerializeField]  float fDistanceTrajectory = 25f;
+
+    [HideInInspector]public  LineRenderer lineRenderer;
+
 
     //GameObject goPlatformMove;
     Rigidbody2D rbPlayer;
@@ -312,6 +317,8 @@ public class PlayerControllerV3 : MonoBehaviour
         tPlayerAttackPivot.transform.eulerAngles = new Vector3(0f, 0f, Mathf.Atan2(-fHorizontalStick, -fVerticalStick) * 180 / Mathf.PI);
         tBallAttackPivot.transform.eulerAngles = new Vector3(0f, 0f, Mathf.Atan2(-fHorizontalStick, -fVerticalStick) * 180 / Mathf.PI);
 
+
+
         fPlayerBallDistance = Vector2.Distance(goBall.transform.position, transform.position);
     }
 
@@ -426,6 +433,8 @@ public class PlayerControllerV3 : MonoBehaviour
             fChargeMinTimeControl -= Time.deltaTime;
             fChargeMaxTimeControl -= Time.deltaTime;
 
+            DrawTrajectory();
+
             if (fChargeMinTimeControl <= 0)
             {
                 Time.timeScale = fChargeTimeScale;
@@ -442,7 +451,7 @@ public class PlayerControllerV3 : MonoBehaviour
 
                 Vector3 v3HitDirection = tPlayerAttackPos.position - transform.position;
                 v3HitDirection.Normalize();
-
+               
                 bDashBeforeShootCd = true;
                 bShootDone = true;
                 rbBall.bodyType = RigidbodyType2D.Dynamic;
@@ -479,7 +488,9 @@ public class PlayerControllerV3 : MonoBehaviour
         }
 
         if (Input.GetButtonUp("Shoot"))
-        {
+        {   
+            lineRenderer.positionCount = 0;
+
             if (bChargingShoot)
             {
                 goPlayerArrow.SetActive(false);
@@ -491,6 +502,8 @@ public class PlayerControllerV3 : MonoBehaviour
 
                 Vector3 v3HitDirection = tPlayerAttackPos.position - transform.position;
                 v3HitDirection.Normalize();
+
+                
 
                 bDashBeforeShootCd = true;
                 bShootDone = true;
@@ -713,7 +726,76 @@ public class PlayerControllerV3 : MonoBehaviour
         */
     }
 
+    private void DrawTrajectory(){
+        //LOGICA DOTTED LINE BOLA
 
+
+            if (lineRenderer != null){
+                Vector3 joaquin = tPlayerAttackPos.position - transform.position;
+                joaquin.Normalize();
+
+                RaycastHit2D hit = Physics2D.Raycast(goBall.transform.position, joaquin, fDistanceTrajectory, layerTrajectoryHit);
+                
+                float fOldDistance = fDistanceTrajectory;
+
+                if (hit.collider){
+
+                    //float fDistanceBallToHit =Vector2.Distance(goBall.transform.position, hit.point);
+                    //float fNewDistance = fOldDistance - fDistanceBallToHit;
+
+                    Vector2 francisco = (new Vector2(joaquin.x, joaquin.y) - (2 * (joaquin * hit.normal.normalized)*hit.normal.normalized));
+
+                    //RaycastHit2D hiti = Physics2D.Raycast(hit.point, francisco, 1, layerTrajectoryHit);
+                    
+                    lineRenderer.positionCount = 3;
+
+                    lineRenderer.SetPosition(0, goBall.transform.position);
+
+                    lineRenderer.SetPosition(1, hit.point);
+
+                    lineRenderer.SetPosition(2, (francisco + francisco*1) + (hit.point) );
+
+                                    
+                    /*if (hiti.collider){
+
+                         print(hiti.collider.name);
+
+                        lineRenderer.positionCount = 3;
+
+                        lineRenderer.SetPosition(0, goBall.transform.position);
+
+                        lineRenderer.SetPosition(1, hit.point);
+
+                        lineRenderer.SetPosition(2, hiti.point);
+
+                    }else{
+                        lineRenderer.positionCount = 3;
+
+                        lineRenderer.SetPosition(0, goBall.transform.position);
+
+                        lineRenderer.SetPosition(1, hit.point);
+
+                        lineRenderer.SetPosition(2, (francisco + francisco*fNewDistance) + (hit.point) );
+                    }*/
+                    
+
+
+                }else{
+                    lineRenderer.positionCount = 2;
+
+                    lineRenderer.SetPosition(0, goBall.transform.position);
+
+                    lineRenderer.SetPosition(1, (joaquin + joaquin*fDistanceTrajectory) + (goBall.transform.position));
+                    
+                }
+            }
+               
+
+
+                
+
+                //Hasta AQui Mi lógica amigos
+    }
 
     private void OnDrawGizmosSelected()
     {
@@ -725,6 +807,8 @@ public class PlayerControllerV3 : MonoBehaviour
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(transform.position, 1.2f);
     }
+
+    
 
     /*
     void Slingshot()

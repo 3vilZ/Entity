@@ -143,7 +143,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1417720872053266615}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.0000019073486, y: 3.6000004, z: -10}
+  m_LocalPosition: {x: 12.58857, y: 8.8, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1417720873242113992}
@@ -159,7 +159,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.6886792, g: 0.62707263, b: 0.5879761, a: 0}
+  m_BackGroundColor: {r: 1, g: 0.38461542, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -567,7 +567,7 @@ MonoBehaviour:
   fWallRangeX: 1.2
   fWallRangeY: 1
   fWallJumpCapMoveTime: 0.2
-  v2WallJumpdir: {x: 0.9, y: 0.97}
+  v2WallJumpdir: {x: 0.9, y: 0.98}
   layerWall:
     serializedVersion: 2
     m_Bits: 2048
@@ -599,7 +599,16 @@ MonoBehaviour:
   layerBall:
     serializedVersion: 2
     m_Bits: 4096
-  bBugTest: 1
+  layerPlatformMove:
+    serializedVersion: 2
+    m_Bits: 0
+  layerTrajectoryHit:
+    serializedVersion: 2
+    m_Bits: 53047
+  fDistanceTrajectory: 13.09
+  lineRenderer: {fileID: 0}
+  bCollecting: 0
+  bBugTest: 0
 --- !u!50 &1417720873242114006
 Rigidbody2D:
   serializedVersion: 4

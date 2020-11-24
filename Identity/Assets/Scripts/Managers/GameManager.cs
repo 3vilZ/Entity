@@ -49,6 +49,8 @@ public class GameManager : MonoBehaviour
         {
             goBall.SetActive(true);
             goPlayer.GetComponent<PlayerControllerV3>().CatchBall();
+
+            goPlayer.GetComponent<PlayerControllerV3>().lineRenderer = goBall.GetComponent<LineRenderer>();
         }
     }
 

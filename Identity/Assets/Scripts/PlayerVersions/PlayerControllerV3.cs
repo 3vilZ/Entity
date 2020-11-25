@@ -121,8 +121,11 @@ public class PlayerControllerV3 : MonoBehaviour
     [SerializeField] Transform tPlayerAttackPivot;
     [SerializeField] LayerMask layerBall;
     [SerializeField] LayerMask layerPlatformMove;
-    [SerializeField]  LayerMask layerTrajectoryHit;
-    [SerializeField]  float fDistanceTrajectory = 25f;
+    [SerializeField] LayerMask layerTrajectoryHit;
+    [SerializeField] float fDistanceTrajectory = 25f;
+    [SerializeField] ParticleSystem psMove;
+    [SerializeField] ParticleSystem psContact;
+
 
     [HideInInspector]public  LineRenderer lineRenderer;
 
@@ -228,31 +231,7 @@ public class PlayerControllerV3 : MonoBehaviour
         //Slingshot();
 
 
-        if(bPlatformMove)
-        {
-            if(Input.GetAxisRaw("Horizontal") != 0)
-            {
-                if (!facingRight && fHorizontalVelocity > 0)
-                {
-                    FlipX();
-                }
-                else if (facingRight && fHorizontalVelocity < 0)
-                {
-                    FlipX();
-                }
-            }            
-        }
-        else
-        {
-            if (!facingRight && fHorizontalVelocity > 0)
-            {
-                FlipX();
-            }
-            else if (facingRight && fHorizontalVelocity < 0)
-            {
-                FlipX();
-            }
-        }
+        
     }
 
     private void FixedUpdate()
@@ -338,9 +317,46 @@ public class PlayerControllerV3 : MonoBehaviour
         tPlayerAttackPivot.transform.eulerAngles = new Vector3(0f, 0f, Mathf.Atan2(-fHorizontalStick, -fVerticalStick) * 180 / Mathf.PI);
         tBallAttackPivot.transform.eulerAngles = new Vector3(0f, 0f, Mathf.Atan2(-fHorizontalStick, -fVerticalStick) * 180 / Mathf.PI);
 
-
-
         fPlayerBallDistance = Vector2.Distance(goBall.transform.position, transform.position);
+
+        if(rbPlayer.velocity.x > 0.1f || rbPlayer.velocity.x < -0.1f)
+        {
+            if(!psMove.isPlaying)
+            {
+                psMove.Play();
+            }
+        }
+        else
+        {
+            psMove.Stop();
+        }
+
+
+        if (bPlatformMove)
+        {
+            if (Input.GetAxisRaw("Horizontal") != 0)
+            {
+                if (!facingRight && fHorizontalVelocity > 0)
+                {
+                    FlipX();
+                }
+                else if (facingRight && fHorizontalVelocity < 0)
+                {
+                    FlipX();
+                }
+            }
+        }
+        else
+        {
+            if (!facingRight && fHorizontalVelocity > 0)
+            {
+                FlipX();
+            }
+            else if (facingRight && fHorizontalVelocity < 0)
+            {
+                FlipX();
+            }
+        }
     }
 
     void BallDetection()
@@ -586,6 +602,7 @@ public class PlayerControllerV3 : MonoBehaviour
                 bShootRDY = false;
                 bBallDetecion = true;
             }
+
 
             /*
             if (Input.GetButtonUp("Ball"))

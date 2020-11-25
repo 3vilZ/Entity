@@ -112,7 +112,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fTimeToOut: 0.25
-  fTimeToIn: 1.5
+  fTimeToIn: 1.2
   alpha: 0.203
 --- !u!61 &2006625939105091776
 BoxCollider2D:

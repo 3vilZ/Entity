@@ -14,12 +14,23 @@ public class PlatformMove : MonoBehaviour
     bool bPlaced = false;
     bool bBackward = false;
 
+    LineRenderer lineRenderer;
+
     float fPlayerSpeed;
 
     void Start()
     {
         iCurrentPoint = 1;
         fPlayerSpeed = fForwardSpeed;
+
+        lineRenderer = this.GetComponent<LineRenderer>();
+
+        lineRenderer.positionCount = tPoints.Length;
+
+        for (int i = 0; i < tPoints.Length; i++)
+        {
+            lineRenderer.SetPosition(i, tPoints[i].transform.position);
+        }
     }
 
     

@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
     bool[] bSkill = new bool[3];
     int iCollectables;
     Vector2 tCurrentCheckPointPos;
+    PlayerControllerV3 scriptPlayer;
 
     public bool[] BSkill { get => bSkill; set => bSkill = value; }
     public Vector2 TCurrentCheckPointPos { get => tCurrentCheckPointPos; set => tCurrentCheckPointPos = value; }
@@ -19,6 +20,7 @@ public class GameManager : MonoBehaviour
     public GameObject GoBall { get => goBall; set => goBall = value; }
     public GameObject GoVirtualCamera { get => goVirtualCamera; set => goVirtualCamera = value; }
     public int ICollectables { get => iCollectables; set => iCollectables = value; }
+    public PlayerControllerV3 ScriptPlayer { get => scriptPlayer; set => scriptPlayer = value; }
 
     private void Awake()
     {
@@ -27,6 +29,8 @@ public class GameManager : MonoBehaviour
         goPlayer = GameObject.FindGameObjectWithTag("Player");
         goBall = GameObject.FindGameObjectWithTag("Ball");
         goVirtualCamera = GameObject.FindGameObjectWithTag("VirtualCamera");
+
+        scriptPlayer = goPlayer.GetComponent<PlayerControllerV3>();
 
         tCurrentCheckPointPos = goPlayer.transform.position;
 
@@ -48,9 +52,9 @@ public class GameManager : MonoBehaviour
         if(bSkill[0])
         {
             goBall.SetActive(true);
-            goPlayer.GetComponent<PlayerControllerV3>().CatchBall();
+            scriptPlayer.CatchBall();
 
-            goPlayer.GetComponent<PlayerControllerV3>().lineRenderer = goBall.GetComponent<LineRenderer>();
+            scriptPlayer.lineRenderer = goBall.GetComponent<LineRenderer>();
         }
     }
 
@@ -64,10 +68,23 @@ public class GameManager : MonoBehaviour
         tCurrentCheckPointPos = newPosition;
     }
 
-    public void Death()
+    public void Death1()
+    {
+        goPlayer.GetComponent<Animator>().SetTrigger("Death");
+        goPlayer.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+    }
+    public void Death2()
     {
         goVirtualCamera.transform.position = tCurrentCheckPointPos;
         goPlayer.transform.position = tCurrentCheckPointPos;
-        goPlayer.GetComponent<PlayerControllerV3>().CatchBall();
+
+        goPlayer.GetComponent<Animator>().SetTrigger("Revive");
+    }
+    public void Death3()
+    {
+        if (bSkill[0])
+        {
+            scriptPlayer.CatchBall();
+        }
     }
 }

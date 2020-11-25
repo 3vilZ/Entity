@@ -127,12 +127,17 @@ public class PlayerControllerV3 : MonoBehaviour
     //ParticleSystems
     [SerializeField] ParticleSystem psMove;
     [SerializeField] ParticleSystem psLand;
+    [SerializeField] ParticleSystem psDeath;
     bool bLandDone = false;
+    [HideInInspector] public  LineRenderer lineRenderer;
 
-    [HideInInspector]public  LineRenderer lineRenderer;
+    //GameObject goPlatformMove;
+    [HideInInspector] public bool bPlatformMove = false;
+    [HideInInspector] public GameObject goPlatformMove;
 
+    [HideInInspector] public bool bDead = false;
 
-    
+    Animator animPlayer;
     Rigidbody2D rbPlayer;
     Vector2 v2PlayerToBall;
     Vector2 v2BallToPlayer;
@@ -142,9 +147,7 @@ public class PlayerControllerV3 : MonoBehaviour
     GameObject goCurrentCollectable;
     public bool bBugTest;
 
-    //GameObject goPlatformMove;
-    public bool bPlatformMove = false;
-    public GameObject goPlatformMove;
+    
 
 
     private void Awake()
@@ -167,6 +170,8 @@ public class PlayerControllerV3 : MonoBehaviour
 
         rbPlayer.gravityScale = fNormalGravity;
 
+        //Animator
+        animPlayer = GetComponent<Animator>();
 
         goLimit.SetActive(false);
         goPlayerArrow.SetActive(false);
@@ -199,7 +204,7 @@ public class PlayerControllerV3 : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.B))
             {
-                print(fHorizontalVelocity);
+                print(bDead);
             }
 
             fBugTest -= Time.deltaTime;
@@ -215,8 +220,12 @@ public class PlayerControllerV3 : MonoBehaviour
             
         }
 
-        WallJump();
-        Jump();
+        if(!bDead)
+        {
+            WallJump();
+            Jump();
+        }
+        
         UpdatePlayerAndBallState();
         BallDetection();
         Collecting();
@@ -232,15 +241,12 @@ public class PlayerControllerV3 : MonoBehaviour
         }
 
         //Slingshot();
-
-
-        
     }
 
     private void FixedUpdate()
     {
 
-        if(!bWallJumpDone && !bShootDone && !bDashDone)
+        if(!bWallJumpDone && !bShootDone && !bDashDone && !bDead)
         {
             Movement();
         }
@@ -315,16 +321,47 @@ public class PlayerControllerV3 : MonoBehaviour
 
     void Particles(int value)
     {
-        if(value == 0)
+        switch (value)
         {
-            psMove.Play();
+            case 0:
+                psMove.Play();
+                break;
+            case 1:
+                psLand.Play();
+                break;
+            case 2:
+                psDeath.Play();
+                break;
+            default:
+                print("PdroP");
+                break;
         }
-        else if (value == 1)
-        {
-            psLand.Play();
-        }
-        
     }
+
+    //Death Anim Methods
+    public void AnimDeath()
+    {
+        Particles(2);
+    }
+
+    public void BoolDeath()
+    {
+        if(bDead)
+        {
+            bDead = false;
+        }
+        else
+        {
+            bDead = true;
+        }
+    }
+
+    public void Revive()
+    {
+        GameManager.Instance.Death3();
+    }
+    //EndEndEnd
+
 
     void UpdatePlayerAndBallState()
     {
@@ -335,7 +372,16 @@ public class PlayerControllerV3 : MonoBehaviour
 
         fPlayerBallDistance = Vector2.Distance(goBall.transform.position, transform.position);
 
-        if(bGrounded)
+        if(bDead && !psDeath.IsAlive())
+        {
+            GameManager.Instance.Death2();
+        }
+        else
+        {
+            animPlayer.ResetTrigger("Revive");
+        }
+
+        if (bGrounded)
         {
             if(!bLandDone)
             {

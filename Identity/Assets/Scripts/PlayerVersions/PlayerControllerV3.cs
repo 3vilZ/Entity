@@ -123,14 +123,16 @@ public class PlayerControllerV3 : MonoBehaviour
     [SerializeField] LayerMask layerPlatformMove;
     [SerializeField] LayerMask layerTrajectoryHit;
     [SerializeField] float fDistanceTrajectory = 25f;
-    [SerializeField] ParticleSystem psMove;
-    [SerializeField] ParticleSystem psContact;
 
+    //ParticleSystems
+    [SerializeField] ParticleSystem psMove;
+    [SerializeField] ParticleSystem psLand;
+    bool bLandDone = false;
 
     [HideInInspector]public  LineRenderer lineRenderer;
 
 
-    //GameObject goPlatformMove;
+    
     Rigidbody2D rbPlayer;
     Vector2 v2PlayerToBall;
     Vector2 v2BallToPlayer;
@@ -140,6 +142,7 @@ public class PlayerControllerV3 : MonoBehaviour
     GameObject goCurrentCollectable;
     public bool bBugTest;
 
+    //GameObject goPlatformMove;
     public bool bPlatformMove = false;
     public GameObject goPlatformMove;
 
@@ -310,6 +313,19 @@ public class PlayerControllerV3 : MonoBehaviour
         }
     }
 
+    void Particles(int value)
+    {
+        if(value == 0)
+        {
+            psMove.Play();
+        }
+        else if (value == 1)
+        {
+            psLand.Play();
+        }
+        
+    }
+
     void UpdatePlayerAndBallState()
     {
         float fHorizontalStick = Input.GetAxis("HorizontalRightStick");
@@ -319,18 +335,18 @@ public class PlayerControllerV3 : MonoBehaviour
 
         fPlayerBallDistance = Vector2.Distance(goBall.transform.position, transform.position);
 
-        if(rbPlayer.velocity.x > 0.1f || rbPlayer.velocity.x < -0.1f)
+        if(bGrounded)
         {
-            if(!psMove.isPlaying)
+            if(!bLandDone)
             {
-                psMove.Play();
+                Particles(1);
+                bLandDone = true;
             }
         }
         else
         {
-            psMove.Stop();
+            bLandDone = false;
         }
-
 
         if (bPlatformMove)
         {
@@ -633,6 +649,7 @@ public class PlayerControllerV3 : MonoBehaviour
             else if (Mathf.Sign(Input.GetAxisRaw("Horizontal")) != Mathf.Sign(fHorizontalVelocity))
             {
                 fHorizontalVelocity *= Mathf.Pow(1f - fTurnControl, Time.deltaTime * fSpeedDrag);
+                if (bGrounded) { Particles(0); }
             }
             else
             {
@@ -653,6 +670,7 @@ public class PlayerControllerV3 : MonoBehaviour
             else if (Mathf.Sign(Input.GetAxisRaw("Horizontal")) != Mathf.Sign(fHorizontalVelocity))
             {
                 fHorizontalVelocity *= Mathf.Pow(1f - fTurnControl, Time.deltaTime * fSpeedDrag);
+                if (bGrounded) { Particles(0); }
             }
             else
             {
@@ -686,11 +704,13 @@ public class PlayerControllerV3 : MonoBehaviour
                 {
                     bWallJumpDone = true;
                     rbPlayer.velocity = new Vector2(v2WallJumpdir.x, v2WallJumpdir.y) * fWallJumpforce;
+                    Particles(0);
                 }
                 else
                 {
                     bWallJumpDone = true;
                     rbPlayer.velocity = new Vector2(-v2WallJumpdir.x, v2WallJumpdir.y) * fWallJumpforce;
+                    Particles(0);
                 }
             }
         }
@@ -737,6 +757,7 @@ public class PlayerControllerV3 : MonoBehaviour
                 fJumpSecureControl = 0;
                 fGroundedSecureControl = 0;
                 rbPlayer.velocity = new Vector2(rbPlayer.velocity.x, fJumpForce);
+                Particles(0);
             }
         }
         else

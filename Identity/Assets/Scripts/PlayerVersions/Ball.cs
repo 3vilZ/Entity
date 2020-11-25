@@ -13,6 +13,9 @@ public class Ball : MonoBehaviour
     public GameObject goBallArrow;
     public Transform tBallAttackPivot;
 
+    Quaternion targetRot;
+    List<ParticleSystem> psList = new List<ParticleSystem>();
+    bool bEmitting;
 
     private void Start()
     {
@@ -22,12 +25,20 @@ public class Ball : MonoBehaviour
     
     private void Update()
     {
-        /*
-        v3BallSpeed = rbBall.velocity;
-        v3BallSpeed.Normalize();
-        print(v3BallSpeed);
-        */
+        if (psList.Count != 0)
+        {
+            if (psList[0])
+            {
+                if (!psList[0].IsAlive())
+                {
+                    Destroy(psList[0].gameObject);
+                    psList.Remove(psList[0]);
+                }
+            }
+        }
+        
     }
+
     /*
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -52,15 +63,26 @@ public class Ball : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        //print("collision");
-        Quaternion rotToLook = Quaternion.LookRotation(collision.contacts[0].normal);
-        Vector3 m = rotToLook.eulerAngles;
-        m.z = 90;
+        if(collision.GetContact(0).normal.x > 0.5f || collision.GetContact(0).normal.x < -0.5f)
+        {
+            print(collision.GetContact(0).normal);
+            targetRot = Quaternion.LookRotation(collision.GetContact(0).normal, Vector3.forward);
+        }
+        else
+        {
+            targetRot = Quaternion.LookRotation(collision.GetContact(0).normal, Vector3.up);
+        }
 
-        rotToLook = Quaternion.Euler(m);
+        psList.Add(Instantiate(BallPS, collision.GetContact(0).point, targetRot));
+
+        for (int i = 0; i < psList.Count; i++)
+        {
+            psList[i].Play();
+        }
         
-        ParticleSystem j = Instantiate(BallPS, collision.contacts[0].point, rotToLook);
         
+
+        //ParticleSystem j = Instantiate(BallPS, collision.GetContact(0).point, targetRot);
     }
 
     

@@ -137,8 +137,8 @@ public class PlayerControllerV3 : MonoBehaviour
     GameObject goCurrentCollectable;
     public bool bBugTest;
 
-    public bool bTTT = false;
-    public GameObject goTTT;
+    public bool bPlatformMove = false;
+    public GameObject goPlatformMove;
 
 
     private void Awake()
@@ -228,7 +228,7 @@ public class PlayerControllerV3 : MonoBehaviour
         //Slingshot();
 
 
-        if(bTTT)
+        if(bPlatformMove)
         {
             if(Input.GetAxisRaw("Horizontal") != 0)
             {
@@ -604,9 +604,9 @@ public class PlayerControllerV3 : MonoBehaviour
     private void Movement()
     {
 
-        if (bTTT)
+        if (bPlatformMove)
         {
-            fHorizontalVelocity = rbPlayer.velocity.x - goTTT.GetComponent<Rigidbody2D>().velocity.x;
+            fHorizontalVelocity = rbPlayer.velocity.x - goPlatformMove.GetComponent<Rigidbody2D>().velocity.x;
             fHorizontalVelocity += Input.GetAxisRaw("Horizontal");
 
             if (Mathf.Abs(Input.GetAxisRaw("Horizontal")) < 0.01f)
@@ -622,7 +622,7 @@ public class PlayerControllerV3 : MonoBehaviour
                 fHorizontalVelocity *= Mathf.Pow(1f - fMoveControl, Time.deltaTime * fSpeedDrag);
             }
 
-            rbPlayer.velocity = new Vector2(fHorizontalVelocity + goTTT.GetComponent<Rigidbody2D>().velocity.x, rbPlayer.velocity.y);
+            rbPlayer.velocity = new Vector2(fHorizontalVelocity + goPlatformMove.GetComponent<Rigidbody2D>().velocity.x, rbPlayer.velocity.y);
         }
         else
         {

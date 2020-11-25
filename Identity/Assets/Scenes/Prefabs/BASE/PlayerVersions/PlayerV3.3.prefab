@@ -143,7 +143,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1417720872053266615}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 12.58857, y: 8.8, z: -10}
+  m_LocalPosition: {x: -0.0000019073486, y: 3.6000004, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1417720873242113992}
@@ -601,14 +601,16 @@ MonoBehaviour:
     m_Bits: 4096
   layerPlatformMove:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 32768
   layerTrajectoryHit:
     serializedVersion: 2
     m_Bits: 53047
   fDistanceTrajectory: 13.09
   lineRenderer: {fileID: 0}
   bCollecting: 0
-  bBugTest: 0
+  bBugTest: 1
+  bTTT: 0
+  goTTT: {fileID: 0}
 --- !u!50 &1417720873242114006
 Rigidbody2D:
   serializedVersion: 4

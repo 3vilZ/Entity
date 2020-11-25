@@ -137,6 +137,9 @@ public class PlayerControllerV3 : MonoBehaviour
     GameObject goCurrentCollectable;
     public bool bBugTest;
 
+    public bool bTTT = false;
+    public GameObject goTTT;
+
 
     private void Awake()
     {
@@ -190,7 +193,7 @@ public class PlayerControllerV3 : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.B))
             {
-                print(rbPlayer.velocity.y);
+                print(fHorizontalVelocity);
             }
 
             fBugTest -= Time.deltaTime;
@@ -224,15 +227,32 @@ public class PlayerControllerV3 : MonoBehaviour
 
         //Slingshot();
 
-        if (!facingRight && fHorizontalVelocity > 0)
-        {
-            FlipX();
-        }
-        else if (facingRight && fHorizontalVelocity < 0)
-        {
-            FlipX();
-        }
 
+        if(bTTT)
+        {
+            if(Input.GetAxisRaw("Horizontal") != 0)
+            {
+                if (!facingRight && fHorizontalVelocity > 0)
+                {
+                    FlipX();
+                }
+                else if (facingRight && fHorizontalVelocity < 0)
+                {
+                    FlipX();
+                }
+            }            
+        }
+        else
+        {
+            if (!facingRight && fHorizontalVelocity > 0)
+            {
+                FlipX();
+            }
+            else if (facingRight && fHorizontalVelocity < 0)
+            {
+                FlipX();
+            }
+        }
     }
 
     private void FixedUpdate()
@@ -269,6 +289,7 @@ public class PlayerControllerV3 : MonoBehaviour
         scaler.x *= -1;
         tModel.transform.localScale = scaler;
     }
+
     public void SetCollectable(GameObject collectable)
     {
         goCurrentCollectable = collectable;
@@ -442,6 +463,8 @@ public class PlayerControllerV3 : MonoBehaviour
             
             if(fChargeMaxTimeControl <= 0)
             {
+                lineRenderer.positionCount = 0;
+
                 goPlayerArrow.SetActive(false);
                 goBallArrow.SetActive(false);
                 bChargingShoot = false;
@@ -489,10 +512,10 @@ public class PlayerControllerV3 : MonoBehaviour
 
         if (Input.GetButtonUp("Shoot"))
         {   
-            lineRenderer.positionCount = 0;
-
             if (bChargingShoot)
             {
+                lineRenderer.positionCount = 0;
+
                 goPlayerArrow.SetActive(false);
                 goBallArrow.SetActive(false);
                 bChargingShoot = false;
@@ -502,8 +525,6 @@ public class PlayerControllerV3 : MonoBehaviour
 
                 Vector3 v3HitDirection = tPlayerAttackPos.position - transform.position;
                 v3HitDirection.Normalize();
-
-                
 
                 bDashBeforeShootCd = true;
                 bShootDone = true;
@@ -582,25 +603,58 @@ public class PlayerControllerV3 : MonoBehaviour
 
     private void Movement()
     {
-        
-        fHorizontalVelocity = rbPlayer.velocity.x;
-        fHorizontalVelocity += Input.GetAxisRaw("Horizontal");
 
-        
-        if (Mathf.Abs(Input.GetAxisRaw("Horizontal")) < 0.01f)
+        if (bTTT)
         {
-            fHorizontalVelocity *= Mathf.Pow(1f - fStopControl, Time.deltaTime * fSpeedDrag);
-        }
-        else if (Mathf.Sign(Input.GetAxisRaw("Horizontal")) != Mathf.Sign(fHorizontalVelocity))
-        {
-            fHorizontalVelocity *= Mathf.Pow(1f - fTurnControl, Time.deltaTime * fSpeedDrag);
+            fHorizontalVelocity = rbPlayer.velocity.x - goTTT.GetComponent<Rigidbody2D>().velocity.x;
+            fHorizontalVelocity += Input.GetAxisRaw("Horizontal");
+
+            if (Mathf.Abs(Input.GetAxisRaw("Horizontal")) < 0.01f)
+            {
+                fHorizontalVelocity *= Mathf.Pow(1f - fStopControl, Time.deltaTime * fSpeedDrag);
+            }
+            else if (Mathf.Sign(Input.GetAxisRaw("Horizontal")) != Mathf.Sign(fHorizontalVelocity))
+            {
+                fHorizontalVelocity *= Mathf.Pow(1f - fTurnControl, Time.deltaTime * fSpeedDrag);
+            }
+            else
+            {
+                fHorizontalVelocity *= Mathf.Pow(1f - fMoveControl, Time.deltaTime * fSpeedDrag);
+            }
+
+            rbPlayer.velocity = new Vector2(fHorizontalVelocity + goTTT.GetComponent<Rigidbody2D>().velocity.x, rbPlayer.velocity.y);
         }
         else
         {
-            fHorizontalVelocity *= Mathf.Pow(1f - fMoveControl, Time.deltaTime * fSpeedDrag);
+            fHorizontalVelocity = rbPlayer.velocity.x;
+            fHorizontalVelocity += Input.GetAxisRaw("Horizontal");
+
+            if (Mathf.Abs(Input.GetAxisRaw("Horizontal")) < 0.01f)
+            {
+                fHorizontalVelocity *= Mathf.Pow(1f - fStopControl, Time.deltaTime * fSpeedDrag);
+            }
+            else if (Mathf.Sign(Input.GetAxisRaw("Horizontal")) != Mathf.Sign(fHorizontalVelocity))
+            {
+                fHorizontalVelocity *= Mathf.Pow(1f - fTurnControl, Time.deltaTime * fSpeedDrag);
+            }
+            else
+            {
+                fHorizontalVelocity *= Mathf.Pow(1f - fMoveControl, Time.deltaTime * fSpeedDrag);
+            }
+
+            rbPlayer.velocity = new Vector2(fHorizontalVelocity, rbPlayer.velocity.y);
         }
 
-        rbPlayer.velocity = new Vector2(fHorizontalVelocity, rbPlayer.velocity.y);
+        /*
+        if (transform.parent != null)
+        {
+            rbPlayer.velocity = new Vector2(transform.parent.GetComponent<Rigidbody2D>().velocity.x + fHorizontalVelocity, transform.parent.GetComponent<Rigidbody2D>().velocity.y + rbPlayer.velocity.y);
+        }
+        else
+        {
+            rbPlayer.velocity = new Vector2(fHorizontalVelocity, rbPlayer.velocity.y);
+        }
+        */
     }
 
     private void WallJump()
@@ -726,75 +780,70 @@ public class PlayerControllerV3 : MonoBehaviour
         */
     }
 
-    private void DrawTrajectory(){
+    private void DrawTrajectory()
+    {
         //LOGICA DOTTED LINE BOLA
+        if (lineRenderer != null)
+        {
+            Vector3 joaquin = tPlayerAttackPos.position - transform.position;
+            joaquin.Normalize();
+
+            RaycastHit2D hit = Physics2D.Raycast(goBall.transform.position, joaquin, fDistanceTrajectory, layerTrajectoryHit);
+
+            float fOldDistance = fDistanceTrajectory;
+
+            if (hit.collider)
+            {
+
+                //float fDistanceBallToHit =Vector2.Distance(goBall.transform.position, hit.point);
+                //float fNewDistance = fOldDistance - fDistanceBallToHit;
+
+                Vector2 francisco = (new Vector2(joaquin.x, joaquin.y) - (2 * (joaquin * hit.normal.normalized) * hit.normal.normalized));
+
+                //RaycastHit2D hiti = Physics2D.Raycast(hit.point, francisco, 1, layerTrajectoryHit);
+
+                lineRenderer.positionCount = 3;
+
+                lineRenderer.SetPosition(0, goBall.transform.position);
+
+                lineRenderer.SetPosition(1, hit.point);
+
+                lineRenderer.SetPosition(2, (francisco + francisco * 1) + (hit.point));
 
 
-            if (lineRenderer != null){
-                Vector3 joaquin = tPlayerAttackPos.position - transform.position;
-                joaquin.Normalize();
+                /*if (hiti.collider){
 
-                RaycastHit2D hit = Physics2D.Raycast(goBall.transform.position, joaquin, fDistanceTrajectory, layerTrajectoryHit);
-                
-                float fOldDistance = fDistanceTrajectory;
+                     print(hiti.collider.name);
 
-                if (hit.collider){
-
-                    //float fDistanceBallToHit =Vector2.Distance(goBall.transform.position, hit.point);
-                    //float fNewDistance = fOldDistance - fDistanceBallToHit;
-
-                    Vector2 francisco = (new Vector2(joaquin.x, joaquin.y) - (2 * (joaquin * hit.normal.normalized)*hit.normal.normalized));
-
-                    //RaycastHit2D hiti = Physics2D.Raycast(hit.point, francisco, 1, layerTrajectoryHit);
-                    
                     lineRenderer.positionCount = 3;
 
                     lineRenderer.SetPosition(0, goBall.transform.position);
 
                     lineRenderer.SetPosition(1, hit.point);
 
-                    lineRenderer.SetPosition(2, (francisco + francisco*1) + (hit.point) );
-
-                                    
-                    /*if (hiti.collider){
-
-                         print(hiti.collider.name);
-
-                        lineRenderer.positionCount = 3;
-
-                        lineRenderer.SetPosition(0, goBall.transform.position);
-
-                        lineRenderer.SetPosition(1, hit.point);
-
-                        lineRenderer.SetPosition(2, hiti.point);
-
-                    }else{
-                        lineRenderer.positionCount = 3;
-
-                        lineRenderer.SetPosition(0, goBall.transform.position);
-
-                        lineRenderer.SetPosition(1, hit.point);
-
-                        lineRenderer.SetPosition(2, (francisco + francisco*fNewDistance) + (hit.point) );
-                    }*/
-                    
-
+                    lineRenderer.SetPosition(2, hiti.point);
 
                 }else{
-                    lineRenderer.positionCount = 2;
+                    lineRenderer.positionCount = 3;
 
                     lineRenderer.SetPosition(0, goBall.transform.position);
 
-                    lineRenderer.SetPosition(1, (joaquin + joaquin*fDistanceTrajectory) + (goBall.transform.position));
-                    
-                }
+                    lineRenderer.SetPosition(1, hit.point);
+
+                    lineRenderer.SetPosition(2, (francisco + francisco*fNewDistance) + (hit.point) );
+                }*/
             }
-               
+            else
+            {
+                lineRenderer.positionCount = 2;
 
+                lineRenderer.SetPosition(0, goBall.transform.position);
 
-                
+                lineRenderer.SetPosition(1, (joaquin + joaquin * fDistanceTrajectory) + (goBall.transform.position));
 
-                //Hasta AQui Mi lógica amigos
+            }
+        }
+        //Hasta AQui Mi lógica amigos
     }
 
     private void OnDrawGizmosSelected()

@@ -25,18 +25,19 @@ public class PlatformMove : MonoBehaviour
     
     void FixedUpdate()
     {
-        if(bPlaced)
-        {
-            GameManager.Instance.GoPlayer.GetComponent<Rigidbody2D>().velocity += new Vector2(v3CurrentVector.x, v3CurrentVector.y) * fForwardSpeed;
-        }
-
         if (bMoving)
         {
             if (!bBackward)
             {
-                transform.position = Vector3.MoveTowards(transform.position, tPoints[iCurrentPoint].position, fForwardSpeed * Time.deltaTime);
+                v3CurrentVector = tPoints[iCurrentPoint].position - transform.position;
+                v3CurrentVector.Normalize();
 
-                if (Vector3.Distance(transform.position, tPoints[iCurrentPoint].position) <= 0.1f)
+                //transform.position += v3CurrentVector * fForwardSpeed * Time.deltaTime;
+                //transform.Translate(v3CurrentVector * fForwardSpeed * Time.deltaTime);
+                //transform.position = Vector3.MoveTowards(transform.position, tPoints[iCurrentPoint].position, fForwardSpeed * Time.deltaTime);
+                GetComponent<Rigidbody2D>().velocity = v3CurrentVector * fForwardSpeed;
+
+                if (Vector3.Distance(transform.position, tPoints[iCurrentPoint].position) <= 0.2f)
                 {
                     if (iCurrentPoint == tPoints.Length - 1)
                     {
@@ -51,15 +52,22 @@ public class PlatformMove : MonoBehaviour
             }
             else
             {
-                transform.position = Vector3.MoveTowards(transform.position, tPoints[iCurrentPoint].position, fForwardSpeed * Time.deltaTime);
+                v3CurrentVector = tPoints[iCurrentPoint].position - transform.position;
+                v3CurrentVector.Normalize();
 
-                if (Vector3.Distance(transform.position, tPoints[iCurrentPoint].position) <= 0.1f)
+                //transform.position += v3CurrentVector * fForwardSpeed * Time.deltaTime;
+                //transform.Translate(v3CurrentVector * fForwardSpeed * Time.deltaTime);
+                //transform.position = Vector3.MoveTowards(transform.position, tPoints[iCurrentPoint].position, fForwardSpeed * Time.deltaTime);
+                GetComponent<Rigidbody2D>().velocity = v3CurrentVector * fForwardSpeed;
+
+                if (Vector3.Distance(transform.position, tPoints[iCurrentPoint].position) <= 0.2f)
                 {
                     if (iCurrentPoint == 0)
                     {
                         iCurrentPoint++;
                         bMoving = false;
                         bBackward = false;
+                        GetComponent<Rigidbody2D>().velocity = Vector3.zero;
                     }
                     else
                     {
@@ -84,22 +92,7 @@ public class PlatformMove : MonoBehaviour
             bMoving = true;
         }
     }
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.gameObject.tag == "Player")
-        {
-            other.transform.parent = transform;
-            //bPlaced = true;
-        }
-    }
-    private void OnTriggerExit2D(Collider2D other)
-    {
-        if (other.gameObject.tag == "Player")
-        {
-            other.transform.parent = null;
-            //bPlaced = false;
-        }
-    }
+    
 }
 
 /*

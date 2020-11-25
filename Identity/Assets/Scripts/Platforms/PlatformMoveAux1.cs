@@ -11,8 +11,8 @@ public class PlatformMoveAux1 : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             //other.transform.parent = goParent.transform;
-            other.GetComponent<PlayerControllerV3>().bTTT = true;
-            other.GetComponent<PlayerControllerV3>().goTTT = goParent;
+            other.GetComponent<PlayerControllerV3>().bPlatformMove = true;
+            other.GetComponent<PlayerControllerV3>().goPlatformMove = goParent;
         }
     }
     private void OnTriggerExit2D(Collider2D other)
@@ -20,8 +20,8 @@ public class PlatformMoveAux1 : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             //other.transform.parent = null;
-            other.GetComponent<PlayerControllerV3>().bTTT = false;
-            other.GetComponent<PlayerControllerV3>().goTTT = goParent;
+            other.GetComponent<PlayerControllerV3>().bPlatformMove = false;
+            other.GetComponent<PlayerControllerV3>().goPlatformMove = goParent;
         }
     }
 }

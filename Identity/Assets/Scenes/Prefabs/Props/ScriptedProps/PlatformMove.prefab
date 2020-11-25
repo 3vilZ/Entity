@@ -455,7 +455,7 @@ MonoBehaviour:
   tPoints:
   - {fileID: 2941411689692955663}
   - {fileID: 2941411689342653950}
-  fForwardSpeed: 5
+  fForwardSpeed: 10
   fAcceleration: 0
   fBackSpeed: 0
 --- !u!114 &2941411689812675566

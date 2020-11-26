@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Cinemachine;
 
 public class GameManager : MonoBehaviour
 {
@@ -13,6 +14,8 @@ public class GameManager : MonoBehaviour
     int iCollectables;
     Vector2 tCurrentCheckPointPos;
     PlayerControllerV3 scriptPlayer;
+    Vector2 tDeathPos;
+    
 
     public bool[] BSkill { get => bSkill; set => bSkill = value; }
     public Vector2 TCurrentCheckPointPos { get => tCurrentCheckPointPos; set => tCurrentCheckPointPos = value; }
@@ -72,17 +75,26 @@ public class GameManager : MonoBehaviour
     {
         goPlayer.GetComponent<Animator>().SetTrigger("Death");
         goPlayer.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
+        tDeathPos = goPlayer.transform.position;
     }
     public void Death2()
     {
+        //Vector3 delta = tCurrentCheckPointPos - tDeathPos;
+        //goVirtualCamera.GetComponent<CinemachineVirtualCamera>().GetCinemachineComponent<CinemachineFramingTransposer>().OnTargetObjectWarped(goVirtualCamera.GetComponent<CinemachineVirtualCamera>().Follow, delta);
+        goVirtualCamera.GetComponent<CinemachineVirtualCamera>().enabled = false;
         goVirtualCamera.transform.position = tCurrentCheckPointPos;
         goPlayer.transform.position = tCurrentCheckPointPos;
+        
+        //
+        
 
         goPlayer.GetComponent<Animator>().SetTrigger("Revive");
     }
     public void Death3()
     {
+        goVirtualCamera.GetComponent<CinemachineVirtualCamera>().enabled = true;
         goPlayer.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
+        
         if (bSkill[0])
         {
             scriptPlayer.CatchBall();

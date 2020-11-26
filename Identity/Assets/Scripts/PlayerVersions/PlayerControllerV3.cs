@@ -234,7 +234,7 @@ public class PlayerControllerV3 : MonoBehaviour
         {
             Shoot();
             Reload();
-        }   
+        }
         if (GameManager.Instance.BSkill[2])
         {
             Dash();

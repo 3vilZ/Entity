@@ -71,7 +71,7 @@ public class GameManager : MonoBehaviour
     public void Death1()
     {
         goPlayer.GetComponent<Animator>().SetTrigger("Death");
-        goPlayer.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+        goPlayer.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
     }
     public void Death2()
     {
@@ -82,6 +82,7 @@ public class GameManager : MonoBehaviour
     }
     public void Death3()
     {
+        goPlayer.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
         if (bSkill[0])
         {
             scriptPlayer.CatchBall();

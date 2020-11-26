@@ -866,12 +866,15 @@ public class PlayerControllerV3 : MonoBehaviour
 
     private void DrawTrajectory()
     {
+
+
+       
         //LOGICA DOTTED LINE BOLA
         if (lineRenderer != null)
         {
             Vector3 joaquin = tPlayerAttackPos.position - transform.position;
             joaquin.Normalize();
-
+            
             RaycastHit2D hit = Physics2D.Raycast(goBall.transform.position, joaquin, fDistanceTrajectory, layerTrajectoryHit);
 
             float fOldDistance = fDistanceTrajectory;

@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     GameObject goBall;
     GameObject goCurrentVirtualCamera;
     GameObject goOldVirtualCamera;
+    GameObject goCheckPointCamera;
     bool[] bSkill = new bool[3];
     int iCollectables;
     Vector2 tCurrentCheckPointPos;
@@ -24,6 +25,7 @@ public class GameManager : MonoBehaviour
     public GameObject GoBall { get => goBall; set => goBall = value; }
     public GameObject GoCurrentVirtualCamera { get => goCurrentVirtualCamera; set => goCurrentVirtualCamera = value; }
     public GameObject GoOldVirtualCamera { get => goOldVirtualCamera; set => goOldVirtualCamera = value; }
+    public GameObject GoCheckPointCamera { get => goCheckPointCamera; set => goCheckPointCamera = value; }
     public int ICollectables { get => iCollectables; set => iCollectables = value; }
     public PlayerControllerV3 ScriptPlayer { get => scriptPlayer; set => scriptPlayer = value; }
 

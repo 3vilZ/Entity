@@ -65,7 +65,6 @@ public class Ball : MonoBehaviour
     {
         if(collision.GetContact(0).normal.x > 0.5f || collision.GetContact(0).normal.x < -0.5f)
         {
-            print(collision.GetContact(0).normal);
             targetRot = Quaternion.LookRotation(collision.GetContact(0).normal, Vector3.forward);
         }
         else

@@ -79,20 +79,22 @@ public class GameManager : MonoBehaviour
     }
     public void Death2()
     {
-        //Vector3 delta = tCurrentCheckPointPos - tDeathPos;
-        //goVirtualCamera.GetComponent<CinemachineVirtualCamera>().GetCinemachineComponent<CinemachineFramingTransposer>().OnTargetObjectWarped(goVirtualCamera.GetComponent<CinemachineVirtualCamera>().Follow, delta);
-        goVirtualCamera.GetComponent<CinemachineVirtualCamera>().enabled = false;
-        goVirtualCamera.transform.position = tCurrentCheckPointPos;
-        goPlayer.transform.position = tCurrentCheckPointPos;
-        
-        //
         
 
+
+        
+        goVirtualCamera.GetComponent<CinemachineVirtualCamera>().GetCinemachineComponent<CinemachineFramingTransposer>().m_LookaheadSmoothing = 0;
+        goPlayer.transform.position = tCurrentCheckPointPos;
+
         goPlayer.GetComponent<Animator>().SetTrigger("Revive");
+
+        //Vector3 delta = tCurrentCheckPointPos - tDeathPos;
+        //goVirtualCamera.GetComponent<CinemachineVirtualCamera>().enabled = false;
+        //goVirtualCamera.GetComponent<CinemachineVirtualCamera>().GetCinemachineComponent<CinemachineFramingTransposer>().OnTargetObjectWarped(goVirtualCamera.GetComponent<CinemachineVirtualCamera>().Follow, delta);
     }
     public void Death3()
     {
-        goVirtualCamera.GetComponent<CinemachineVirtualCamera>().enabled = true;
+        goVirtualCamera.GetComponent<CinemachineVirtualCamera>().GetCinemachineComponent<CinemachineFramingTransposer>().m_LookaheadSmoothing = 0.4f;
         goPlayer.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
         
         if (bSkill[0])

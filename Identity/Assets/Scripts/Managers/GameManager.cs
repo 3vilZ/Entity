@@ -9,7 +9,8 @@ public class GameManager : MonoBehaviour
 
     GameObject goPlayer;
     GameObject goBall;
-    GameObject goVirtualCamera;
+    GameObject goCurrentVirtualCamera;
+    GameObject goOldVirtualCamera;
     bool[] bSkill = new bool[3];
     int iCollectables;
     Vector2 tCurrentCheckPointPos;
@@ -21,7 +22,8 @@ public class GameManager : MonoBehaviour
     public Vector2 TCurrentCheckPointPos { get => tCurrentCheckPointPos; set => tCurrentCheckPointPos = value; }
     public GameObject GoPlayer { get => goPlayer; set => goPlayer = value; }
     public GameObject GoBall { get => goBall; set => goBall = value; }
-    public GameObject GoVirtualCamera { get => goVirtualCamera; set => goVirtualCamera = value; }
+    public GameObject GoCurrentVirtualCamera { get => goCurrentVirtualCamera; set => goCurrentVirtualCamera = value; }
+    public GameObject GoOldVirtualCamera { get => goOldVirtualCamera; set => goOldVirtualCamera = value; }
     public int ICollectables { get => iCollectables; set => iCollectables = value; }
     public PlayerControllerV3 ScriptPlayer { get => scriptPlayer; set => scriptPlayer = value; }
 
@@ -31,7 +33,8 @@ public class GameManager : MonoBehaviour
 
         goPlayer = GameObject.FindGameObjectWithTag("Player");
         goBall = GameObject.FindGameObjectWithTag("Ball");
-        goVirtualCamera = GameObject.FindGameObjectWithTag("VirtualCamera");
+        goCurrentVirtualCamera = GameObject.FindGameObjectWithTag("VirtualCamera");
+        goOldVirtualCamera = GameObject.FindGameObjectWithTag("VirtualCamera");
 
         scriptPlayer = goPlayer.GetComponent<PlayerControllerV3>();
 
@@ -83,7 +86,7 @@ public class GameManager : MonoBehaviour
 
 
         
-        goVirtualCamera.GetComponent<CinemachineVirtualCamera>().GetCinemachineComponent<CinemachineFramingTransposer>().m_LookaheadSmoothing = 0;
+        goCurrentVirtualCamera.GetComponent<CinemachineVirtualCamera>().GetCinemachineComponent<CinemachineFramingTransposer>().m_LookaheadSmoothing = 0;
         goPlayer.transform.position = tCurrentCheckPointPos;
 
         goPlayer.GetComponent<Animator>().SetTrigger("Revive");
@@ -94,7 +97,7 @@ public class GameManager : MonoBehaviour
     }
     public void Death3()
     {
-        goVirtualCamera.GetComponent<CinemachineVirtualCamera>().GetCinemachineComponent<CinemachineFramingTransposer>().m_LookaheadSmoothing = 0.4f;
+        goCurrentVirtualCamera.GetComponent<CinemachineVirtualCamera>().GetCinemachineComponent<CinemachineFramingTransposer>().m_LookaheadSmoothing = 0.4f;
         goPlayer.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
         
         if (bSkill[0])

@@ -77,10 +77,13 @@ public class Ball : MonoBehaviour
 
         for (int i = 0; i < psList.Count; i++)
         {
-            psList[i].Play();
+            if(!psList[i].IsAlive())
+            {
+                psList[i].Play();
+            }
         }
-        
-        
+
+
 
         //ParticleSystem j = Instantiate(BallPS, collision.GetContact(0).point, targetRot);
     }

@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7937451858074997357}
   - component: {fileID: 7937451858074997358}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Amarillo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -167,7 +167,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7937451859843752496}
   - component: {fileID: 7937451859843752497}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: negro
   m_TagString: Untagged
   m_Icon: {fileID: 0}

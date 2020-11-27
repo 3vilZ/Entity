@@ -29,14 +29,18 @@ public class GameManager : MonoBehaviour
     public int ICollectables { get => iCollectables; set => iCollectables = value; }
     public PlayerControllerV3 ScriptPlayer { get => scriptPlayer; set => scriptPlayer = value; }
 
+
     private void Awake()
     {
         if (Instance == null) { Instance = this; }
 
         goPlayer = GameObject.FindGameObjectWithTag("Player");
         goBall = GameObject.FindGameObjectWithTag("Ball");
-        goCurrentVirtualCamera = GameObject.FindGameObjectWithTag("VirtualCamera");
-        goOldVirtualCamera = GameObject.FindGameObjectWithTag("VirtualCamera");
+
+        //***************** Hecho en ConfinerTransition.cs ****************************
+        //goCurrentVirtualCamera = GameObject.FindGameObjectWithTag("VirtualCamera");
+        //goOldVirtualCamera = goCurrentVirtualCamera;
+        //goCheckPointCamera = goCurrentVirtualCamera;
 
         scriptPlayer = goPlayer.GetComponent<PlayerControllerV3>();
 
@@ -52,6 +56,19 @@ public class GameManager : MonoBehaviour
     {
         goBall.SetActive(false);
     }
+
+    /*
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.B))
+        {
+            print(goCurrentVirtualCamera + " curr");
+            print(goOldVirtualCamera + " old");
+            print(goCheckPointCamera + " check");
+
+        }
+    }
+    */
 
     public void GetSkill(int value)
     {
@@ -74,6 +91,7 @@ public class GameManager : MonoBehaviour
     public void SetCheckPoint(Vector2 newPosition)
     {
         tCurrentCheckPointPos = newPosition;
+        goCheckPointCamera = goCurrentVirtualCamera;
     }
 
     public void Death1()
@@ -84,12 +102,18 @@ public class GameManager : MonoBehaviour
     }
     public void Death2()
     {
-        
-
-
-        
         goCurrentVirtualCamera.GetComponent<CinemachineVirtualCamera>().GetCinemachineComponent<CinemachineFramingTransposer>().m_LookaheadSmoothing = 0;
         goPlayer.transform.position = tCurrentCheckPointPos;
+        
+        if(goCheckPointCamera != goCurrentVirtualCamera)
+        {
+            goCurrentVirtualCamera.SetActive(false);
+            goOldVirtualCamera.SetActive(false);
+            goCheckPointCamera.SetActive(true);
+
+            goCurrentVirtualCamera = goCheckPointCamera;
+            goOldVirtualCamera = goCheckPointCamera;
+        }
 
         goPlayer.GetComponent<Animator>().SetTrigger("Revive");
 

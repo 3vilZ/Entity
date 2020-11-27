@@ -1,10 +1,28 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Cinemachine;
 
 public class ConfinerTransition : MonoBehaviour
 {
     [SerializeField] GameObject goCamera;
+    [SerializeField] bool bStartingCamera = false;
+
+    private void Start()
+    {
+        goCamera.GetComponent<CinemachineVirtualCamera>().m_Follow = GameManager.Instance.GoPlayer.transform;
+
+        if(bStartingCamera)
+        {
+            GameManager.Instance.GoCurrentVirtualCamera = goCamera;
+            GameManager.Instance.GoOldVirtualCamera = goCamera;
+            GameManager.Instance.GoCheckPointCamera = goCamera;
+        }
+        else
+        {
+            goCamera.SetActive(false);
+        }
+    }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -23,8 +41,6 @@ public class ConfinerTransition : MonoBehaviour
                 GameManager.Instance.GoOldVirtualCamera.SetActive(false);
                 GameManager.Instance.GoOldVirtualCamera = goCamera;
             }
-            
-            
         }
     }
 

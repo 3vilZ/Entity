@@ -309,6 +309,7 @@ public class PlayerControllerV3 : MonoBehaviour
 
         if (bReloading && !bGrounded && GameManager.Instance.BSkill[1])
         {
+            rbPlayer.velocity = Vector2.zero;
             rbPlayer.velocity = new Vector2(rbPlayer.velocity.x, fPlayerReloadForce);
             //rbPlayer.velocity = Vector2.up * fPlayerReloadForce;
             bReloading = false;
@@ -484,6 +485,7 @@ public class PlayerControllerV3 : MonoBehaviour
                 {
                     fForceToApply = 40;
                 }
+                rbPlayer.velocity = Vector2.zero;
                 rbPlayer.velocity = v2PlayerToBall * fForceToApply;
             }
         }
@@ -561,6 +563,7 @@ public class PlayerControllerV3 : MonoBehaviour
 
                 rbBall.velocity = new Vector2(v3HitDirection.x, v3HitDirection.y) * fBallShootForce;
 
+                rbPlayer.velocity = Vector2.zero;
                 rbPlayer.velocity = new Vector2(-v3HitDirection.x * fPlayerShootForce, -v3HitDirection.y * fPlayerShootForce);
 
                 if (bBallOn)
@@ -612,6 +615,7 @@ public class PlayerControllerV3 : MonoBehaviour
 
                 rbBall.velocity = new Vector2(v3HitDirection.x, v3HitDirection.y) * fBallShootForce;
 
+                rbPlayer.velocity = Vector2.zero;
                 rbPlayer.velocity = new Vector2(-v3HitDirection.x * fPlayerShootForce, -v3HitDirection.y * fPlayerShootForce);
 
                 if (bBallOn)

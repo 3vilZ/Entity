@@ -7,6 +7,9 @@ public class HideLevel : MonoBehaviour
 
     public float[] colors;
 
+    bool ballin;
+    bool playerin;
+
     void Start(){
 
         colors = new float[transform.childCount];
@@ -25,7 +28,7 @@ public class HideLevel : MonoBehaviour
     {
 
 
-        if (col.tag == "Player"){
+        if (col.tag == "Player" || col.tag == "Ball" ){
             int children = transform.childCount;
 
             for (int i = 0; i < children; ++i){
@@ -35,6 +38,13 @@ public class HideLevel : MonoBehaviour
                 transform.GetChild(i).GetComponent<SpriteRenderer>().color = tmp;
 
             }
+
+
+            if (col.tag == "Player"){
+                playerin = true;
+            }else{
+                ballin = true;
+            }
         }
         
              
@@ -43,16 +53,34 @@ public class HideLevel : MonoBehaviour
     void OnTriggerExit2D(Collider2D col)
     {
 
-        if (col.tag == "Player"){
-            int children = transform.childCount;
-            for (int i = 0; i < children; ++i){
-            
+        if (col.tag == "Player" || col.tag == "Ball"){
 
-            Color tmp = transform.GetChild(i).GetComponent<SpriteRenderer>().color;
-            tmp.a = colors[i];
-            transform.GetChild(i).GetComponent<SpriteRenderer>().color = tmp;
+            if (col.tag == "Ball"){
+                ballin = false;
+
+                if(!playerin){
+                    int children = transform.childCount;
+                    for (int i = 0; i < children; ++i){
+                    Color tmp = transform.GetChild(i).GetComponent<SpriteRenderer>().color;
+                    tmp.a = colors[i];
+                    transform.GetChild(i).GetComponent<SpriteRenderer>().color = tmp;
+                    }
+                }
+            }else{
+                playerin = false;
+
+                if(!ballin){
+                    int children = transform.childCount;
+                    for (int i = 0; i < children; ++i){
+                    Color tmp = transform.GetChild(i).GetComponent<SpriteRenderer>().color;
+                    tmp.a = colors[i];
+                    transform.GetChild(i).GetComponent<SpriteRenderer>().color = tmp;
+                    }
+                }
 
             }
+
+
         }
     }
 }

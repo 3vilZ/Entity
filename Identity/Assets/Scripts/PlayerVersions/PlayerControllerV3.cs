@@ -177,10 +177,31 @@ public class PlayerControllerV3 : MonoBehaviour
         goPlayerArrow.SetActive(false);
         goBallArrow.SetActive(false);
 
-        
+
 
         //CatchBall();
-        
+        switch (GameManager.Instance.ICoreStart)
+        {
+            case 0:
+                goBall.SetActive(false);
+                break;
+            case 1:
+                GameManager.Instance.GetSkill(0);
+                break;
+            case 2:
+                GameManager.Instance.GetSkill(0);
+                GameManager.Instance.GetSkill(1);
+                break;
+            case 3:
+                GameManager.Instance.GetSkill(0);
+                GameManager.Instance.GetSkill(1);
+                GameManager.Instance.GetSkill(2);
+                break;
+            default:
+                print("PdroP");
+                break;
+        }
+
         v2WallJumpdir.Normalize();
 
         fChargeShootMaxTime = (fChargeShootMaxTime * fChargeTimeScale) + fChargeShootMinTime;
@@ -309,7 +330,7 @@ public class PlayerControllerV3 : MonoBehaviour
 
         if (bReloading && !bGrounded && GameManager.Instance.BSkill[1])
         {
-            rbPlayer.velocity = Vector2.zero;
+            //rbPlayer.velocity = Vector2.zero;
             rbPlayer.velocity = new Vector2(rbPlayer.velocity.x, fPlayerReloadForce);
             //rbPlayer.velocity = Vector2.up * fPlayerReloadForce;
             bReloading = false;

@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
 
+    [SerializeField] int iCoreStart;
     GameObject goPlayer;
     GameObject goBall;
     GameObject goCurrentVirtualCamera;
@@ -28,6 +29,7 @@ public class GameManager : MonoBehaviour
     public GameObject GoOldVirtualCamera { get => goOldVirtualCamera; set => goOldVirtualCamera = value; }
     public GameObject GoCheckPointCamera { get => goCheckPointCamera; set => goCheckPointCamera = value; }
     public int ICollectables { get => iCollectables; set => iCollectables = value; }
+    public int ICoreStart { get => iCoreStart; set => iCoreStart = value; }
     public PlayerControllerV3 ScriptPlayer { get => scriptPlayer; set => scriptPlayer = value; }
 
 
@@ -36,12 +38,12 @@ public class GameManager : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject);
         }
         else
         {
             Destroy(gameObject);
         }
+
 
         goPlayer = GameObject.FindGameObjectWithTag("Player");
         goBall = GameObject.FindGameObjectWithTag("Ball");
@@ -55,6 +57,8 @@ public class GameManager : MonoBehaviour
 
         tCurrentCheckPointPos = goPlayer.transform.position;
 
+
+        
         /*
         for (int i = 0; i < bSkill.Length; i++)
         {
@@ -65,15 +69,44 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+        /*
         if(bSkill[0])
         {
+            
             scriptPlayer.CatchBall();
             scriptPlayer.lineRenderer = goBall.GetComponent<LineRenderer>();
+            
         }
         else
         {
             goBall.SetActive(false);
         }
+        */
+
+        /*
+        switch (iCoreStart)
+        {
+            case 0:
+                goBall.SetActive(false);
+                break;
+            case 1:
+                GetSkill(0);
+                break;
+            case 2:
+                GetSkill(0);
+                GetSkill(1);
+                break;
+            case 3:
+                GetSkill(0);
+                GetSkill(1);
+                GetSkill(2);
+                break;
+            default:
+                print("PdroP");
+                break;
+        }
+        */
+
     }
 
     
@@ -84,7 +117,6 @@ public class GameManager : MonoBehaviour
             print(bSkill[0]);
             print(bSkill[1]);
             print(bSkill[2]);
-
         }
     }
     

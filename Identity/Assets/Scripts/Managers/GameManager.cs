@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Cinemachine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -32,7 +33,15 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
-        if (Instance == null) { Instance = this; }
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
 
         goPlayer = GameObject.FindGameObjectWithTag("Player");
         goBall = GameObject.FindGameObjectWithTag("Ball");
@@ -46,29 +55,39 @@ public class GameManager : MonoBehaviour
 
         tCurrentCheckPointPos = goPlayer.transform.position;
 
+        /*
         for (int i = 0; i < bSkill.Length; i++)
         {
             bSkill[i] = false;
         }
+        */
     }
 
     private void Start()
     {
-        goBall.SetActive(false);
+        if(bSkill[0])
+        {
+            scriptPlayer.CatchBall();
+            scriptPlayer.lineRenderer = goBall.GetComponent<LineRenderer>();
+        }
+        else
+        {
+            goBall.SetActive(false);
+        }
     }
 
-    /*
+    
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.B))
         {
-            print(goCurrentVirtualCamera + " curr");
-            print(goOldVirtualCamera + " old");
-            print(goCheckPointCamera + " check");
+            print(bSkill[0]);
+            print(bSkill[1]);
+            print(bSkill[2]);
 
         }
     }
-    */
+    
 
     public void GetSkill(int value)
     {
@@ -130,5 +149,10 @@ public class GameManager : MonoBehaviour
         {
             scriptPlayer.CatchBall();
         }
+    }
+
+    public void LoadLevel(string levelName)
+    {
+        SceneManager.LoadScene(levelName);
     }
 }

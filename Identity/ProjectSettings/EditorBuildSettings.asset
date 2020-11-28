@@ -5,10 +5,13 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/Pedrop/Scenes/PlatformerMechanics 1.unity
-    guid: 55ae330c7ccaa1a4a9450214fc76d39d
+  - enabled: 1
+    path: Assets/Scenes/BlockOuts PT 20112020/Nivel 0.unity
+    guid: 410d9c3fe0f25864f8b43f375f5401d6
   - enabled: 1
     path: Assets/Scenes/BlockOuts PT 20112020/Nivel 1.unity
     guid: 834750aa3e5783e4c973377c51ec1db2
+  - enabled: 1
+    path: Assets/Scenes/BlockOuts PT 20112020/Nivel 2.unity
+    guid: 1fb45602485793c4ab34cd0e273efafb
   m_configObjects: {}

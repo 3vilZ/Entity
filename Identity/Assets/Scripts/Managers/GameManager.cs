@@ -112,11 +112,16 @@ public class GameManager : MonoBehaviour
     
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.B))
+        if (Input.GetKey(KeyCode.O))
         {
-            print(bSkill[0]);
-            print(bSkill[1]);
-            print(bSkill[2]);
+            if (Input.GetKeyDown(KeyCode.P))
+            {
+                LoadLevel("Nivel 2");
+            }
+        }
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
         }
     }
     
@@ -185,6 +190,13 @@ public class GameManager : MonoBehaviour
 
     public void LoadLevel(string levelName)
     {
-        SceneManager.LoadScene(levelName);
+        if(levelName == "Quit")
+        {
+            Application.Quit();
+        }
+        else
+        {
+            SceneManager.LoadScene(levelName);
+        }
     }
 }

@@ -50,6 +50,7 @@ public class HideLevel : MonoBehaviour
              
     }
 
+    /*
     void OnTriggerExit2D(Collider2D col)
     {
 
@@ -83,4 +84,5 @@ public class HideLevel : MonoBehaviour
 
         }
     }
+    */
 }

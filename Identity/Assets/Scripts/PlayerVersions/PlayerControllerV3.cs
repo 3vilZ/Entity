@@ -37,11 +37,13 @@ public class PlayerControllerV3 : MonoBehaviour
     [SerializeField] float fWallJumpforce;
     [SerializeField] float fWallRangeX;
     [SerializeField] float fWallRangeY;
+    [SerializeField] float fWallSecure;
     [SerializeField] float fWallJumpCapMoveTime;
     [SerializeField] Vector2 v2WallJumpdir;
     [SerializeField] LayerMask layerWall;
     Vector2 v2WallDetectScale;
     bool bWallJumpDone = false;
+    float fWallSecureControl = 0;
     float fWallJumpCapMoveTimeControl = 0;
     
 
@@ -62,10 +64,12 @@ public class PlayerControllerV3 : MonoBehaviour
     [SerializeField] float fChargeShootMaxTime;
     [SerializeField] float fShootExploitTime;
     [SerializeField] float fChargeTimeScale;
+    [SerializeField] [Range(0, 1)] float fGroundedKnockBackReduction;
     [Space(10)]
     [SerializeField] float fBallReloadForce;
     [SerializeField] float fPlayerReloadForce;
     [SerializeField] bool bCOLLIDEOnReload;
+    [SerializeField] bool bShootDirectionForPlayer;
     bool bBallOn = false;
     bool bShootDone = false;
     bool bShootRDY = false;
@@ -236,10 +240,6 @@ public class PlayerControllerV3 : MonoBehaviour
                 fBugTest = .5f;
             }
         }
-        if (Input.GetAxis("Hold") == 0)
-        {
-            
-        }
 
         if(!bDead)
         {
@@ -272,7 +272,7 @@ public class PlayerControllerV3 : MonoBehaviour
             Movement();
         }
 
-        v2GroundedPositionControl = (Vector2)transform.position + new Vector2(0, -0.1f);
+        v2GroundedPositionControl = (Vector2)transform.position + new Vector2(0, -0.99f);
         v2GroundedScaleControl = new Vector2(fGroundRangeX, fGroundRangeY);
         bGrounded = Physics2D.OverlapBox(v2GroundedPositionControl, v2GroundedScaleControl, 0, layerGround);
         v2WallDetectScale = new Vector2(fWallRangeX, fWallRangeY);
@@ -389,8 +389,34 @@ public class PlayerControllerV3 : MonoBehaviour
     {
         float fHorizontalStick = Input.GetAxis("HorizontalRightStick");
         float fVerticalStick = Input.GetAxis("VerticalRightStick");
-        tPlayerAttackPivot.transform.eulerAngles = new Vector3(0f, 0f, Mathf.Atan2(-fHorizontalStick, -fVerticalStick) * 180 / Mathf.PI);
-        tBallAttackPivot.transform.eulerAngles = new Vector3(0f, 0f, Mathf.Atan2(-fHorizontalStick, -fVerticalStick) * 180 / Mathf.PI);
+
+        if(bShootDirectionForPlayer)
+        {
+            if (fHorizontalStick > 0.1f || fHorizontalStick < -0.1f || fVerticalStick > 0.1f || fVerticalStick < -0.1f)
+            {
+                tPlayerAttackPivot.transform.eulerAngles = new Vector3(0f, 0f, Mathf.Atan2(fHorizontalStick, fVerticalStick) * 180 / Mathf.PI);
+                //tBallAttackPivot.transform.eulerAngles = new Vector3(0f, 0f, Mathf.Atan2(-fHorizontalStick, -fVerticalStick) * 180 / Mathf.PI);
+            }
+            else
+            {
+                tPlayerAttackPivot.transform.eulerAngles = new Vector3(0, 0, 180);
+            }
+        }
+        else
+        {
+            if (fHorizontalStick > 0.1f || fHorizontalStick < -0.1f || fVerticalStick > 0.1f || fVerticalStick < -0.1f)
+            {
+                tPlayerAttackPivot.transform.eulerAngles = new Vector3(0f, 0f, Mathf.Atan2(-fHorizontalStick, -fVerticalStick) * 180 / Mathf.PI);
+                //tBallAttackPivot.transform.eulerAngles = new Vector3(0f, 0f, Mathf.Atan2(-fHorizontalStick, -fVerticalStick) * 180 / Mathf.PI);
+            }
+            else
+            {
+                tPlayerAttackPivot.transform.eulerAngles = new Vector3(0, 0, 180);
+            }
+        }
+
+        
+        
 
         fPlayerBallDistance = Vector2.Distance(goBall.transform.position, transform.position);
 
@@ -566,8 +592,8 @@ public class PlayerControllerV3 : MonoBehaviour
             {
                 lineRenderer.positionCount = 0;
 
-                goPlayerArrow.SetActive(false);
-                goBallArrow.SetActive(false);
+                //goPlayerArrow.SetActive(false);
+                //goBallArrow.SetActive(false);
                 bChargingShoot = false;
                 fChargeMinTimeControl = fChargeShootMinTime;
                 fChargeMaxTimeControl = fChargeShootMaxTime;
@@ -585,7 +611,15 @@ public class PlayerControllerV3 : MonoBehaviour
                 rbBall.velocity = new Vector2(v3HitDirection.x, v3HitDirection.y) * fBallShootForce;
 
                 rbPlayer.velocity = Vector2.zero;
-                rbPlayer.velocity = new Vector2(-v3HitDirection.x * fPlayerShootForce, -v3HitDirection.y * fPlayerShootForce);
+
+                if(bGrounded)
+                {
+                    rbPlayer.velocity = new Vector2((-v3HitDirection.x * fPlayerShootForce) * fGroundedKnockBackReduction, (-v3HitDirection.y * fPlayerShootForce) * fGroundedKnockBackReduction);
+                }
+                else
+                {
+                    rbPlayer.velocity = new Vector2(-v3HitDirection.x * fPlayerShootForce, -v3HitDirection.y * fPlayerShootForce);
+                }
 
                 if (bBallOn)
                 {
@@ -605,8 +639,8 @@ public class PlayerControllerV3 : MonoBehaviour
         {
             if (fPlayerBallDistance <= fShootDistance)
             {
-                goPlayerArrow.SetActive(true);
-                goBallArrow.SetActive(true);
+                //goPlayerArrow.SetActive(true);
+                //goBallArrow.SetActive(true);
                 bChargingShoot = true;
                 bShootExploit = true;
             }
@@ -618,8 +652,8 @@ public class PlayerControllerV3 : MonoBehaviour
             {
                 lineRenderer.positionCount = 0;
 
-                goPlayerArrow.SetActive(false);
-                goBallArrow.SetActive(false);
+                //goPlayerArrow.SetActive(false);
+                //goBallArrow.SetActive(false);
                 bChargingShoot = false;
                 fChargeMinTimeControl = fChargeShootMinTime;
                 fChargeMaxTimeControl = fChargeShootMaxTime;
@@ -637,7 +671,15 @@ public class PlayerControllerV3 : MonoBehaviour
                 rbBall.velocity = new Vector2(v3HitDirection.x, v3HitDirection.y) * fBallShootForce;
 
                 rbPlayer.velocity = Vector2.zero;
-                rbPlayer.velocity = new Vector2(-v3HitDirection.x * fPlayerShootForce, -v3HitDirection.y * fPlayerShootForce);
+
+                if (bGrounded)
+                {
+                    rbPlayer.velocity = new Vector2((-v3HitDirection.x * fPlayerShootForce) * fGroundedKnockBackReduction, (-v3HitDirection.y * fPlayerShootForce) * fGroundedKnockBackReduction);
+                }
+                else
+                {
+                    rbPlayer.velocity = new Vector2(-v3HitDirection.x * fPlayerShootForce, -v3HitDirection.y * fPlayerShootForce);
+                }
 
                 if (bBallOn)
                 {
@@ -682,7 +724,7 @@ public class PlayerControllerV3 : MonoBehaviour
                 rbBall.velocity = v2BallToPlayer * fBallReloadForce;
             }
 
-            if (Input.GetButtonDown("Ball"))
+            if (Input.GetAxis("Ball") != 0)
             {
                 //bChargingReload = true;
                 bReloading = true;
@@ -765,7 +807,14 @@ public class PlayerControllerV3 : MonoBehaviour
 
     private void WallJump()
     {
+        fWallSecureControl -= Time.deltaTime;
+
         if(!bGrounded && Input.GetButtonDown("Jump"))
+        {
+            fWallSecureControl = fWallSecure;
+        }
+
+        if(fWallSecureControl > 0)
         {
             Collider2D[] wallDetect = Physics2D.OverlapBoxAll(transform.position, v2WallDetectScale, 0, layerWall);
 

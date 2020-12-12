@@ -9636,6 +9636,8 @@ GameObject:
   - component: {fileID: 2567960037349834548}
   - component: {fileID: 2567960037349834549}
   - component: {fileID: 8603509683065695501}
+  - component: {fileID: 1426928236}
+  - component: {fileID: 1426928237}
   m_Layer: 13
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -9651,7 +9653,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1417720872053266615}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 205.06, y: -58.430004, z: -10}
+  m_LocalPosition: {x: 0, y: 3.5999985, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1417720873242113992}
@@ -9666,8 +9668,8 @@ Camera:
   m_GameObject: {fileID: 1417720872053266615}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.105882354, g: 0.13333334, b: 0.25490198, a: 0}
+  m_ClearFlags: 1
+  m_BackGroundColor: {r: 0.9843137, g: 0.6901961, b: 0.2509804, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -9681,8 +9683,8 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.1
-  far clip plane: 5000
-  field of view: 40
+  far clip plane: 6760.98
+  field of view: 87.8
   orthographic: 1
   orthographic size: 18
   m_Depth: -1
@@ -9831,6 +9833,82 @@ MonoBehaviour:
   m_CameraActivatedEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1426928236
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1417720872053266615}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15e8fc05344791f49885c0e5c06f01f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  downsampleFactor: 2
+  renderVolumetricClouds: 1
+  render2DFallback: 1
+  lightSampleCount: 1
+  highQualityClouds: 0
+  downsample2DClouds: 0
+  renderAtmosphere: 1
+  renderScatteringMask: 1
+  includeCascadedShadows: 1
+  scatteringMaskSamples: 1
+  renderRainMask: 0
+--- !u!114 &1426928237
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1417720872053266615}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ccfa547679dfb8b43aeef1e0ae038448, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Dither: 1
+  Pixelate: 0
+  Grain: 0
+  Grain_Old: 0
+  Grain_New: 0
+  grain:
+    m_Enabled: 0
+    m_Settings:
+      colored: 0
+      intensity: 0.2
+      size: 0.4
+      luminanceContribution: 0
+      animated: 0
+  colored: 0
+  intensity: 0.2
+  size: 0.4
+  luminanceContribution: 0
+  animated: 0
+  _palette: {fileID: 11400000, guid: c48f16de530119a438ca7c78231b7b22, type: 2}
+  _pattern: {fileID: 11400000, guid: 07fe3b80db4350f41912c159f6feab94, type: 2}
+  _patternTexture: {fileID: 0}
+  _shader: {fileID: 4800000, guid: 0e4c0c6d48b7240d8b59f441b94c2b0e, type: 3}
+  _pixelScale: 0.37
+  intensityMultiplier: 0.25
+  generalIntensity: 58.57
+  blackIntensity: 1
+  whiteIntensity: 1
+  midGrey: 0.31
+  dx11Grain: 0
+  softness: 0.37
+  monochrome: 1
+  intensities: {x: 1, y: 1, z: 1}
+  tiling: {x: 64, y: 64, z: 64}
+  monochromeTiling: 64
+  filterMode: 1
+  noiseTexture: {fileID: 0}
+  noiseShader: {fileID: 4800000, guid: 68560b76e4c6d9b4d8b8bf6e844a3654, type: 3}
+  dx11NoiseShader: {fileID: 0}
+  profile: {fileID: 0}
+  ub: {fileID: 0}
+  gm: {fileID: 0}
 --- !u!1 &1417720872086830277
 GameObject:
   m_ObjectHideFlags: 0

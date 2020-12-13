@@ -38,11 +38,13 @@ public class PlayerControllerV3 : MonoBehaviour
     [SerializeField] float fWallRangeX;
     [SerializeField] float fWallRangeY;
     [SerializeField] float fWallSecure;
+    [SerializeField] float fWallGravity;
     [SerializeField] float fWallJumpCapMoveTime;
     [SerializeField] Vector2 v2WallJumpdir;
     [SerializeField] LayerMask layerWall;
     Vector2 v2WallDetectScale;
     bool bWallJumpDone = false;
+    bool bWallJumpRDY = true;
     float fWallSecureControl = 0;
     float fWallJumpCapMoveTimeControl = 0;
     
@@ -807,16 +809,50 @@ public class PlayerControllerV3 : MonoBehaviour
 
     private void WallJump()
     {
+        Collider2D wallDetect = Physics2D.OverlapBox(transform.position, v2WallDetectScale, 0, layerWall);
+
         fWallSecureControl -= Time.deltaTime;
 
-        if(!bGrounded && Input.GetButtonDown("Jump"))
+        if (bWallJumpDone)
+        {
+            fWallJumpCapMoveTimeControl -= Time.deltaTime;
+
+            if (fWallJumpCapMoveTimeControl <= 0)
+            {
+                fWallJumpCapMoveTimeControl = fWallJumpCapMoveTime;
+                bWallJumpDone = false;
+                bWallJumpRDY = true;
+            }
+        }
+
+        if (!bGrounded && Input.GetButtonDown("Jump"))
         {
             fWallSecureControl = fWallSecure;
         }
 
         if(fWallSecureControl > 0)
         {
+            if(bWallJumpRDY && wallDetect != null)
+            {
+                if (wallDetect.GetComponent<BoxCollider2D>() == wallDetect.gameObject.GetComponentInParent<WallJump>().colRight)
+                {
+                    bWallJumpDone = true;
+                    rbPlayer.velocity = new Vector2(v2WallJumpdir.x, v2WallJumpdir.y) * fWallJumpforce;
+                    Particles(0);
+                    bWallJumpRDY = false;
+                }
+                else if (wallDetect.GetComponent<BoxCollider2D>() == wallDetect.gameObject.GetComponentInParent<WallJump>().colLeft)
+                {
+                    bWallJumpDone = true;
+                    rbPlayer.velocity = new Vector2(-v2WallJumpdir.x, v2WallJumpdir.y) * fWallJumpforce;
+                    Particles(0);
+                    bWallJumpRDY = false;
+                }
+            }
+
+            /*
             Collider2D[] wallDetect = Physics2D.OverlapBoxAll(transform.position, v2WallDetectScale, 0, layerWall);
+
 
             for (int i = 0; i < wallDetect.Length; i++)
             {
@@ -833,17 +869,12 @@ public class PlayerControllerV3 : MonoBehaviour
                     Particles(0);
                 }
             }
+            */
         }
 
-        if(bWallJumpDone)
+        if(wallDetect != null && rbPlayer.velocity.y <= -fWallGravity)
         {
-            fWallJumpCapMoveTimeControl -= Time.deltaTime;
-
-            if (fWallJumpCapMoveTimeControl <= 0)
-            {
-                fWallJumpCapMoveTimeControl = fWallJumpCapMoveTime;
-                bWallJumpDone = false;
-            }
+            rbPlayer.velocity = new Vector2(0, -fWallGravity);
         }
     }
 

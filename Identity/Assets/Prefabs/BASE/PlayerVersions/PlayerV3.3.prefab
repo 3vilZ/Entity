@@ -9653,7 +9653,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1417720872053266615}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.0000019073486, y: 3.5999985, z: -10}
+  m_LocalPosition: {x: -0.0000038146973, y: 3.6000004, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1417720873242113992}
@@ -10152,9 +10152,10 @@ MonoBehaviour:
   fAirJumpForce: 15
   fAirJumpMaxTime: 0.2
   fWallJumpforce: 24.23
-  fWallRangeX: 1.2
+  fWallRangeX: 1.1
   fWallRangeY: 1.5
   fWallSecure: 0.1
+  fWallGravity: 6
   fWallJumpCapMoveTime: 0.2
   v2WallJumpdir: {x: 0.9, y: 0.98}
   layerWall:
@@ -10172,7 +10173,7 @@ MonoBehaviour:
   fChargeShootMaxTime: 1
   fShootExploitTime: 0.5
   fChargeTimeScale: 0.1
-  fGroundedKnockBackReduction: 0
+  fGroundedKnockBackReduction: 0.2
   fBallReloadForce: 100
   fPlayerReloadForce: 20
   bCOLLIDEOnReload: 0

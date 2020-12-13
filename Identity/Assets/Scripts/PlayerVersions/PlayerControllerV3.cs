@@ -874,7 +874,7 @@ public class PlayerControllerV3 : MonoBehaviour
 
         if(wallDetect != null && rbPlayer.velocity.y <= -fWallGravity)
         {
-            rbPlayer.velocity = new Vector2(0, -fWallGravity);
+            rbPlayer.velocity = new Vector2(rbPlayer.velocity.x, -fWallGravity);
         }
     }
 

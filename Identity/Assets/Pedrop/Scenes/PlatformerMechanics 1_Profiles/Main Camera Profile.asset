@@ -18,10 +18,10 @@ MonoBehaviour:
     value: 1
   intensity:
     overrideState: 1
-    value: 0.59
+    value: 8.03
   threshold:
-    overrideState: 0
-    value: 1
+    overrideState: 1
+    value: 0.95
   softKnee:
     overrideState: 0
     value: 0.5
@@ -47,6 +47,55 @@ MonoBehaviour:
   dirtIntensity:
     overrideState: 0
     value: 0
+--- !u!114 &-2965005152845090880
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1cb7e9e120078f43bce4f0b1be547a7, type: 3}
+  m_Name: AmbientOcclusion
+  m_EditorClassIdentifier: 
+  active: 1
+  enabled:
+    overrideState: 1
+    value: 1
+  mode:
+    overrideState: 1
+    value: 0
+  intensity:
+    overrideState: 1
+    value: 2.26
+  color:
+    overrideState: 1
+    value: {r: 0, g: 0, b: 0, a: 1}
+  ambientOnly:
+    overrideState: 0
+    value: 1
+  noiseFilterTolerance:
+    overrideState: 0
+    value: 0
+  blurTolerance:
+    overrideState: 0
+    value: -4.6
+  upsampleTolerance:
+    overrideState: 0
+    value: -12
+  thicknessModifier:
+    overrideState: 1
+    value: 1
+  directLightingStrength:
+    overrideState: 0
+    value: 0
+  radius:
+    overrideState: 1
+    value: 14.59
+  quality:
+    overrideState: 1
+    value: 4
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -64,6 +113,7 @@ MonoBehaviour:
   - {fileID: 3885832706707695995}
   - {fileID: 1475171884735794866}
   - {fileID: 7553241699755510322}
+  - {fileID: -2965005152845090880}
 --- !u!114 &1475171884735794866
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -122,8 +172,8 @@ MonoBehaviour:
     value: {fileID: 0}
     defaultState: 1
   tonemapper:
-    overrideState: 0
-    value: 0
+    overrideState: 1
+    value: 2
   toneCurveToeStrength:
     overrideState: 0
     value: 0
@@ -151,28 +201,28 @@ MonoBehaviour:
     value: 1
   temperature:
     overrideState: 1
-    value: 38.7
+    value: 12
   tint:
-    overrideState: 1
+    overrideState: 0
     value: 22.8
   colorFilter:
-    overrideState: 0
-    value: {r: 1, g: 1, b: 1, a: 1}
+    overrideState: 1
+    value: {r: 0.9528302, g: 0.8343378, b: 0.7775454, a: 1}
   hueShift:
     overrideState: 0
     value: 0
   saturation:
-    overrideState: 0
-    value: 0
+    overrideState: 1
+    value: 0.6
   brightness:
     overrideState: 0
     value: 0
   postExposure:
-    overrideState: 0
-    value: 0
+    overrideState: 1
+    value: 1.25
   contrast:
-    overrideState: 0
-    value: 0
+    overrideState: 1
+    value: 8.7
   mixerRedOutRedIn:
     overrideState: 0
     value: 100

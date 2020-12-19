@@ -5,6 +5,7 @@ using UnityEngine;
 
 namespace Com.AllSkyFree
 {
+    /*
 	public class AllSkyFreeMenu : MonoBehaviour
 	{
 		[MenuItem("Window/AllSky/AllSky 200+ Skybox Set")]
@@ -14,4 +15,5 @@ namespace Com.AllSkyFree
 	    }
 	
 	}	
+    */
 }

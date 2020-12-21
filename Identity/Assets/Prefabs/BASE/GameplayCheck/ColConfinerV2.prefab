@@ -74,6 +74,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   goCamera: {fileID: 8077127433893727344}
+  bStartingCamera: 1
 --- !u!1 &6605651685290444369
 GameObject:
   m_ObjectHideFlags: 0
@@ -148,6 +149,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   goCamera: {fileID: 8077127433893727344}
+  bStartingCamera: 1
 --- !u!1 &6605651686555595083
 GameObject:
   m_ObjectHideFlags: 0
@@ -207,10 +209,10 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0, y: 0}
-      - {x: 70, y: 0}
-      - {x: 70, y: 40}
-      - {x: 0, y: 40}
+    - - {x: -135.84949, y: -40.82995}
+      - {x: 404.55655, y: -46.524277}
+      - {x: 403.51105, y: 154.48108}
+      - {x: -135.96121, y: 122.07091}
 --- !u!1001 &6605651685122346702
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -221,17 +223,17 @@ PrefabInstance:
     - target: {fileID: 3151470456492638904, guid: 6918a1687af9ff643972433e351247f0,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 34.26
+      value: -22.434849
       objectReference: {fileID: 0}
     - target: {fileID: 3151470456492638904, guid: 6918a1687af9ff643972433e351247f0,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 19.07
+      value: 52.43469
       objectReference: {fileID: 0}
     - target: {fileID: 3151470456492638904, guid: 6918a1687af9ff643972433e351247f0,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -10
+      value: -600
       objectReference: {fileID: 0}
     - target: {fileID: 3151470456492638904, guid: 6918a1687af9ff643972433e351247f0,
         type: 3}
@@ -302,6 +304,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Follow
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3151470456492638911, guid: 6918a1687af9ff643972433e351247f0,
+        type: 3}
+      propertyPath: m_Lens.FieldOfView
+      value: 2.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3151470456492638911, guid: 6918a1687af9ff643972433e351247f0,
+        type: 3}
+      propertyPath: m_Lens.FarClipPlane
+      value: 6000
+      objectReference: {fileID: 0}
+    - target: {fileID: 3151470456892000308, guid: 6918a1687af9ff643972433e351247f0,
+        type: 3}
+      propertyPath: m_CameraDistance
+      value: 600
       objectReference: {fileID: 0}
     - target: {fileID: 3151470456892000314, guid: 6918a1687af9ff643972433e351247f0,
         type: 3}

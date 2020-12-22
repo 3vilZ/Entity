@@ -274,7 +274,7 @@ public class PlayerControllerV3 : MonoBehaviour
             Movement();
         }
 
-        v2GroundedPositionControl = (Vector2)transform.position + new Vector2(0, -0.99f);
+        v2GroundedPositionControl = (Vector2)transform.position + new Vector2(0, -1.188f);
         v2GroundedScaleControl = new Vector2(fGroundRangeX, fGroundRangeY);
         bGrounded = Physics2D.OverlapBox(v2GroundedPositionControl, v2GroundedScaleControl, 0, layerGround);
         v2WallDetectScale = new Vector2(fWallRangeX, fWallRangeY);

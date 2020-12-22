@@ -1,0 +1,296 @@
+fileFormatVersion: 2
+guid: 6d4450d0265e6c548a9c49dcb677966c
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5456089506696793909
+    second: PlayerSpriteSheetBASICv2_0
+  - first:
+      213: -4134841347142851737
+    second: PlayerSpriteSheetBASICv2_1
+  - first:
+      213: 4324596781717393468
+    second: PlayerSpriteSheetBASICv2_2
+  - first:
+      213: -9152422659083338935
+    second: PlayerSpriteSheetBASICv2_3
+  - first:
+      213: 7250693335429930865
+    second: PlayerSpriteSheetBASICv2_4
+  - first:
+      213: -5072411002743536081
+    second: PlayerSpriteSheetBASICv2_5
+  - first:
+      213: 4699241519205844093
+    second: PlayerSpriteSheetBASICv2_6
+  - first:
+      213: 966121042818616351
+    second: PlayerSpriteSheetBASICv2_7
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 800
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: PlayerSpriteSheetBASICv2_0
+      rect:
+        serializedVersion: 2
+        x: 1263
+        y: 970
+        width: 740
+        height: 1197
+      alignment: 9
+      pivot: {x: 0.5851337, y: 0.032451022}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc0f99250831844b0800000000000000
+      internalID: -5456089506696793909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetBASICv2_1
+      rect:
+        serializedVersion: 2
+        x: 2260
+        y: 1551
+        width: 271
+        height: 368
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 763e3fcb3b71e96c0800000000000000
+      internalID: -4134841347142851737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetBASICv2_2
+      rect:
+        serializedVersion: 2
+        x: 2736
+        y: 1541
+        width: 274
+        height: 378
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c30101b3cdd040c30800000000000000
+      internalID: 4324596781717393468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetBASICv2_3
+      rect:
+        serializedVersion: 2
+        x: 2293
+        y: 946
+        width: 238
+        height: 324
+      alignment: 9
+      pivot: {x: 0.9, y: 0.9}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94bf91b45101cf080800000000000000
+      internalID: -9152422659083338935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetBASICv2_4
+      rect:
+        serializedVersion: 2
+        x: 2815
+        y: 946
+        width: 236
+        height: 324
+      alignment: 9
+      pivot: {x: 0.1, y: 0.9}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17fd7993c23af9460800000000000000
+      internalID: 7250693335429930865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetBASICv2_5
+      rect:
+        serializedVersion: 2
+        x: 1522
+        y: 443
+        width: 250
+        height: 388
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2640ba511d2b99b0800000000000000
+      internalID: -5072411002743536081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetBASICv2_6
+      rect:
+        serializedVersion: 2
+        x: 2444
+        y: 467
+        width: 87
+        height: 197
+      alignment: 9
+      pivot: {x: 0.7, y: 0.9}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d74080a934f073140800000000000000
+      internalID: 4699241519205844093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetBASICv2_7
+      rect:
+        serializedVersion: 2
+        x: 2789
+        y: 513
+        width: 86
+        height: 199
+      alignment: 9
+      pivot: {x: 0.3, y: 0.9}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1ccb3f38f9586d00800000000000000
+      internalID: 966121042818616351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

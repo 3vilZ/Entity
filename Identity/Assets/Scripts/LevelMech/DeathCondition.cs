@@ -9,6 +9,7 @@ public class DeathCondition : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             GameManager.Instance.GoPlayer.GetComponent<PlayerControllerV3>().bCollecting = false;
+            GameManager.Instance.GoPlayer.GetComponent<PlayerControllerV3>().goCurrentCollectable.GetComponent<Collectable>().bCollecting = false;
             GameManager.Instance.Death1();
         }
     }

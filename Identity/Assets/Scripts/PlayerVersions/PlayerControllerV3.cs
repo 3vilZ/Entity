@@ -143,6 +143,7 @@ public class PlayerControllerV3 : MonoBehaviour
 
     [HideInInspector] public bool bDead = false;
 
+    PlayerAnim playerAnim;
     Animator animPlayer;
     Rigidbody2D rbPlayer;
     Vector2 v2PlayerToBall;
@@ -150,7 +151,7 @@ public class PlayerControllerV3 : MonoBehaviour
     float fPlayerBallDistance;
     float fBugTest = .5f;
     [HideInInspector] public bool bCollecting = false;
-    GameObject goCurrentCollectable;
+    [HideInInspector] public GameObject goCurrentCollectable;
     public bool bBugTest;
 
     
@@ -178,6 +179,7 @@ public class PlayerControllerV3 : MonoBehaviour
 
         //Animator
         animPlayer = GetComponent<Animator>();
+        playerAnim = GetComponent<PlayerAnim>();
 
         goLimit.SetActive(false);
         goPlayerArrow.SetActive(false);
@@ -312,9 +314,7 @@ public class PlayerControllerV3 : MonoBehaviour
         {
             if(bGrounded)
             {
-                goCurrentCollectable.SetActive(false);
-                GameManager.Instance.GetCollectable();
-                bCollecting = false;
+                goCurrentCollectable.GetComponent<Collectable>().bRDY1 = true;
             }
         }
     }
@@ -794,6 +794,18 @@ public class PlayerControllerV3 : MonoBehaviour
 
             rbPlayer.velocity = new Vector2(fHorizontalVelocity, rbPlayer.velocity.y);
         }
+
+        //ANIM
+        if (Mathf.Abs(Input.GetAxisRaw("Horizontal")) < 0.01f)
+        {
+            playerAnim.Walking(false);
+        }
+        else
+        {
+            playerAnim.StartWalk();
+            playerAnim.Walking(true);
+        }
+
 
         /*
         if (transform.parent != null)

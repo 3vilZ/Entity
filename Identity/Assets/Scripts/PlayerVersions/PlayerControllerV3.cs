@@ -142,6 +142,7 @@ public class PlayerControllerV3 : MonoBehaviour
     [HideInInspector] public GameObject goPlatformMove;
 
     [HideInInspector] public bool bDead = false;
+    [HideInInspector] public bool bInteracting = false;
 
     PlayerAnim playerAnim;
     Animator animPlayer;
@@ -191,7 +192,7 @@ public class PlayerControllerV3 : MonoBehaviour
         switch (GameManager.Instance.ICoreStart)
         {
             case 0:
-                goBall.SetActive(false);
+                //goBall.SetActive(false);
                 break;
             case 1:
                 GameManager.Instance.GetSkill(0);
@@ -245,7 +246,7 @@ public class PlayerControllerV3 : MonoBehaviour
             }
         }
 
-        if(!bDead)
+        if(!bDead && !bInteracting)
         {
             WallJump();
             Jump();
@@ -255,15 +256,19 @@ public class PlayerControllerV3 : MonoBehaviour
         BallDetection();
         Collecting();
 
-        if (GameManager.Instance.BSkill[0])
+        if(!bDead && !bInteracting)
         {
-            Shoot();
-            Reload();
+            if (GameManager.Instance.BSkill[0])
+            {
+                Shoot();
+                Reload();
+            }
+            if (GameManager.Instance.BSkill[2])
+            {
+                Dash();
+            }
         }
-        if (GameManager.Instance.BSkill[2])
-        {
-            Dash();
-        }
+        
 
         //Slingshot();
     }
@@ -271,7 +276,7 @@ public class PlayerControllerV3 : MonoBehaviour
     private void FixedUpdate()
     {
 
-        if(!bWallJumpDone && !bShootDone && !bDashDone && !bDead)
+        if(!bWallJumpDone && !bShootDone && !bDashDone && !bDead && !bInteracting)
         {
             Movement();
         }
@@ -330,7 +335,7 @@ public class PlayerControllerV3 : MonoBehaviour
         goBall.transform.parent = transform;
         goBall.transform.position = transform.position;
 
-        if (bReloading && !bGrounded && GameManager.Instance.BSkill[1])
+        if (bReloading && !bGrounded && GameManager.Instance.BSkill[1] && !bDead && !bInteracting)
         {
             //rbPlayer.velocity = Vector2.zero;
             rbPlayer.velocity = new Vector2(rbPlayer.velocity.x, fPlayerReloadForce);
@@ -889,6 +894,7 @@ public class PlayerControllerV3 : MonoBehaviour
             rbPlayer.velocity = new Vector2(rbPlayer.velocity.x, -fWallGravity);
         }
     }
+
 
     private void Jump()
     {

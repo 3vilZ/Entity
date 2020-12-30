@@ -28,7 +28,6 @@ public class HeartFraction : MonoBehaviour
         {
             goY.SetActive(false);
         }
-
     }
 
     private void OnDrawGizmosSelected()

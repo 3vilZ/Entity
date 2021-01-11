@@ -1300,11 +1300,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1417720872053266610, guid: 5e1a29e3417a28e4aa819804e7a134eb,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 2.8279567
-      objectReference: {fileID: 0}
     - target: {fileID: 1417720873242113992, guid: 5e1a29e3417a28e4aa819804e7a134eb,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2593,11 +2588,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: HidePortionBubbles
-      objectReference: {fileID: 0}
-    - target: {fileID: 7304400832546844554, guid: ad4b6c68b3d3f394f8433420f17290d6,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ad4b6c68b3d3f394f8433420f17290d6, type: 3}
@@ -4530,31 +4520,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Projectile
       objectReference: {fileID: 0}
-    - target: {fileID: 2393301264101264813, guid: d2510489028f85a45bb7e0ee6e652eee,
-        type: 3}
-      propertyPath: goCarcajList.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2393301264101264813, guid: d2510489028f85a45bb7e0ee6e652eee,
-        type: 3}
-      propertyPath: goCarcajList.Array.data[1]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2393301264101264813, guid: d2510489028f85a45bb7e0ee6e652eee,
-        type: 3}
-      propertyPath: goCarcajList.Array.data[2]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2393301264101264813, guid: d2510489028f85a45bb7e0ee6e652eee,
-        type: 3}
-      propertyPath: goCarcajList.Array.data[3]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2393301264101264813, guid: d2510489028f85a45bb7e0ee6e652eee,
-        type: 3}
-      propertyPath: goCarcajList.Array.data[4]
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 2393301264101264814, guid: d2510489028f85a45bb7e0ee6e652eee,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5276,31 +5241,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 8842004403910944584, guid: 595b9257130296e459562e07a0a6c506,
-        type: 3}
-      propertyPath: sDialogue.strName
-      value: '- SLIME:'
-      objectReference: {fileID: 0}
-    - target: {fileID: 8842004403910944584, guid: 595b9257130296e459562e07a0a6c506,
-        type: 3}
-      propertyPath: sDialogue.strSentence.Array.data[0]
-      value: Hola...
-      objectReference: {fileID: 0}
-    - target: {fileID: 8842004403910944584, guid: 595b9257130296e459562e07a0a6c506,
-        type: 3}
-      propertyPath: sDialogue.strSentence.Array.data[1]
-      value: Pa ti mi cola...
-      objectReference: {fileID: 0}
-    - target: {fileID: 8842004403910944584, guid: 595b9257130296e459562e07a0a6c506,
-        type: 3}
-      propertyPath: sDialogue.strSentence.Array.data[2]
-      value: Como mola...
-      objectReference: {fileID: 0}
-    - target: {fileID: 8842004403910944584, guid: 595b9257130296e459562e07a0a6c506,
-        type: 3}
-      propertyPath: sDialogue.strSentence.Array.data[3]
-      value: Hacerse la gayola.
-      objectReference: {fileID: 0}
     - target: {fileID: 8842004403910944585, guid: 595b9257130296e459562e07a0a6c506,
         type: 3}
       propertyPath: m_LocalPosition.x

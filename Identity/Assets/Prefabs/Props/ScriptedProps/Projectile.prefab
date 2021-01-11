@@ -213,7 +213,6 @@ MonoBehaviour:
   fPlayerDistance: 5
   tAttackPos: {fileID: 2393301264942568163}
   goBullet: {fileID: 9131735986333550001}
-  goCheat: {fileID: 9131735986333550001}
   goCarcaj: {fileID: 2393301264295167317}
   fbulletCdControl: 0
   goBulletList: []

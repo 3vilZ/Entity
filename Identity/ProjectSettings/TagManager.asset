@@ -10,6 +10,7 @@ TagManager:
   - Fountain
   - VirtualCamera
   - PlatformMove
+  - Bullet
   layers:
   - Default
   - TransparentFX

@@ -4799,17 +4799,17 @@ PrefabInstance:
     - target: {fileID: 2941411689697995846, guid: e0bcd7a07593e3b42a1f2aba3b5cbd35,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2941411689697996728, guid: e0bcd7a07593e3b42a1f2aba3b5cbd35,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 12.89
+      value: 124.4
       objectReference: {fileID: 0}
     - target: {fileID: 2941411689697996728, guid: e0bcd7a07593e3b42a1f2aba3b5cbd35,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 31.49
+      value: -0.3
       objectReference: {fileID: 0}
     - target: {fileID: 2941411689697996728, guid: e0bcd7a07593e3b42a1f2aba3b5cbd35,
         type: 3}
@@ -4839,7 +4839,7 @@ PrefabInstance:
     - target: {fileID: 2941411689697996728, guid: e0bcd7a07593e3b42a1f2aba3b5cbd35,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2941411689697996728, guid: e0bcd7a07593e3b42a1f2aba3b5cbd35,
         type: 3}
@@ -4952,12 +4952,12 @@ PrefabInstance:
     - target: {fileID: 6563486955540013264, guid: 566b8b21675bb66489249c169b6c6ebd,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -21.59
+      value: -17.2
       objectReference: {fileID: 0}
     - target: {fileID: 6563486955540013264, guid: 566b8b21675bb66489249c169b6c6ebd,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 27.54
+      value: 30.4
       objectReference: {fileID: 0}
     - target: {fileID: 6563486955540013264, guid: 566b8b21675bb66489249c169b6c6ebd,
         type: 3}
@@ -5012,7 +5012,7 @@ PrefabInstance:
     - target: {fileID: 6563486955540013279, guid: 566b8b21675bb66489249c169b6c6ebd,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 566b8b21675bb66489249c169b6c6ebd, type: 3}

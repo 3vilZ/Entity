@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/BlockOuts VS 20122020/Nivel 1.unity
     guid: f8dfbaae4f99fb14aa7ac396f8975912
+  - enabled: 1
+    path: Assets/Scenes/TestDani2.unity
+    guid: 11d3607a9e2f30f4eb5813fbc1153b55
   m_configObjects: {}

@@ -6,27 +6,62 @@ using TMPro;
 
 public class DialogueManager : MonoBehaviour
 {
-
-    public TextMeshProUGUI txtName;
-    public TextMeshProUGUI txtSentence;
-    public GameObject goNarrativeDisplay;
+    TextMeshProUGUI txtName;
+    TextMeshProUGUI txtSentence;
+    GameObject goNarrativeDisplay;
 
     private Queue<string> queue = new Queue<string>();
 
     bool bStart = false;
+    bool bTyping = false;
+    bool bOnce = false;
+    string strCurrentSentence;
+    int iEvent;
 
     void Start()
     {
-        goNarrativeDisplay.SetActive(false);
+        txtName = CanvasManager.Instance.txtName;
+        txtSentence = CanvasManager.Instance.txtSentence;
+        goNarrativeDisplay = CanvasManager.Instance.goNarrativeDisplay;
+
+        //goNarrativeDisplay.SetActive(false);
+
+        txtName.text = "";
+        txtSentence.text = "";
     }
 
     private void Update()
     {
         if(bStart)
         {
-            if(Input.GetButtonDown("Jump") || Input.GetButtonDown("Fire2") || Input.GetButtonDown("Shoot") || Input.GetButtonDown("Y"))
+            if(bTyping)
             {
-                DisplayNextSentence();
+                if (Input.GetButtonDown("Jump") || Input.GetButtonDown("Fire2") || Input.GetButtonDown("Shoot") || Input.GetButtonDown("Y"))
+                {
+                    StopCoroutine("DisplaySentence");
+                    txtSentence.text = strCurrentSentence;
+                    CanvasManager.Instance.canvasAnim.SetTrigger("On");
+                    bTyping = false;
+                }
+            }
+            else
+            {
+                if (Input.GetButtonDown("Jump") || Input.GetButtonDown("Fire2") || Input.GetButtonDown("Shoot") || Input.GetButtonDown("Y"))
+                {
+                    StopCoroutine("DisplaySentence");
+                    txtSentence.text = "";
+                    strCurrentSentence = "";
+                    if(!bOnce)
+                    {
+                        bOnce = true;
+                    }
+                    else
+                    {
+                        CanvasManager.Instance.canvasAnim.SetTrigger("Off");
+                    }
+                    
+                    DisplayNextSentence();
+                }
             }
         }
     }
@@ -46,25 +81,20 @@ public class DialogueManager : MonoBehaviour
         }
 
         bStart = true;
-        DisplayNextSentence();
-        //StartCoroutine("DisplaySentence");
+        bOnce = false;
     }
 
-    /*
     public IEnumerator DisplaySentence()
     {
-        string sentence = queue.ToString();
-
-        foreach (char c in sentence)
+        foreach (char c in strCurrentSentence)
         {
             txtSentence.text += c;
 
-            yield return new WaitForSeconds(0.25f);
+            yield return new WaitForSeconds(0.1f);
         }
-
-        DisplayNextSentence();
+        bTyping = false;
+        CanvasManager.Instance.canvasAnim.SetTrigger("On");
     }
-    */
 
     public void DisplayNextSentence()
     {
@@ -73,16 +103,41 @@ public class DialogueManager : MonoBehaviour
             EndDialogue();
             return;
         }
-        string sentence = queue.Dequeue();
-        txtSentence.text = sentence;
+        strCurrentSentence = queue.Dequeue().ToString();
+        StartCoroutine("DisplaySentence");
+        bTyping = true;
     }
-
 
     void EndDialogue()
     {
         GameManager.Instance.ScriptPlayer.bInteracting = false;
         goNarrativeDisplay.SetActive(false);
         bStart = false;
+        StartEvent();
         Debug.Log("End of conversation. ");
+    }
+
+    public void SelectEvent(int dialogueTriggerEvent)
+    {
+        iEvent = dialogueTriggerEvent;
+    }
+
+    void StartEvent()
+    {
+        switch (iEvent)
+        {
+            case 0:
+                print("No Event");
+                break;
+            case 1:
+                //
+                break;
+            case 2:
+                //
+                break;
+            default:
+                print("PdroP");
+                break;
+        }
     }
 }

@@ -6,6 +6,7 @@ public class PlayerAnim : MonoBehaviour
 {
     Animator anim;
     bool bWalking = false;
+    
 
     private void Start()
     {
@@ -24,5 +25,34 @@ public class PlayerAnim : MonoBehaviour
     {
         bWalking = b;
         anim.SetBool("Walking", bWalking);
+    }
+
+    public void StartJump()
+    {
+        anim.SetTrigger("StartJump");
+    }
+
+    public void SwitchJump(bool b)
+    {
+        if(b)
+        {
+            anim.SetTrigger("SwitchJump");
+        }
+        else
+        {
+            anim.ResetTrigger("SwitchJump");
+        }
+    }
+
+    public void Land(bool b)
+    {
+        if (b)
+        {
+            anim.SetTrigger("Land");
+        }
+        else
+        {
+            anim.ResetTrigger("Land");
+        }
     }
 }

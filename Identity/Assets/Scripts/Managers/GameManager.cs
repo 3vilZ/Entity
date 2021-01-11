@@ -32,9 +32,18 @@ public class GameManager : MonoBehaviour
     public int ICoreStart { get => iCoreStart; set => iCoreStart = value; }
     public PlayerControllerV3 ScriptPlayer { get => scriptPlayer; set => scriptPlayer = value; }
 
+    private void OnLevelWasLoaded(int level)
+    {
+        goPlayer = GameObject.FindGameObjectWithTag("Player");
+        goBall = GameObject.FindGameObjectWithTag("Ball");
+        scriptPlayer = goPlayer.GetComponent<PlayerControllerV3>();
+        tCurrentCheckPointPos = goPlayer.transform.position;
+    }
 
     private void Awake()
     {
+        
+
         if (Instance == null)
         {
             Instance = this;
@@ -44,7 +53,9 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
         }
 
+        DontDestroyOnLoad(gameObject);
 
+    
         goPlayer = GameObject.FindGameObjectWithTag("Player");
         goBall = GameObject.FindGameObjectWithTag("Ball");
 
@@ -108,7 +119,6 @@ public class GameManager : MonoBehaviour
                 break;
         }
         */
-
     }
 
     
@@ -124,6 +134,11 @@ public class GameManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             Application.Quit();
+        }
+
+        if (Input.GetKey(KeyCode.K))
+        {
+            print(iCollectables);
         }
     }
     

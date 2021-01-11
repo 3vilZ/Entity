@@ -801,15 +801,19 @@ public class PlayerControllerV3 : MonoBehaviour
         }
 
         //ANIM
-        if (Mathf.Abs(Input.GetAxisRaw("Horizontal")) < 0.01f)
+        if(bGrounded)
         {
-            playerAnim.Walking(false);
+            if (Mathf.Abs(Input.GetAxisRaw("Horizontal")) < 0.01f)
+            {
+                playerAnim.Walking(false);
+            }
+            else
+            {
+                playerAnim.StartWalk();
+                playerAnim.Walking(true);
+            }
         }
-        else
-        {
-            playerAnim.StartWalk();
-            playerAnim.Walking(true);
-        }
+        
 
 
         /*
@@ -923,6 +927,7 @@ public class PlayerControllerV3 : MonoBehaviour
 
             if ((fJumpSecureControl > 0) && (fGroundedSecureControl > 0))
             {
+                playerAnim.StartJump();
                 fJumpSecureControl = 0;
                 fGroundedSecureControl = 0;
                 rbPlayer.velocity = new Vector2(rbPlayer.velocity.x, fJumpForce);
@@ -977,7 +982,28 @@ public class PlayerControllerV3 : MonoBehaviour
                 bGravitySwap = false;
             }
         }
+
+        //ANIM
         
+
+        if (rbPlayer.velocity.y <= 0 && !bGrounded)
+        {
+            playerAnim.SwitchJump(true);
+        }
+        else
+        {
+            playerAnim.SwitchJump(false);
+        }
+
+        if (bGrounded)
+        {
+            playerAnim.Land(true);
+        }
+        else
+        {
+            playerAnim.Land(false);
+        }
+
         //FallingCap
         /*
         if(rbPlayer.velocity.y <= fMaxFallSpeed)

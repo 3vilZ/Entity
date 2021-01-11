@@ -1,0 +1,944 @@
+fileFormatVersion: 2
+guid: d538441088d71044e941ce51de1cf90e
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8672458141902682672
+    second: PersonajeAnimJump_0
+  - first:
+      213: 6836261172309567035
+    second: PersonajeAnimJump_1
+  - first:
+      213: 2908812216321240604
+    second: PersonajeAnimJump_2
+  - first:
+      213: 6690239126177502984
+    second: PersonajeAnimJump_3
+  - first:
+      213: -6354965919076722323
+    second: PersonajeAnimJump_4
+  - first:
+      213: 8252802987829508042
+    second: PersonajeAnimJump_5
+  - first:
+      213: 8799858813018440537
+    second: PersonajeAnimJump_6
+  - first:
+      213: 738411347621685341
+    second: PersonajeAnimJump_7
+  - first:
+      213: 757586742549803045
+    second: PersonajeAnimJump_8
+  - first:
+      213: -2509661974875675809
+    second: PersonajeAnimJump_9
+  - first:
+      213: -7792363153872136967
+    second: PersonajeAnimJump_10
+  - first:
+      213: 1040201532947583638
+    second: PersonajeAnimJump_11
+  - first:
+      213: 1793775982521081867
+    second: PersonajeAnimJump_12
+  - first:
+      213: 1037704271517774285
+    second: PersonajeAnimJump_13
+  - first:
+      213: 1875080373254432381
+    second: PersonajeAnimJump_14
+  - first:
+      213: -6216427772830127244
+    second: PersonajeAnimJump_15
+  - first:
+      213: 4485628664239133083
+    second: PersonajeAnimJump_16
+  - first:
+      213: 8299990274361965706
+    second: PersonajeAnimJump_17
+  - first:
+      213: 5214148169034646992
+    second: PersonajeAnimJump_18
+  - first:
+      213: -4792229452012759578
+    second: PersonajeAnimJump_19
+  - first:
+      213: -8277667879530561564
+    second: PersonajeAnimJump_20
+  - first:
+      213: -2539319583422525290
+    second: PersonajeAnimJump_21
+  - first:
+      213: -3151718182628107331
+    second: PersonajeAnimJump_22
+  - first:
+      213: -7287721183240742391
+    second: PersonajeAnimJump_23
+  - first:
+      213: -2295125237936373905
+    second: PersonajeAnimJump_24
+  - first:
+      213: -4933904389790847559
+    second: PersonajeAnimJump_25
+  - first:
+      213: 7554883446351824692
+    second: PersonajeAnimJump_26
+  - first:
+      213: 1779052232181262673
+    second: PersonajeAnimJump_27
+  - first:
+      213: 3163707003997383488
+    second: PersonajeAnimJump_28
+  - first:
+      213: 6990248900549245336
+    second: PersonajeAnimJump_29
+  - first:
+      213: -1178241597972312093
+    second: PersonajeAnimJump_30
+  - first:
+      213: 8468361110335335993
+    second: PersonajeAnimJump_31
+  - first:
+      213: 4935538479291985477
+    second: PersonajeAnimJump_32
+  - first:
+      213: -3357734251523566290
+    second: PersonajeAnimJump_33
+  - first:
+      213: -7979157111556565418
+    second: PersonajeAnimJump_34
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 800
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: PersonajeAnimJump_0
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 1393
+        width: 275
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d54272c44d35a780800000000000000
+      internalID: -8672458141902682672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PersonajeAnimJump_1
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 1383
+        width: 288
+        height: 394
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b36ae4fe0574fde50800000000000000
+      internalID: 6836261172309567035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PersonajeAnimJump_2
+      rect:
+        serializedVersion: 2
+        x: 1279
+        y: 1392
+        width: 322
+        height: 383
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1ee4289c4d2e5820800000000000000
+      internalID: 2908812216321240604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PersonajeAnimJump_3
+      rect:
+        serializedVersion: 2
+        x: 1656
+        y: 1407
+        width: 375
+        height: 370
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 807da32f90188dc50800000000000000
+      internalID: 6690239126177502984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PersonajeAnimJump_4
+      rect:
+        serializedVersion: 2
+        x: 2082
+        y: 1433
+        width: 377
+        height: 342
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d69d7b9aa20aec7a0800000000000000
+      internalID: -6354965919076722323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PersonajeAnimJump_5
+      rect:
+        serializedVersion: 2
+        x: 2488
+        y: 1440
+        width: 428
+        height: 337
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac73cda9798d78270800000000000000
+      internalID: 8252802987829508042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PersonajeAnimJump_6
+      rect:
+        serializedVersion: 2
+        x: 2944
+        y: 1534
+        width: 6
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9530e8f77f06f1a70800000000000000
+      internalID: 8799858813018440537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PersonajeAnimJump_7
+      rect:
+        serializedVersion: 2
+        x: 3007
+        y: 1440
+        width: 416
+        height: 337
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d58ab19553d5f3a00800000000000000
+      internalID: 738411347621685341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PersonajeAnimJump_8
+      rect:
+        serializedVersion: 2
+        x: 3448
+        y: 1534
+        width: 6
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 520f934e02d738a00800000000000000
+      internalID: 757586742549803045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PersonajeAnimJump_9
+      rect:
+        serializedVersion: 2
+        x: 2161
+        y: 1421
+        width: 5
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f53ea390bb3eb2dd0800000000000000
+      internalID: -2509661974875675809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PersonajeAnimJump_10
+      rect:
+        serializedVersion: 2
+        x: 2613
+        y: 1411
+        width: 6
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f4db9c4ff6fbd390800000000000000
+      internalID: -7792363153872136967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PersonajeAnimJump_11
+      rect:
+        serializedVersion: 2
+        x: 3118
+        y: 1411
+        width: 5
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 692582278c98f6e00800000000000000
+      internalID: 1040201532947583638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PersonajeAnimJump_12
+      rect:
+        serializedVersion: 2
+        x: 2184
+        y: 1406
+        width: 6
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b00ebc490c5c4e810800000000000000
+      internalID: 1793775982521081867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PersonajeAnimJump_13
+      rect:
+        serializedVersion: 2
+        x: 1815
+        y: 1366
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc1f8b5798aa66e00800000000000000
+      internalID: 1037704271517774285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PersonajeAnimJump_14
+      rect:
+        serializedVersion: 2
+        x: 1967
+        y: 1361
+        width: 5
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7623253aaf950a10800000000000000
+      internalID: 1875080373254432381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PersonajeAnimJump_15
+      rect:
+        serializedVersion: 2
+        x: 2242
+        y: 1361
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47b669c60efcab9a0800000000000000
+      internalID: -6216427772830127244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PersonajeAnimJump_16
+      rect:
+        serializedVersion: 2
+        x: 2672
+        y: 1366
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9198461187204e30800000000000000
+      internalID: 4485628664239133083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PersonajeAnimJump_17
+      rect:
+        serializedVersion: 2
+        x: 2824
+        y: 1361
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8cba86ed2d7f2370800000000000000
+      internalID: 8299990274361965706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PersonajeAnimJump_18
+      rect:
+        serializedVersion: 2
+        x: 3177
+        y: 1366
+        width: 5
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d5409d42206c5840800000000000000
+      internalID: 5214148169034646992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PersonajeAnimJump_19
+      rect:
+        serializedVersion: 2
+        x: 3328
+        y: 1361
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e55d9624b49e7db0800000000000000
+      internalID: -4792229452012759578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PersonajeAnimJump_20
+      rect:
+        serializedVersion: 2
+        x: 2394
+        y: 1356
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ef7be7abe0df1d80800000000000000
+      internalID: -8277667879530561564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PersonajeAnimJump_21
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 1005
+        width: 100
+        height: 190
+      alignment: 9
+      pivot: {x: 0.71982133, y: 0.9049348}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69058e2fa4682ccd0800000000000000
+      internalID: -2539319583422525290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PersonajeAnimJump_22
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 1005
+        width: 84
+        height: 170
+      alignment: 9
+      pivot: {x: 0.23830631, y: 0.9177605}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbbdf4ce209d244d0800000000000000
+      internalID: -3151718182628107331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PersonajeAnimJump_23
+      rect:
+        serializedVersion: 2
+        x: 547
+        y: 1010
+        width: 100
+        height: 188
+      alignment: 9
+      pivot: {x: 0.7282758, y: 0.92723113}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90a98d22230dcda90800000000000000
+      internalID: -7287721183240742391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PersonajeAnimJump_24
+      rect:
+        serializedVersion: 2
+        x: 739
+        y: 1011
+        width: 84
+        height: 170
+      alignment: 9
+      pivot: {x: 0.1477196, y: 0.9177605}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6fb4c591c31620e0800000000000000
+      internalID: -2295125237936373905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PersonajeAnimJump_25
+      rect:
+        serializedVersion: 2
+        x: 1316
+        y: 1005
+        width: 84
+        height: 169
+      alignment: 9
+      pivot: {x: 0.38928223, y: 0.9052243}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bda6c23910478bb0800000000000000
+      internalID: -4933904389790847559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PersonajeAnimJump_26
+      rect:
+        serializedVersion: 2
+        x: 1477
+        y: 1030
+        width: 103
+        height: 125
+      alignment: 9
+      pivot: {x: 0.19562775, y: 0.86480564}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 437874b877658d860800000000000000
+      internalID: 7554883446351824692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PersonajeAnimJump_27
+      rect:
+        serializedVersion: 2
+        x: 1721
+        y: 1032
+        width: 92
+        height: 128
+      alignment: 9
+      pivot: {x: 0.26766303, y: 0.8673887}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 159a700549670b810800000000000000
+      internalID: 1779052232181262673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PersonajeAnimJump_28
+      rect:
+        serializedVersion: 2
+        x: 1895
+        y: 1010
+        width: 100
+        height: 164
+      alignment: 9
+      pivot: {x: 0.17224732, y: 0.9083899}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04beda212ceb7eb20800000000000000
+      internalID: 3163707003997383488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PersonajeAnimJump_29
+      rect:
+        serializedVersion: 2
+        x: 2180
+        y: 1034
+        width: 101
+        height: 126
+      alignment: 9
+      pivot: {x: 0.1472748, y: 0.88452923}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8997dc0d65a520160800000000000000
+      internalID: 6990248900549245336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PersonajeAnimJump_30
+      rect:
+        serializedVersion: 2
+        x: 2363
+        y: 1011
+        width: 104
+        height: 170
+      alignment: 9
+      pivot: {x: 0.17115197, y: 0.8939755}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ef854d528b06afe0800000000000000
+      internalID: -1178241597972312093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PersonajeAnimJump_31
+      rect:
+        serializedVersion: 2
+        x: 2639
+        y: 1018
+        width: 84
+        height: 149
+      alignment: 9
+      pivot: {x: 0.19464111, y: 0.89211935}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93e25430099a58570800000000000000
+      internalID: 8468361110335335993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PersonajeAnimJump_32
+      rect:
+        serializedVersion: 2
+        x: 2812
+        y: 1001
+        width: 90
+        height: 188
+      alignment: 9
+      pivot: {x: 0.1991672, y: 0.9168948}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54e6879e81e8e7440800000000000000
+      internalID: 4935538479291985477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PersonajeAnimJump_33
+      rect:
+        serializedVersion: 2
+        x: 3079
+        y: 1022
+        width: 86
+        height: 150
+      alignment: 9
+      pivot: {x: 0.20174249, y: 0.8800049}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2596cffc7ee661d0800000000000000
+      internalID: -3357734251523566290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PersonajeAnimJump_34
+      rect:
+        serializedVersion: 2
+        x: 3252
+        y: 1000
+        width: 92
+        height: 189
+      alignment: 9
+      pivot: {x: 0.22119406, y: 0.9146877}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65693a6e1e6544190800000000000000
+      internalID: -7979157111556565418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 19f019ed06b19224d8827187db8abce6
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

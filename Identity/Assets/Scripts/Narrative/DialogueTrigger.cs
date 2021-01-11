@@ -6,6 +6,7 @@ public class DialogueTrigger : MonoBehaviour
 {
     [SerializeField] float fDistance;
     [SerializeField] GameObject goY;
+    [SerializeField] int iEvent;
     [Space(20)]
     public SerializeDialogue sDialogue;
 
@@ -47,6 +48,8 @@ public class DialogueTrigger : MonoBehaviour
     public void TriggerDialogue()
     {
         FindObjectOfType<DialogueManager>().StartDialogue(sDialogue);
+        FindObjectOfType<DialogueManager>().SelectEvent(iEvent);
+
     }
 
     private void OnDrawGizmosSelected()

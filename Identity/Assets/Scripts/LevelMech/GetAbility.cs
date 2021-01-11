@@ -93,8 +93,31 @@ public class GetAbility : MonoBehaviour
             if (Vector3.Distance(goBallSlot.transform.position, GameManager.Instance.GoPlayer.transform.position) <= 0.1f)
             {
                 GameManager.Instance.ScriptPlayer.CatchBall();
-                GameManager.Instance.ScriptPlayer.bInteracting = false;
+                //GameManager.Instance.ScriptPlayer.bInteracting = false;
                 GameManager.Instance.GetSkill(iValue);
+
+                //CanvasManager.Instance.SetCore(iValue);
+                CanvasManager.Instance.goCore[iValue].SetActive(true);
+
+                switch (iValue)
+                {
+                    case 0:
+                        CanvasManager.Instance.txtLeft.text = "Pulsa (X) para lanzar la esencia del Dios.\nTe verás impulsado en la dirección opuesta al lanzamiento.";
+                        CanvasManager.Instance.txtRight.text = "Pulsa (RT) para recuperar la esencia del Dios.\nPodrás lanzar la esencia las veces que desees, hasta que sea recuperada.";
+                        break;
+                    case 1:
+                        CanvasManager.Instance.txtCenter.text = "Pulsa (RT) para recuperar la esencia del Dios.\nAhora, al recuperar la esencia recibirás un impulso vertical.";
+                        break;
+                    case 2:
+                        //
+                        break;
+                    default:
+                        print("PdroP");
+                        break;
+                }
+                CanvasManager.Instance.goCoreDisplay.SetActive(true);
+                CanvasManager.Instance.canvasAnim.SetTrigger("Core");
+
                 bEnd = false;
             }
         }

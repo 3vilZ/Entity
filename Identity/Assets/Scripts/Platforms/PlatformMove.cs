@@ -91,7 +91,7 @@ public class PlatformMove : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other)
     {
-        if(other.gameObject.tag == "Player" && !bMoving || other.gameObject.tag == "Ball" && !bMoving)
+        if(other.gameObject.tag == "Player" && !bMoving || other.gameObject.tag == "Ball" && !bMoving || other.gameObject.tag == "Bullet" && !bMoving)
         {
             bMoving = true;
         }

@@ -210,7 +210,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fBulletSpeed: 8
   fBulletCd: 2
-  fPlayerDistance: 5
+  fPlayerDistance: 22.34
   tAttackPos: {fileID: 2393301264942568163}
   goBullet: {fileID: 9131735986333550001}
   goCarcaj: {fileID: 2393301264295167317}

@@ -94,7 +94,7 @@ public class GameManager : MonoBehaviour
         {
             goBall.SetActive(false);
         }
-        */
+        
 
         
         switch (iCoreStart)
@@ -118,7 +118,7 @@ public class GameManager : MonoBehaviour
                 print("PdroP");
                 break;
         }
-        
+        */
     }
 
     

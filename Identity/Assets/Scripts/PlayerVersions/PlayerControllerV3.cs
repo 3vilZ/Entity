@@ -186,9 +186,6 @@ public class PlayerControllerV3 : MonoBehaviour
         goPlayerArrow.SetActive(false);
         goBallArrow.SetActive(false);
 
-
-
-        /*
         switch (GameManager.Instance.ICoreStart)
         {
             case 0:
@@ -210,7 +207,6 @@ public class PlayerControllerV3 : MonoBehaviour
                 print("PdroP");
                 break;
         }
-        */
 
         v2WallJumpdir.Normalize();
 

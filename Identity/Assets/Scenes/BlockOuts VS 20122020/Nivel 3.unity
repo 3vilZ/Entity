@@ -9372,6 +9372,11 @@ PrefabInstance:
       propertyPath: fBulletCd
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2393301264101264813, guid: d2510489028f85a45bb7e0ee6e652eee,
+        type: 3}
+      propertyPath: fPlayerDistance
+      value: 38.08
+      objectReference: {fileID: 0}
     - target: {fileID: 2393301264101264814, guid: d2510489028f85a45bb7e0ee6e652eee,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -29791,6 +29796,21 @@ PrefabInstance:
       propertyPath: orthographic size
       value: 21
       objectReference: {fileID: 0}
+    - target: {fileID: 1417720872053266613, guid: 5e1a29e3417a28e4aa819804e7a134eb,
+        type: 3}
+      propertyPath: m_BackGroundColor.r
+      value: 0.088634215
+      objectReference: {fileID: 0}
+    - target: {fileID: 1417720872053266613, guid: 5e1a29e3417a28e4aa819804e7a134eb,
+        type: 3}
+      propertyPath: m_BackGroundColor.g
+      value: 0.08446065
+      objectReference: {fileID: 0}
+    - target: {fileID: 1417720872053266613, guid: 5e1a29e3417a28e4aa819804e7a134eb,
+        type: 3}
+      propertyPath: m_BackGroundColor.b
+      value: 0.24528301
+      objectReference: {fileID: 0}
     - target: {fileID: 1417720873242113992, guid: 5e1a29e3417a28e4aa819804e7a134eb,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -37248,6 +37268,11 @@ PrefabInstance:
       propertyPath: fBulletCd
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 2393301264101264813, guid: d2510489028f85a45bb7e0ee6e652eee,
+        type: 3}
+      propertyPath: fPlayerDistance
+      value: 46.8
+      objectReference: {fileID: 0}
     - target: {fileID: 2393301264101264814, guid: d2510489028f85a45bb7e0ee6e652eee,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -43598,6 +43623,11 @@ PrefabInstance:
         type: 3}
       propertyPath: fBulletCd
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2393301264101264813, guid: d2510489028f85a45bb7e0ee6e652eee,
+        type: 3}
+      propertyPath: fPlayerDistance
+      value: 48.9
       objectReference: {fileID: 0}
     - target: {fileID: 2393301264101264814, guid: d2510489028f85a45bb7e0ee6e652eee,
         type: 3}
@@ -64947,6 +64977,11 @@ PrefabInstance:
         type: 3}
       propertyPath: fBulletCd
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2393301264101264813, guid: d2510489028f85a45bb7e0ee6e652eee,
+        type: 3}
+      propertyPath: fPlayerDistance
+      value: 42
       objectReference: {fileID: 0}
     - target: {fileID: 2393301264101264814, guid: d2510489028f85a45bb7e0ee6e652eee,
         type: 3}

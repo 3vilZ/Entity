@@ -4813,8 +4813,9 @@ MonoBehaviour:
   colorCollecting1: {r: 0.9528302, g: 0.76162255, b: 0.15730685, a: 1}
   colorCollecting2: {r: 1, g: 0.9679296, b: 0.759434, a: 1}
   ps: {fileID: 190891657}
-  fSpeed: 1
+  fSpeed: 3
   fDistance: 2
+  bCollecting: 0
   bRDY1: 0
   bRDY2: 0
 --- !u!58 &9181584055982769958

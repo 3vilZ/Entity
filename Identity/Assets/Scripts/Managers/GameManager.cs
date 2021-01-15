@@ -96,11 +96,11 @@ public class GameManager : MonoBehaviour
         }
         */
 
-        /*
+        
         switch (iCoreStart)
         {
             case 0:
-                goBall.SetActive(false);
+                //goBall.SetActive(false);
                 break;
             case 1:
                 GetSkill(0);
@@ -118,7 +118,7 @@ public class GameManager : MonoBehaviour
                 print("PdroP");
                 break;
         }
-        */
+        
     }
 
     
@@ -171,6 +171,7 @@ public class GameManager : MonoBehaviour
     {
         goPlayer.GetComponent<Animator>().SetTrigger("Death");
         goPlayer.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
+        goPlayer.GetComponent<BoxCollider2D>().enabled = false;
         tDeathPos = goPlayer.transform.position;
     }
     public void Death2()
@@ -197,6 +198,7 @@ public class GameManager : MonoBehaviour
     public void Death3()
     {
         goCurrentVirtualCamera.GetComponent<CinemachineVirtualCamera>().GetCinemachineComponent<CinemachineFramingTransposer>().m_LookaheadSmoothing = 0.4f;
+        goPlayer.GetComponent<BoxCollider2D>().enabled = true;
         goPlayer.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
         
         if (bSkill[0])

@@ -77,7 +77,7 @@ public class GetAbility : MonoBehaviour
 
         if(bStart)
         {
-            goBallSlot.transform.position = Vector3.MoveTowards(goBallSlot.transform.position, goAnimPlace.transform.position, 0.03f);
+            goBallSlot.transform.position = Vector3.MoveTowards(goBallSlot.transform.position, goAnimPlace.transform.position, 0.04f);
 
             if(Vector3.Distance(goBallSlot.transform.position, goAnimPlace.transform.position) <= 0.1f)
             {
@@ -88,7 +88,7 @@ public class GetAbility : MonoBehaviour
 
         if(bEnd)
         {
-            goBallSlot.transform.position = Vector3.MoveTowards(goBallSlot.transform.position, GameManager.Instance.GoPlayer.transform.position, 0.03f);
+            goBallSlot.transform.position = Vector3.MoveTowards(goBallSlot.transform.position, GameManager.Instance.GoPlayer.transform.position, 0.04f);
 
             if (Vector3.Distance(goBallSlot.transform.position, GameManager.Instance.GoPlayer.transform.position) <= 0.1f)
             {

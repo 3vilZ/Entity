@@ -188,7 +188,7 @@ public class PlayerControllerV3 : MonoBehaviour
 
 
 
-        //CatchBall();
+        /*
         switch (GameManager.Instance.ICoreStart)
         {
             case 0:
@@ -210,6 +210,7 @@ public class PlayerControllerV3 : MonoBehaviour
                 print("PdroP");
                 break;
         }
+        */
 
         v2WallJumpdir.Normalize();
 

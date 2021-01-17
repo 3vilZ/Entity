@@ -1315,6 +1315,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1417720872053266610, guid: 5e1a29e3417a28e4aa819804e7a134eb,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1417720872053266610, guid: 5e1a29e3417a28e4aa819804e7a134eb,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.8279567
+      objectReference: {fileID: 0}
     - target: {fileID: 1417720873242113992, guid: 5e1a29e3417a28e4aa819804e7a134eb,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4133,11 +4143,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4800702590185129057, guid: bd1ae5eae53342b459920e7584e73da0,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 10.160017
-      objectReference: {fileID: 0}
     - target: {fileID: 4800702590720814005, guid: bd1ae5eae53342b459920e7584e73da0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4211,11 +4216,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: GameManager
-      objectReference: {fileID: 0}
-    - target: {fileID: 161136713085171595, guid: fcf0005624176224993c3942531ff98f,
-        type: 3}
-      propertyPath: iCoreStart
-      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 161136713085171596, guid: fcf0005624176224993c3942531ff98f,
         type: 3}

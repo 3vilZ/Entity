@@ -627,6 +627,7 @@ public class PlayerControllerV3 : MonoBehaviour
                 else
                 {
                     playerAnim.StartJump();
+                    fHorizontalVelocity = -v3HitDirection.x;
                     rbPlayer.velocity = new Vector2(-v3HitDirection.x * fPlayerShootForce, -v3HitDirection.y * fPlayerShootForce);
                 }
 
@@ -688,6 +689,7 @@ public class PlayerControllerV3 : MonoBehaviour
                 else
                 {
                     playerAnim.StartJump();
+                    fHorizontalVelocity = -v3HitDirection.x;
                     rbPlayer.velocity = new Vector2(-v3HitDirection.x * fPlayerShootForce, -v3HitDirection.y * fPlayerShootForce);
                 }
 
@@ -862,6 +864,8 @@ public class PlayerControllerV3 : MonoBehaviour
                 {
                     bWallJumpDone = true;
                     playerAnim.StartJump();
+                    FlipX();
+                    fHorizontalVelocity = v2WallJumpdir.x;
                     rbPlayer.velocity = new Vector2(v2WallJumpdir.x, v2WallJumpdir.y) * fWallJumpforce;
                     Particles(0);
                     bWallJumpRDY = false;
@@ -870,6 +874,8 @@ public class PlayerControllerV3 : MonoBehaviour
                 {
                     bWallJumpDone = true;
                     playerAnim.StartJump();
+                    FlipX();
+                    fHorizontalVelocity = -v2WallJumpdir.x;
                     rbPlayer.velocity = new Vector2(-v2WallJumpdir.x, v2WallJumpdir.y) * fWallJumpforce;
                     Particles(0);
                     bWallJumpRDY = false;
@@ -911,7 +917,7 @@ public class PlayerControllerV3 : MonoBehaviour
         {
             playerAnim.Wall(false);
         }
-
+        
         if(wallDetect != null)
         {
             bWallDetect = true;
@@ -920,6 +926,7 @@ public class PlayerControllerV3 : MonoBehaviour
         {
             bWallDetect = false;
         }
+        
     }
 
 

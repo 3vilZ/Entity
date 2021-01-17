@@ -10014,7 +10014,7 @@ MonoBehaviour:
   fBallReloadForce: 100
   fPlayerReloadForce: 20
   bCOLLIDEOnReload: 0
-  bShootDirectionForPlayer: 1
+  bShootDirectionForPlayer: 0
   fDashForce: 8
   fDashDistance: 10
   fDashCapMoveTime: 0.3

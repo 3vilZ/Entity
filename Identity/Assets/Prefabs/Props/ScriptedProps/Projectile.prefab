@@ -208,9 +208,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5cbba6f9abb9e80448ca856e1c3d0366, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fBulletSpeed: 8
-  fBulletCd: 2
-  fPlayerDistance: 22.34
+  fBulletSpeed: 20
+  fBulletCd: 0.2
+  fPlayerDistance: 30
   tAttackPos: {fileID: 2393301264942568163}
   goBullet: {fileID: 9131735986333550001}
   goCarcaj: {fileID: 2393301264295167317}

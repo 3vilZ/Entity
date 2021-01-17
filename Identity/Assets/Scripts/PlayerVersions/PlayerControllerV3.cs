@@ -45,6 +45,7 @@ public class PlayerControllerV3 : MonoBehaviour
     Vector2 v2WallDetectScale;
     bool bWallJumpDone = false;
     bool bWallJumpRDY = true;
+    bool bWallDetect = false;
     float fWallSecureControl = 0;
     float fWallJumpCapMoveTimeControl = 0;
     
@@ -335,8 +336,8 @@ public class PlayerControllerV3 : MonoBehaviour
         if (bReloading && !bGrounded && GameManager.Instance.BSkill[1] && !bDead && !bInteracting)
         {
             //rbPlayer.velocity = Vector2.zero;
+            playerAnim.StartJump();
             rbPlayer.velocity = new Vector2(rbPlayer.velocity.x, fPlayerReloadForce);
-            //rbPlayer.velocity = Vector2.up * fPlayerReloadForce;
             bReloading = false;
         }
         else if (bReloading)
@@ -446,9 +447,23 @@ public class PlayerControllerV3 : MonoBehaviour
             bLandDone = false;
         }
 
-        if (bPlatformMove)
+        if(!bWallDetect)
         {
-            if (Input.GetAxisRaw("Horizontal") != 0)
+            if (bPlatformMove)
+            {
+                if (Input.GetAxisRaw("Horizontal") != 0)
+                {
+                    if (!facingRight && fHorizontalVelocity > 0)
+                    {
+                        FlipX();
+                    }
+                    else if (facingRight && fHorizontalVelocity < 0)
+                    {
+                        FlipX();
+                    }
+                }
+            }
+            else
             {
                 if (!facingRight && fHorizontalVelocity > 0)
                 {
@@ -458,17 +473,6 @@ public class PlayerControllerV3 : MonoBehaviour
                 {
                     FlipX();
                 }
-            }
-        }
-        else
-        {
-            if (!facingRight && fHorizontalVelocity > 0)
-            {
-                FlipX();
-            }
-            else if (facingRight && fHorizontalVelocity < 0)
-            {
-                FlipX();
             }
         }
     }
@@ -622,6 +626,7 @@ public class PlayerControllerV3 : MonoBehaviour
                 }
                 else
                 {
+                    playerAnim.StartJump();
                     rbPlayer.velocity = new Vector2(-v3HitDirection.x * fPlayerShootForce, -v3HitDirection.y * fPlayerShootForce);
                 }
 
@@ -682,6 +687,7 @@ public class PlayerControllerV3 : MonoBehaviour
                 }
                 else
                 {
+                    playerAnim.StartJump();
                     rbPlayer.velocity = new Vector2(-v3HitDirection.x * fPlayerShootForce, -v3HitDirection.y * fPlayerShootForce);
                 }
 
@@ -855,6 +861,7 @@ public class PlayerControllerV3 : MonoBehaviour
                 if (wallDetect.GetComponent<BoxCollider2D>() == wallDetect.gameObject.GetComponentInParent<WallJump>().colRight)
                 {
                     bWallJumpDone = true;
+                    playerAnim.StartJump();
                     rbPlayer.velocity = new Vector2(v2WallJumpdir.x, v2WallJumpdir.y) * fWallJumpforce;
                     Particles(0);
                     bWallJumpRDY = false;
@@ -862,6 +869,7 @@ public class PlayerControllerV3 : MonoBehaviour
                 else if (wallDetect.GetComponent<BoxCollider2D>() == wallDetect.gameObject.GetComponentInParent<WallJump>().colLeft)
                 {
                     bWallJumpDone = true;
+                    playerAnim.StartJump();
                     rbPlayer.velocity = new Vector2(-v2WallJumpdir.x, v2WallJumpdir.y) * fWallJumpforce;
                     Particles(0);
                     bWallJumpRDY = false;
@@ -893,6 +901,24 @@ public class PlayerControllerV3 : MonoBehaviour
         if(wallDetect != null && rbPlayer.velocity.y <= -fWallGravity)
         {
             rbPlayer.velocity = new Vector2(rbPlayer.velocity.x, -fWallGravity);
+        }
+
+        if (wallDetect != null && !bGrounded && !bWallJumpDone)
+        {
+            playerAnim.Wall(true);
+        }
+        else
+        {
+            playerAnim.Wall(false);
+        }
+
+        if(wallDetect != null)
+        {
+            bWallDetect = true;
+        }
+        else
+        {
+            bWallDetect = false;
         }
     }
 

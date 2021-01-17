@@ -128,7 +128,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fDistance: 4
   goY: {fileID: 8842004403749251872}
-  iEvent: 0
+  iEvent: -1
   sDialogue:
     strName: '- SLIME:'
     strSentence:

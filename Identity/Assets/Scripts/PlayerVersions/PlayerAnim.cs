@@ -55,4 +55,9 @@ public class PlayerAnim : MonoBehaviour
             anim.ResetTrigger("Land");
         }
     }
+
+    public void Wall(bool b)
+    {
+        anim.SetBool("Wall", b);
+    }
 }

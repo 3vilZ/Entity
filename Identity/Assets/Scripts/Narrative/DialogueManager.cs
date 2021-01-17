@@ -17,6 +17,7 @@ public class DialogueManager : MonoBehaviour
     bool bOnce = false;
     string strCurrentSentence;
     int iEvent;
+    public GameObject[] goEvent;
 
     void Start()
     {
@@ -113,7 +114,16 @@ public class DialogueManager : MonoBehaviour
         GameManager.Instance.ScriptPlayer.bInteracting = false;
         goNarrativeDisplay.SetActive(false);
         bStart = false;
-        StartEvent();
+
+        if(goEvent.Length > 0)
+        {
+            if(iEvent >= 0)
+            {
+                goEvent[iEvent].GetComponent<Animator>().SetTrigger("Start");
+            }
+            
+        }
+        
         Debug.Log("End of conversation. ");
     }
 
@@ -122,6 +132,7 @@ public class DialogueManager : MonoBehaviour
         iEvent = dialogueTriggerEvent;
     }
 
+    /*
     void StartEvent()
     {
         switch (iEvent)
@@ -140,4 +151,5 @@ public class DialogueManager : MonoBehaviour
                 break;
         }
     }
+    */
 }

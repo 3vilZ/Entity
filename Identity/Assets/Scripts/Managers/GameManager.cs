@@ -18,7 +18,9 @@ public class GameManager : MonoBehaviour
     int iCollectables;
     Vector2 tCurrentCheckPointPos;
     PlayerControllerV3 scriptPlayer;
+    int iSpawn;
     Vector2 tDeathPos;
+
     
 
     public bool[] BSkill { get => bSkill; set => bSkill = value; }
@@ -31,6 +33,7 @@ public class GameManager : MonoBehaviour
     public int ICollectables { get => iCollectables; set => iCollectables = value; }
     public int ICoreStart { get => iCoreStart; set => iCoreStart = value; }
     public PlayerControllerV3 ScriptPlayer { get => scriptPlayer; set => scriptPlayer = value; }
+    public int ISpawn { get => iSpawn; set => iSpawn = value; }
 
     private void OnLevelWasLoaded(int level)
     {

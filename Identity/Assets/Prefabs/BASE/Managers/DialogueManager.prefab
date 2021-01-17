@@ -43,6 +43,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87c056969f163a4469b91c91fc9a930f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  txtName: {fileID: 0}
-  txtSentence: {fileID: 0}
-  goNarrativeDisplay: {fileID: 0}
+  goEvent: []

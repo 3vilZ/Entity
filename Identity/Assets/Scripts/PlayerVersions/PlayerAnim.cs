@@ -56,6 +56,22 @@ public class PlayerAnim : MonoBehaviour
         }
     }
 
+    public void StartWall()
+    {
+        anim.SetTrigger("StartWall");
+    }
+    public void EndWall(bool b)
+    {
+        if (b)
+        {
+            anim.SetTrigger("EndWall");
+        }
+        else
+        {
+            anim.ResetTrigger("EndWall");
+        }
+    }
+
     public void Wall(bool b)
     {
         anim.SetBool("Wall", b);

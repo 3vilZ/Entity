@@ -46,6 +46,7 @@ public class PlayerControllerV3 : MonoBehaviour
     bool bWallJumpDone = false;
     bool bWallJumpRDY = true;
     bool bWallDetect = false;
+    bool bWallOnce = false;
     float fWallSecureControl = 0;
     float fWallJumpCapMoveTimeControl = 0;
     
@@ -911,11 +912,18 @@ public class PlayerControllerV3 : MonoBehaviour
 
         if (wallDetect != null && !bGrounded && !bWallJumpDone)
         {
-            playerAnim.Wall(true);
+            if(!bWallOnce)
+            {
+                playerAnim.EndWall(false);
+                playerAnim.StartWall();
+                bWallOnce = true;
+                print("kk");
+            }
         }
         else
         {
-            playerAnim.Wall(false);
+            bWallOnce = false;
+            playerAnim.EndWall(true);
         }
         
         if(wallDetect != null)

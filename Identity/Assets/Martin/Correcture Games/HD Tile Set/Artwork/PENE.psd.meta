@@ -1,0 +1,8159 @@
+fileFormatVersion: 2
+guid: 808b1132527559347b28f66c555df509
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 21300000
+    second: Outtake_0
+  - first:
+      213: 21300002
+    second: Outtake_1
+  - first:
+      213: 21300004
+    second: Outtake_3
+  - first:
+      213: 21300006
+    second: Outtake_8
+  - first:
+      213: 21300008
+    second: Outtake_9
+  - first:
+      213: 21300010
+    second: Outtake_11
+  - first:
+      213: 21300012
+    second: Outtake_12
+  - first:
+      213: 21300014
+    second: Outtake_13
+  - first:
+      213: 21300016
+    second: Outtake_20
+  - first:
+      213: 21300018
+    second: Outtake_21
+  - first:
+      213: 21300020
+    second: Outtake_22
+  - first:
+      213: 21300022
+    second: Outtake_28
+  - first:
+      213: 21300024
+    second: Outtake_29
+  - first:
+      213: 21300026
+    second: Outtake_30
+  - first:
+      213: 21300028
+    second: Outtake_32
+  - first:
+      213: 21300030
+    second: Outtake_33
+  - first:
+      213: 21300032
+    second: Outtake_35
+  - first:
+      213: 21300034
+    second: Outtake_36
+  - first:
+      213: 21300036
+    second: Outtake_37
+  - first:
+      213: 21300038
+    second: Outtake_40
+  - first:
+      213: 21300040
+    second: Outtake_41
+  - first:
+      213: 21300042
+    second: Outtake_43
+  - first:
+      213: 21300044
+    second: Outtake_48
+  - first:
+      213: 21300046
+    second: Outtake_51
+  - first:
+      213: 21300048
+    second: Outtake_52
+  - first:
+      213: 21300050
+    second: Outtake_54
+  - first:
+      213: 21300052
+    second: Outtake_56
+  - first:
+      213: 21300054
+    second: Outtake_57
+  - first:
+      213: 21300056
+    second: Outtake_59
+  - first:
+      213: 21300058
+    second: Outtake_60
+  - first:
+      213: 21300060
+    second: Outtake_62
+  - first:
+      213: 21300062
+    second: Outtake_64
+  - first:
+      213: 21300064
+    second: Outtake_65
+  - first:
+      213: 21300066
+    second: Outtake_67
+  - first:
+      213: 21300068
+    second: Outtake_68
+  - first:
+      213: 21300070
+    second: Outtake_69
+  - first:
+      213: 21300072
+    second: Outtake_86
+  - first:
+      213: 21300074
+    second: Outtake_88
+  - first:
+      213: 21300076
+    second: Outtake_90
+  - first:
+      213: 21300078
+    second: Outtake_92
+  - first:
+      213: 21300080
+    second: Outtake_94
+  - first:
+      213: 21300082
+    second: Outtake_96
+  - first:
+      213: 21300084
+    second: Outtake_98
+  - first:
+      213: 21300086
+    second: Outtake_100
+  - first:
+      213: 21300088
+    second: Outtake_106
+  - first:
+      213: 21300090
+    second: Outtake_107
+  - first:
+      213: 21300092
+    second: Outtake_108
+  - first:
+      213: 21300094
+    second: Outtake_109
+  - first:
+      213: 21300096
+    second: Outtake_118
+  - first:
+      213: 21300098
+    second: Outtake_120
+  - first:
+      213: 21300100
+    second: Outtake_122
+  - first:
+      213: 21300102
+    second: Outtake_123
+  - first:
+      213: 21300104
+    second: Outtake_124
+  - first:
+      213: 21300106
+    second: Outtake_125
+  - first:
+      213: 21300108
+    second: Outtake_126
+  - first:
+      213: 21300110
+    second: Outtake_128
+  - first:
+      213: 21300112
+    second: Outtake_130
+  - first:
+      213: 21300114
+    second: Outtake_132
+  - first:
+      213: 21300116
+    second: Outtake_134
+  - first:
+      213: 21300118
+    second: Outtake_135
+  - first:
+      213: 21300120
+    second: Outtake_137
+  - first:
+      213: 21300122
+    second: Outtake_138
+  - first:
+      213: 21300124
+    second: Outtake_139
+  - first:
+      213: 21300126
+    second: Outtake_142
+  - first:
+      213: 21300128
+    second: Outtake_143
+  - first:
+      213: 21300130
+    second: Outtake_144
+  - first:
+      213: 21300132
+    second: Outtake_145
+  - first:
+      213: 21300134
+    second: Outtake_146
+  - first:
+      213: 21300136
+    second: Outtake_148
+  - first:
+      213: 21300138
+    second: Outtake_154
+  - first:
+      213: 21300140
+    second: Outtake_155
+  - first:
+      213: 21300142
+    second: Outtake_156
+  - first:
+      213: 21300144
+    second: Outtake_158
+  - first:
+      213: 21300146
+    second: Outtake_159
+  - first:
+      213: 21300148
+    second: Outtake_160
+  - first:
+      213: 21300150
+    second: Outtake_162
+  - first:
+      213: 21300152
+    second: Outtake_163
+  - first:
+      213: 21300154
+    second: Outtake_164
+  - first:
+      213: 21300156
+    second: Outtake_165
+  - first:
+      213: 21300158
+    second: Outtake_166
+  - first:
+      213: 21300160
+    second: Outtake_167
+  - first:
+      213: 21300162
+    second: Outtake_169
+  - first:
+      213: 21300164
+    second: Outtake_174
+  - first:
+      213: 21300166
+    second: Outtake_175
+  - first:
+      213: 21300168
+    second: Outtake_176
+  - first:
+      213: 21300170
+    second: Outtake_177
+  - first:
+      213: 21300172
+    second: Outtake_178
+  - first:
+      213: 21300174
+    second: Outtake_179
+  - first:
+      213: 21300176
+    second: Outtake_180
+  - first:
+      213: 21300178
+    second: Outtake_181
+  - first:
+      213: 21300180
+    second: Outtake_182
+  - first:
+      213: 21300182
+    second: Outtake_183
+  - first:
+      213: 21300184
+    second: Outtake_185
+  - first:
+      213: 21300186
+    second: Outtake_186
+  - first:
+      213: 21300188
+    second: Outtake_188
+  - first:
+      213: 21300190
+    second: Outtake_192
+  - first:
+      213: 21300192
+    second: Outtake_193
+  - first:
+      213: 21300194
+    second: Outtake_194
+  - first:
+      213: 21300196
+    second: Outtake_195
+  - first:
+      213: 21300198
+    second: Outtake_196
+  - first:
+      213: 21300200
+    second: Outtake_197
+  - first:
+      213: 21300202
+    second: Outtake_206
+  - first:
+      213: 21300204
+    second: Outtake_208
+  - first:
+      213: 21300206
+    second: Outtake_209
+  - first:
+      213: 21300208
+    second: Outtake_210
+  - first:
+      213: 21300210
+    second: Outtake_211
+  - first:
+      213: 21300212
+    second: Outtake_212
+  - first:
+      213: 21300214
+    second: Outtake_213
+  - first:
+      213: 21300216
+    second: Outtake_214
+  - first:
+      213: 21300218
+    second: Outtake_216
+  - first:
+      213: 21300220
+    second: Outtake_218
+  - first:
+      213: 21300222
+    second: Outtake_220
+  - first:
+      213: 21300224
+    second: Outtake_224
+  - first:
+      213: 21300226
+    second: Outtake_226
+  - first:
+      213: 21300228
+    second: Outtake_227
+  - first:
+      213: 21300230
+    second: Outtake_228
+  - first:
+      213: 21300232
+    second: Outtake_229
+  - first:
+      213: 21300234
+    second: Outtake_234
+  - first:
+      213: 21300236
+    second: Outtake_235
+  - first:
+      213: 21300238
+    second: Outtake_236
+  - first:
+      213: 21300240
+    second: Outtake_237
+  - first:
+      213: 21300242
+    second: Outtake_238
+  - first:
+      213: 21300244
+    second: Outtake_240
+  - first:
+      213: 21300246
+    second: Outtake_242
+  - first:
+      213: 21300248
+    second: Outtake_243
+  - first:
+      213: 21300250
+    second: Outtake_244
+  - first:
+      213: 21300252
+    second: Outtake_245
+  - first:
+      213: 21300254
+    second: Outtake_246
+  - first:
+      213: 21300256
+    second: Outtake_248
+  - first:
+      213: 21300258
+    second: Outtake_250
+  - first:
+      213: 21300260
+    second: Outtake_251
+  - first:
+      213: 21300262
+    second: Outtake_252
+  - first:
+      213: 21300264
+    second: Outtake_253
+  - first:
+      213: 7989318940620280007
+    second: Outtake_0
+  - first:
+      213: 6396433404294633215
+    second: Outtake_1
+  - first:
+      213: 8852990207283817264
+    second: Outtake_2
+  - first:
+      213: -6543917931447069603
+    second: Outtake_3
+  - first:
+      213: 8011277048819446035
+    second: Outtake_4
+  - first:
+      213: 2237849065411140314
+    second: Outtake_5
+  - first:
+      213: -2572473877195100091
+    second: Outtake_6
+  - first:
+      213: 729510217360922077
+    second: Outtake_7
+  - first:
+      213: -6726472140795196496
+    second: Outtake_8
+  - first:
+      213: -8214237159195825831
+    second: Outtake_9
+  - first:
+      213: 8258786861006380618
+    second: Outtake_10
+  - first:
+      213: 3622525585546536713
+    second: Outtake_11
+  - first:
+      213: 3528949970374788083
+    second: Outtake_12
+  - first:
+      213: -8514698901735961543
+    second: Outtake_13
+  - first:
+      213: 8519588766056427935
+    second: Outtake_14
+  - first:
+      213: 8189957038876890057
+    second: Outtake_15
+  - first:
+      213: -6458524930347317983
+    second: Outtake_16
+  - first:
+      213: 4420751872646155810
+    second: Outtake_17
+  - first:
+      213: 85340051158993778
+    second: Outtake_18
+  - first:
+      213: -2202858379170627117
+    second: Outtake_19
+  - first:
+      213: -3439332585387384809
+    second: Outtake_20
+  - first:
+      213: 1216857842403163259
+    second: Outtake_21
+  - first:
+      213: 1146184284629612701
+    second: Outtake_22
+  - first:
+      213: -2082589559341395382
+    second: Outtake_23
+  - first:
+      213: 3492833266478184208
+    second: Outtake_24
+  - first:
+      213: -5966554687397112972
+    second: Outtake_25
+  - first:
+      213: -20917960888606491
+    second: Outtake_26
+  - first:
+      213: 6846038630593484891
+    second: Outtake_27
+  - first:
+      213: 6327191574350992244
+    second: Outtake_28
+  - first:
+      213: -5759299156365413626
+    second: Outtake_29
+  - first:
+      213: -5552637526271106742
+    second: Outtake_30
+  - first:
+      213: -6808093451391670776
+    second: Outtake_31
+  - first:
+      213: -8509232658064427497
+    second: Outtake_32
+  - first:
+      213: -8291477133707963120
+    second: Outtake_33
+  - first:
+      213: 1309091337987150879
+    second: Outtake_34
+  - first:
+      213: -2574526992157573586
+    second: Outtake_35
+  - first:
+      213: 9015940545177246226
+    second: Outtake_36
+  - first:
+      213: 6477096753949532170
+    second: Outtake_37
+  - first:
+      213: 3142807570170271360
+    second: Outtake_38
+  - first:
+      213: 168546366354052612
+    second: Outtake_39
+  - first:
+      213: 7047943803714095024
+    second: Outtake_40
+  - first:
+      213: -3648357311878425650
+    second: Outtake_41
+  - first:
+      213: 6752951063329752412
+    second: Outtake_42
+  - first:
+      213: -7682453396639368854
+    second: Outtake_43
+  - first:
+      213: -2268392014131868666
+    second: Outtake_44
+  - first:
+      213: 3430451744552488383
+    second: Outtake_45
+  - first:
+      213: 7207154175234376999
+    second: Outtake_46
+  - first:
+      213: 177775994001643598
+    second: Outtake_47
+  - first:
+      213: -6844857137731403240
+    second: Outtake_49
+  - first:
+      213: 9108301999616577615
+    second: Outtake_50
+  - first:
+      213: 5468188448521599494
+    second: Outtake_52
+  - first:
+      213: -4851237403974371502
+    second: Outtake_53
+  - first:
+      213: -2966987304734578588
+    second: Outtake_54
+  - first:
+      213: 8463778038068891828
+    second: Outtake_55
+  - first:
+      213: 5915683104800386929
+    second: Outtake_56
+  - first:
+      213: -4150629958106265955
+    second: Outtake_57
+  - first:
+      213: -5537240906784743971
+    second: Outtake_58
+  - first:
+      213: -8842112706139796438
+    second: Outtake_59
+  - first:
+      213: -933999709103560273
+    second: Outtake_60
+  - first:
+      213: 6905908073745497268
+    second: Outtake_61
+  - first:
+      213: 7134036154336641507
+    second: Outtake_62
+  - first:
+      213: 6195659678471917106
+    second: Outtake_63
+  - first:
+      213: 6412366794494541178
+    second: Outtake_64
+  - first:
+      213: 6213841869535255234
+    second: Outtake_65
+  - first:
+      213: -6424764879722036053
+    second: Outtake_66
+  - first:
+      213: 8905026773754073798
+    second: Outtake_67
+  - first:
+      213: -7816044511137175074
+    second: Outtake_70
+  - first:
+      213: 3854864766200474005
+    second: Outtake_71
+  - first:
+      213: -8399987908831680909
+    second: Outtake_72
+  - first:
+      213: 6112229005040012656
+    second: Outtake_73
+  - first:
+      213: 4621749170488231382
+    second: Outtake_74
+  - first:
+      213: 7392331618077045071
+    second: Outtake_75
+  - first:
+      213: 6292697409248185998
+    second: Outtake_76
+  - first:
+      213: 2129262753255538835
+    second: Outtake_77
+  - first:
+      213: -8357353134788811890
+    second: Outtake_78
+  - first:
+      213: -7170077224395420067
+    second: Outtake_79
+  - first:
+      213: 4480254565815088210
+    second: Outtake_80
+  - first:
+      213: 7311357408113071041
+    second: Outtake_81
+  - first:
+      213: 2216392020511391453
+    second: Outtake_82
+  - first:
+      213: 980307194685035885
+    second: Outtake_83
+  - first:
+      213: -7591227456107834671
+    second: Outtake_84
+  - first:
+      213: 8724460955511415971
+    second: Outtake_85
+  - first:
+      213: -4895671766791470292
+    second: Outtake_86
+  - first:
+      213: -5415525399010617967
+    second: Outtake_87
+  - first:
+      213: 459686660559768722
+    second: Outtake_88
+  - first:
+      213: -6486207368175184972
+    second: Outtake_89
+  - first:
+      213: -911645503353441044
+    second: Outtake_90
+  - first:
+      213: -2525471908313329152
+    second: Outtake_91
+  - first:
+      213: 1585513557086065994
+    second: Outtake_92
+  - first:
+      213: 3613947628700540464
+    second: Outtake_93
+  - first:
+      213: -6841997662700511214
+    second: Outtake_94
+  - first:
+      213: 1561169194253074245
+    second: Outtake_95
+  - first:
+      213: -1184004424444830015
+    second: Outtake_96
+  - first:
+      213: 2198735431930333920
+    second: Outtake_97
+  - first:
+      213: 2612438228696851657
+    second: Outtake_98
+  - first:
+      213: -1627619473270824897
+    second: Outtake_99
+  - first:
+      213: -1222343742302607464
+    second: Outtake_100
+  - first:
+      213: -5502832956213059851
+    second: Outtake_101
+  - first:
+      213: 2802330677153335210
+    second: Outtake_102
+  - first:
+      213: 3185502129659426674
+    second: Outtake_103
+  - first:
+      213: -5991582614534079178
+    second: Outtake_104
+  - first:
+      213: 4089600723075205803
+    second: Outtake_105
+  - first:
+      213: -4528723684961264814
+    second: Outtake_106
+  - first:
+      213: 8738263555587058197
+    second: Outtake_107
+  - first:
+      213: 4412912953625752547
+    second: Outtake_108
+  - first:
+      213: 1276612787742376161
+    second: Outtake_109
+  - first:
+      213: 4608618222804867001
+    second: Outtake_110
+  - first:
+      213: 436164500953813593
+    second: Outtake_111
+  - first:
+      213: -3677910371096828308
+    second: Outtake_112
+  - first:
+      213: -1950490211484572415
+    second: Outtake_113
+  - first:
+      213: 4113398802852804497
+    second: Outtake_114
+  - first:
+      213: -8193126925611387233
+    second: Outtake_115
+  - first:
+      213: 6320989480478050494
+    second: Outtake_116
+  - first:
+      213: 4170770573608884784
+    second: Outtake_117
+  - first:
+      213: 7810396231547507403
+    second: Outtake_118
+  - first:
+      213: -8786919331636723052
+    second: Outtake_119
+  - first:
+      213: 1055087660723459041
+    second: Outtake_120
+  - first:
+      213: 4183346089308288549
+    second: Outtake_121
+  - first:
+      213: -6791091826583791873
+    second: Outtake_122
+  - first:
+      213: 6696213001998950044
+    second: Outtake_123
+  - first:
+      213: 8577647683972457089
+    second: Outtake_124
+  - first:
+      213: -1313963083905437624
+    second: Outtake_125
+  - first:
+      213: -2642923572069468302
+    second: Outtake_126
+  - first:
+      213: 1842230924398477074
+    second: Outtake_127
+  - first:
+      213: 2598493616423856841
+    second: Outtake_128
+  - first:
+      213: -5739327187641093589
+    second: Outtake_129
+  - first:
+      213: 2329480502860489685
+    second: Outtake_130
+  - first:
+      213: -71126503046049841
+    second: Outtake_131
+  - first:
+      213: 74043695522886632
+    second: Outtake_132
+  - first:
+      213: -4608133521069990252
+    second: Outtake_133
+  - first:
+      213: 9033340382170010761
+    second: Outtake_134
+  - first:
+      213: 8345155167163322769
+    second: Outtake_135
+  - first:
+      213: 5241993058333395433
+    second: Outtake_136
+  - first:
+      213: 5722934169647382248
+    second: Outtake_137
+  - first:
+      213: -6225905087149193379
+    second: Outtake_138
+  - first:
+      213: -3774851693395830215
+    second: Outtake_139
+  - first:
+      213: 7492211684941472594
+    second: Outtake_140
+  - first:
+      213: 6644273384027173245
+    second: Outtake_141
+  - first:
+      213: -2306885164909974196
+    second: Outtake_142
+  - first:
+      213: 6335499894946260414
+    second: Outtake_143
+  - first:
+      213: 7820461884869705418
+    second: Outtake_144
+  - first:
+      213: -567166881126649897
+    second: Outtake_145
+  - first:
+      213: -3002932899457854541
+    second: Outtake_146
+  - first:
+      213: 2571541236099287915
+    second: Outtake_147
+  - first:
+      213: -2719667335356191641
+    second: Outtake_148
+  - first:
+      213: 9172434336532837366
+    second: Outtake_149
+  - first:
+      213: 5164687766953414956
+    second: Outtake_150
+  - first:
+      213: -8122451057710149412
+    second: Outtake_151
+  - first:
+      213: -9148328782036495726
+    second: Outtake_152
+  - first:
+      213: -404131067846973526
+    second: Outtake_153
+  - first:
+      213: -4962238420190211790
+    second: Outtake_154
+  - first:
+      213: -5322119901239416916
+    second: Outtake_155
+  - first:
+      213: -6157972617977177924
+    second: Outtake_156
+  - first:
+      213: -2429981236805328488
+    second: Outtake_157
+  - first:
+      213: 1592221842614312769
+    second: Outtake_158
+  - first:
+      213: -5389001697918559354
+    second: Outtake_159
+  - first:
+      213: 8521651158303768173
+    second: Outtake_160
+  - first:
+      213: -4131708123891369019
+    second: Outtake_161
+  - first:
+      213: 3909917105147536468
+    second: Outtake_162
+  - first:
+      213: 4211912617027237966
+    second: Outtake_163
+  - first:
+      213: 6533526766634006878
+    second: Outtake_164
+  - first:
+      213: 9064463203716942285
+    second: Outtake_165
+  - first:
+      213: -5560886746335126054
+    second: Outtake_166
+  - first:
+      213: -3530579841497557996
+    second: Outtake_167
+  - first:
+      213: 8731987366607638529
+    second: Outtake_168
+  - first:
+      213: -1660674379319206912
+    second: Outtake_169
+  - first:
+      213: -1233624528787279804
+    second: Outtake_170
+  - first:
+      213: 8952206409560907875
+    second: Outtake_171
+  - first:
+      213: 8575100925624297328
+    second: Outtake_172
+  - first:
+      213: 5042653785017298719
+    second: Outtake_173
+  - first:
+      213: 5830845450605460698
+    second: Outtake_174
+  - first:
+      213: -7287362385675550120
+    second: Outtake_175
+  - first:
+      213: -4237657560496684940
+    second: Outtake_176
+  - first:
+      213: -1337206695278792657
+    second: Outtake_177
+  - first:
+      213: 1110479097081836820
+    second: Outtake_178
+  - first:
+      213: 6099109804992820232
+    second: Outtake_179
+  - first:
+      213: -6381345685660718494
+    second: Outtake_180
+  - first:
+      213: -8273893281421399775
+    second: Outtake_181
+  - first:
+      213: 12509719205136044
+    second: Outtake_182
+  - first:
+      213: -8374287809082317921
+    second: Outtake_183
+  - first:
+      213: 336915954556223536
+    second: Outtake_184
+  - first:
+      213: 4477227916297527312
+    second: Outtake_185
+  - first:
+      213: 6023911781210579806
+    second: Outtake_186
+  - first:
+      213: 2658961043924233902
+    second: Outtake_187
+  - first:
+      213: -6579397393131904482
+    second: Outtake_188
+  - first:
+      213: -511885977011726648
+    second: Outtake_189
+  - first:
+      213: 7280930015531469756
+    second: Outtake_190
+  - first:
+      213: 3812537871176163681
+    second: Outtake_191
+  - first:
+      213: 3171297416359815251
+    second: Outtake_192
+  - first:
+      213: 4937467444936390321
+    second: Outtake_193
+  - first:
+      213: 6705078991779585099
+    second: Outtake_194
+  - first:
+      213: -3231670250900604005
+    second: Outtake_195
+  - first:
+      213: -8292660968437337397
+    second: Outtake_196
+  - first:
+      213: -3291879701511293476
+    second: Outtake_197
+  - first:
+      213: 5972870853313096784
+    second: Outtake_198
+  - first:
+      213: -6652694591837468145
+    second: Outtake_199
+  - first:
+      213: -8868402257817691265
+    second: Outtake_200
+  - first:
+      213: -7199200612706683457
+    second: Outtake_201
+  - first:
+      213: -2181754743817415670
+    second: Outtake_202
+  - first:
+      213: 108361997194971097
+    second: Outtake_203
+  - first:
+      213: -2486746636219575
+    second: Outtake_204
+  - first:
+      213: -9009957430990897061
+    second: Outtake_205
+  - first:
+      213: -4259024103421769132
+    second: Outtake_206
+  - first:
+      213: 2624900964242970554
+    second: Outtake_207
+  - first:
+      213: -5276605241441919358
+    second: Outtake_208
+  - first:
+      213: -8580014873167102223
+    second: Outtake_209
+  - first:
+      213: -469054512663130372
+    second: Outtake_210
+  - first:
+      213: 6680716403241460103
+    second: Outtake_211
+  - first:
+      213: 605340028638566827
+    second: Outtake_212
+  - first:
+      213: 3769967984103597456
+    second: Outtake_213
+  - first:
+      213: -7402935998773936535
+    second: Outtake_214
+  - first:
+      213: 6587292952875649343
+    second: Outtake_215
+  - first:
+      213: -3551242135569290788
+    second: Outtake_216
+  - first:
+      213: 617202324132524469
+    second: Outtake_217
+  - first:
+      213: 3861718990278647717
+    second: Outtake_218
+  - first:
+      213: -4656302198046122566
+    second: Outtake_219
+  - first:
+      213: -2483032085484228716
+    second: Outtake_220
+  - first:
+      213: 1568959344775317390
+    second: Outtake_221
+  - first:
+      213: 4749525693012369697
+    second: Outtake_222
+  - first:
+      213: -936677802479765030
+    second: Outtake_223
+  - first:
+      213: -472188367676758708
+    second: Outtake_224
+  - first:
+      213: -4525203313942360155
+    second: Outtake_225
+  - first:
+      213: -6134803556093766876
+    second: Outtake_226
+  - first:
+      213: 8511504981373804614
+    second: Outtake_227
+  - first:
+      213: -3866676505532595199
+    second: Outtake_228
+  - first:
+      213: -531549383322566356
+    second: Outtake_229
+  - first:
+      213: 2109505603152129791
+    second: Outtake_230
+  - first:
+      213: 3660097725424632253
+    second: Outtake_231
+  - first:
+      213: -8035551319576745274
+    second: Outtake_232
+  - first:
+      213: 441183919042038774
+    second: Outtake_233
+  - first:
+      213: -7594389175576535073
+    second: Outtake_234
+  - first:
+      213: -4508546492481739367
+    second: Outtake_235
+  - first:
+      213: 2899269925005545288
+    second: Outtake_236
+  - first:
+      213: -4428269140649099103
+    second: Outtake_237
+  - first:
+      213: -6600974048911032224
+    second: Outtake_238
+  - first:
+      213: 3642056449398957576
+    second: Outtake_239
+  - first:
+      213: -2202643498422210696
+    second: Outtake_240
+  - first:
+      213: -4797384705306200907
+    second: Outtake_241
+  - first:
+      213: 3345787758640448510
+    second: Outtake_242
+  - first:
+      213: 7064728698799976565
+    second: Outtake_243
+  - first:
+      213: 1171989202068179425
+    second: Outtake_244
+  - first:
+      213: -5017626442007349136
+    second: Outtake_245
+  - first:
+      213: -2650084799865685274
+    second: Outtake_246
+  - first:
+      213: 4484771607290115423
+    second: Outtake_247
+  - first:
+      213: 544861834183198427
+    second: Outtake_248
+  - first:
+      213: 379291851547527567
+    second: Outtake_249
+  - first:
+      213: -2692588453635755381
+    second: Outtake_250
+  - first:
+      213: 2583660868148746529
+    second: Outtake_251
+  - first:
+      213: 3545125167726821096
+    second: Outtake_252
+  - first:
+      213: 6334808553963252547
+    second: Outtake_253
+  - first:
+      213: 203168542379372997
+    second: PENE_0
+  - first:
+      213: 1819555993346543341
+    second: PENE_1
+  - first:
+      213: 4816034194365698421
+    second: PENE_2
+  - first:
+      213: 3576639606325777492
+    second: PENE_3
+  - first:
+      213: 1665214579167198846
+    second: PENE_4
+  - first:
+      213: -1395605091609193005
+    second: PENE_5
+  - first:
+      213: 6526841247807076615
+    second: PENE_6
+  - first:
+      213: -3619941216101487850
+    second: PENE_7
+  - first:
+      213: -93608508341613144
+    second: PENE_8
+  - first:
+      213: -5296254702185256137
+    second: PENE_9
+  - first:
+      213: 4240729287397619420
+    second: PENE_10
+  - first:
+      213: -236080123803366739
+    second: PENE_11
+  - first:
+      213: 4684167249255206012
+    second: PENE_12
+  - first:
+      213: -8741780591885222579
+    second: PENE_13
+  - first:
+      213: -103506264639969602
+    second: PENE_14
+  - first:
+      213: 3655244232530255296
+    second: PENE_15
+  - first:
+      213: 5298681962735884624
+    second: PENE_16
+  - first:
+      213: 9182500385252458714
+    second: PENE_17
+  - first:
+      213: -8094874420200885227
+    second: PENE_18
+  - first:
+      213: -6576218481142688261
+    second: PENE_19
+  - first:
+      213: -9099166056640289387
+    second: PENE_20
+  - first:
+      213: -5286623549120946255
+    second: PENE_21
+  - first:
+      213: 6524091164075409545
+    second: PENE_22
+  - first:
+      213: -5371899565417730681
+    second: PENE_23
+  - first:
+      213: 4040047207081004516
+    second: PENE_24
+  - first:
+      213: 8240990767678110133
+    second: PENE_25
+  - first:
+      213: 1766583498140518281
+    second: PENE_26
+  - first:
+      213: -7014968282989638164
+    second: PENE_27
+  - first:
+      213: -4065136802241444529
+    second: PENE_28
+  - first:
+      213: -6856887395648350501
+    second: PENE_29
+  - first:
+      213: -5333158874082815396
+    second: PENE_30
+  - first:
+      213: -125308804428033080
+    second: PENE_31
+  - first:
+      213: 1289583588571228661
+    second: PENE_32
+  - first:
+      213: -3615236779676883813
+    second: PENE_33
+  - first:
+      213: 3871875622352482865
+    second: PENE_34
+  - first:
+      213: -1375850124807726978
+    second: PENE_35
+  - first:
+      213: -7108246007983104271
+    second: PENE_36
+  - first:
+      213: 6485020156832042243
+    second: PENE_37
+  - first:
+      213: 5172693390484781500
+    second: PENE_38
+  - first:
+      213: -4376906469095093517
+    second: PENE_39
+  - first:
+      213: 2639461556846858345
+    second: PENE_40
+  - first:
+      213: 7812792529798993366
+    second: PENE_41
+  - first:
+      213: 2118758935603426905
+    second: PENE_42
+  - first:
+      213: -7651187525776774640
+    second: PENE_43
+  - first:
+      213: 4583248685769689004
+    second: PENE_44
+  - first:
+      213: -8522601807694567258
+    second: PENE_45
+  - first:
+      213: 5067971645941103126
+    second: PENE_46
+  - first:
+      213: -5406273729584013968
+    second: PENE_47
+  - first:
+      213: 436159809738678527
+    second: PENE_48
+  - first:
+      213: -7067204900543163732
+    second: PENE_49
+  - first:
+      213: 7168058358941451711
+    second: PENE_50
+  - first:
+      213: 6612100472233460314
+    second: PENE_51
+  - first:
+      213: -5637392432719123590
+    second: PENE_52
+  - first:
+      213: -6175861537465195332
+    second: PENE_53
+  - first:
+      213: 312920784095506382
+    second: PENE_54
+  - first:
+      213: 2762348328632816025
+    second: PENE_55
+  - first:
+      213: 3122316201330003811
+    second: PENE_56
+  - first:
+      213: 7920536670314304672
+    second: PENE_57
+  - first:
+      213: 1867621659566786040
+    second: PENE_58
+  - first:
+      213: 763371661928647641
+    second: PENE_59
+  - first:
+      213: -5301918088450745125
+    second: PENE_60
+  - first:
+      213: -3612728695619343708
+    second: PENE_61
+  - first:
+      213: -7185880718967379028
+    second: PENE_62
+  - first:
+      213: -6700993051694476285
+    second: PENE_63
+  - first:
+      213: -2208679722959318127
+    second: PENE_64
+  - first:
+      213: 8126361952617701733
+    second: PENE_65
+  - first:
+      213: 8594243623131466641
+    second: PENE_66
+  - first:
+      213: -2097607126170130832
+    second: PENE_67
+  - first:
+      213: -4436957979524094192
+    second: PENE_68
+  - first:
+      213: 2316798971015731826
+    second: PENE_69
+  - first:
+      213: 392905771688053857
+    second: PENE_70
+  - first:
+      213: 2134529737758040160
+    second: PENE_71
+  - first:
+      213: 1141414738623121229
+    second: PENE_72
+  - first:
+      213: 4076093095320585397
+    second: PENE_73
+  - first:
+      213: -6122083672477527750
+    second: PENE_74
+  - first:
+      213: -4624677964323965783
+    second: PENE_75
+  - first:
+      213: 4117949087479747729
+    second: PENE_76
+  - first:
+      213: 1417246744816062206
+    second: PENE_77
+  - first:
+      213: 3571140285208468680
+    second: PENE_78
+  - first:
+      213: 6056173784424009196
+    second: PENE_79
+  - first:
+      213: 8756392612147073070
+    second: PENE_80
+  - first:
+      213: -4773981570546485845
+    second: PENE_81
+  - first:
+      213: 3047995894495255795
+    second: PENE_82
+  - first:
+      213: 3190514234224805697
+    second: PENE_83
+  - first:
+      213: -7722084696149946490
+    second: PENE_84
+  - first:
+      213: 8467632357752298454
+    second: PENE_85
+  - first:
+      213: -1439114927185311014
+    second: PENE_86
+  - first:
+      213: 1474752207760878105
+    second: PENE_87
+  - first:
+      213: 4297204256773875365
+    second: PENE_88
+  - first:
+      213: -4653438614503833822
+    second: PENE_89
+  - first:
+      213: 5528083579748062904
+    second: PENE_90
+  - first:
+      213: 7916303483914398818
+    second: PENE_91
+  - first:
+      213: 876425840317600023
+    second: PENE_92
+  - first:
+      213: 1156606392204865142
+    second: PENE_93
+  - first:
+      213: -3347908525271091617
+    second: PENE_94
+  - first:
+      213: 8824717895512380790
+    second: PENE_95
+  - first:
+      213: -3700137863054851217
+    second: PENE_96
+  - first:
+      213: -4028920951899434536
+    second: PENE_97
+  - first:
+      213: 2261016802948557907
+    second: PENE_98
+  - first:
+      213: 9085483024416611318
+    second: PENE_99
+  - first:
+      213: 8656539493431477528
+    second: PENE_100
+  - first:
+      213: -6436104461827659317
+    second: PENE_101
+  - first:
+      213: -5531901391273065440
+    second: PENE_102
+  - first:
+      213: -5217645479663156098
+    second: PENE_103
+  - first:
+      213: 1896011434971410112
+    second: PENE_104
+  - first:
+      213: 4661276417662260917
+    second: PENE_105
+  - first:
+      213: -6815993092629293463
+    second: PENE_106
+  - first:
+      213: -1871756197860265505
+    second: PENE_107
+  - first:
+      213: -843070589722855850
+    second: PENE_108
+  - first:
+      213: 6996369729932809455
+    second: PENE_109
+  - first:
+      213: -3910459628076295006
+    second: PENE_110
+  - first:
+      213: 1032303005878767807
+    second: PENE_111
+  - first:
+      213: -873680038616579298
+    second: PENE_112
+  - first:
+      213: 4171763080171005664
+    second: PENE_113
+  - first:
+      213: 6787437606126036340
+    second: PENE_114
+  - first:
+      213: 5013363299033093953
+    second: PENE_115
+  - first:
+      213: -8035750848745700901
+    second: PENE_116
+  - first:
+      213: 1980880638604736760
+    second: PENE_117
+  - first:
+      213: 2492782921310001625
+    second: PENE_118
+  - first:
+      213: -147710406447007334
+    second: PENE_119
+  - first:
+      213: 2998749895990632949
+    second: PENE_120
+  - first:
+      213: -5875672934402880516
+    second: PENE_121
+  - first:
+      213: 1446511732994168703
+    second: PENE_122
+  - first:
+      213: 4917773354230108916
+    second: PENE_123
+  - first:
+      213: 4946046738621559979
+    second: PENE_124
+  - first:
+      213: -2781205822357564191
+    second: PENE_125
+  - first:
+      213: -1840483283953745087
+    second: PENE_126
+  - first:
+      213: -4094319436625460437
+    second: PENE_127
+  - first:
+      213: 1046372822732093947
+    second: PENE_128
+  - first:
+      213: -4650821241553708455
+    second: PENE_129
+  - first:
+      213: 3459127949261540687
+    second: PENE_130
+  - first:
+      213: 8699527358960114614
+    second: PENE_131
+  - first:
+      213: 798141146082960285
+    second: PENE_132
+  - first:
+      213: 6146476670681511695
+    second: PENE_133
+  - first:
+      213: 3503458386971097859
+    second: PENE_134
+  - first:
+      213: 84411997357761415
+    second: PENE_135
+  - first:
+      213: 4741121620570521472
+    second: PENE_136
+  - first:
+      213: -3792481804389998735
+    second: PENE_137
+  - first:
+      213: 3008333737024168886
+    second: PENE_138
+  - first:
+      213: -6916411810797983044
+    second: PENE_139
+  - first:
+      213: 4494876665795754880
+    second: PENE_140
+  - first:
+      213: -5065373682087004803
+    second: PENE_141
+  - first:
+      213: 2631267993253629011
+    second: PENE_142
+  - first:
+      213: 7507831902649434804
+    second: PENE_143
+  - first:
+      213: 429643964992132469
+    second: PENE_144
+  - first:
+      213: 8244023494120265120
+    second: PENE_145
+  - first:
+      213: -7847863107776083687
+    second: PENE_146
+  - first:
+      213: -9195810191120286107
+    second: PENE_147
+  - first:
+      213: 3772798322921894979
+    second: PENE_148
+  - first:
+      213: -93886986830266717
+    second: PENE_149
+  - first:
+      213: -3705330221190369379
+    second: PENE_150
+  - first:
+      213: 8876212155667782183
+    second: PENE_151
+  - first:
+      213: 5137496276764640138
+    second: PENE_152
+  - first:
+      213: 5284278831418035543
+    second: PENE_153
+  - first:
+      213: 3049918693348863768
+    second: PENE_154
+  - first:
+      213: 3335141381463361729
+    second: PENE_155
+  - first:
+      213: 7460916317986393225
+    second: PENE_156
+  - first:
+      213: 8908225183827080490
+    second: PENE_157
+  - first:
+      213: -3844486604247652468
+    second: PENE_158
+  - first:
+      213: 2467133399244690506
+    second: PENE_159
+  - first:
+      213: 6982444297467922392
+    second: PENE_160
+  - first:
+      213: 2275503318799333737
+    second: PENE_161
+  - first:
+      213: 6409639460158825136
+    second: PENE_162
+  - first:
+      213: 2071992046603255986
+    second: PENE_163
+  - first:
+      213: 7180655211265538257
+    second: PENE_164
+  - first:
+      213: 1939437766599341828
+    second: PENE_165
+  - first:
+      213: -7240064618148434265
+    second: PENE_166
+  - first:
+      213: 91280425241852687
+    second: PENE_167
+  - first:
+      213: 63047188932552785
+    second: PENE_168
+  - first:
+      213: 3344046422527064651
+    second: PENE_169
+  - first:
+      213: 4237994289221488735
+    second: PENE_170
+  - first:
+      213: -553517549419382679
+    second: PENE_171
+  - first:
+      213: 7372357614938634849
+    second: PENE_172
+  - first:
+      213: -5261462790561681696
+    second: PENE_173
+  - first:
+      213: -5570399181876296811
+    second: PENE_174
+  - first:
+      213: -4713380763923724830
+    second: PENE_175
+  - first:
+      213: -6570464401918764107
+    second: PENE_176
+  - first:
+      213: 1571682472803051406
+    second: PENE_177
+  - first:
+      213: 8650184471178661328
+    second: PENE_178
+  - first:
+      213: 8261808475309363143
+    second: PENE_179
+  - first:
+      213: -8274269242427985819
+    second: PENE_180
+  - first:
+      213: -392010485695142891
+    second: PENE_181
+  - first:
+      213: 2396372719014942248
+    second: PENE_182
+  - first:
+      213: -8147317363765862596
+    second: PENE_183
+  - first:
+      213: 31242214746237612
+    second: PENE_184
+  - first:
+      213: -5594582568664306307
+    second: PENE_185
+  - first:
+      213: 3574309644933968207
+    second: PENE_186
+  - first:
+      213: -6798937251706299401
+    second: PENE_187
+  - first:
+      213: -5961769417594454257
+    second: PENE_188
+  - first:
+      213: -5920802107234226607
+    second: PENE_189
+  - first:
+      213: 6939008719439272317
+    second: PENE_190
+  - first:
+      213: -6473147111245608302
+    second: PENE_191
+  - first:
+      213: -2745312301574113076
+    second: PENE_192
+  - first:
+      213: -6179392048528842855
+    second: PENE_193
+  - first:
+      213: 6179780985695971305
+    second: PENE_194
+  - first:
+      213: -4222357743632363957
+    second: PENE_195
+  - first:
+      213: 1274677667194858724
+    second: PENE_196
+  - first:
+      213: 7751175174323629124
+    second: PENE_197
+  - first:
+      213: 6661558286441216032
+    second: PENE_198
+  - first:
+      213: -7115781779685787165
+    second: PENE_199
+  - first:
+      213: -3070610010525129026
+    second: PENE_200
+  - first:
+      213: -1160520052763606362
+    second: PENE_201
+  - first:
+      213: 100962152288093708
+    second: PENE_202
+  - first:
+      213: 9138752602602583418
+    second: PENE_203
+  - first:
+      213: -5565458447534653317
+    second: PENE_204
+  - first:
+      213: -5852041228882595591
+    second: PENE_205
+  - first:
+      213: 9179164969345489886
+    second: PENE_206
+  - first:
+      213: 6691290812956592121
+    second: PENE_207
+  - first:
+      213: -4786646519711013489
+    second: PENE_208
+  - first:
+      213: 6852988431665885399
+    second: PENE_209
+  - first:
+      213: -5157506210012542925
+    second: PENE_210
+  - first:
+      213: -2036203962553135216
+    second: PENE_211
+  - first:
+      213: -8587677009105056251
+    second: PENE_212
+  - first:
+      213: -6833824146640119171
+    second: PENE_213
+  - first:
+      213: 2231343449031000890
+    second: PENE_214
+  - first:
+      213: -8540793221317732495
+    second: PENE_215
+  - first:
+      213: 3569289709904117943
+    second: PENE_216
+  - first:
+      213: 4660341670600435264
+    second: PENE_217
+  - first:
+      213: -2109484426414188431
+    second: PENE_218
+  - first:
+      213: -8188182651574447260
+    second: PENE_219
+  - first:
+      213: 7084683514014510037
+    second: PENE_220
+  - first:
+      213: 7878263100768725489
+    second: PENE_221
+  - first:
+      213: 1442786092485953922
+    second: PENE_222
+  - first:
+      213: -1310917608364769464
+    second: PENE_223
+  - first:
+      213: 4023394201118754719
+    second: PENE_224
+  - first:
+      213: 7906671181830562567
+    second: PENE_225
+  - first:
+      213: 5505084311663854639
+    second: PENE_226
+  - first:
+      213: -9127166215256507437
+    second: PENE_227
+  - first:
+      213: 1221679386583696079
+    second: PENE_228
+  - first:
+      213: 2224060828767382758
+    second: PENE_229
+  - first:
+      213: 8947756459462531810
+    second: PENE_230
+  - first:
+      213: -4349416937917359794
+    second: PENE_231
+  - first:
+      213: 4437347705190667152
+    second: PENE_232
+  - first:
+      213: -5230100996540562256
+    second: PENE_233
+  - first:
+      213: 2780617466983088729
+    second: PENE_234
+  - first:
+      213: -1761082840460961901
+    second: PENE_235
+  - first:
+      213: -5235550477203402310
+    second: PENE_236
+  - first:
+      213: 7443862149781475357
+    second: PENE_237
+  - first:
+      213: 4941150439493677326
+    second: PENE_238
+  - first:
+      213: -6725422850451694388
+    second: PENE_239
+  - first:
+      213: 8442096956990602407
+    second: PENE_240
+  - first:
+      213: -4927885258358567922
+    second: PENE_241
+  - first:
+      213: 6845410166663342592
+    second: PENE_242
+  - first:
+      213: -7332613566872637579
+    second: PENE_243
+  - first:
+      213: 5362458840974219408
+    second: PENE_244
+  - first:
+      213: 5762023098333413236
+    second: PENE_245
+  - first:
+      213: 56089185639166607
+    second: PENE_246
+  - first:
+      213: 1186051524996770915
+    second: PENE_247
+  - first:
+      213: 8214056376287404651
+    second: PENE_248
+  - first:
+      213: 5636504789326808874
+    second: PENE_249
+  - first:
+      213: -1196972939870890917
+    second: PENE_250
+  - first:
+      213: 5660075579319045364
+    second: PENE_251
+  - first:
+      213: 40864411709081601
+    second: PENE_252
+  - first:
+      213: 7859754657910583350
+    second: PENE_253
+  - first:
+      213: -1083181653999774240
+    second: PENE_0
+  - first:
+      213: 238471164838890001
+    second: PENE_1
+  - first:
+      213: 1275543218119658121
+    second: PENE_2
+  - first:
+      213: 1346400113920140002
+    second: PENE_3
+  - first:
+      213: -8623525056043377695
+    second: PENE_4
+  - first:
+      213: -3586039459619939649
+    second: PENE_5
+  - first:
+      213: -8488467513534760600
+    second: PENE_6
+  - first:
+      213: -8322074634009827242
+    second: PENE_7
+  - first:
+      213: -9038010047487871268
+    second: PENE_8
+  - first:
+      213: 4098039533849908883
+    second: PENE_9
+  - first:
+      213: -1475905708131060453
+    second: PENE_10
+  - first:
+      213: -291406498092306358
+    second: PENE_11
+  - first:
+      213: -1070313168943280773
+    second: PENE_12
+  - first:
+      213: 7173516814449347296
+    second: PENE_13
+  - first:
+      213: 4053647532524812142
+    second: PENE_14
+  - first:
+      213: -2350296915176412471
+    second: PENE_15
+  - first:
+      213: 6852898118013001510
+    second: PENE_16
+  - first:
+      213: 334137880262789449
+    second: PENE_17
+  - first:
+      213: -1872749032931019299
+    second: PENE_18
+  - first:
+      213: 7489529366315227254
+    second: PENE_19
+  - first:
+      213: 2470326160484477978
+    second: PENE_20
+  - first:
+      213: 3288131319931728458
+    second: PENE_21
+  - first:
+      213: -6837838009411177513
+    second: PENE_22
+  - first:
+      213: 6904525531160738432
+    second: PENE_23
+  - first:
+      213: -1900045823557381409
+    second: PENE_24
+  - first:
+      213: 6896229711381551214
+    second: PENE_25
+  - first:
+      213: 7799790312196105793
+    second: PENE_26
+  - first:
+      213: -1727269609985411412
+    second: PENE_27
+  - first:
+      213: 719477567317272027
+    second: PENE_28
+  - first:
+      213: -2200620081626235597
+    second: PENE_29
+  - first:
+      213: 1533095817279806917
+    second: PENE_30
+  - first:
+      213: -6210583352556232762
+    second: PENE_31
+  - first:
+      213: 7230400937793866484
+    second: PENE_32
+  - first:
+      213: -1623304508150140724
+    second: PENE_33
+  - first:
+      213: 2002833709517106673
+    second: PENE_34
+  - first:
+      213: 6474166698056210211
+    second: PENE_35
+  - first:
+      213: -4329775840227024766
+    second: PENE_36
+  - first:
+      213: 4740906981149691241
+    second: PENE_37
+  - first:
+      213: -972445263584600757
+    second: PENE_38
+  - first:
+      213: -2269552887457631153
+    second: PENE_39
+  - first:
+      213: -8288465296544749136
+    second: PENE_40
+  - first:
+      213: 3390571875478611451
+    second: PENE_41
+  - first:
+      213: 1684779416995388439
+    second: PENE_42
+  - first:
+      213: -5471668482512551329
+    second: PENE_43
+  - first:
+      213: -3569689862444957199
+    second: PENE_44
+  - first:
+      213: -3907699371765410911
+    second: PENE_45
+  - first:
+      213: -5902004655789509160
+    second: PENE_46
+  - first:
+      213: -921470410503027430
+    second: PENE_47
+  - first:
+      213: -5128088501937818402
+    second: PENE_48
+  - first:
+      213: 231554541734867759
+    second: PENE_49
+  - first:
+      213: -4470698390419325222
+    second: PENE_50
+  - first:
+      213: -4024120513272329682
+    second: PENE_51
+  - first:
+      213: 5215576138423032847
+    second: PENE_52
+  - first:
+      213: -5873947768673295317
+    second: PENE_53
+  - first:
+      213: -8208120293629724959
+    second: PENE_54
+  - first:
+      213: -5617849709848281248
+    second: PENE_55
+  - first:
+      213: -5611158606572593750
+    second: PENE_56
+  - first:
+      213: 6994793226758962629
+    second: PENE_57
+  - first:
+      213: -5805740637242995287
+    second: PENE_58
+  - first:
+      213: -5306664921750067449
+    second: PENE_59
+  - first:
+      213: 3752441031988297227
+    second: PENE_60
+  - first:
+      213: -3193678574574631222
+    second: PENE_61
+  - first:
+      213: 6264480956213771305
+    second: PENE_62
+  - first:
+      213: -640810287121753947
+    second: PENE_63
+  - first:
+      213: 5197614800259223436
+    second: PENE_64
+  - first:
+      213: -2447652940933811699
+    second: PENE_65
+  - first:
+      213: 6213874518148639567
+    second: PENE_66
+  - first:
+      213: -327844817053199509
+    second: PENE_67
+  - first:
+      213: 3213969513976863503
+    second: PENE_68
+  - first:
+      213: -4692749608782275663
+    second: PENE_69
+  - first:
+      213: -4384635386199732714
+    second: PENE_70
+  - first:
+      213: 5807867713561135445
+    second: PENE_71
+  - first:
+      213: 4820688723145785447
+    second: PENE_72
+  - first:
+      213: 2907962237725388696
+    second: PENE_73
+  - first:
+      213: -665937770577162480
+    second: PENE_74
+  - first:
+      213: 8287619949643679553
+    second: PENE_75
+  - first:
+      213: -2292191137170690198
+    second: PENE_76
+  - first:
+      213: 5774287084534766610
+    second: PENE_77
+  - first:
+      213: -2450948152115512856
+    second: PENE_78
+  - first:
+      213: -7095791500912794817
+    second: PENE_79
+  - first:
+      213: -7519999137933586995
+    second: PENE_80
+  - first:
+      213: -3853132996738685341
+    second: PENE_81
+  - first:
+      213: -6240785539984901234
+    second: PENE_82
+  - first:
+      213: -2494999499295520954
+    second: PENE_83
+  - first:
+      213: 3564697164971311642
+    second: PENE_84
+  - first:
+      213: 3927823434211051848
+    second: PENE_85
+  - first:
+      213: -2152033006147259695
+    second: PENE_86
+  - first:
+      213: -1114536361584466810
+    second: PENE_87
+  - first:
+      213: 2425660419699588614
+    second: PENE_88
+  - first:
+      213: -567602802701518146
+    second: PENE_89
+  - first:
+      213: 714641809130876066
+    second: PENE_90
+  - first:
+      213: 5938549602977307615
+    second: PENE_91
+  - first:
+      213: -9100587617207665047
+    second: PENE_92
+  - first:
+      213: -5620293217395320933
+    second: PENE_93
+  - first:
+      213: 6332381233740932774
+    second: PENE_94
+  - first:
+      213: 6329245087745742509
+    second: PENE_95
+  - first:
+      213: 7961678814391019088
+    second: PENE_96
+  - first:
+      213: -3666288179664201519
+    second: PENE_97
+  - first:
+      213: 2078286830978328787
+    second: PENE_98
+  - first:
+      213: -1287514437108583161
+    second: PENE_99
+  - first:
+      213: 3663513480473157691
+    second: PENE_100
+  - first:
+      213: -1624071677025523791
+    second: PENE_101
+  - first:
+      213: -2441781978706928983
+    second: PENE_102
+  - first:
+      213: -4180451175358985006
+    second: PENE_103
+  - first:
+      213: 7982686196119081014
+    second: PENE_104
+  - first:
+      213: -9127570972064500280
+    second: PENE_105
+  - first:
+      213: -3851553218486036526
+    second: PENE_106
+  - first:
+      213: -2824162637049921499
+    second: PENE_107
+  - first:
+      213: -2503715040835402074
+    second: PENE_108
+  - first:
+      213: 6190302918556360223
+    second: PENE_109
+  - first:
+      213: -2274890056702669608
+    second: PENE_110
+  - first:
+      213: -3070627514589830106
+    second: PENE_111
+  - first:
+      213: -2608594298994238939
+    second: PENE_112
+  - first:
+      213: 614068527454268222
+    second: PENE_113
+  - first:
+      213: -2892559038453390644
+    second: PENE_114
+  - first:
+      213: 3184385022658554645
+    second: PENE_115
+  - first:
+      213: 2753025237609090029
+    second: PENE_116
+  - first:
+      213: 1968305311438439243
+    second: PENE_117
+  - first:
+      213: 5335451660323916735
+    second: PENE_118
+  - first:
+      213: 1112431648209792221
+    second: PENE_119
+  - first:
+      213: 5319465867256773646
+    second: PENE_120
+  - first:
+      213: 2442451470732719513
+    second: PENE_121
+  - first:
+      213: -1306571955405131312
+    second: PENE_122
+  - first:
+      213: 7904509729684859978
+    second: PENE_123
+  - first:
+      213: 8568214000325030829
+    second: PENE_124
+  - first:
+      213: -5895726668124483907
+    second: PENE_125
+  - first:
+      213: 9011202904708534169
+    second: PENE_126
+  - first:
+      213: 4221506944883723842
+    second: PENE_127
+  - first:
+      213: -4886079343955935456
+    second: PENE_128
+  - first:
+      213: -3284650689255391509
+    second: PENE_129
+  - first:
+      213: -618057540958364608
+    second: PENE_130
+  - first:
+      213: 3489874970074912778
+    second: PENE_131
+  - first:
+      213: -2796211856966691075
+    second: PENE_132
+  - first:
+      213: -208793242857758551
+    second: PENE_133
+  - first:
+      213: 4035817718810138801
+    second: PENE_134
+  - first:
+      213: 1005980225008435104
+    second: PENE_135
+  - first:
+      213: -6479948550545028001
+    second: PENE_136
+  - first:
+      213: 8857972235118653925
+    second: PENE_137
+  - first:
+      213: -1143454408022285039
+    second: PENE_138
+  - first:
+      213: -8264695322087572815
+    second: PENE_139
+  - first:
+      213: 4702074020862031807
+    second: PENE_140
+  - first:
+      213: -1490618803822015602
+    second: PENE_141
+  - first:
+      213: -1639905216929343693
+    second: PENE_142
+  - first:
+      213: -3522298464376920183
+    second: PENE_143
+  - first:
+      213: -8852280754697422645
+    second: PENE_144
+  - first:
+      213: -4590766722605569982
+    second: PENE_145
+  - first:
+      213: 7290117605921676797
+    second: PENE_146
+  - first:
+      213: 5372127142980750642
+    second: PENE_147
+  - first:
+      213: 8487499265567675892
+    second: PENE_148
+  - first:
+      213: 3316015757433322985
+    second: PENE_149
+  - first:
+      213: -654941850647160834
+    second: PENE_150
+  - first:
+      213: -1519782288281181679
+    second: PENE_151
+  - first:
+      213: -7227087627287469559
+    second: PENE_152
+  - first:
+      213: -2813286336641713180
+    second: PENE_153
+  - first:
+      213: -606378827473880191
+    second: PENE_154
+  - first:
+      213: 601995248823038579
+    second: PENE_155
+  - first:
+      213: 1365239835521123147
+    second: PENE_156
+  - first:
+      213: -6454350150840799925
+    second: PENE_157
+  - first:
+      213: 8897769035007351487
+    second: PENE_158
+  - first:
+      213: 923540583457691519
+    second: PENE_159
+  - first:
+      213: 8619925873946135768
+    second: PENE_160
+  - first:
+      213: -8449511243385719276
+    second: PENE_161
+  - first:
+      213: -3695376001149816022
+    second: PENE_162
+  - first:
+      213: -6837991429777545379
+    second: PENE_163
+  - first:
+      213: -1985355795985139293
+    second: PENE_164
+  - first:
+      213: -7538880382479738972
+    second: PENE_165
+  - first:
+      213: -1753097780174741905
+    second: PENE_166
+  - first:
+      213: -8788650720540774767
+    second: PENE_167
+  - first:
+      213: 5226703214262537556
+    second: PENE_168
+  - first:
+      213: 7772219617353317989
+    second: PENE_169
+  - first:
+      213: -147105733857791294
+    second: PENE_170
+  - first:
+      213: 6309263754814912161
+    second: PENE_171
+  - first:
+      213: 2157833824599276128
+    second: PENE_172
+  - first:
+      213: 2829226478769060552
+    second: PENE_173
+  - first:
+      213: -6544570968358709706
+    second: PENE_174
+  - first:
+      213: -4655468322923930771
+    second: PENE_175
+  - first:
+      213: 2968484241730997362
+    second: PENE_176
+  - first:
+      213: -3477723750165756361
+    second: PENE_177
+  - first:
+      213: -1525333595105535705
+    second: PENE_178
+  - first:
+      213: -8312496458693003669
+    second: PENE_179
+  - first:
+      213: -3337370898635394256
+    second: PENE_180
+  - first:
+      213: 4754604991530687273
+    second: PENE_181
+  - first:
+      213: 4944246969530643591
+    second: PENE_182
+  - first:
+      213: -626074934449735253
+    second: PENE_183
+  - first:
+      213: -3971205161550224479
+    second: PENE_184
+  - first:
+      213: 4399525286176097792
+    second: PENE_185
+  - first:
+      213: -7722487189342578302
+    second: PENE_186
+  - first:
+      213: -1084225816167004459
+    second: PENE_187
+  - first:
+      213: -4220301702119444377
+    second: PENE_188
+  - first:
+      213: 3153611721232984573
+    second: PENE_189
+  - first:
+      213: 8955054775200850155
+    second: PENE_190
+  - first:
+      213: 1514971713508595391
+    second: PENE_191
+  - first:
+      213: -2563790112115118617
+    second: PENE_192
+  - first:
+      213: 4391832704653620692
+    second: PENE_193
+  - first:
+      213: -5262888904090264789
+    second: PENE_194
+  - first:
+      213: -1469280234570170945
+    second: PENE_195
+  - first:
+      213: 4166531036928487115
+    second: PENE_196
+  - first:
+      213: 5367099348142603821
+    second: PENE_197
+  - first:
+      213: 5910663993539943866
+    second: PENE_198
+  - first:
+      213: -2097121806294468917
+    second: PENE_199
+  - first:
+      213: 1947369529737641642
+    second: PENE_200
+  - first:
+      213: 3621727281383769225
+    second: PENE_201
+  - first:
+      213: 4547773788375515091
+    second: PENE_202
+  - first:
+      213: 1079522338375659369
+    second: PENE_203
+  - first:
+      213: -1230755314593346382
+    second: PENE_204
+  - first:
+      213: -4745152490429146771
+    second: PENE_205
+  - first:
+      213: 4139424738832853708
+    second: PENE_206
+  - first:
+      213: 4405322070565399673
+    second: PENE_207
+  - first:
+      213: 4874019019594438736
+    second: PENE_208
+  - first:
+      213: 1363439705229383343
+    second: PENE_209
+  - first:
+      213: 4243608474679096874
+    second: PENE_210
+  - first:
+      213: -2685248168113374026
+    second: PENE_211
+  - first:
+      213: -8240526038546692757
+    second: PENE_212
+  - first:
+      213: 1333818645356018444
+    second: PENE_213
+  - first:
+      213: 135716328670269259
+    second: PENE_214
+  - first:
+      213: -5625503896943202660
+    second: PENE_215
+  - first:
+      213: -6534360287873801842
+    second: PENE_216
+  - first:
+      213: -8186737384651793318
+    second: PENE_217
+  - first:
+      213: 8016715084184931970
+    second: PENE_218
+  - first:
+      213: 8101039469403227276
+    second: PENE_219
+  - first:
+      213: -7673590431097054456
+    second: PENE_220
+  - first:
+      213: 6349920377861904316
+    second: PENE_221
+  - first:
+      213: -2108014092136172849
+    second: PENE_222
+  - first:
+      213: -7924289214838200424
+    second: PENE_223
+  - first:
+      213: 9064048661338884553
+    second: PENE_224
+  - first:
+      213: 3676308559967891945
+    second: PENE_225
+  - first:
+      213: -4158649551817063869
+    second: PENE_226
+  - first:
+      213: -3716219395313315349
+    second: PENE_227
+  - first:
+      213: -9076303934004847877
+    second: PENE_228
+  - first:
+      213: 4890786470950594407
+    second: PENE_229
+  - first:
+      213: -2010377534650890022
+    second: PENE_230
+  - first:
+      213: -1040022547928722136
+    second: PENE_231
+  - first:
+      213: -3967991875414600501
+    second: PENE_232
+  - first:
+      213: -4812966891198865889
+    second: PENE_233
+  - first:
+      213: 3744414214571082018
+    second: PENE_234
+  - first:
+      213: -9161917257771553983
+    second: PENE_235
+  - first:
+      213: -7736011477931631291
+    second: PENE_236
+  - first:
+      213: 8401417400164693419
+    second: PENE_237
+  - first:
+      213: -8123583305327518587
+    second: PENE_238
+  - first:
+      213: -50872223431889651
+    second: PENE_239
+  - first:
+      213: -3930053454412996742
+    second: PENE_240
+  - first:
+      213: -3545694983642567622
+    second: PENE_241
+  - first:
+      213: 6315771570239238617
+    second: PENE_242
+  - first:
+      213: 5790515082705442864
+    second: PENE_243
+  - first:
+      213: -2219728581342565895
+    second: PENE_244
+  - first:
+      213: -5504751244964783374
+    second: PENE_245
+  - first:
+      213: -6789703674646313081
+    second: PENE_246
+  - first:
+      213: -801573783405330335
+    second: PENE_247
+  - first:
+      213: 8140592313667058917
+    second: PENE_248
+  - first:
+      213: -1923607657993434196
+    second: PENE_249
+  - first:
+      213: 6202866938366399496
+    second: PENE_250
+  - first:
+      213: -3304264560746392924
+    second: PENE_251
+  - first:
+      213: 4408507770509891718
+    second: PENE_252
+  - first:
+      213: 244198434438247624
+    second: PENE_253
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 0
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 1
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 1
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: tvOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: PENE_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 480
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e59f1e4604c7f0f0800000000000000
+      internalID: -1083181653999774240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 480
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11a456dc2483f4300800000000000000
+      internalID: 238471164838890001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 480
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98a4eab7cc3a3b110800000000000000
+      internalID: 1275543218119658121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 480
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e261c325cf5fa210800000000000000
+      internalID: 1346400113920140002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_4
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 480
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1eb9ad2a6a5135880800000000000000
+      internalID: -8623525056043377695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_5
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 480
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbad1d27c14db3ec0800000000000000
+      internalID: -3586039459619939649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_6
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 480
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 869315035c7e23a80800000000000000
+      internalID: -8488467513534760600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_7
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 480
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6582e8d663d028c80800000000000000
+      internalID: -8322074634009827242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_8
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 480
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd6f21b4fb9829280800000000000000
+      internalID: -9038010047487871268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_9
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 480
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39691a26e392fd830800000000000000
+      internalID: 4098039533849908883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_10
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 480
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1570e00497848be0800000000000000
+      internalID: -1475905708131060453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_11
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 480
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a40b7fb7557b4fbf0800000000000000
+      internalID: -291406498092306358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_12
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 480
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7d86b6f7db7521f0800000000000000
+      internalID: -1070313168943280773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_13
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 480
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ea8b8b29837d8360800000000000000
+      internalID: 7173516814449347296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_14
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 480
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e67b7c424f2714830800000000000000
+      internalID: 4053647532524812142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_15
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 480
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9caa6367861126fd0800000000000000
+      internalID: -2350296915176412471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 448
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62f9b16b7826a1f50800000000000000
+      internalID: 6852898118013001510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_17
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 448
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 949c01bb1a813a400800000000000000
+      internalID: 334137880262789449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_18
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 448
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd5b0b24da8a206e0800000000000000
+      internalID: -1872749032931019299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_19
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 448
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6785316074720f760800000000000000
+      internalID: 7489529366315227254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_20
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 448
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1c280bfd8c584220800000000000000
+      internalID: 2470326160484477978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_21
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 448
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a42fd53a30ac1ad20800000000000000
+      internalID: 3288131319931728458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_22
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 448
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d3f1611f8e1b11a0800000000000000
+      internalID: -6837838009411177513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_23
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 448
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08a737b836dc1df50800000000000000
+      internalID: 6904525531160738432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_24
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 448
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd2d5ede36ea1a5e0800000000000000
+      internalID: -1900045823557381409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_25
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 448
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e68546c726454bf50800000000000000
+      internalID: 6896229711381551214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_26
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 448
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1466bf0c6fb6e3c60800000000000000
+      internalID: 7799790312196105793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_27
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 448
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca6fd71f0718708e0800000000000000
+      internalID: -1727269609985411412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_28
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 448
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd5eec719091cf900800000000000000
+      internalID: 719477567317272027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_29
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 448
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33db315f1b3d571e0800000000000000
+      internalID: -2200620081626235597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_30
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 448
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cd999be586a64510800000000000000
+      internalID: 1533095817279806917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_31
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 448
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6cf5eee88539fc9a0800000000000000
+      internalID: -6210583352556232762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_32
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 416
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4facad8385b875460800000000000000
+      internalID: 7230400937793866484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_33
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 416
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc0bb65862dd879e0800000000000000
+      internalID: -1623304508150140724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_34
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 416
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fde1f7b5ae7bcb10800000000000000
+      internalID: 2002833709517106673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_35
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 416
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 327dd4e6f4cd8d950800000000000000
+      internalID: 6474166698056210211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_36
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 416
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 280233e30db89e3c0800000000000000
+      internalID: -4329775840227024766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_37
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 416
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96dc89ce7c51bc140800000000000000
+      internalID: 4740906981149691241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_38
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 416
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4d578c5f2e2182f0800000000000000
+      internalID: -972445263584600757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_39
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 416
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4430286cade080e0800000000000000
+      internalID: -2269552887457631153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_40
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 416
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b92c4a1ab479fc80800000000000000
+      internalID: -8288465296544749136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_41
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 416
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf5255f182bbd0f20800000000000000
+      internalID: 3390571875478611451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_42
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 416
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71c56e214f9816710800000000000000
+      internalID: 1684779416995388439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_43
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 416
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f52832b518ab014b0800000000000000
+      internalID: -5471668482512551329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_44
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 416
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f1c7aeabf9e57ec0800000000000000
+      internalID: -3569689862444957199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_45
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 416
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a3d7e0102015c9c0800000000000000
+      internalID: -3907699371765410911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_46
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 416
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d5f6f4290ed71ea0800000000000000
+      internalID: -5902004655789509160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_47
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 416
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a150fe63b874633f0800000000000000
+      internalID: -921470410503027430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_48
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 384
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed43b316dae55d8b0800000000000000
+      internalID: -5128088501937818402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_49
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 384
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f233c3ef0a5a63300800000000000000
+      internalID: 231554541734867759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_50
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 384
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ade352d2083e4f1c0800000000000000
+      internalID: -4470698390419325222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_51
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 384
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2a4a01c6b37728c0800000000000000
+      internalID: -4024120513272329682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_52
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 384
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0c55b55dd2716840800000000000000
+      internalID: 5215576138423032847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_53
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 384
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b24a70b30ab8b7ea0800000000000000
+      internalID: -5873947768673295317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_54
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 384
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e67688d416e61e80800000000000000
+      internalID: -8208120293629724959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_55
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 384
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06f36fa14736902b0800000000000000
+      internalID: -5617849709848281248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_56
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 384
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aad5ddcf9f82122b0800000000000000
+      internalID: -5611158606572593750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_57
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 384
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cdb646316f721160800000000000000
+      internalID: 6994793226758962629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_58
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 384
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9adc41b86addd6fa0800000000000000
+      internalID: -5805740637242995287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_59
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 384
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 707af0d9e50fa56b0800000000000000
+      internalID: -5306664921750067449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_60
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 384
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0e3340cc39531430800000000000000
+      internalID: 3752441031988297227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_61
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 384
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac604bbd146cda3d0800000000000000
+      internalID: -3193678574574631222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_62
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 384
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92c32513d38efe650800000000000000
+      internalID: 6264480956213771305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_63
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 384
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a811b360726b17f0800000000000000
+      internalID: -640810287121753947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_64
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 352
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8f83c86f13a12840800000000000000
+      internalID: 5197614800259223436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_65
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 352
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0233325e90380ed0800000000000000
+      internalID: -2447652940933811699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_66
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 352
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4be915a3fd1c3650800000000000000
+      internalID: 6213874518148639567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_67
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 352
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b63571a30e2437bf0800000000000000
+      internalID: -327844817053199509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_68
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 352
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0b968f9e305a9c20800000000000000
+      internalID: 3213969513976863503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_69
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 352
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bbdda4181100eeb0800000000000000
+      internalID: -4692749608782275663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_70
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 352
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61e05f7d855a623c0800000000000000
+      internalID: -4384635386199732714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_71
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 352
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55985410ae0b99050800000000000000
+      internalID: 5807867713561135445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_72
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 352
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76006d34ad686e240800000000000000
+      internalID: 4820688723145785447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_73
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 352
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89f2fd78f382b5820800000000000000
+      internalID: 2907962237725388696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_74
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 352
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01f8b3e302d12c6f0800000000000000
+      internalID: -665937770577162480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_75
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 352
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 147c3fb3f6a830370800000000000000
+      internalID: 8287619949643679553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_76
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 352
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6f64a72e408030e0800000000000000
+      internalID: -2292191137170690198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_77
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 352
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21c12d88283622050800000000000000
+      internalID: 5774287084534766610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_78
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 320
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e9314e24ab7cfdd0800000000000000
+      internalID: -2450948152115512856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_79
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 320
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f336bdb993fa68d90800000000000000
+      internalID: -7095791500912794817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_80
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 320
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcd893070a893a790800000000000000
+      internalID: -7519999137933586995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_81
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 320
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 366ed0944fbe68ac0800000000000000
+      internalID: -3853132996738685341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_82
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 320
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8b3ec1dd964469a0800000000000000
+      internalID: -6240785539984901234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_83
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 320
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64786b9ac2bff5dd0800000000000000
+      internalID: -2494999499295520954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_84
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 320
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1205f95f29587130800000000000000
+      internalID: 3564697164971311642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_85
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 320
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 849ca985a9e628630800000000000000
+      internalID: 3927823434211051848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_86
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 320
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d23da302617222e0800000000000000
+      internalID: -2152033006147259695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_87
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 320
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 684608e851f5880f0800000000000000
+      internalID: -1114536361584466810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_88
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 320
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60e3bedcc4da9a120800000000000000
+      internalID: 2425660419699588614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_89
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 320
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebab57b12487f18f0800000000000000
+      internalID: -567602802701518146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_90
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 320
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ac63e660faeae900800000000000000
+      internalID: 714641809130876066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_91
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 320
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdbdf7e6667f96250800000000000000
+      internalID: 5938549602977307615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_92
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 320
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96eb40577c734b180800000000000000
+      internalID: -9100587617207665047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_93
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 320
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b975d9ba815b002b0800000000000000
+      internalID: -5620293217395320933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_94
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 288
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a66a738e2321e750800000000000000
+      internalID: 6332381233740932774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_95
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 288
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da6987f9fdef5d750800000000000000
+      internalID: 6329245087745742509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_96
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 288
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 056a78be2b09d7e60800000000000000
+      internalID: 7961678814391019088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_97
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 288
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d8d6ee435abe1dc0800000000000000
+      internalID: -3666288179664201519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_98
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 288
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d8e5dd8cde87dc10800000000000000
+      internalID: 2078286830978328787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_99
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 288
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 705b4f4e074d12ee0800000000000000
+      internalID: -1287514437108583161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_100
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 288
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b302571b91a67d230800000000000000
+      internalID: 3663513480473157691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_101
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 288
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b7ee191a632679e0800000000000000
+      internalID: -1624071677025523791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_102
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 288
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9aa193c3a3c0d1ed0800000000000000
+      internalID: -2441781978706928983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_103
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 288
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2dc0dd31ecd0cf5c0800000000000000
+      internalID: -4180451175358985006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_104
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 288
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63097112dc238ce60800000000000000
+      internalID: 7982686196119081014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_105
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 288
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c5bde39f8a545180800000000000000
+      internalID: -9127570972064500280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_106
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 288
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d790a211c88c8ac0800000000000000
+      internalID: -3851553218486036526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_107
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 288
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52085be6b0f8ec8d0800000000000000
+      internalID: -2824162637049921499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_108
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 288
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a604348f64014dd0800000000000000
+      internalID: -2503715040835402074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_109
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 288
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1e9d90f4bf58e550800000000000000
+      internalID: 6190302918556360223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_110
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 256
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8dc4b2bdb87fd60e0800000000000000
+      internalID: -2274890056702669608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_111
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 256
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 624255b5b80f265d0800000000000000
+      internalID: -3070627514589830106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_112
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 256
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52ad6555e496ccbd0800000000000000
+      internalID: -2608594298994238939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_113
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 256
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3ba8ae721c958800800000000000000
+      internalID: 614068527454268222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_114
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 256
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc2e32541e09bd7d0800000000000000
+      internalID: -2892559038453390644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_115
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 256
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51b23a77e45313c20800000000000000
+      internalID: 3184385022658554645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_116
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 256
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: deb00611ed5b43620800000000000000
+      internalID: 2753025237609090029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_117
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 256
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b438dc19043d05b10800000000000000
+      internalID: 1968305311438439243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_118
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 256
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbb00e144055b0a40800000000000000
+      internalID: 5335451660323916735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_119
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 256
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ddc627ca0b6207f00800000000000000
+      internalID: 1112431648209792221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_120
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 256
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0cb7a4c50a82d940800000000000000
+      internalID: 5319465867256773646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_121
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 256
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99577260ca455e120800000000000000
+      internalID: 2442451470732719513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_122
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 256
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d1f694aabf1edde0800000000000000
+      internalID: -1306571955405131312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_123
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 256
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4c2c7128b572bd60800000000000000
+      internalID: 7904509729684859978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_124
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 256
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da3f6e8ac3968e670800000000000000
+      internalID: 8568214000325030829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_125
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 256
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbe84ad05db2e2ea0800000000000000
+      internalID: -5895726668124483907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_126
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99fce166c493e0d70800000000000000
+      internalID: 9011202904708534169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_127
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24e83aa233ec59a30800000000000000
+      internalID: 4221506944883723842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_128
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02ff12769b8213cb0800000000000000
+      internalID: -4886079343955935456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_129
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: beeb0b7d9939a62d0800000000000000
+      internalID: -3284650689255391509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_130
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04cdc6ce0f73c67f0800000000000000
+      internalID: -618057540958364608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_131
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0897dd8bc68e6030800000000000000
+      internalID: 3489874970074912778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_132
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df6d3cc812cd139d0800000000000000
+      internalID: -2796211856966691075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_133
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a026ffd6a73a1df0800000000000000
+      internalID: -208793242857758551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_134
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b8d7e325da120830800000000000000
+      internalID: 4035817718810138801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_135
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0aff1ba4fa5f5fd00800000000000000
+      internalID: 1005980225008435104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_136
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5cc4f120299216a0800000000000000
+      internalID: -6479948550545028001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_137
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e13588f0d6ddea70800000000000000
+      internalID: 8857972235118653925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_138
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1152af03642a120f0800000000000000
+      internalID: -1143454408022285039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_139
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ba332e8467ed4d80800000000000000
+      internalID: -8264695322087572815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_140
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb7f219c86f114140800000000000000
+      internalID: 4702074020862031807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_141
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8bcba67812405be0800000000000000
+      internalID: -1490618803822015602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_142
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 337dd9fc4e2ed39e0800000000000000
+      internalID: -1639905216929343693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_143
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 987e8e565384e1fc0800000000000000
+      internalID: -3522298464376920183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_144
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc8bb341e81662580800000000000000
+      internalID: -8852280754697422645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_145
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 248296c1df15a40c0800000000000000
+      internalID: -4590766722605569982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_146
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfd58cf7653bb2560800000000000000
+      internalID: 7290117605921676797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_147
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23d0a9d7c21ad8a40800000000000000
+      internalID: 5372127142980750642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_148
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f5dc830d97a9c570800000000000000
+      internalID: 8487499265567675892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_149
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ed396b23cad40e20800000000000000
+      internalID: 3316015757433322985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_150
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef793ab5bdd29e6f0800000000000000
+      internalID: -654941850647160834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_151
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 112e11b9f06a8eae0800000000000000
+      internalID: -1519782288281181679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_152
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 902e8eef71a34bb90800000000000000
+      internalID: -7227087627287469559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_153
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ebb2057bf235f8d0800000000000000
+      internalID: -2813286336641713180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_154
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18bf91d4ba5b597f0800000000000000
+      internalID: -606378827473880191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_155
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 372f1924d77ba5800800000000000000
+      internalID: 601995248823038579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_156
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b430375a56e42f210800000000000000
+      internalID: 1365239835521123147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_157
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4d25230cba8d66a0800000000000000
+      internalID: -6454350150840799925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_158
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fba55118bc93b7b70800000000000000
+      internalID: 8897769035007351487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_159
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7717ac744311dc00800000000000000
+      internalID: 923540583457691519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_160
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8dc02ca79e020a770800000000000000
+      internalID: 8619925873946135768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_161
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4163354aa4e4dba80800000000000000
+      internalID: -8449511243385719276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_162
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2336fb1b1367bcc0800000000000000
+      internalID: -3695376001149816022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_163
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d57a1fa16039a11a0800000000000000
+      internalID: -6837991429777545379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_164
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a9fa832c699274e0800000000000000
+      internalID: -1985355795985139293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_165
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a7522e1c34806790800000000000000
+      internalID: -7538880382479738972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_166
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6e98247bdebba7e0800000000000000
+      internalID: -1753097780174741905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_167
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19eaf23ebb0780680800000000000000
+      internalID: -8788650720540774767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_168
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45dc28091eaf88840800000000000000
+      internalID: 5226703214262537556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_169
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56ebaa020987cdb60800000000000000
+      internalID: 7772219617353317989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_170
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c2bbfc4d1065fdf0800000000000000
+      internalID: -147105733857791294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_171
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a67df305f10f8750800000000000000
+      internalID: 6309263754814912161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_172
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06aff874e6a22fd10800000000000000
+      internalID: 2157833824599276128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_173
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cab8281e7e634720800000000000000
+      internalID: 2829226478769060552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_174
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63615aff0630d25a0800000000000000
+      internalID: -6544570968358709706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_175
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6b190dd934746fb0800000000000000
+      internalID: -4655468322923930771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_176
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27c88bda0bc223920800000000000000
+      internalID: 2968484241730997362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_177
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7364e6ccca4acbfc0800000000000000
+      internalID: -3477723750165756361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_178
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 729d3c34d2de4dae0800000000000000
+      internalID: -1525333595105535705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_179
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6639e6238414ac80800000000000000
+      internalID: -8312496458693003669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_180
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0337c1f89d64fa1d0800000000000000
+      internalID: -3337370898635394256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_181
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92b5c7f7c00cbf140800000000000000
+      internalID: 4754604991530687273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_182
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 784fcac4c6e7d9440800000000000000
+      internalID: 4944246969530643591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_183
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba9f8590a2cbf47f0800000000000000
+      internalID: -626074934449735253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_184
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a3e99722f173e8c0800000000000000
+      internalID: -3971205161550224479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_185
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00600e620f04e0d30800000000000000
+      internalID: 4399525286176097792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_186
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2891bb811d634d490800000000000000
+      internalID: -7722487189342578302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_187
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d6ce0b5d5e04f0f0800000000000000
+      internalID: -1084225816167004459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_188
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 760b13846f97e65c0800000000000000
+      internalID: -4220301702119444377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_189
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df9a993e621e3cb20800000000000000
+      internalID: 3153611721232984573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_190
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be023044fdeb64c70800000000000000
+      internalID: 8955054775200850155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_191
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb6d17c2fb2460510800000000000000
+      internalID: 1514971713508595391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_192
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ed28b00a769b6cd0800000000000000
+      internalID: -2563790112115118617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_193
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d572d1739ce2fc30800000000000000
+      internalID: 4391832704653620692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_194
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2bda5bfc6676f6b0800000000000000
+      internalID: -5262888904090264789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_195
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbd31f649611c9be0800000000000000
+      internalID: -1469280234570170945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_196
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bce23c127ed72d930800000000000000
+      internalID: 4166531036928487115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_197
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2e3548cb64cb7a40800000000000000
+      internalID: 5367099348142603821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_198
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abdd3a90695e60250800000000000000
+      internalID: 5910663993539943866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_199
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc6b71504d685e2e0800000000000000
+      internalID: -2097121806294468917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_200
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aae7e6a0542760b10800000000000000
+      internalID: 1947369529737641642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_201
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 984883016c5f24230800000000000000
+      internalID: 3621727281383769225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_202
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3df74f65a20fc1f30800000000000000
+      internalID: 4547773788375515091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_203
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96feaf1e8db3bfe00800000000000000
+      internalID: 1079522338375659369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_204
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bc4d3cef8a7beee0800000000000000
+      internalID: -1230755314593346382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_205
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6919ea63f4d52eb0800000000000000
+      internalID: -4745152490429146771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_206
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccaa89c4ed0327930800000000000000
+      internalID: 4139424738832853708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_207
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97c2d313519d22d30800000000000000
+      internalID: 4405322070565399673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_208
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0589c63897ef3a340800000000000000
+      internalID: 4874019019594438736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_209
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa65cd62039ebe210800000000000000
+      internalID: 1363439705229383343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_210
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a26b5139c6354ea30800000000000000
+      internalID: 4243608474679096874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_211
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bc75d5a4051cbad0800000000000000
+      internalID: -2685248168113374026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_212
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6541166a35c3ad80800000000000000
+      internalID: -8240526038546692757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_213
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0bfc37bdfca28210800000000000000
+      internalID: 1333818645356018444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_214
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4f8c98284922e100800000000000000
+      internalID: 135716328670269259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_215
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9eef1cc2023ee1b0800000000000000
+      internalID: -5625503896943202660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_216
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e81ecde40f94155a0800000000000000
+      internalID: -6534360287873801842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_217
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5c5b6e49bdd26e80800000000000000
+      internalID: -8186737384651793318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_218
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28ecb5a05e7114f60800000000000000
+      internalID: 8016715084184931970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_219
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c84c23de97cac6070800000000000000
+      internalID: 8101039469403227276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_220
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80b9f9ac82ee18590800000000000000
+      internalID: -7673590431097054456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_221
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb7197ab0f27f1850800000000000000
+      internalID: 6349920377861904316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_222
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc2b4b81a54deb2e0800000000000000
+      internalID: -2108014092136172849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_223
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8972c1c91f4470290800000000000000
+      internalID: -7924289214838200424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_224
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c985fdeb38f9cd70800000000000000
+      internalID: 9064048661338884553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_225
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e13d99482fd40330800000000000000
+      internalID: 3676308559967891945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_226
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3424b9e14428946c0800000000000000
+      internalID: -4158649551817063869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_227
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be1deea36265d6cc0800000000000000
+      internalID: -3716219395313315349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_228
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfa192c09ad7a0280800000000000000
+      internalID: -9076303934004847877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_229
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 767eb4102609fd340800000000000000
+      internalID: 4890786470950594407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_230
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad845be9844b914e0800000000000000
+      internalID: -2010377534650890022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_231
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 825df40c0091191f0800000000000000
+      internalID: -1040022547928722136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_232
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc4d642a96cdee8c0800000000000000
+      internalID: -3967991875414600501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_233
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1e1066dc18e43db0800000000000000
+      internalID: -4812966891198865889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_234
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 221ce6fa3e4d6f330800000000000000
+      internalID: 3744414214571082018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_235
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14b6105cbc45ad080800000000000000
+      internalID: -9161917257771553983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_236
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54d5a874c8a24a490800000000000000
+      internalID: -7736011477931631291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_237
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba53a92ec94d79470800000000000000
+      internalID: 8401417400164693419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_238
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58cd8ae360c334f80800000000000000
+      internalID: -8123583305327518587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_239
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0d68697bf34b4ff0800000000000000
+      internalID: -50872223431889651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_240
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7f9a6d9435a579c0800000000000000
+      internalID: -3930053454412996742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_241
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3ca912c2392bcec0800000000000000
+      internalID: -3545694983642567622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_242
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d1fe9ed7c026a750800000000000000
+      internalID: 6315771570239238617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_243
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 038133bc9ca0c5050800000000000000
+      internalID: 5790515082705442864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_244
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f96b4bad90f131e0800000000000000
+      internalID: -2219728581342565895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_245
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fa1cfa78e13b93b0800000000000000
+      internalID: -5504751244964783374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_246
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 787ca863b7026c1a0800000000000000
+      internalID: -6789703674646313081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_247
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1600cd214ec30e4f0800000000000000
+      internalID: -801573783405330335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_248
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ec766d149139f070800000000000000
+      internalID: 8140592313667058917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_249
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cab841ad609fd45e0800000000000000
+      internalID: -1923607657993434196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_250
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8041852cd92051650800000000000000
+      internalID: 6202866938366399496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_251
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a29cc483e4e422d0800000000000000
+      internalID: -3304264560746392924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_252
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6889ac2c57a2e2d30800000000000000
+      internalID: 4408507770509891718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PENE_253
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c4f56bae21936300800000000000000
+      internalID: 244198434438247624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 6a2fb2b322bbfdd40aa6401f56852256
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: TilesA
+  pSDRemoveMatte: 1
+  pSDShowRemoveMatteOption: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -917,7 +917,6 @@ public class PlayerControllerV3 : MonoBehaviour
                 playerAnim.EndWall(false);
                 playerAnim.StartWall();
                 bWallOnce = true;
-                print("kk");
             }
         }
         else

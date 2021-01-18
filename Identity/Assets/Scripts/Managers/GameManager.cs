@@ -172,6 +172,9 @@ public class GameManager : MonoBehaviour
 
     public void Death1()
     {
+        //scriptPlayer.BoolDeath();
+        //goPlayer.GetComponent<Animator>().
+
         goPlayer.GetComponent<Animator>().SetTrigger("Death");
         goPlayer.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
         goPlayer.GetComponent<BoxCollider2D>().enabled = false;

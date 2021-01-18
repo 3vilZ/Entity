@@ -6,7 +6,14 @@ public class PlayerAnim : MonoBehaviour
 {
     Animator anim;
     bool bWalking = false;
-    
+
+    private void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.J))
+        {
+            anim.SetTrigger("Death");
+        }
+    }
 
     private void Start()
     {

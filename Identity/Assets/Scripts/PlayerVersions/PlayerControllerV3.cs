@@ -127,6 +127,7 @@ public class PlayerControllerV3 : MonoBehaviour
     [SerializeField] Transform tModel;
     [SerializeField] Transform tPlayerAttackPos;
     [SerializeField] Transform tPlayerAttackPivot;
+    [SerializeField] Transform tBallPosition;
     [SerializeField] LayerMask layerBall;
     [SerializeField] LayerMask layerPlatformMove;
     [SerializeField] LayerMask layerTrajectoryHit;
@@ -326,14 +327,17 @@ public class PlayerControllerV3 : MonoBehaviour
 
     public void CatchBall()
     {
+        playerAnim.ArmsCatchBall();
+        playerAnim.BallCatchBall();
+
         bBallOn = true;
         bBallDetecion = false;
         rbBall.velocity = Vector2.zero;
         rbBall.bodyType = RigidbodyType2D.Kinematic;
         goBall.GetComponent<CircleCollider2D>().enabled = false;
         if (!bCOLLIDEOnReload) { goBall.GetComponent<CircleCollider2D>().isTrigger = false; }
-        goBall.transform.parent = transform;
-        goBall.transform.position = transform.position;
+        goBall.transform.parent = tBallPosition.transform;
+        goBall.transform.position = tBallPosition.transform.position;
 
         if (bReloading && !bGrounded && GameManager.Instance.BSkill[1] && !bDeadDone && !bInteracting)
         {
@@ -643,6 +647,12 @@ public class PlayerControllerV3 : MonoBehaviour
                 goBall.GetComponent<CircleCollider2D>().enabled = true;
                 goBall.transform.parent = null;
 
+                playerAnim.ArmsShootBall();
+                if(bBallOn)
+                {
+                    playerAnim.BallShootBall();
+                }
+
                 rbBall.velocity = new Vector2(v3HitDirection.x, v3HitDirection.y) * fBallShootForce;
 
                 rbPlayer.velocity = Vector2.zero;
@@ -707,6 +717,12 @@ public class PlayerControllerV3 : MonoBehaviour
                 rbBall.bodyType = RigidbodyType2D.Dynamic;
                 goBall.GetComponent<CircleCollider2D>().enabled = true;
                 goBall.transform.parent = null;
+
+                playerAnim.ArmsShootBall();
+                if (bBallOn)
+                {
+                    playerAnim.BallShootBall();
+                }
 
                 rbBall.velocity = new Vector2(v3HitDirection.x, v3HitDirection.y) * fBallShootForce;
 

@@ -10014,7 +10014,7 @@ MonoBehaviour:
   fBallReloadForce: 100
   fPlayerReloadForce: 20
   bCOLLIDEOnReload: 0
-  bShootDirectionForPlayer: 0
+  bShootDirectionForPlayer: 1
   fDashForce: 8
   fDashDistance: 10
   fDashCapMoveTime: 0.3
@@ -10041,11 +10041,12 @@ MonoBehaviour:
   lineRenderer: {fileID: 0}
   bPlatformMove: 0
   goPlatformMove: {fileID: 0}
+  bDeadDone: 0
   bDead: 0
   bInteracting: 0
   bCollecting: 0
   goCurrentCollectable: {fileID: 0}
-  bBugTest: 0
+  bBugTest: 1
 --- !u!114 &7224575447954468581
 MonoBehaviour:
   m_ObjectHideFlags: 0

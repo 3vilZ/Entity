@@ -160,6 +160,9 @@ AnimatorStateTransition:
   - m_ConditionMode: 1
     m_ConditionEvent: StartJump
     m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: DeathDone
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 3569003508198725500}
   m_Solo: 0
@@ -171,7 +174,7 @@ AnimatorStateTransition:
   m_ExitTime: 0
   m_HasExitTime: 0
   m_HasFixedDuration: 1
-  m_InterruptionSource: 0
+  m_InterruptionSource: 1
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
 --- !u!1101 &-2924413358820441411
@@ -260,6 +263,9 @@ AnimatorStateTransition:
   - m_ConditionMode: 1
     m_ConditionEvent: StartWalk
     m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: DeathDone
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -348290608013672948}
   m_Solo: 0
@@ -271,7 +277,7 @@ AnimatorStateTransition:
   m_ExitTime: 0.75
   m_HasExitTime: 0
   m_HasFixedDuration: 1
-  m_InterruptionSource: 0
+  m_InterruptionSource: 1
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
 --- !u!1102 &-1796642798792872100
@@ -338,10 +344,10 @@ AnimatorStateMachine:
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: 4466882526553499}
-    m_Position: {x: 300, y: 0, z: 0}
+    m_Position: {x: 270, y: 40, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -5763093610856358469}
-    m_Position: {x: 300, y: 80, z: 0}
+    m_Position: {x: 270, y: 120, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -348290608013672948}
     m_Position: {x: 530, y: 0, z: 0}
@@ -356,7 +362,7 @@ AnimatorStateMachine:
     m_Position: {x: 530, y: 160, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 3569003508198725500}
-    m_Position: {x: 800, y: -50, z: 0}
+    m_Position: {x: 800, y: -40, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 5793124042481219516}
     m_Position: {x: 800, y: 60, z: 0}
@@ -504,6 +510,12 @@ AnimatorController:
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
+  - m_Name: DeathDone
+    m_Type: 4
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 0}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
@@ -577,6 +589,9 @@ AnimatorStateTransition:
   - m_ConditionMode: 1
     m_ConditionEvent: StartWall
     m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: DeathDone
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -1796642798792872100}
   m_Solo: 0
@@ -588,7 +603,7 @@ AnimatorStateTransition:
   m_ExitTime: 0
   m_HasExitTime: 0
   m_HasFixedDuration: 1
-  m_InterruptionSource: 0
+  m_InterruptionSource: 1
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
 --- !u!1101 &1340349385360183983

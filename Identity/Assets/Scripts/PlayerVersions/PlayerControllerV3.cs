@@ -143,6 +143,7 @@ public class PlayerControllerV3 : MonoBehaviour
     [HideInInspector] public bool bPlatformMove = false;
     [HideInInspector] public GameObject goPlatformMove;
 
+    [HideInInspector] public bool bDeadDone = false;
     [HideInInspector] public bool bDead = false;
     [HideInInspector] public bool bInteracting = false;
 
@@ -233,7 +234,7 @@ public class PlayerControllerV3 : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.B))
             {
-                print(bDead);
+                BoolDeathDone();
             }
 
             fBugTest -= Time.deltaTime;
@@ -245,7 +246,7 @@ public class PlayerControllerV3 : MonoBehaviour
             }
         }
 
-        if(!bDead && !bInteracting)
+        if(!bDeadDone && !bInteracting)
         {
             WallJump();
             Jump();
@@ -255,7 +256,7 @@ public class PlayerControllerV3 : MonoBehaviour
         BallDetection();
         Collecting();
 
-        if(!bDead && !bInteracting)
+        if(!bDeadDone && !bInteracting)
         {
             if (GameManager.Instance.BSkill[0])
             {
@@ -275,7 +276,7 @@ public class PlayerControllerV3 : MonoBehaviour
     private void FixedUpdate()
     {
 
-        if(!bWallJumpDone && !bShootDone && !bDashDone && !bDead && !bInteracting)
+        if(!bWallJumpDone && !bShootDone && !bDashDone && !bDeadDone && !bInteracting)
         {
             Movement();
         }
@@ -334,10 +335,14 @@ public class PlayerControllerV3 : MonoBehaviour
         goBall.transform.parent = transform;
         goBall.transform.position = transform.position;
 
-        if (bReloading && !bGrounded && GameManager.Instance.BSkill[1] && !bDead && !bInteracting)
+        if (bReloading && !bGrounded && GameManager.Instance.BSkill[1] && !bDeadDone && !bInteracting)
         {
             //rbPlayer.velocity = Vector2.zero;
-            playerAnim.StartJump();
+            if (!bDeadDone)
+            {
+                playerAnim.StartJump();
+            }
+            
             rbPlayer.velocity = new Vector2(rbPlayer.velocity.x, fPlayerReloadForce);
             bReloading = false;
         }
@@ -367,6 +372,10 @@ public class PlayerControllerV3 : MonoBehaviour
     }
 
     //Death Anim Methods
+    //
+    //
+    //
+    //
     public void AnimDeath()
     {
         Particles(2);
@@ -383,11 +392,28 @@ public class PlayerControllerV3 : MonoBehaviour
             bDead = true;
         }
     }
+    public void BoolDeathDone()
+    {
+        if (bDeadDone)
+        {
+            bDeadDone = false;
+            animPlayer.SetBool("DeathDone", false);
+        }
+        else
+        {
+            bDeadDone = true;
+            animPlayer.SetBool("DeathDone", true);
+        }
+    }
 
     public void Revive()
     {
         GameManager.Instance.Death3();
     }
+    //
+    //
+    //
+    //
     //EndEndEnd
 
 
@@ -627,7 +653,10 @@ public class PlayerControllerV3 : MonoBehaviour
                 }
                 else
                 {
-                    playerAnim.StartJump();
+                    if (!bDeadDone)
+                    {
+                        playerAnim.StartJump();
+                    }
                     fHorizontalVelocity = -v3HitDirection.x;
                     rbPlayer.velocity = new Vector2(-v3HitDirection.x * fPlayerShootForce, -v3HitDirection.y * fPlayerShootForce);
                 }
@@ -689,7 +718,10 @@ public class PlayerControllerV3 : MonoBehaviour
                 }
                 else
                 {
-                    playerAnim.StartJump();
+                    if (!bDeadDone)
+                    {
+                        playerAnim.StartJump();
+                    }
                     fHorizontalVelocity = -v3HitDirection.x;
                     rbPlayer.velocity = new Vector2(-v3HitDirection.x * fPlayerShootForce, -v3HitDirection.y * fPlayerShootForce);
                 }
@@ -811,12 +843,18 @@ public class PlayerControllerV3 : MonoBehaviour
         {
             if (Mathf.Abs(Input.GetAxisRaw("Horizontal")) < 0.01f)
             {
-                playerAnim.Walking(false);
+                if (!bDeadDone)
+                {
+                    playerAnim.Walking(false);
+                }
             }
             else
             {
-                playerAnim.StartWalk();
-                playerAnim.Walking(true);
+                if (!bDeadDone)
+                {
+                    playerAnim.StartWalk();
+                    playerAnim.Walking(true);
+                }
             }
         }
         
@@ -864,7 +902,11 @@ public class PlayerControllerV3 : MonoBehaviour
                 if (wallDetect.GetComponent<BoxCollider2D>() == wallDetect.gameObject.GetComponentInParent<WallJump>().colRight)
                 {
                     bWallJumpDone = true;
-                    playerAnim.StartJump();
+                    if (!bDeadDone)
+                    {
+                        playerAnim.StartJump();
+                    }
+                    
                     FlipX();
                     fHorizontalVelocity = v2WallJumpdir.x;
                     rbPlayer.velocity = new Vector2(v2WallJumpdir.x, v2WallJumpdir.y) * fWallJumpforce;
@@ -874,7 +916,10 @@ public class PlayerControllerV3 : MonoBehaviour
                 else if (wallDetect.GetComponent<BoxCollider2D>() == wallDetect.gameObject.GetComponentInParent<WallJump>().colLeft)
                 {
                     bWallJumpDone = true;
-                    playerAnim.StartJump();
+                    if (!bDeadDone)
+                    {
+                        playerAnim.StartJump();
+                    }
                     FlipX();
                     fHorizontalVelocity = -v2WallJumpdir.x;
                     rbPlayer.velocity = new Vector2(-v2WallJumpdir.x, v2WallJumpdir.y) * fWallJumpforce;
@@ -914,15 +959,21 @@ public class PlayerControllerV3 : MonoBehaviour
         {
             if(!bWallOnce)
             {
-                playerAnim.EndWall(false);
-                playerAnim.StartWall();
-                bWallOnce = true;
+                if (!bDeadDone)
+                {
+                    playerAnim.EndWall(false);
+                    playerAnim.StartWall();
+                    bWallOnce = true;
+                }
             }
         }
         else
         {
-            bWallOnce = false;
-            playerAnim.EndWall(true);
+            if (!bDeadDone)
+            {
+                bWallOnce = false;
+                playerAnim.EndWall(true);
+            }
         }
         
         if(wallDetect != null)
@@ -964,7 +1015,10 @@ public class PlayerControllerV3 : MonoBehaviour
 
             if ((fJumpSecureControl > 0) && (fGroundedSecureControl > 0))
             {
-                playerAnim.StartJump();
+                if (!bDeadDone)
+                {
+                    playerAnim.StartJump();
+                }
                 fJumpSecureControl = 0;
                 fGroundedSecureControl = 0;
                 rbPlayer.velocity = new Vector2(rbPlayer.velocity.x, fJumpForce);
@@ -1021,25 +1075,28 @@ public class PlayerControllerV3 : MonoBehaviour
         }
 
         //ANIM
+
+        if (!bDeadDone)
+        {
+            if (rbPlayer.velocity.y <= 0 && !bGrounded)
+            {
+                playerAnim.SwitchJump(true);
+            }
+            else
+            {
+                playerAnim.SwitchJump(false);
+            }
+
+            if (bGrounded)
+            {
+                playerAnim.Land(true);
+            }
+            else
+            {
+                playerAnim.Land(false);
+            }
+        }
         
-
-        if (rbPlayer.velocity.y <= 0 && !bGrounded)
-        {
-            playerAnim.SwitchJump(true);
-        }
-        else
-        {
-            playerAnim.SwitchJump(false);
-        }
-
-        if (bGrounded)
-        {
-            playerAnim.Land(true);
-        }
-        else
-        {
-            playerAnim.Land(false);
-        }
 
         //FallingCap
         /*

@@ -15,6 +15,7 @@ public class DeathCondition : MonoBehaviour
                 GameManager.Instance.GoPlayer.GetComponent<PlayerControllerV3>().goCurrentCollectable.GetComponent<Collectable>().bCollecting = false;
             }
 
+            GameManager.Instance.ScriptPlayer.BoolDeathDone();
             GameManager.Instance.Death1();
         }
     }

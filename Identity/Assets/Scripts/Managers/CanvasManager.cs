@@ -79,4 +79,8 @@ public class CanvasManager : MonoBehaviour
         goCoreDisplay.SetActive(false);
         GameManager.Instance.ScriptPlayer.bInteracting = false;
     }
+    public void CollectableOff()
+    {
+        goCollectableDisplay.SetActive(false);
+    }
 }

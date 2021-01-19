@@ -342,7 +342,7 @@ public class PlayerControllerV3 : MonoBehaviour
         if (bReloading && !bGrounded && GameManager.Instance.BSkill[1] && !bDeadDone && !bInteracting)
         {
             //rbPlayer.velocity = Vector2.zero;
-            if (!bDeadDone)
+            if (!bDeadDone && !bWallDetect && !bGrounded)
             {
                 playerAnim.StartJump();
             }
@@ -663,10 +663,11 @@ public class PlayerControllerV3 : MonoBehaviour
                 }
                 else
                 {
-                    if (!bDeadDone)
+                    if (!bDeadDone && !bWallDetect && !bGrounded)
                     {
                         playerAnim.StartJump();
                     }
+                    
                     fHorizontalVelocity = -v3HitDirection.x;
                     rbPlayer.velocity = new Vector2(-v3HitDirection.x * fPlayerShootForce, -v3HitDirection.y * fPlayerShootForce);
                 }
@@ -734,10 +735,11 @@ public class PlayerControllerV3 : MonoBehaviour
                 }
                 else
                 {
-                    if (!bDeadDone)
+                    if (!bDeadDone && !bWallDetect && !bGrounded)
                     {
                         playerAnim.StartJump();
                     }
+
                     fHorizontalVelocity = -v3HitDirection.x;
                     rbPlayer.velocity = new Vector2(-v3HitDirection.x * fPlayerShootForce, -v3HitDirection.y * fPlayerShootForce);
                 }

@@ -16,6 +16,9 @@ public class Collectable : MonoBehaviour
     [HideInInspector] public bool bCollecting = false;
     [HideInInspector] public bool bRDY1 = false;
     [HideInInspector] public bool bRDY2 = false;
+    bool b1Once = false;
+    bool b2Once = false;
+
     ParticleSystem.MainModule psMain;
     ParticleSystem.RotationOverLifetimeModule psRot;
 
@@ -51,6 +54,8 @@ public class Collectable : MonoBehaviour
 
             bRDY1 = false;
             bRDY2 = false;
+            b1Once = false;
+            b2Once = false;
         }
 
         if(bRDY1)
@@ -63,15 +68,31 @@ public class Collectable : MonoBehaviour
 
         if (bRDY2)
         {
+            if(!b1Once)
+            {
+                CanvasManager.Instance.goCollectableDisplay.SetActive(true);
+                CanvasManager.Instance.txtCollectable.text = GameManager.Instance.ICollectables.ToString();
+                CanvasManager.Instance.canvasAnim.SetTrigger("Collectable1");
+                b1Once = true;
+            }
+
             psMain.startSize = new ParticleSystem.MinMaxCurve(2, 5);
             psRot.zMultiplier = 18f;
             psMain.loop = false;
 
             if (!ps.IsAlive())
             {
-                gameObject.SetActive(false);
                 GameManager.Instance.GetCollectable();
                 GameManager.Instance.GoPlayer.GetComponent<PlayerControllerV3>().bCollecting = false;
+
+                if (!b2Once)
+                {
+                    CanvasManager.Instance.txtCollectable.text = GameManager.Instance.ICollectables.ToString();
+                    CanvasManager.Instance.canvasAnim.SetTrigger("Collectable2");
+                    b2Once = true;
+                }
+
+                gameObject.SetActive(false);
             }
         }
     }

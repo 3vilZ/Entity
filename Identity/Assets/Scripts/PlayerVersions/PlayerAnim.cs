@@ -106,4 +106,9 @@ public class PlayerAnim : MonoBehaviour
     {
         anim.SetBool("Wall", b);
     }
+    
+    public void Interact()
+    {
+        anim.SetTrigger("Interact");
+    }
 }

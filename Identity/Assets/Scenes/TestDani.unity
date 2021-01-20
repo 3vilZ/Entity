@@ -4350,6 +4350,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameManager
       objectReference: {fileID: 0}
+    - target: {fileID: 161136713085171595, guid: fcf0005624176224993c3942531ff98f,
+        type: 3}
+      propertyPath: iCoreStart
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 161136713085171596, guid: fcf0005624176224993c3942531ff98f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5346,7 +5351,7 @@ PrefabInstance:
     - target: {fileID: 1721704562556813196, guid: 9a41d2ccca9354e4b8ce321445c29e42,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -7.7
+      value: -5.24
       objectReference: {fileID: 0}
     - target: {fileID: 1721704562556813196, guid: 9a41d2ccca9354e4b8ce321445c29e42,
         type: 3}
@@ -5470,13 +5475,18 @@ PrefabInstance:
     - target: {fileID: 7312302695114677797, guid: 0f2d317d61b6e4749a268835423ca79d,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7312302695114677798, guid: 0f2d317d61b6e4749a268835423ca79d,
         type: 3}
       propertyPath: goParts.Array.data[0]
       value: 
       objectReference: {fileID: 226007691}
+    - target: {fileID: 7312302695114677798, guid: 0f2d317d61b6e4749a268835423ca79d,
+        type: 3}
+      propertyPath: iValue
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0f2d317d61b6e4749a268835423ca79d, type: 3}
 --- !u!1001 &8842004404750989161

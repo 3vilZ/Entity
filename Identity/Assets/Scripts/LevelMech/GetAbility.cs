@@ -53,6 +53,7 @@ public class GetAbility : MonoBehaviour
 
                 if (Input.GetButtonDown("Y"))
                 {
+                    GameManager.Instance.GoPlayer.GetComponent<PlayerAnim>().Interact();
                     GameManager.Instance.ScriptPlayer.bInteracting = true;
                     GameManager.Instance.GoPlayer.GetComponent<Rigidbody2D>().velocity = new Vector2(0, GameManager.Instance.GoPlayer.GetComponent<Rigidbody2D>().velocity.y);
 
@@ -81,6 +82,11 @@ public class GetAbility : MonoBehaviour
 
             if(Vector3.Distance(goBallSlot.transform.position, goAnimPlace.transform.position) <= 0.1f)
             {
+                if(iValue > 0)
+                {
+                    GameManager.Instance.GoBall.GetComponent<Animator>().SetTrigger("Shoot");
+                }
+                
                 animAbility.SetTrigger("Start");
                 bStart = false;
             }
@@ -95,6 +101,7 @@ public class GetAbility : MonoBehaviour
                 GameManager.Instance.ScriptPlayer.CatchBall();
                 //GameManager.Instance.ScriptPlayer.bInteracting = false;
                 GameManager.Instance.GetSkill(iValue);
+                GameManager.Instance.ICoreStart = iValue +1;
 
                 //CanvasManager.Instance.SetCore(iValue);
                 CanvasManager.Instance.goCore[iValue].SetActive(true);

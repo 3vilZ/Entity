@@ -23,6 +23,7 @@ public class DialogueTrigger : MonoBehaviour
 
                 if (Input.GetButtonDown("Y"))
                 {
+                    GameManager.Instance.GoPlayer.GetComponent<PlayerAnim>().Interact();
                     GameManager.Instance.ScriptPlayer.bInteracting = true;
                     GameManager.Instance.GoPlayer.GetComponent<Rigidbody2D>().velocity = new Vector2(0, GameManager.Instance.GoPlayer.GetComponent<Rigidbody2D>().velocity.y);
 

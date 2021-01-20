@@ -231,6 +231,18 @@ public class PlayerControllerV3 : MonoBehaviour
 
     void Update()
     {
+        if(Input.GetKeyDown(KeyCode.K))
+        {
+            if(bShootDirectionForPlayer)
+            {
+                bShootDirectionForPlayer = false;
+            }
+            else
+            {
+                bShootDirectionForPlayer = true;
+            }
+        }
+
         if(bBugTest)
         {
             if (Input.GetKeyDown(KeyCode.B))

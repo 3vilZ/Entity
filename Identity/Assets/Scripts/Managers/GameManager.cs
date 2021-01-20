@@ -45,7 +45,6 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
-        
 
         if (Instance == null)
         {
@@ -83,7 +82,7 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        //Cursor.visible = false;
+        Cursor.visible = false;
 
         /*
         if(bSkill[0])
@@ -131,17 +130,12 @@ public class GameManager : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.P))
             {
-                LoadLevel("Nivel 2");
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
             }
         }
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             Application.Quit();
-        }
-
-        if (Input.GetKey(KeyCode.K))
-        {
-            print(iCollectables);
         }
     }
     

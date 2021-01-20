@@ -5,22 +5,16 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/Scenes/BlockOuts PT 20112020/Nivel 0.unity
-    guid: 410d9c3fe0f25864f8b43f375f5401d6
-  - enabled: 0
-    path: Assets/Scenes/BlockOuts PT 20112020/Nivel 1.unity
-    guid: 834750aa3e5783e4c973377c51ec1db2
-  - enabled: 0
-    path: Assets/Scenes/BlockOuts PT 20112020/Nivel 2.unity
-    guid: 1fb45602485793c4ab34cd0e273efafb
-  - enabled: 0
-    path: Assets/Scenes/TestDani.unity
-    guid: 047f4c8cc0bc74d49ab191ed9f163fa5
   - enabled: 1
     path: Assets/Scenes/BlockOuts VS 20122020/Nivel 1.unity
     guid: f8dfbaae4f99fb14aa7ac396f8975912
   - enabled: 1
-    path: Assets/Scenes/TestDani2.unity
-    guid: 11d3607a9e2f30f4eb5813fbc1153b55
+    path: Assets/Scenes/BlockOuts VS 20122020/Nivel 2.unity
+    guid: dedc568417b08694e9cb39ddd4f1f0ff
+  - enabled: 1
+    path: Assets/Scenes/BlockOuts VS 20122020/Nivel 3.unity
+    guid: b04d767af6247ff4cbe173c634d1e0b4
+  - enabled: 1
+    path: Assets/Scenes/BlockOuts VS 20122020/Nivel 4.unity
+    guid: 6a930ab524c346c4194359335d946439
   m_configObjects: {}

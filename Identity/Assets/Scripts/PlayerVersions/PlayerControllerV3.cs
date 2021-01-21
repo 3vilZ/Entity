@@ -164,11 +164,12 @@ public class PlayerControllerV3 : MonoBehaviour
 
     private void Awake()
     {
-        
+
     }
 
     void Start()
     {
+
         //BallElements
         goBall = GameManager.Instance.GoBall.gameObject;
         scriptBall = goBall.GetComponent<Ball>();
@@ -231,7 +232,9 @@ public class PlayerControllerV3 : MonoBehaviour
 
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.K))
+        
+
+        if (Input.GetKeyDown(KeyCode.K))
         {
             if(bShootDirectionForPlayer)
             {
@@ -340,7 +343,7 @@ public class PlayerControllerV3 : MonoBehaviour
     public void CatchBall()
     {
         playerAnim.ArmsCatchBall();
-        playerAnim.BallCatchBall();
+        goBall.GetComponent<Animator>().SetTrigger("Catch");
 
         bBallOn = true;
         bBallDetecion = false;
@@ -662,7 +665,7 @@ public class PlayerControllerV3 : MonoBehaviour
                 playerAnim.ArmsShootBall();
                 if(bBallOn)
                 {
-                    playerAnim.BallShootBall();
+                    goBall.GetComponent<Animator>().SetTrigger("Shoot");
                 }
 
                 rbBall.velocity = new Vector2(v3HitDirection.x, v3HitDirection.y) * fBallShootForce;
@@ -734,7 +737,7 @@ public class PlayerControllerV3 : MonoBehaviour
                 playerAnim.ArmsShootBall();
                 if (bBallOn)
                 {
-                    playerAnim.BallShootBall();
+                    goBall.GetComponent<Animator>().SetTrigger("Shoot");
                 }
 
                 rbBall.velocity = new Vector2(v3HitDirection.x, v3HitDirection.y) * fBallShootForce;

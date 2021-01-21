@@ -618,6 +618,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d31b27ec0596e648996c4d55e85b7ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BUILD: {fileID: 0}
   txtName: {fileID: 2703690448323064844}
   txtSentence: {fileID: 2703690448941421499}
   goNarrativeDisplay: {fileID: 2703690447808855219}

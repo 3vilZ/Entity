@@ -41,11 +41,17 @@ public class GameManager : MonoBehaviour
         goBall = GameObject.FindGameObjectWithTag("Ball");
         scriptPlayer = goPlayer.GetComponent<PlayerControllerV3>();
         tCurrentCheckPointPos = goPlayer.transform.position;
+
+        /*
+        for (int i = 0; i < bSkill.Length; i++)
+        {
+            bSkill[i] = false;
+        }
+        */
     }
 
     private void Awake()
     {
-
         if (Instance == null)
         {
             Instance = this;
@@ -67,7 +73,6 @@ public class GameManager : MonoBehaviour
         //goCheckPointCamera = goCurrentVirtualCamera;
 
         scriptPlayer = goPlayer.GetComponent<PlayerControllerV3>();
-
         tCurrentCheckPointPos = goPlayer.transform.position;
 
 
@@ -130,6 +135,7 @@ public class GameManager : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.P))
             {
+                iSpawn = 0;
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
             }
         }
@@ -144,7 +150,7 @@ public class GameManager : MonoBehaviour
     {
         bSkill[value] = true;
 
-        if(bSkill[0])
+        if (bSkill[0])
         {
             goBall.SetActive(true);
             scriptPlayer.CatchBall();

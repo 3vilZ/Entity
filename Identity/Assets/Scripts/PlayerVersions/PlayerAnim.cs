@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerAnim : MonoBehaviour
 {
     Animator anim;
-    Animator animBall;
+    //Animator animBall;
     public Animator animArms;
     bool bWalking = false;
 
@@ -20,7 +20,7 @@ public class PlayerAnim : MonoBehaviour
     private void Start()
     {
         anim = GetComponent<Animator>();
-        animBall = GameManager.Instance.GoBall.GetComponent<Animator>();
+        //animBall = GameManager.Instance.GoBall.GetComponent<Animator>();
     }
 
     public void ArmsCatchBall()
@@ -35,12 +35,12 @@ public class PlayerAnim : MonoBehaviour
 
     public void BallCatchBall()
     {
-        animBall.SetTrigger("Catch");
+        //animBall.SetTrigger("Catch");
     }
 
     public void BallShootBall()
     {
-        animBall.SetTrigger("Shoot");
+        //animBall.SetTrigger("Shoot");
     }
 
     public void StartWalk()

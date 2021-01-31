@@ -92,9 +92,10 @@ public class CanvasManager : MonoBehaviour
      * 7-18 Ball
      * 20 Spikes
      * 21-22 Interact
+     * 25 ROCKS
+     *
      * 
-     * 
-     * 26 Collectable
+     * 30 Collectable
      * 
      * 
      * 

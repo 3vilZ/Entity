@@ -201,13 +201,13 @@ MonoBehaviour:
     value: 1
   temperature:
     overrideState: 1
-    value: 12
+    value: 9.1
   tint:
     overrideState: 0
     value: 22.8
   colorFilter:
     overrideState: 1
-    value: {r: 1, g: 0.927673, b: 0.8915094, a: 1}
+    value: {r: 1, g: 0.95444673, b: 0.8901961, a: 1}
   hueShift:
     overrideState: 0
     value: 0

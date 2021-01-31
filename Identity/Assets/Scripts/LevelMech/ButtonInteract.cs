@@ -8,6 +8,7 @@ public class ButtonInteract : MonoBehaviour
     [SerializeField] GameObject goBlock;
     [SerializeField] float fSpeed;
     [SerializeField] Transform tDestiny;
+    [SerializeField] ParticleSystem psClick;
 
     bool bActivated = false;
 
@@ -29,13 +30,21 @@ public class ButtonInteract : MonoBehaviour
             }
         }
     }
-
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnCollisionEnter2D(Collision2D other)
     {
-        if(other.gameObject.tag == "Player" || other.gameObject.tag == "Ball")
+        if (other.gameObject.tag == "Player" || other.gameObject.tag == "Ball")
         {
+            GetComponent<Animator>().SetTrigger("Click");
+            psClick.Play();
             bActivated = true;
             colButton.enabled = false;
         }
     }
+    
+    /*
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        
+    }
+    */
 }

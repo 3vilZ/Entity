@@ -83,4 +83,20 @@ public class CanvasManager : MonoBehaviour
     {
         goCollectableDisplay.SetActive(false);
     }
+    /*
+     * LAYERS
+     * -2 InOut
+     * -1 Platforms
+     * 0 Null
+     * 1-6 Player
+     * 7-18 Ball
+     * 20 Spikes
+     * 21-22 Interact
+     * 
+     * 
+     * 26 Collectable
+     * 
+     * 
+     * 
+     */
 }

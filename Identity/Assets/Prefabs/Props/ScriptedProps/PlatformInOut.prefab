@@ -64,7 +64,6 @@ MonoBehaviour:
   sprModel: {fileID: 3705811924672268620}
   fTimeToOut: 0.25
   fTimeToIn: 1.2
-  alpha: 0.203
   colorOut: {r: 0, g: 0, b: 0, a: 0.68235296}
 --- !u!61 &2006625939105091776
 BoxCollider2D:

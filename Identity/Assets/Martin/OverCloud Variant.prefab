@@ -1,0 +1,653 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &1410590750807547715
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1190934061602206, guid: 1ed6a05698c1f3646b05c428ee90cfd5, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1319460974527812, guid: 1ed6a05698c1f3646b05c428ee90cfd5, type: 3}
+      propertyPath: m_Name
+      value: OverCloud Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 1319460974527812, guid: 1ed6a05698c1f3646b05c428ee90cfd5, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1740272214747152, guid: 1ed6a05698c1f3646b05c428ee90cfd5, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1831748699553512, guid: 1ed6a05698c1f3646b05c428ee90cfd5, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4015646639703630, guid: 1ed6a05698c1f3646b05c428ee90cfd5, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.03384952
+      objectReference: {fileID: 0}
+    - target: {fileID: 4015646639703630, guid: 1ed6a05698c1f3646b05c428ee90cfd5, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.74830383
+      objectReference: {fileID: 0}
+    - target: {fileID: 4015646639703630, guid: 1ed6a05698c1f3646b05c428ee90cfd5, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.03829806
+      objectReference: {fileID: 0}
+    - target: {fileID: 4015646639703630, guid: 1ed6a05698c1f3646b05c428ee90cfd5, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.66138405
+      objectReference: {fileID: 0}
+    - target: {fileID: 4139813758506006, guid: 1ed6a05698c1f3646b05c428ee90cfd5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 625.22986
+      objectReference: {fileID: 0}
+    - target: {fileID: 4139813758506006, guid: 1ed6a05698c1f3646b05c428ee90cfd5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -7287
+      objectReference: {fileID: 0}
+    - target: {fileID: 4139813758506006, guid: 1ed6a05698c1f3646b05c428ee90cfd5, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 51.230476
+      objectReference: {fileID: 0}
+    - target: {fileID: 4139813758506006, guid: 1ed6a05698c1f3646b05c428ee90cfd5, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4139813758506006, guid: 1ed6a05698c1f3646b05c428ee90cfd5, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4139813758506006, guid: 1ed6a05698c1f3646b05c428ee90cfd5, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4139813758506006, guid: 1ed6a05698c1f3646b05c428ee90cfd5, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4139813758506006, guid: 1ed6a05698c1f3646b05c428ee90cfd5, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4139813758506006, guid: 1ed6a05698c1f3646b05c428ee90cfd5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4139813758506006, guid: 1ed6a05698c1f3646b05c428ee90cfd5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4139813758506006, guid: 1ed6a05698c1f3646b05c428ee90cfd5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4186599794869578, guid: 1ed6a05698c1f3646b05c428ee90cfd5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 358.81775
+      objectReference: {fileID: 0}
+    - target: {fileID: 4186599794869578, guid: 1ed6a05698c1f3646b05c428ee90cfd5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 8887
+      objectReference: {fileID: 0}
+    - target: {fileID: 4186599794869578, guid: 1ed6a05698c1f3646b05c428ee90cfd5, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -641.659
+      objectReference: {fileID: 0}
+    - target: {fileID: 4694414523986364, guid: 1ed6a05698c1f3646b05c428ee90cfd5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 424.4209
+      objectReference: {fileID: 0}
+    - target: {fileID: 4694414523986364, guid: 1ed6a05698c1f3646b05c428ee90cfd5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 8887
+      objectReference: {fileID: 0}
+    - target: {fileID: 4694414523986364, guid: 1ed6a05698c1f3646b05c428ee90cfd5, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -576.05585
+      objectReference: {fileID: 0}
+    - target: {fileID: 4895959131409468, guid: 1ed6a05698c1f3646b05c428ee90cfd5, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.0016001489
+      objectReference: {fileID: 0}
+    - target: {fileID: 4895959131409468, guid: 1ed6a05698c1f3646b05c428ee90cfd5, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.99880195
+      objectReference: {fileID: 0}
+    - target: {fileID: 4895959131409468, guid: 1ed6a05698c1f3646b05c428ee90cfd5, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.047872
+      objectReference: {fileID: 0}
+    - target: {fileID: 4895959131409468, guid: 1ed6a05698c1f3646b05c428ee90cfd5, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.010027699
+      objectReference: {fileID: 0}
+    - target: {fileID: 4895959131409468, guid: 1ed6a05698c1f3646b05c428ee90cfd5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 5.4890003
+      objectReference: {fileID: 0}
+    - target: {fileID: 4895959131409468, guid: 1ed6a05698c1f3646b05c428ee90cfd5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -178.856
+      objectReference: {fileID: 0}
+    - target: {fileID: 4895959131409468, guid: 1ed6a05698c1f3646b05c428ee90cfd5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -0.12900001
+      objectReference: {fileID: 0}
+    - target: {fileID: 23360091703444624, guid: 1ed6a05698c1f3646b05c428ee90cfd5,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 23360091703444624, guid: 1ed6a05698c1f3646b05c428ee90cfd5,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: cc47c727d12024a4c84578d53b7a9855, type: 2}
+    - target: {fileID: 23752315596209056, guid: 1ed6a05698c1f3646b05c428ee90cfd5,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 23758426906262394, guid: 1ed6a05698c1f3646b05c428ee90cfd5,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 23758426906262394, guid: 1ed6a05698c1f3646b05c428ee90cfd5,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: cc47c727d12024a4c84578d53b7a9855, type: 2}
+    - target: {fileID: 33240536294463678, guid: 1ed6a05698c1f3646b05c428ee90cfd5,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 33469675173428526, guid: 1ed6a05698c1f3646b05c428ee90cfd5,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 108315800500407990, guid: 1ed6a05698c1f3646b05c428ee90cfd5,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 108315800500407990, guid: 1ed6a05698c1f3646b05c428ee90cfd5,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 108315800500407990, guid: 1ed6a05698c1f3646b05c428ee90cfd5,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 108315800500407990, guid: 1ed6a05698c1f3646b05c428ee90cfd5,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 108315800500407990, guid: 1ed6a05698c1f3646b05c428ee90cfd5,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 108482949134468552, guid: 1ed6a05698c1f3646b05c428ee90cfd5,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.39408857
+      objectReference: {fileID: 0}
+    - target: {fileID: 108482949134468552, guid: 1ed6a05698c1f3646b05c428ee90cfd5,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.33584186
+      objectReference: {fileID: 0}
+    - target: {fileID: 108482949134468552, guid: 1ed6a05698c1f3646b05c428ee90cfd5,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.5347295
+      objectReference: {fileID: 0}
+    - target: {fileID: 108482949134468552, guid: 1ed6a05698c1f3646b05c428ee90cfd5,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 108504513437858882, guid: 1ed6a05698c1f3646b05c428ee90cfd5,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.50717056
+      objectReference: {fileID: 0}
+    - target: {fileID: 108504513437858882, guid: 1ed6a05698c1f3646b05c428ee90cfd5,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.23021081
+      objectReference: {fileID: 0}
+    - target: {fileID: 108504513437858882, guid: 1ed6a05698c1f3646b05c428ee90cfd5,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 108504513437858882, guid: 1ed6a05698c1f3646b05c428ee90cfd5,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.8142433
+      objectReference: {fileID: 0}
+    - target: {fileID: 108504513437858882, guid: 1ed6a05698c1f3646b05c428ee90cfd5,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 1.09
+      objectReference: {fileID: 0}
+    - target: {fileID: 108504513437858882, guid: 1ed6a05698c1f3646b05c428ee90cfd5,
+        type: 3}
+      propertyPath: m_Intensity
+      value: 1.86
+      objectReference: {fileID: 0}
+    - target: {fileID: 108504513437858882, guid: 1ed6a05698c1f3646b05c428ee90cfd5,
+        type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 108504513437858882, guid: 1ed6a05698c1f3646b05c428ee90cfd5,
+        type: 3}
+      propertyPath: m_Shadows.m_Strength
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 108504513437858882, guid: 1ed6a05698c1f3646b05c428ee90cfd5,
+        type: 3}
+      propertyPath: m_Shadows.m_Bias
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114279891684178380, guid: 1ed6a05698c1f3646b05c428ee90cfd5,
+        type: 3}
+      propertyPath: m_Type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114279891684178380, guid: 1ed6a05698c1f3646b05c428ee90cfd5,
+        type: 3}
+      propertyPath: multiplier
+      value: 1.09
+      objectReference: {fileID: 0}
+    - target: {fileID: 114345144636788226, guid: 1ed6a05698c1f3646b05c428ee90cfd5,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114503011375592872, guid: 1ed6a05698c1f3646b05c428ee90cfd5,
+        type: 3}
+      propertyPath: showDrawerCloud
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114503011375592872, guid: 1ed6a05698c1f3646b05c428ee90cfd5,
+        type: 3}
+      propertyPath: m_VolumetricClouds.cloudPlaneRadius
+      value: 4133
+      objectReference: {fileID: 0}
+    - target: {fileID: 114503011375592872, guid: 1ed6a05698c1f3646b05c428ee90cfd5,
+        type: 3}
+      propertyPath: showDrawerWeather
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114503011375592872, guid: 1ed6a05698c1f3646b05c428ee90cfd5,
+        type: 3}
+      propertyPath: m_Weather.windTimescale
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114503011375592872, guid: 1ed6a05698c1f3646b05c428ee90cfd5,
+        type: 3}
+      propertyPath: showDrawerAtmosphere
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114503011375592872, guid: 1ed6a05698c1f3646b05c428ee90cfd5,
+        type: 3}
+      propertyPath: m_Atmosphere.overrideSkyboxMaterial
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114503011375592872, guid: 1ed6a05698c1f3646b05c428ee90cfd5,
+        type: 3}
+      propertyPath: m_Weather.windTime
+      value: 68.81583
+      objectReference: {fileID: 0}
+    - target: {fileID: 114503011375592872, guid: 1ed6a05698c1f3646b05c428ee90cfd5,
+        type: 3}
+      propertyPath: m_Atmosphere.exposure
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114503011375592872, guid: 1ed6a05698c1f3646b05c428ee90cfd5,
+        type: 3}
+      propertyPath: showDrawerCirrus
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114503011375592872, guid: 1ed6a05698c1f3646b05c428ee90cfd5,
+        type: 3}
+      propertyPath: m_VolumetricClouds.compositorBlur
+      value: 0.067
+      objectReference: {fileID: 0}
+    - target: {fileID: 114503011375592872, guid: 1ed6a05698c1f3646b05c428ee90cfd5,
+        type: 3}
+      propertyPath: m_VolumetricClouds.noiseScale
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114503011375592872, guid: 1ed6a05698c1f3646b05c428ee90cfd5,
+        type: 3}
+      propertyPath: m_CloudPlanes.Array.data[1].color.r
+      value: 0.94509804
+      objectReference: {fileID: 0}
+    - target: {fileID: 114503011375592872, guid: 1ed6a05698c1f3646b05c428ee90cfd5,
+        type: 3}
+      propertyPath: m_CloudPlanes.Array.data[1].color.g
+      value: 0.72177994
+      objectReference: {fileID: 0}
+    - target: {fileID: 114503011375592872, guid: 1ed6a05698c1f3646b05c428ee90cfd5,
+        type: 3}
+      propertyPath: m_CloudPlanes.Array.data[1].color.b
+      value: 0.1372549
+      objectReference: {fileID: 0}
+    - target: {fileID: 114503011375592872, guid: 1ed6a05698c1f3646b05c428ee90cfd5,
+        type: 3}
+      propertyPath: m_CloudPlanes.Array.data[1].opacity
+      value: 0.802
+      objectReference: {fileID: 0}
+    - target: {fileID: 114503011375592872, guid: 1ed6a05698c1f3646b05c428ee90cfd5,
+        type: 3}
+      propertyPath: m_CloudPlanes.Array.data[1].lightAbsorption
+      value: 0.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 114503011375592872, guid: 1ed6a05698c1f3646b05c428ee90cfd5,
+        type: 3}
+      propertyPath: m_Atmosphere.actualSunColor.r
+      value: 0.990566
+      objectReference: {fileID: 0}
+    - target: {fileID: 114503011375592872, guid: 1ed6a05698c1f3646b05c428ee90cfd5,
+        type: 3}
+      propertyPath: m_Atmosphere.actualSunColor.g
+      value: 0.47128627
+      objectReference: {fileID: 0}
+    - target: {fileID: 114503011375592872, guid: 1ed6a05698c1f3646b05c428ee90cfd5,
+        type: 3}
+      propertyPath: m_Atmosphere.actualSunColor.b
+      value: 0.21960661
+      objectReference: {fileID: 0}
+    - target: {fileID: 114503011375592872, guid: 1ed6a05698c1f3646b05c428ee90cfd5,
+        type: 3}
+      propertyPath: m_Atmosphere.sunSize
+      value: 24.23
+      objectReference: {fileID: 0}
+    - target: {fileID: 114503011375592872, guid: 1ed6a05698c1f3646b05c428ee90cfd5,
+        type: 3}
+      propertyPath: m_Atmosphere.sunIntensity
+      value: 110.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 114503011375592872, guid: 1ed6a05698c1f3646b05c428ee90cfd5,
+        type: 3}
+      propertyPath: showDrawerLighting
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114503011375592872, guid: 1ed6a05698c1f3646b05c428ee90cfd5,
+        type: 3}
+      propertyPath: m_Lighting.m_CloudLighting.albedo.r
+      value: 0.745283
+      objectReference: {fileID: 0}
+    - target: {fileID: 114503011375592872, guid: 1ed6a05698c1f3646b05c428ee90cfd5,
+        type: 3}
+      propertyPath: m_Lighting.m_CloudLighting.albedo.g
+      value: 0.145442
+      objectReference: {fileID: 0}
+    - target: {fileID: 114503011375592872, guid: 1ed6a05698c1f3646b05c428ee90cfd5,
+        type: 3}
+      propertyPath: m_Lighting.m_CloudLighting.albedo.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114503011375592872, guid: 1ed6a05698c1f3646b05c428ee90cfd5,
+        type: 3}
+      propertyPath: m_Lighting.m_Ambient.sky.ctime0
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114503011375592872, guid: 1ed6a05698c1f3646b05c428ee90cfd5,
+        type: 3}
+      propertyPath: m_Lighting.m_Ambient.sky.ctime1
+      value: 9830
+      objectReference: {fileID: 0}
+    - target: {fileID: 114503011375592872, guid: 1ed6a05698c1f3646b05c428ee90cfd5,
+        type: 3}
+      propertyPath: m_Lighting.m_Ambient.sky.key0.r
+      value: 0.073924236
+      objectReference: {fileID: 0}
+    - target: {fileID: 114503011375592872, guid: 1ed6a05698c1f3646b05c428ee90cfd5,
+        type: 3}
+      propertyPath: m_Lighting.m_Ambient.sky.key0.g
+      value: 0.09195454
+      objectReference: {fileID: 0}
+    - target: {fileID: 114503011375592872, guid: 1ed6a05698c1f3646b05c428ee90cfd5,
+        type: 3}
+      propertyPath: m_Lighting.m_Ambient.sky.key0.b
+      value: 0.118999995
+      objectReference: {fileID: 0}
+    - target: {fileID: 114503011375592872, guid: 1ed6a05698c1f3646b05c428ee90cfd5,
+        type: 3}
+      propertyPath: m_Lighting.m_Ambient.sky.key1.r
+      value: 0.30980393
+      objectReference: {fileID: 0}
+    - target: {fileID: 114503011375592872, guid: 1ed6a05698c1f3646b05c428ee90cfd5,
+        type: 3}
+      propertyPath: m_Lighting.m_Ambient.sky.key1.g
+      value: 0.22826602
+      objectReference: {fileID: 0}
+    - target: {fileID: 114503011375592872, guid: 1ed6a05698c1f3646b05c428ee90cfd5,
+        type: 3}
+      propertyPath: m_Lighting.m_Ambient.sky.key1.b
+      value: 0.22745098
+      objectReference: {fileID: 0}
+    - target: {fileID: 114503011375592872, guid: 1ed6a05698c1f3646b05c428ee90cfd5,
+        type: 3}
+      propertyPath: m_Lighting.m_Ambient.sky.key2.r
+      value: 0.41960785
+      objectReference: {fileID: 0}
+    - target: {fileID: 114503011375592872, guid: 1ed6a05698c1f3646b05c428ee90cfd5,
+        type: 3}
+      propertyPath: m_Lighting.m_Ambient.sky.key2.g
+      value: 0.45294118
+      objectReference: {fileID: 0}
+    - target: {fileID: 114503011375592872, guid: 1ed6a05698c1f3646b05c428ee90cfd5,
+        type: 3}
+      propertyPath: m_Lighting.m_Ambient.sky.key2.b
+      value: 0.5529412
+      objectReference: {fileID: 0}
+    - target: {fileID: 114503011375592872, guid: 1ed6a05698c1f3646b05c428ee90cfd5,
+        type: 3}
+      propertyPath: m_Lighting.m_Ambient.sky.ctime2
+      value: 36356
+      objectReference: {fileID: 0}
+    - target: {fileID: 114503011375592872, guid: 1ed6a05698c1f3646b05c428ee90cfd5,
+        type: 3}
+      propertyPath: m_Lighting.m_Ambient.sky.key3.r
+      value: 0.8113208
+      objectReference: {fileID: 0}
+    - target: {fileID: 114503011375592872, guid: 1ed6a05698c1f3646b05c428ee90cfd5,
+        type: 3}
+      propertyPath: m_Lighting.m_Ambient.sky.key3.g
+      value: 0.39264002
+      objectReference: {fileID: 0}
+    - target: {fileID: 114503011375592872, guid: 1ed6a05698c1f3646b05c428ee90cfd5,
+        type: 3}
+      propertyPath: m_Lighting.m_Ambient.sky.key3.b
+      value: 0.24110004
+      objectReference: {fileID: 0}
+    - target: {fileID: 114503011375592872, guid: 1ed6a05698c1f3646b05c428ee90cfd5,
+        type: 3}
+      propertyPath: m_Lighting.m_Ambient.equator.ctime0
+      value: 9445
+      objectReference: {fileID: 0}
+    - target: {fileID: 114503011375592872, guid: 1ed6a05698c1f3646b05c428ee90cfd5,
+        type: 3}
+      propertyPath: m_Lighting.m_Ambient.equator.key4.r
+      value: 0.38358274
+      objectReference: {fileID: 0}
+    - target: {fileID: 114503011375592872, guid: 1ed6a05698c1f3646b05c428ee90cfd5,
+        type: 3}
+      propertyPath: m_Lighting.m_Ambient.equator.key4.g
+      value: 0.43424463
+      objectReference: {fileID: 0}
+    - target: {fileID: 114503011375592872, guid: 1ed6a05698c1f3646b05c428ee90cfd5,
+        type: 3}
+      propertyPath: m_Lighting.m_Ambient.equator.key4.b
+      value: 0.503
+      objectReference: {fileID: 0}
+    - target: {fileID: 114503011375592872, guid: 1ed6a05698c1f3646b05c428ee90cfd5,
+        type: 3}
+      propertyPath: m_Lighting.m_Ambient.equator.key5.r
+      value: 0.38358274
+      objectReference: {fileID: 0}
+    - target: {fileID: 114503011375592872, guid: 1ed6a05698c1f3646b05c428ee90cfd5,
+        type: 3}
+      propertyPath: m_Lighting.m_Ambient.equator.key5.g
+      value: 0.43424463
+      objectReference: {fileID: 0}
+    - target: {fileID: 114503011375592872, guid: 1ed6a05698c1f3646b05c428ee90cfd5,
+        type: 3}
+      propertyPath: m_Lighting.m_Ambient.equator.key5.b
+      value: 0.503
+      objectReference: {fileID: 0}
+    - target: {fileID: 114503011375592872, guid: 1ed6a05698c1f3646b05c428ee90cfd5,
+        type: 3}
+      propertyPath: m_Lighting.m_Ambient.equator.ctime1
+      value: 16769
+      objectReference: {fileID: 0}
+    - target: {fileID: 114503011375592872, guid: 1ed6a05698c1f3646b05c428ee90cfd5,
+        type: 3}
+      propertyPath: m_Lighting.m_Ambient.equator.ctime4
+      value: 65535
+      objectReference: {fileID: 0}
+    - target: {fileID: 114503011375592872, guid: 1ed6a05698c1f3646b05c428ee90cfd5,
+        type: 3}
+      propertyPath: m_Lighting.m_Ambient.equator.ctime5
+      value: 65535
+      objectReference: {fileID: 0}
+    - target: {fileID: 114503011375592872, guid: 1ed6a05698c1f3646b05c428ee90cfd5,
+        type: 3}
+      propertyPath: m_Lighting.m_Ambient.equator.ctime2
+      value: 31226
+      objectReference: {fileID: 0}
+    - target: {fileID: 114503011375592872, guid: 1ed6a05698c1f3646b05c428ee90cfd5,
+        type: 3}
+      propertyPath: m_Lighting.m_Ambient.equator.key1.r
+      value: 0.18039216
+      objectReference: {fileID: 0}
+    - target: {fileID: 114503011375592872, guid: 1ed6a05698c1f3646b05c428ee90cfd5,
+        type: 3}
+      propertyPath: m_Lighting.m_Ambient.equator.key1.g
+      value: 0.14048171
+      objectReference: {fileID: 0}
+    - target: {fileID: 114503011375592872, guid: 1ed6a05698c1f3646b05c428ee90cfd5,
+        type: 3}
+      propertyPath: m_Lighting.m_Ambient.equator.key1.b
+      value: 0.13333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 114503011375592872, guid: 1ed6a05698c1f3646b05c428ee90cfd5,
+        type: 3}
+      propertyPath: m_Lighting.m_Ambient.equator.key2.r
+      value: 0.24140187
+      objectReference: {fileID: 0}
+    - target: {fileID: 114503011375592872, guid: 1ed6a05698c1f3646b05c428ee90cfd5,
+        type: 3}
+      propertyPath: m_Lighting.m_Ambient.equator.key2.g
+      value: 0.276729
+      objectReference: {fileID: 0}
+    - target: {fileID: 114503011375592872, guid: 1ed6a05698c1f3646b05c428ee90cfd5,
+        type: 3}
+      propertyPath: m_Lighting.m_Ambient.equator.key2.b
+      value: 0.315
+      objectReference: {fileID: 0}
+    - target: {fileID: 114503011375592872, guid: 1ed6a05698c1f3646b05c428ee90cfd5,
+        type: 3}
+      propertyPath: showDrawerTimeOfDay
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114503011375592872, guid: 1ed6a05698c1f3646b05c428ee90cfd5,
+        type: 3}
+      propertyPath: m_TimeOfDay.enable
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114503011375592872, guid: 1ed6a05698c1f3646b05c428ee90cfd5,
+        type: 3}
+      propertyPath: m_TimeOfDay.time
+      value: 10.40999984741211
+      objectReference: {fileID: 0}
+    - target: {fileID: 114503011375592872, guid: 1ed6a05698c1f3646b05c428ee90cfd5,
+        type: 3}
+      propertyPath: showDrawerWeatherPresets
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114503011375592872, guid: 1ed6a05698c1f3646b05c428ee90cfd5,
+        type: 3}
+      propertyPath: m_Lighting.m_CloudLighting.eccentricity
+      value: 0.538
+      objectReference: {fileID: 0}
+    - target: {fileID: 114503011375592872, guid: 1ed6a05698c1f3646b05c428ee90cfd5,
+        type: 3}
+      propertyPath: m_CloudPlanes.Array.data[1].scale
+      value: 200000.27
+      objectReference: {fileID: 0}
+    - target: {fileID: 114503011375592872, guid: 1ed6a05698c1f3646b05c428ee90cfd5,
+        type: 3}
+      propertyPath: m_CloudPlanes.Array.data[1].lightPenetration
+      value: 1.32
+      objectReference: {fileID: 0}
+    - target: {fileID: 114503011375592872, guid: 1ed6a05698c1f3646b05c428ee90cfd5,
+        type: 3}
+      propertyPath: m_Atmosphere.density
+      value: 0.27
+      objectReference: {fileID: 0}
+    - target: {fileID: 114503011375592872, guid: 1ed6a05698c1f3646b05c428ee90cfd5,
+        type: 3}
+      propertyPath: m_Atmosphere.farClipFade
+      value: 0.516
+      objectReference: {fileID: 0}
+    - target: {fileID: 114503011375592872, guid: 1ed6a05698c1f3646b05c428ee90cfd5,
+        type: 3}
+      propertyPath: m_Atmosphere.m_Precomputation.planetScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114503011375592872, guid: 1ed6a05698c1f3646b05c428ee90cfd5,
+        type: 3}
+      propertyPath: m_VolumetricClouds.noiseMacroScale
+      value: 0.272
+      objectReference: {fileID: 0}
+    - target: {fileID: 114503011375592872, guid: 1ed6a05698c1f3646b05c428ee90cfd5,
+        type: 3}
+      propertyPath: m_CloudPlanes.Array.data[1].height
+      value: 3560.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114503011375592872, guid: 1ed6a05698c1f3646b05c428ee90cfd5,
+        type: 3}
+      propertyPath: m_VolumetricClouds.compositorResolution
+      value: 256
+      objectReference: {fileID: 0}
+    - target: {fileID: 114503011375592872, guid: 1ed6a05698c1f3646b05c428ee90cfd5,
+        type: 3}
+      propertyPath: m_Atmosphere.mieScatteringIntensity
+      value: 1.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114503011375592872, guid: 1ed6a05698c1f3646b05c428ee90cfd5,
+        type: 3}
+      propertyPath: m_TimeOfDay.affectsMoon
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114503011375592872, guid: 1ed6a05698c1f3646b05c428ee90cfd5,
+        type: 3}
+      propertyPath: m_Lighting.m_CloudShadows.enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114503011375592872, guid: 1ed6a05698c1f3646b05c428ee90cfd5,
+        type: 3}
+      propertyPath: m_Lighting.m_CloudAmbientOcclusion.intensity
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 1ed6a05698c1f3646b05c428ee90cfd5, type: 3}

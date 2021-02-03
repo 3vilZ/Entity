@@ -1,0 +1,68 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!64 &754769851
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6535430260151303085}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: 59d27d181345c4028b61442c2fc72e1b, type: 3}
+--- !u!1001 &6535849288934037931
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1833430317736454, guid: 504cdb589e853447a8802edac7bc4fcd, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4936913396353828, guid: 504cdb589e853447a8802edac7bc4fcd, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -130
+      objectReference: {fileID: 0}
+    - target: {fileID: 4936913396353828, guid: 504cdb589e853447a8802edac7bc4fcd, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4936913396353828, guid: 504cdb589e853447a8802edac7bc4fcd, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 4936913396353828, guid: 504cdb589e853447a8802edac7bc4fcd, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4936913396353828, guid: 504cdb589e853447a8802edac7bc4fcd, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4936913396353828, guid: 504cdb589e853447a8802edac7bc4fcd, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4936913396353828, guid: 504cdb589e853447a8802edac7bc4fcd, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4936913396353828, guid: 504cdb589e853447a8802edac7bc4fcd, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 65452649682147782, guid: 504cdb589e853447a8802edac7bc4fcd, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: 504cdb589e853447a8802edac7bc4fcd, type: 3}
+--- !u!1 &6535430260151303085 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1833430317736454, guid: 504cdb589e853447a8802edac7bc4fcd,
+    type: 3}
+  m_PrefabInstance: {fileID: 6535849288934037931}
+  m_PrefabAsset: {fileID: 0}

@@ -37,7 +37,8 @@ public class PlayerControllerV3 : MonoBehaviour
     [SerializeField] float fWallJumpforce;
     [SerializeField] float fWallRangeX;
     [SerializeField] float fWallRangeY;
-    [SerializeField] float fWallSecure;
+    [SerializeField] float fWallInSecure;
+    //[SerializeField] float fWallOutSecure;
     [SerializeField] float fWallGravity;
     [SerializeField] float fWallJumpCapMoveTime;
     [SerializeField] Vector2 v2WallJumpdir;
@@ -47,7 +48,8 @@ public class PlayerControllerV3 : MonoBehaviour
     bool bWallJumpRDY = true;
     bool bWallDetect = false;
     bool bWallOnce = false;
-    float fWallSecureControl = 0;
+    float fWallInSecureControl = 0;
+    //float fWallOutSecureControl = 0;
     float fWallJumpCapMoveTimeControl = 0;
     
 
@@ -909,8 +911,6 @@ public class PlayerControllerV3 : MonoBehaviour
     {
         Collider2D wallDetect = Physics2D.OverlapBox(transform.position, v2WallDetectScale, 0, layerWall);
 
-        fWallSecureControl -= Time.deltaTime;
-
         if (bWallJumpDone)
         {
             fWallJumpCapMoveTimeControl -= Time.deltaTime;
@@ -923,12 +923,13 @@ public class PlayerControllerV3 : MonoBehaviour
             }
         }
 
+        fWallInSecureControl -= Time.deltaTime;
         if (!bGrounded && Input.GetButtonDown("Jump"))
         {
-            fWallSecureControl = fWallSecure;
+            fWallInSecureControl = fWallInSecure;
         }
 
-        if(fWallSecureControl > 0)
+        if(fWallInSecureControl > 0)
         {
             if(bWallJumpRDY && wallDetect != null)
             {
@@ -1032,7 +1033,6 @@ public class PlayerControllerV3 : MonoBehaviour
             }
 
             fJumpSecureControl -= Time.deltaTime;
-
             if (Input.GetButtonDown("Jump"))
             {
                 fJumpSecureControl = fJumpSecure;

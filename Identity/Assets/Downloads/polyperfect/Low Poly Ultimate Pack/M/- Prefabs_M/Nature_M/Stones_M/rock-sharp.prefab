@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 4000013314642978}
   - component: {fileID: 33000012006449482}
   - component: {fileID: 23000010876270432}
-  - component: {fileID: 64000013260671000}
   m_Layer: 0
   m_Name: rock-sharp
   m_TagString: Untagged
@@ -80,17 +79,3 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &64000013260671000
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1000011506362536}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300002, guid: 2b853e375cc59094f873c7eea92fd2b5, type: 3}

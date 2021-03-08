@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 4000013275697272}
   - component: {fileID: 33000011921711182}
   - component: {fileID: 23000012378991014}
-  - component: {fileID: 64942984295191700}
   m_Layer: 0
   m_Name: dryer
   m_TagString: Untagged
@@ -81,17 +80,3 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &64942984295191700
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1000012271056116}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300000, guid: ecde2649927fb8842bddc84d7b1a667f, type: 3}

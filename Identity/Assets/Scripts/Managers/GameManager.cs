@@ -142,7 +142,7 @@ public class GameManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             Application.Quit();
-        }
+        } 
     }
     
 
@@ -170,6 +170,22 @@ public class GameManager : MonoBehaviour
         goCheckPointCamera = goCurrentVirtualCamera;
     }
 
+    public void LookAheadSmoothing (bool bDisable)
+    {
+        
+        if(bDisable)
+        {
+            //goCurrentVirtualCamera.GetComponent<CinemachineVirtualCamera>().GetCinemachineComponent<CinemachineFramingTransposer>().m_LookaheadTime = 0;
+            goCurrentVirtualCamera.GetComponent<CinemachineVirtualCamera>().GetCinemachineComponent<CinemachineFramingTransposer>().m_LookaheadSmoothing = 0;
+        }
+        else
+        {
+            //goCurrentVirtualCamera.GetComponent<CinemachineVirtualCamera>().GetCinemachineComponent<CinemachineFramingTransposer>().m_LookaheadTime = 0.4f;
+            goCurrentVirtualCamera.GetComponent<CinemachineVirtualCamera>().GetCinemachineComponent<CinemachineFramingTransposer>().m_LookaheadSmoothing = 10;
+        }
+        
+    }
+
     public void Death1()
     {
         //goPlayer.GetComponent<Animator>().
@@ -182,7 +198,9 @@ public class GameManager : MonoBehaviour
     }
     public void Death2()
     {
-        goCurrentVirtualCamera.GetComponent<CinemachineVirtualCamera>().GetCinemachineComponent<CinemachineFramingTransposer>().m_LookaheadSmoothing = 0;
+        LookAheadSmoothing(true);
+        
+
         goPlayer.transform.position = tCurrentCheckPointPos;
         
         if(goCheckPointCamera != goCurrentVirtualCamera)
@@ -203,7 +221,9 @@ public class GameManager : MonoBehaviour
     }
     public void Death3()
     {
-        goCurrentVirtualCamera.GetComponent<CinemachineVirtualCamera>().GetCinemachineComponent<CinemachineFramingTransposer>().m_LookaheadSmoothing = 0.4f;
+        LookAheadSmoothing(false);
+        
+
         goPlayer.GetComponent<BoxCollider2D>().enabled = true;
         goPlayer.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
         

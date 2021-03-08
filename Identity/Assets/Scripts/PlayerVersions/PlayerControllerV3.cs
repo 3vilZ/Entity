@@ -76,7 +76,7 @@ public class PlayerControllerV3 : MonoBehaviour
     [SerializeField] float fPlayerReloadForce;
     [SerializeField] bool bCOLLIDEOnReload;
     [SerializeField] bool bShootDirectionForPlayer;
-    bool bBallOn = false;
+    [HideInInspector] public bool bBallOn = false;
     bool bShootDone = false;
     bool bShootRDY = false;
     bool bShootExploit = false;
@@ -113,6 +113,18 @@ public class PlayerControllerV3 : MonoBehaviour
     Vector2 v2BallToPlayer;
     float fPlayerBallDistance;
     */
+    [Header("Powers")]
+    [SerializeField] float fBallShootForceBubble;
+    [SerializeField] float fBubbleGravity;
+    [SerializeField] float fIronSpeed;
+    [SerializeField] PhysicsMaterial2D matIron;
+
+    float fShootTemporal;
+    PhysicsMaterial2D matNormal;
+    float fLinearDrag;
+    float fAngularDrag;
+
+    
 
     [Header("Ball")]
     GameObject goBall;
@@ -139,12 +151,18 @@ public class PlayerControllerV3 : MonoBehaviour
     [SerializeField] ParticleSystem psMove;
     [SerializeField] ParticleSystem psLand;
     [SerializeField] ParticleSystem psDeath;
+    [SerializeField] ParticleSystem psLink;
+    [SerializeField] ParticleSystem psArc;
+    //[SerializeField] Color white
     bool bLandDone = false;
     [HideInInspector] public  LineRenderer lineRenderer;
 
     //GameObject goPlatformMove;
     [HideInInspector] public bool bPlatformMove = false;
     [HideInInspector] public GameObject goPlatformMove;
+
+    //LevelMechanics
+    [HideInInspector] public bool bDK = false;
 
     [HideInInspector] public bool bDeadDone = false;
     [HideInInspector] public bool bDead = false;
@@ -161,9 +179,6 @@ public class PlayerControllerV3 : MonoBehaviour
     [HideInInspector] public GameObject goCurrentCollectable;
     public bool bBugTest;
 
-    
-
-
     private void Awake()
     {
 
@@ -178,12 +193,17 @@ public class PlayerControllerV3 : MonoBehaviour
         goLimit = scriptBall.goLimit;
         goBallArrow = scriptBall.goBallArrow;
         tBallAttackPivot = scriptBall.tBallAttackPivot;
+        fShootTemporal = fBallShootForce;
+        
 
         //Rigidbodies
         rbPlayer = GetComponent<Rigidbody2D>();
         rbBall = goBall.GetComponent<Rigidbody2D>();
 
         rbPlayer.gravityScale = fNormalGravity;
+        matNormal = rbBall.sharedMaterial;
+        fLinearDrag = rbBall.drag;
+        fAngularDrag = rbBall.angularDrag;
 
         //Animator
         animPlayer = GetComponent<Animator>();
@@ -234,7 +254,7 @@ public class PlayerControllerV3 : MonoBehaviour
 
     void Update()
     {
-        
+        LinkParticles();
 
         if (Input.GetKeyDown(KeyCode.K))
         {
@@ -294,7 +314,7 @@ public class PlayerControllerV3 : MonoBehaviour
     private void FixedUpdate()
     {
 
-        if(!bWallJumpDone && !bShootDone && !bDashDone && !bDeadDone && !bInteracting)
+        if(!bWallJumpDone && !bShootDone && !bDashDone && !bDeadDone && !bInteracting && !bDK)
         {
             Movement();
         }
@@ -342,8 +362,156 @@ public class PlayerControllerV3 : MonoBehaviour
         }
     }
 
+    public void DKReload()
+    {
+        bShootRDY = true;
+        bDashRDY = true;
+    }
+
+    public void BubbleShootForce(bool bOn)
+    {
+        if(bOn)
+        {
+            rbBall.velocity = rbBall.velocity.normalized * fBallShootForceBubble;
+            fBallShootForce = fBallShootForceBubble;
+            rbBall.gravityScale = fBubbleGravity;
+}
+        else
+        {
+            fBallShootForce = fShootTemporal;
+            rbBall.gravityScale = 0;
+        }
+    }
+
+    public void BubbleForceReload()
+    {
+        bReloading = true;
+        bShootRDY = false;
+        bBallDetecion = true;
+    }
+
+    public void IronState(bool bOn)
+    {
+        if(bOn)
+        {
+            rbBall.velocity = rbBall.velocity.normalized * fIronSpeed;
+            rbBall.sharedMaterial = matIron;
+            rbBall.drag = 0;
+            rbBall.angularDrag = 0;
+        }
+        else
+        {
+            rbBall.sharedMaterial = matNormal;
+            rbBall.drag = fLinearDrag;
+            rbBall.angularDrag = fAngularDrag;
+        }
+        
+    }
+
+    public void LinkParticles()
+    {
+        //float zShape = Vector3.Distance(transform.position, goBall.transform.position);
+        float zShape = fPlayerBallDistance - 4;
+        if(zShape <= 0)
+        {
+            zShape = 0;
+        }
+        
+
+        ParticleSystem.ShapeModule psLinkShape = psLink.shape;
+        
+        psLinkShape.scale = new Vector3(psLinkShape.scale.x, psLinkShape.scale.y, zShape);
+        psLinkShape.position = new Vector3(psLinkShape.position.x, psLinkShape.position.y, psLinkShape.scale.z * 0.5f);
+        //psLink.gameObject.transform.LookAt(goBall.transform, Vector3.right, );
+        
+        Vector3 relativePos = goBall.transform.position - transform.position;
+        Quaternion rotation = Quaternion.LookRotation(relativePos, Vector3.up);
+        psLink.gameObject.transform.parent.localRotation = rotation;
+
+        ParticleSystem.MainModule psLinkMain = psLink.main;
+        ParticleSystem.MainModule psArcMain = psArc.main;
+
+        float xValue;
+        float yValue;
+        float rValue;
+        float gValue;
+        float bValue;
+        float aValue;
+
+        if(bBallOn || bReloading)
+        {
+            aValue = 0;
+
+            rValue = 255;
+            gValue = 255;
+            bValue = 255;
+        }
+        else if (fPlayerBallDistance > 5 && fPlayerBallDistance < 12)
+        {
+            aValue = 1f;
+
+            rValue = 255;
+            gValue = 255;
+            bValue = 255;
+        }
+        else if(fPlayerBallDistance <= 5)
+        {
+            aValue = 0.3f;
+
+            rValue = 255;
+            gValue = 0;
+            bValue = 0;
+        }
+        else if(fPlayerBallDistance > 12 && fPlayerBallDistance < 30)
+        {
+            xValue = zShape - 18f;
+            yValue = 18f - xValue;
+            aValue = 0.05f * (0.1f * yValue);
+
+            rValue = 255;
+            gValue = 255;
+            bValue = 255;
+        }
+        else
+        {
+            aValue = 0;
+
+            rValue = 255;
+            gValue = 255;
+            bValue = 255;
+        }
+
+        if (Input.GetKeyDown(KeyCode.H))
+        {
+            print("Shape " + zShape);
+            print("Distance " + fPlayerBallDistance);
+            print("Alpha " + aValue);
+        }
+
+        
+        psLinkMain.startColor = new Color(rValue, gValue, bValue, aValue);
+        psArcMain.startColor = new Color(rValue, gValue, bValue, aValue);
+
+
+    }
+
     public void CatchBall()
     {
+        if(scriptBall.currentPower == 1)
+        {
+            bShootRDY = true;
+            bDashRDY = true;
+        }
+
+        if (bDashDone)
+        {
+            bShootRDY = true;
+        }
+        else
+        {
+            scriptBall.RemovePower();
+        }
+
         playerAnim.ArmsCatchBall();
         goBall.GetComponent<Animator>().SetTrigger("Catch");
 
@@ -393,15 +561,11 @@ public class PlayerControllerV3 : MonoBehaviour
     }
 
     //Death Anim Methods
-    //
-    //
-    //
-    //
+    
     public void AnimDeath()
     {
         Particles(2);
     }
-
     public void BoolDeath()
     {
         if(bDead)
@@ -426,15 +590,11 @@ public class PlayerControllerV3 : MonoBehaviour
             animPlayer.SetBool("DeathDone", true);
         }
     }
-
     public void Revive()
     {
         GameManager.Instance.Death3();
     }
-    //
-    //
-    //
-    //
+    
     //EndEndEnd
 
 
@@ -559,6 +719,47 @@ public class PlayerControllerV3 : MonoBehaviour
             fDashCapMoveTimeControl -= Time.deltaTime;
             if (fDashCapMoveTimeControl <= 0)
             {
+                bBallDetecion = false;
+                rbPlayer.gravityScale = fNormalGravity;
+                rbPlayer.velocity = Vector2.zero;
+                fDashCapMoveTimeControl = fDashCapMoveTime;
+                bDashDone = false;
+            }
+        }
+
+        if (Input.GetAxis("Dash") != 0 && !bBallOn && bDashRDY && !bReloading && !bDashExploit && !bDashBeforeShootCd)
+        {
+            bDashDone = true;
+            bDashRDY = false;
+            bDashExploit = true;
+            bBallDetecion = true;
+            rbBall.velocity = Vector3.zero;
+
+            v2PlayerToBall = goBall.transform.position - transform.position;
+            v2PlayerToBall.Normalize();
+
+            
+            rbPlayer.velocity = Vector2.zero;
+            rbPlayer.velocity = v2PlayerToBall * fDashForce;
+        }
+
+        /*
+        if (bDashExploit)
+        {
+            fDashExploitTimeControl -= Time.deltaTime;
+            if (fDashExploitTimeControl <= Time.deltaTime)
+            {
+                fDashExploitTimeControl = fDashExploitTime;
+                bDashExploit = false;
+            }
+        }
+
+        if (bDashDone)
+        {
+            rbPlayer.gravityScale = fDashGravity;
+            fDashCapMoveTimeControl -= Time.deltaTime;
+            if (fDashCapMoveTimeControl <= 0)
+            {
                 rbPlayer.gravityScale = fNormalGravity;
                 rbPlayer.velocity = Vector2.zero;
                 fDashCapMoveTimeControl = fDashCapMoveTime;
@@ -596,6 +797,7 @@ public class PlayerControllerV3 : MonoBehaviour
         {
             goLimit.SetActive(false);
         }
+        */
     }
 
     void Shoot()
@@ -670,7 +872,14 @@ public class PlayerControllerV3 : MonoBehaviour
                     goBall.GetComponent<Animator>().SetTrigger("Shoot");
                 }
 
-                rbBall.velocity = new Vector2(v3HitDirection.x, v3HitDirection.y) * fBallShootForce;
+                if(scriptBall.currentPower != 3)
+                {
+                    rbBall.velocity = new Vector2(v3HitDirection.x, v3HitDirection.y) * fBallShootForce;
+                }
+                else if (scriptBall.currentPower == 3 && bBallOn)
+                {
+                    rbBall.velocity = new Vector2(v3HitDirection.x, v3HitDirection.y) * fIronSpeed;
+                }
 
                 rbPlayer.velocity = Vector2.zero;
 
@@ -742,7 +951,14 @@ public class PlayerControllerV3 : MonoBehaviour
                     goBall.GetComponent<Animator>().SetTrigger("Shoot");
                 }
 
-                rbBall.velocity = new Vector2(v3HitDirection.x, v3HitDirection.y) * fBallShootForce;
+                if (scriptBall.currentPower != 3)
+                {
+                    rbBall.velocity = new Vector2(v3HitDirection.x, v3HitDirection.y) * fBallShootForce;
+                }
+                else if (scriptBall.currentPower == 3 && bBallOn)
+                {
+                    rbBall.velocity = new Vector2(v3HitDirection.x, v3HitDirection.y) * fIronSpeed;
+                }
 
                 rbPlayer.velocity = Vector2.zero;
 

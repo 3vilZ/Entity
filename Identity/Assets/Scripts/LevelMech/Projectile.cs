@@ -17,13 +17,21 @@ public class Projectile : MonoBehaviour
     public List<GameObject> goBulletList = new List<GameObject>();
     public List<GameObject> goCarcajList = new List<GameObject>();
 
+    bool bCrash = false;
+
     void Start()
     {
         v3BulletDirection = tAttackPos.position - transform.position;
         v3BulletDirection.Normalize();
+        Physics2D.IgnoreCollision(goBullet.GetComponent<Collider2D>(), GetComponent<Collider2D>());
         
         //goBullet.GetComponent<ProjectileBullet>().v3Direction = v3BulletDirection;
         //goBullet.GetComponent<ProjectileBullet>().fSpeed = fBulletSpeed;
+    }
+
+    public void Crash()
+    {
+        bCrash = true;
     }
 
     void Update()
@@ -35,7 +43,7 @@ public class Projectile : MonoBehaviour
             go.transform.position += v3BulletDirection * fBulletSpeed * Time.deltaTime;
         }
 
-        if (fPlayerDistanceControl <= fPlayerDistance)
+        if (fPlayerDistanceControl <= fPlayerDistance && !bCrash)
         {
             fbulletCdControl -= Time.deltaTime;
 

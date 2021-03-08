@@ -32,14 +32,45 @@ public class PlatformFall : MonoBehaviour
 
             if(fCrashTimeControl <= 0)
             {
+                colTop.isTrigger = true;
                 rb.bodyType = RigidbodyType2D.Dynamic;
                 animator.SetTrigger("Fall");
             }
         }
     }
 
+    public void Crash()
+    {
+        
+        
+        if (!bStart)
+        {
+            animator.SetTrigger("Crash");
+            bStart = true;
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (bStart && other.gameObject.tag != "Player" && other.gameObject.tag != "Ball")
+        {
+            
+            rb.bodyType = RigidbodyType2D.Static;
+            transform.position = goBot.transform.position + new Vector3(0, 1, 0);
+            animator.SetTrigger("Land");
+
+            colTop.enabled = false;
+            GetComponent<WallJump>().colLeft.enabled = false;
+            GetComponent<WallJump>().colRight.enabled = false;
+
+            goBot.SetActive(true);
+            bStart = false;
+        }
+    }
+    /*
     private void OnCollisionEnter2D(Collision2D other)
     {
+        
         if (other.gameObject.tag == "Player" || other.gameObject.tag == "Ball")
         {
             animator.SetTrigger("Crash");
@@ -49,19 +80,6 @@ public class PlatformFall : MonoBehaviour
             }
             
         }
-        else
-        {
-            if(bStart)
-            {
-                bStart = false;
-                rb.bodyType = RigidbodyType2D.Kinematic;
-                animator.SetTrigger("Land");
-
-                colTop.enabled = false;
-                GetComponent<WallJump>().colLeft.enabled = false;
-                GetComponent<WallJump>().colRight.enabled = false;
-                goBot.SetActive(true);
-            }
-        }
     }
+*/
 }

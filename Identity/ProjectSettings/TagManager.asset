@@ -11,6 +11,12 @@ TagManager:
   - VirtualCamera
   - PlatformMove
   - Bullet
+  - Fragile
+  - Fall
+  - Fire
+  - Magma
+  - Arrow
+  - Laser
   layers:
   - Default
   - TransparentFX
@@ -29,7 +35,7 @@ TagManager:
   - Phantom
   - PlatformMove
   - ColConfiner
-  - 
+  - Powers
   - 
   - 
   - 

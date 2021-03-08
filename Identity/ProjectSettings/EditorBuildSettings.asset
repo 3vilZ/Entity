@@ -6,15 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/BlockOuts VS 20122020/Nivel 1.unity
-    guid: f8dfbaae4f99fb14aa7ac396f8975912
-  - enabled: 1
-    path: Assets/Scenes/BlockOuts VS 20122020/Nivel 2.unity
-    guid: dedc568417b08694e9cb39ddd4f1f0ff
-  - enabled: 1
-    path: Assets/Scenes/BlockOuts VS 20122020/Nivel 3.unity
-    guid: b04d767af6247ff4cbe173c634d1e0b4
-  - enabled: 1
-    path: Assets/Scenes/BlockOuts VS 20122020/Nivel 4.unity
-    guid: 6a930ab524c346c4194359335d946439
+    path: Assets/Scenes/TestDani.unity
+    guid: 047f4c8cc0bc74d49ab191ed9f163fa5
   m_configObjects: {}

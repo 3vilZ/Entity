@@ -4,8 +4,14 @@ using UnityEngine;
 
 public class Ball : MonoBehaviour
 {
-    Rigidbody2D rbBall;
-    Vector3 v3BallSpeed;
+    [Header("New")]
+    [SerializeField] GameObject[] goPowers;
+    
+    [HideInInspector] public int currentPower;
+    [HideInInspector] public Vector2 v2DirectionIron;
+
+
+    [Header("Old")]
     [SerializeField] int iDamage;
     [SerializeField] ParticleSystem BallPS;
     [Space(10)]
@@ -13,6 +19,8 @@ public class Ball : MonoBehaviour
     public GameObject goBallArrow;
     public Transform tBallAttackPivot;
 
+    Rigidbody2D rbBall;
+    Vector3 v3BallSpeed;
     Quaternion targetRot;
     List<ParticleSystem> psList = new List<ParticleSystem>();
     bool bEmitting;
@@ -20,8 +28,55 @@ public class Ball : MonoBehaviour
     private void Start()
     {
         rbBall = GetComponent<Rigidbody2D>();
+
+        for (int i = 0; i < goPowers.Length; i++)
+        {
+            goPowers[i].SetActive(false);
+        }
     }
 
+    public void GetPowerID(int ID)
+    {
+        currentPower = ID;
+
+        if(currentPower == 2)
+        {
+            GameManager.Instance.ScriptPlayer.BubbleShootForce(true);
+        }
+        else
+        {
+            GameManager.Instance.ScriptPlayer.BubbleShootForce(false);
+        }
+
+        if(currentPower == 3)
+        {
+            GameManager.Instance.ScriptPlayer.IronState(true);
+        }
+        else
+        {
+            GameManager.Instance.ScriptPlayer.IronState(false);
+        }
+
+        for (int i = 0; i < goPowers.Length; i++)
+        {
+            goPowers[i].SetActive(false);
+        }
+
+        goPowers[currentPower].SetActive(true);
+    }
+
+    public void RemovePower()
+    {
+        currentPower = -1;
+
+        GameManager.Instance.ScriptPlayer.BubbleShootForce(false);
+        GameManager.Instance.ScriptPlayer.IronState(false);
+
+        for (int i = 0; i < goPowers.Length; i++)
+        {
+            goPowers[i].SetActive(false);
+        }
+    }
     
     private void Update()
     {
@@ -36,43 +91,74 @@ public class Ball : MonoBehaviour
                 }
             }
         }
-        
     }
-
-    /*
+    
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.tag == "Player")
+        if (currentPower == 2)
         {
-            other.gameObject.GetComponent<PlayerControllerV2>().CatchBall();
-        }
-        else if(other.gameObject.tag == "Enemy")
-        {
-            other.gameObject.GetComponentInParent<EnemyBase>().GetDamage(iDamage);
+            if (other.gameObject.tag == "Fire")
+            {
+                GameManager.Instance.ScriptPlayer.BubbleForceReload();
+                other.gameObject.GetComponent<Fire>().Crash();
+            }
         }
     }
-    */
-
-    private void OnDrawGizmosSelected()
+    void OnCollisionEnter2D(Collision2D other)
     {
-
-        
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, 10);
-    }
-
-    void OnCollisionEnter2D(Collision2D collision)
-    {
-        if(collision.GetContact(0).normal.x > 0.5f || collision.GetContact(0).normal.x < -0.5f)
+        if(currentPower == 0)
         {
-            targetRot = Quaternion.LookRotation(collision.GetContact(0).normal, Vector3.forward);
+            if(other.gameObject.tag == "Fragile")
+            {
+                Destroy(other.gameObject);
+            }
+            else if(other.gameObject.tag == "Fall")
+            {
+                other.gameObject.GetComponent<PlatformFall>().Crash();
+            }
+            else if (other.gameObject.tag == "Arrow")
+            {
+                other.gameObject.GetComponent<Projectile>().Crash();
+            }
+            else if (other.gameObject.tag == "Laser")
+            {
+                other.gameObject.GetComponent<Laser>().Crash();
+            }
+
+
+        }
+        else if(currentPower == 1)
+        {
+
+        }
+        else if (currentPower == 2)
+        {
+            if(other.gameObject.tag == "Spikes" || other.gameObject.tag == "Bullet")
+            {
+                GameManager.Instance.ScriptPlayer.BubbleForceReload();
+
+            }
+            else if (other.gameObject.tag == "Magma")
+            {
+                GameManager.Instance.ScriptPlayer.BubbleForceReload();
+                other.gameObject.GetComponent<Magma>().Crash();
+            }
+            //Fire and Laser on his own code
+        }
+
+        //Iron + Spikes/Magma on his own code
+
+
+        if (other.GetContact(0).normal.x > 0.5f || other.GetContact(0).normal.x < -0.5f)
+        {
+            targetRot = Quaternion.LookRotation(other.GetContact(0).normal, Vector3.forward);
         }
         else
         {
-            targetRot = Quaternion.LookRotation(collision.GetContact(0).normal, Vector3.up);
+            targetRot = Quaternion.LookRotation(other.GetContact(0).normal, Vector3.up);
         }
 
-        psList.Add(Instantiate(BallPS, collision.GetContact(0).point, targetRot));
+        psList.Add(Instantiate(BallPS, other.GetContact(0).point, targetRot));
 
         for (int i = 0; i < psList.Count; i++)
         {
@@ -87,5 +173,10 @@ public class Ball : MonoBehaviour
         //ParticleSystem j = Instantiate(BallPS, collision.GetContact(0).point, targetRot);
     }
 
-    
+    private void OnDrawGizmosSelected()
+    {
+
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, 10);
+    }
 }

@@ -21,7 +21,10 @@ public class Spikes : MonoBehaviour
 
         if (other.gameObject.tag == "Ball")
         {
-            GameManager.Instance.GoBall.GetComponent<Rigidbody2D>();
+            if(GameManager.Instance.GoBall.GetComponent<Ball>().currentPower != 3)
+            {
+                GameManager.Instance.GoBall.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+            }
         }
     }
 }

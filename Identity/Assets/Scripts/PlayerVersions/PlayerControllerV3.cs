@@ -288,6 +288,9 @@ public class PlayerControllerV3 : MonoBehaviour
         {
             WallJump();
             Jump();
+
+            
+            
         }
         
         UpdatePlayerAndBallState();
@@ -1307,21 +1310,25 @@ public class PlayerControllerV3 : MonoBehaviour
 
         
         //Suspension
-        if (rbPlayer.velocity.y >= -fSuspensionRange && rbPlayer.velocity.y <= fSuspensionRange && !bGrounded)
+        if(!bWallJumpDone)
         {
-            bGravitySwap = true;
-        }
-        if (bGravitySwap)
-        {
-            rbPlayer.gravityScale = fSuspensionGravity;
-            fSuspensionTimeControl -= Time.deltaTime;
-            if (fSuspensionTimeControl <= 0)
+            if (rbPlayer.velocity.y >= -fSuspensionRange && rbPlayer.velocity.y <= fSuspensionRange && !bGrounded)
             {
-                rbPlayer.gravityScale = fNormalGravity;
-                fSuspensionTimeControl = fSuspensionTime;
-                bGravitySwap = false;
+                bGravitySwap = true;
+            }
+            if (bGravitySwap)
+            {
+                rbPlayer.gravityScale = fSuspensionGravity;
+                fSuspensionTimeControl -= Time.deltaTime;
+                if (fSuspensionTimeControl <= 0)
+                {
+                    rbPlayer.gravityScale = fNormalGravity;
+                    fSuspensionTimeControl = fSuspensionTime;
+                    bGravitySwap = false;
+                }
             }
         }
+        
 
         //ANIM
 

@@ -41,11 +41,11 @@ GameObject:
   m_Component:
   - component: {fileID: 1611768019873738764}
   - component: {fileID: 1611768019873738765}
-  - component: {fileID: 1611768019873738762}
   - component: {fileID: 2507415934085929870}
+  - component: {fileID: 8469324487311253362}
   m_Layer: 0
-  m_Name: Spikes (1)
-  m_TagString: Untagged
+  m_Name: SkipesMini
+  m_TagString: Spikes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -97,18 +97,6 @@ PolygonCollider2D:
       - {x: 1.932004, y: -0.19999886}
       - {x: 2.3898811, y: -0.0730052}
       - {x: 1.9068766, y: 0.8343486}
---- !u!114 &1611768019873738762
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1611768019873738763}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5469e3c4e61eca44f8e7385c347ece64, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &2507415934085929870
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -135,6 +123,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &8469324487311253362
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1611768019873738763}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21fe41471387b6c4eb6dab7ff738d9c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8021827786457521273
 GameObject:
   m_ObjectHideFlags: 0

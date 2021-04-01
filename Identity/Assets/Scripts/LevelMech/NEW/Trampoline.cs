@@ -6,6 +6,15 @@ public class Trampoline : MonoBehaviour
 {
     [SerializeField] float fPlayerSpeed;
     [SerializeField] float fBallSpeed;
+    [SerializeField] bool bInverse = false;
+    private void Start()
+    {
+        if(bInverse)
+        {
+            fPlayerSpeed = -fPlayerSpeed;
+            fBallSpeed = -fBallSpeed;
+        }
+    }
 
 
     private void OnTriggerEnter2D(Collider2D other)

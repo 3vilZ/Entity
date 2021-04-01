@@ -8,12 +8,16 @@ public class TicTac : MonoBehaviour
     [SerializeField] Transform tSpikesTop;
     [SerializeField] Transform tSpikesBot;
     [SerializeField] float fPlayerDistance;
-    [SerializeField] float fCooldown;
+    [SerializeField] public float fCooldown;
     [SerializeField] float fSpeed;
+    //[SerializeField] public bool bMidTerm;
+
+    [HideInInspector] public bool bActivate;
 
     float fPlayerDistanceControl;
     float fCooldownControl;
     bool bTop;
+    
 
 
 
@@ -27,9 +31,10 @@ public class TicTac : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        fPlayerDistanceControl = Vector3.Distance(GameManager.Instance.GoPlayer.transform.position, transform.position);
+        //fPlayerDistanceControl = Vector3.Distance(GameManager.Instance.GoPlayer.transform.position, transform.position);
 
-        if (fPlayerDistanceControl <= fPlayerDistance)
+        //if (fPlayerDistanceControl <= fPlayerDistance)
+        if(bActivate)
         {
             fCooldownControl -= Time.deltaTime;
 

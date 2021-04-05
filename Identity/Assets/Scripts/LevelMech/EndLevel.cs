@@ -4,22 +4,16 @@ using UnityEngine;
 
 public class EndLevel : MonoBehaviour
 {
-    [SerializeField] float fDistance;
     public ScriptableEndLvl[] module;
-    
 
     private void Start()
     {
-        for (int i = 0; i < module.Length; i++)
-        {
-            module[i].goY.SetActive(false);
-        }
-
         GameManager.Instance.GoPlayer.transform.position = module[GameManager.Instance.ISpawn].tSpawnPoint.position;
     }
 
+    /*
     private void Update()
-    {
+    {     
         if (module.Length > 0)
         {
             if (Vector2.Distance(GameManager.Instance.GoPlayer.transform.position, module[0].tSpawnPoint.transform.position) <= fDistance)
@@ -71,6 +65,7 @@ public class EndLevel : MonoBehaviour
                 module[2].goY.SetActive(false);
             }
         }
+        
     }
 
     private void OnDrawGizmosSelected()
@@ -90,7 +85,7 @@ public class EndLevel : MonoBehaviour
         }
     }
 
-    /*
+    
     [SerializeField] string strNextLevel;
     [SerializeField] Transform[] tSpawnPoint;
     [Tooltip("0 para el spawn de entrada, 1 para la salida 1, 2 para la salida 2")]

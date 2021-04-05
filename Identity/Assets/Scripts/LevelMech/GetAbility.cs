@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class GetAbility : MonoBehaviour
 {
+    [Tooltip("0 = Lanzar, 1 = Recoger, 2 = Dash")]
     [SerializeField] int iValue;
     [SerializeField] float fDistance;
     [SerializeField] GameObject goY;

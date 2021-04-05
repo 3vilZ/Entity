@@ -341,7 +341,7 @@ public class PlayerControllerV3 : MonoBehaviour
         }
     }
 
-    private void FlipX()
+    public void FlipX()
     {
         facingRight = !facingRight;
         Vector3 scaler = tModel.transform.localScale;

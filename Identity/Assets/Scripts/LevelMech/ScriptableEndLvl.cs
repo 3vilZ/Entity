@@ -3,12 +3,27 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-[System.Serializable]
-public class ScriptableEndLvl
+
+public class ScriptableEndLvl :MonoBehaviour
 {
-    public Transform tSpawnPoint;
-    [Tooltip("0 para el spawn de entrada, 1 para la salida 1, 2 para la salida 2")]
+    [Tooltip("Módulo en el que va a spawnear en el siguiente nivel")]
     public int iNextSpawn;
+    [Tooltip("Nombre siguiente nivel")]
     public string strNextLevel;
-    public GameObject goY;
+    [Tooltip("Punto de spawn de ESTE módulo")]
+    public Transform tSpawnPoint;
+    [Tooltip("¿El Trigger de este módulo funciona?")]
+    public bool bLevelTransition;
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if(bLevelTransition)
+        {
+            if (other.gameObject.tag == "Player")
+            {
+                GameManager.Instance.ISpawn = iNextSpawn;
+                GameManager.Instance.LoadLevel(strNextLevel);
+            }
+        }
+    }
 }

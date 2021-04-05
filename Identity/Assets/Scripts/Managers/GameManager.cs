@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
 
+    [Tooltip("0 = Nada, 1 = Lanzar, 2 = Recoger, 3 = Dash")]
     [SerializeField] int iCoreStart;
     GameObject goPlayer;
     GameObject goBall;

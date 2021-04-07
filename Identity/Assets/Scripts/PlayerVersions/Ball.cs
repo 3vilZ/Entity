@@ -110,7 +110,7 @@ public class Ball : MonoBehaviour
         {
             if(other.gameObject.tag == "Fragile")
             {
-                Destroy(other.gameObject);
+                other.gameObject.GetComponent<Fragile>().Crash();
             }
             else if(other.gameObject.tag == "Fall")
             {

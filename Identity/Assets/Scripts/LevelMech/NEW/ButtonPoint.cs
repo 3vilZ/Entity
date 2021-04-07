@@ -5,7 +5,7 @@ using UnityEngine;
 public class ButtonPoint : MonoBehaviour
 {
     public ButtonInteract buttonInteract;
-    [SerializeField] ParticleSystem psClick;
+    [SerializeField] public ParticleSystem psClick;
 
     private void OnCollisionEnter2D(Collision2D other)
     {

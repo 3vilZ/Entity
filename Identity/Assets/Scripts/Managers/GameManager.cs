@@ -7,9 +7,13 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
+    
 
     [Tooltip("0 = Nada, 1 = Lanzar, 2 = Recoger, 3 = Dash")]
     [SerializeField] int iCoreStart;
+
+    public bool[] goLobby1;
+
     GameObject goPlayer;
     GameObject goBall;
     GameObject goCurrentVirtualCamera;
@@ -21,8 +25,6 @@ public class GameManager : MonoBehaviour
     PlayerControllerV3 scriptPlayer;
     int iSpawn;
     Vector2 tDeathPos;
-
-    
 
     public bool[] BSkill { get => bSkill; set => bSkill = value; }
     public Vector2 TCurrentCheckPointPos { get => tCurrentCheckPointPos; set => tCurrentCheckPointPos = value; }
@@ -42,6 +44,21 @@ public class GameManager : MonoBehaviour
         goBall = GameObject.FindGameObjectWithTag("Ball");
         scriptPlayer = goPlayer.GetComponent<PlayerControllerV3>();
         tCurrentCheckPointPos = goPlayer.transform.position;
+
+        if(SceneManager.GetActiveScene() == SceneManager.GetSceneByName("Lobby_1"))
+        {
+            for (int i = 0; i < goLobby1.Length; i++)
+            {
+                if(goLobby1[i] == true)
+                {
+                    Destroy(FindObjectOfType<LobbyManager>().goLobby[i].gameObject);
+                }
+            }
+        }
+        else
+        {
+            
+        }
 
         /*
         for (int i = 0; i < bSkill.Length; i++)
@@ -128,7 +145,6 @@ public class GameManager : MonoBehaviour
         }
         */
     }
-
     
     private void Update()
     {
@@ -146,7 +162,6 @@ public class GameManager : MonoBehaviour
         } 
     }
     
-
     public void GetSkill(int value)
     {
         bSkill[value] = true;
@@ -167,8 +182,24 @@ public class GameManager : MonoBehaviour
 
     public void SetCheckPoint(Vector2 newPosition)
     {
-        tCurrentCheckPointPos = newPosition;
-        goCheckPointCamera = goCurrentVirtualCamera;
+        if(newPosition != TCurrentCheckPointPos)
+        {
+            tCurrentCheckPointPos = newPosition;
+            goCheckPointCamera = goCurrentVirtualCamera;
+
+            //KeepInfo
+            {
+                for (int i = 0; i < listButtonInteract.Count; i++)
+                {
+                    listButtonInteract[i].bKeepInfo = true;
+                }
+                for (int i = 0; i < listFragile.Count; i++)
+                {
+                    listFragile[i].bKeepInfo = true;
+                }
+            }
+        }
+        
     }
 
     public void LookAheadSmoothing (bool bDisable)
@@ -196,6 +227,8 @@ public class GameManager : MonoBehaviour
         goPlayer.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
         goPlayer.GetComponent<BoxCollider2D>().enabled = false;
         tDeathPos = goPlayer.transform.position;
+
+        KeepInfo();
     }
     public void Death2()
     {
@@ -243,6 +276,58 @@ public class GameManager : MonoBehaviour
         else
         {
             SceneManager.LoadScene(levelName);
+        }
+    }
+
+
+
+    public List<ButtonInteract> listButtonInteract = new List<ButtonInteract>();
+    public List<Fragile> listFragile = new List<Fragile>();
+
+
+    public void KeepInfo()
+    {
+        for (int i = 0; i < listButtonInteract.Count; i++)
+        {
+            listButtonInteract[i].Reset();
+        }
+        for (int i = 0; i < listFragile.Count; i++)
+        {
+            listFragile[i].Reset();
+        }
+
+
+        listButtonInteract.Clear();
+        listFragile.Clear();
+
+    }
+    public void KeepInfo(ButtonInteract info)
+    {
+        if(!listButtonInteract.Contains(info))
+        {
+            listButtonInteract.Add(info);
+        }
+    }
+    public void KeepInfo(Fragile info)
+    {
+        if (!listFragile.Contains(info))
+        {
+            listFragile.Add(info);
+        }
+    }
+
+    public void CheckIfLobby(GameObject go)
+    {
+        if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("Lobby_1"))
+        {
+            for (int i = 0; i < FindObjectOfType<LobbyManager>().goLobby.Length; i++)
+            {
+                if(go == FindObjectOfType<LobbyManager>().goLobby[i])
+                {
+                    goLobby1[i] = true;
+                    return;
+                }
+            }
         }
     }
 }

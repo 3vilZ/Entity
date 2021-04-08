@@ -13,6 +13,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] int iCoreStart;
 
     public bool[] goLobby1;
+    public bool[] goLobby2;
+    public bool[] goLobby3;
 
     GameObject goPlayer;
     GameObject goBall;
@@ -24,7 +26,7 @@ public class GameManager : MonoBehaviour
     Vector2 tCurrentCheckPointPos;
     PlayerControllerV3 scriptPlayer;
     int iSpawn;
-    Vector2 tDeathPos;
+    //Vector2 tDeathPos;
 
     public bool[] BSkill { get => bSkill; set => bSkill = value; }
     public Vector2 TCurrentCheckPointPos { get => tCurrentCheckPointPos; set => tCurrentCheckPointPos = value; }
@@ -50,6 +52,26 @@ public class GameManager : MonoBehaviour
             for (int i = 0; i < goLobby1.Length; i++)
             {
                 if(goLobby1[i] == true)
+                {
+                    Destroy(FindObjectOfType<LobbyManager>().goLobby[i].gameObject);
+                }
+            }
+        }
+        else if(SceneManager.GetActiveScene() == SceneManager.GetSceneByName("Lobby_2"))
+        {
+            for (int i = 0; i < goLobby2.Length; i++)
+            {
+                if (goLobby2[i] == true)
+                {
+                    Destroy(FindObjectOfType<LobbyManager>().goLobby[i].gameObject);
+                }
+            }
+        }
+        else if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("Lobby_3"))
+        {
+            for (int i = 0; i < goLobby3.Length; i++)
+            {
+                if (goLobby3[i] == true)
                 {
                     Destroy(FindObjectOfType<LobbyManager>().goLobby[i].gameObject);
                 }
@@ -210,6 +232,10 @@ public class GameManager : MonoBehaviour
                 {
                     listFire[i].bKeepInfo = true;
                 }
+                for (int i = 0; i < listPlatformFall.Count; i++)
+                {
+                    listPlatformFall[i].bKeepInfo = true;
+                }
             }
         }
         
@@ -235,11 +261,11 @@ public class GameManager : MonoBehaviour
     {
         //goPlayer.GetComponent<Animator>().
         //scriptPlayer.BoolDeath();
-        print("tt");
+        Time.timeScale = 1;
         goPlayer.GetComponent<Animator>().SetTrigger("Death");
         goPlayer.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
         goPlayer.GetComponent<BoxCollider2D>().enabled = false;
-        tDeathPos = goPlayer.transform.position;
+        //tDeathPos = goPlayer.transform.position;
 
         
     }
@@ -296,11 +322,12 @@ public class GameManager : MonoBehaviour
 
 
 
-    public List<ButtonInteract> listButtonInteract = new List<ButtonInteract>();
-    public List<Fragile> listFragile = new List<Fragile>();
-    public List<PlatformMove> listPlatformMove = new List<PlatformMove>();
-    public List<Magma> listMagma = new List<Magma>();
-    public List<Fire> listFire = new List<Fire>();
+    [HideInInspector] public List<ButtonInteract> listButtonInteract = new List<ButtonInteract>();
+    [HideInInspector] public List<Fragile> listFragile = new List<Fragile>();
+    [HideInInspector] public List<PlatformMove> listPlatformMove = new List<PlatformMove>();
+    [HideInInspector] public List<Magma> listMagma = new List<Magma>();
+    [HideInInspector] public List<Fire> listFire = new List<Fire>();
+    [HideInInspector] public List<PlatformFall> listPlatformFall = new List<PlatformFall>();
 
     public void KeepInfo()
     {
@@ -324,12 +351,17 @@ public class GameManager : MonoBehaviour
         {
             listFire[i].Reset();
         }
+        for (int i = 0; i < listPlatformFall.Count; i++)
+        {
+            listPlatformFall[i].Reset();
+        }
 
         listButtonInteract.Clear();
         listFragile.Clear();
         listPlatformMove.Clear();
         listMagma.Clear();
         listFire.Clear();
+        listPlatformFall.Clear();
     }
     public void KeepInfo(ButtonInteract info)
     {
@@ -366,6 +398,13 @@ public class GameManager : MonoBehaviour
             listFire.Add(info);
         }
     }
+    public void KeepInfo(PlatformFall info)
+    {
+        if (!listPlatformFall.Contains(info))
+        {
+            listPlatformFall.Add(info);
+        }
+    }
 
     public void CheckIfLobby(GameObject go)
     {
@@ -376,6 +415,28 @@ public class GameManager : MonoBehaviour
                 if(go == FindObjectOfType<LobbyManager>().goLobby[i])
                 {
                     goLobby1[i] = true;
+                    return;
+                }
+            }
+        }
+        if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("Lobby_2"))
+        {
+            for (int i = 0; i < FindObjectOfType<LobbyManager>().goLobby.Length; i++)
+            {
+                if (go == FindObjectOfType<LobbyManager>().goLobby[i])
+                {
+                    goLobby2[i] = true;
+                    return;
+                }
+            }
+        }
+        if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("Lobby_1"))
+        {
+            for (int i = 0; i < FindObjectOfType<LobbyManager>().goLobby.Length; i++)
+            {
+                if (go == FindObjectOfType<LobbyManager>().goLobby[i])
+                {
+                    goLobby3[i] = true;
                     return;
                 }
             }

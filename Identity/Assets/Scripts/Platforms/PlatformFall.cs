@@ -13,6 +13,8 @@ public class PlatformFall : MonoBehaviour
     bool bStart = false;
     float fCrashTimeControl = 0;
 
+    Vector3 v3Initial;
+    [HideInInspector] public bool bKeepInfo = false;
 
     void Start()
     {
@@ -21,6 +23,8 @@ public class PlatformFall : MonoBehaviour
         goBot.SetActive(false);
 
         fCrashTimeControl = fCrashTime;
+
+        v3Initial = transform.position;
     }
 
     
@@ -41,13 +45,35 @@ public class PlatformFall : MonoBehaviour
 
     public void Crash()
     {
-        
-        
         if (!bStart)
         {
             animator.SetTrigger("Crash");
+            GameManager.Instance.KeepInfo(this);
             bStart = true;
         }
+    }
+
+    public void Reset()
+    {
+        if(!bKeepInfo)
+        {
+            print("olis");
+            bStart = false;
+            animator.ResetTrigger("Crash");
+            animator.ResetTrigger("Fall");
+            animator.ResetTrigger("Land");
+            animator.SetTrigger("Reset");
+            fCrashTimeControl = fCrashTime;
+            rb.bodyType = RigidbodyType2D.Kinematic;
+            transform.position = v3Initial;
+            colTop.enabled = true;
+            colTop.isTrigger = false;
+            GetComponent<WallJump>().colLeft.enabled = true;
+            GetComponent<WallJump>().colRight.enabled = true;
+
+            goBot.SetActive(false);
+        }
+        
     }
 
     private void OnTriggerEnter2D(Collider2D other)

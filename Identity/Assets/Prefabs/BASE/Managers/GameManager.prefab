@@ -44,3 +44,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   iCoreStart: 2
+  goLobby1: 000000
+  goLobby2: 000000
+  listButtonInteract: []
+  listFragile: []
+  listPlatformMove: []
+  listMagma: []
+  listFire: []

@@ -71,7 +71,7 @@ public class PowerCell : MonoBehaviour
     {
         if(other.gameObject.tag == "Ball")
         {
-
+            /*
             switch ((int)currentPower)
             {
                 case 0:
@@ -90,6 +90,7 @@ public class PowerCell : MonoBehaviour
                     print("PowerBug");
                     break;
             }
+            */
 
             GameManager.Instance.GoBall.GetComponent<Ball>().GetPowerID((int)currentPower);
 

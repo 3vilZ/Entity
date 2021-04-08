@@ -571,7 +571,10 @@ public class PlayerControllerV3 : MonoBehaviour
     }
     public void BoolDeath()
     {
-        if(bDead)
+        bDead = true;
+
+        /*
+        if (bDead)
         {
             bDead = false;
         }
@@ -579,9 +582,14 @@ public class PlayerControllerV3 : MonoBehaviour
         {
             bDead = true;
         }
+        */
     }
     public void BoolDeathDone()
     {
+        bDeadDone = true;
+        animPlayer.SetBool("DeathDone", true);
+
+        /*
         if (bDeadDone)
         {
             bDeadDone = false;
@@ -592,6 +600,16 @@ public class PlayerControllerV3 : MonoBehaviour
             bDeadDone = true;
             animPlayer.SetBool("DeathDone", true);
         }
+        */
+    }
+    public void BoolDeathReset()
+    {
+        bDead = false;
+    }
+    public void BoolDeathDoneReset()
+    {
+        bDeadDone = false;
+        animPlayer.SetBool("DeathDone", false);
     }
     public void Revive()
     {
@@ -868,6 +886,7 @@ public class PlayerControllerV3 : MonoBehaviour
                 rbBall.bodyType = RigidbodyType2D.Dynamic;
                 goBall.GetComponent<CircleCollider2D>().enabled = true;
                 goBall.transform.parent = null;
+                goBall.transform.localScale = new Vector3(1, 1, 1);
 
                 playerAnim.ArmsShootBall();
                 if(bBallOn)
@@ -947,6 +966,8 @@ public class PlayerControllerV3 : MonoBehaviour
                 rbBall.bodyType = RigidbodyType2D.Dynamic;
                 goBall.GetComponent<CircleCollider2D>().enabled = true;
                 goBall.transform.parent = null;
+                goBall.transform.localScale = new Vector3(1, 1, 1);
+
 
                 playerAnim.ArmsShootBall();
                 if (bBallOn)

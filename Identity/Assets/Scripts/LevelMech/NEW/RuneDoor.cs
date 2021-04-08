@@ -38,6 +38,7 @@ public class RuneDoor : MonoBehaviour
             {
                 goKey.SetActive(false);
                 bActivated = true;
+                GameManager.Instance.CheckIfLobby(gameObject);
                 bUnlock = false;
             }
         }

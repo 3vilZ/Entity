@@ -197,6 +197,19 @@ public class GameManager : MonoBehaviour
                 {
                     listFragile[i].bKeepInfo = true;
                 }
+
+                for (int i = 0; i < listPlatformMove.Count; i++)
+                {
+                    listPlatformMove[i].bKeepInfo = true;
+                }
+                for (int i = 0; i < listMagma.Count; i++)
+                {
+                    listMagma[i].bKeepInfo = true;
+                }
+                for (int i = 0; i < listFire.Count; i++)
+                {
+                    listFire[i].bKeepInfo = true;
+                }
             }
         }
         
@@ -228,7 +241,7 @@ public class GameManager : MonoBehaviour
         goPlayer.GetComponent<BoxCollider2D>().enabled = false;
         tDeathPos = goPlayer.transform.position;
 
-        KeepInfo();
+        
     }
     public void Death2()
     {
@@ -265,6 +278,8 @@ public class GameManager : MonoBehaviour
         {
             scriptPlayer.CatchBall();
         }
+
+        KeepInfo();
     }
 
     public void LoadLevel(string levelName)
@@ -283,23 +298,38 @@ public class GameManager : MonoBehaviour
 
     public List<ButtonInteract> listButtonInteract = new List<ButtonInteract>();
     public List<Fragile> listFragile = new List<Fragile>();
-
+    public List<PlatformMove> listPlatformMove = new List<PlatformMove>();
+    public List<Magma> listMagma = new List<Magma>();
+    public List<Fire> listFire = new List<Fire>();
 
     public void KeepInfo()
     {
         for (int i = 0; i < listButtonInteract.Count; i++)
         {
             listButtonInteract[i].Reset();
-        }
+        } 
         for (int i = 0; i < listFragile.Count; i++)
         {
             listFragile[i].Reset();
         }
-
+        for (int i = 0; i < listPlatformMove.Count; i++)
+        {
+            listPlatformMove[i].Reset();
+        }
+        for (int i = 0; i < listMagma.Count; i++)
+        {
+            listMagma[i].Reset();
+        }
+        for (int i = 0; i < listFire.Count; i++)
+        {
+            listFire[i].Reset();
+        }
 
         listButtonInteract.Clear();
         listFragile.Clear();
-
+        listPlatformMove.Clear();
+        listMagma.Clear();
+        listFire.Clear();
     }
     public void KeepInfo(ButtonInteract info)
     {
@@ -313,6 +343,27 @@ public class GameManager : MonoBehaviour
         if (!listFragile.Contains(info))
         {
             listFragile.Add(info);
+        }
+    }
+    public void KeepInfo(PlatformMove info)
+    {
+        if (!listPlatformMove.Contains(info))
+        {
+            listPlatformMove.Add(info);
+        }
+    }
+    public void KeepInfo(Magma info)
+    {
+        if (!listMagma.Contains(info))
+        {
+            listMagma.Add(info);
+        }
+    }
+    public void KeepInfo(Fire info)
+    {
+        if (!listFire.Contains(info))
+        {
+            listFire.Add(info);
         }
     }
 

@@ -6,6 +6,8 @@ public class Magma : MonoBehaviour
 {
     [SerializeField] GameObject goPlatform;
 
+    [HideInInspector] public bool bKeepInfo = false;
+
     private void Start()
     {
         goPlatform.SetActive(false);
@@ -13,9 +15,20 @@ public class Magma : MonoBehaviour
 
     public void Crash()
     {
+        GameManager.Instance.KeepInfo(this);
         GetComponent<SpriteRenderer>().enabled = false;
         GetComponent<Collider2D>().enabled = false;
         goPlatform.SetActive(true);
+    }
+
+    public void Reset()
+    {
+        if (!bKeepInfo)
+        {
+            goPlatform.SetActive(false);
+            GetComponent<SpriteRenderer>().enabled = true;
+            GetComponent<Collider2D>().enabled = true;
+        }           
     }
 
     private void OnCollisionEnter2D(Collision2D other)

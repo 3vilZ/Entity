@@ -18,6 +18,8 @@ public class PlatformMove : MonoBehaviour
 
     float fPlayerSpeed;
 
+    [HideInInspector] public bool bKeepInfo = false;
+
     void Start()
     {
         iCurrentPoint = 1;
@@ -89,10 +91,23 @@ public class PlatformMove : MonoBehaviour
         }
     }
 
+    public void Reset()
+    {
+        if (!bKeepInfo)
+        {
+            GetComponent<Rigidbody2D>().velocity = Vector3.zero;
+            bMoving = false;
+            bBackward = false;
+            iCurrentPoint = 1;
+            transform.position = tPoints[0].position;
+        }         
+    }
+
     private void OnCollisionEnter2D(Collision2D other)
     {
         if(other.gameObject.tag == "Player" && !bMoving || other.gameObject.tag == "Ball" && !bMoving || other.gameObject.tag == "Bullet" && !bMoving)
         {
+            GameManager.Instance.KeepInfo(this);
             bMoving = true;
         }
     }

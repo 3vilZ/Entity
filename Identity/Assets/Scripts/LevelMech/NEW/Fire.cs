@@ -4,10 +4,22 @@ using UnityEngine;
 
 public class Fire : MonoBehaviour
 {
+    [HideInInspector] public bool bKeepInfo = false;
+
     public void Crash()
     {
+        GameManager.Instance.KeepInfo(this);
         GetComponent<SpriteRenderer>().enabled = false;
         GetComponent<Collider2D>().enabled = false;
+    }
+
+    public void Reset()
+    {
+        if (!bKeepInfo)
+        {
+            GetComponent<SpriteRenderer>().enabled = true;
+            GetComponent<Collider2D>().enabled = true;
+        }          
     }
 
     

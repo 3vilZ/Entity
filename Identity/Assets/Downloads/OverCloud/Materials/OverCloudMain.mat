@@ -10,7 +10,7 @@ Material:
   m_Name: OverCloudMain
   m_Shader: {fileID: 4800000, guid: c8003dd98bff5844abe311b57a41d0aa, type: 3}
   m_ShaderKeywords: AMBIENT_GRADIENT CUSTOM_AMBIENT OVERCLOUD_ATMOSPHERE_ENABLED
-    SAMPLE_COUNT_NORMAL
+    SAMPLE_COUNT_LOW
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0

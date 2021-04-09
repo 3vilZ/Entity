@@ -2871,6 +2871,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: HidePortionBubbles (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7304400832546844554, guid: ad4b6c68b3d3f394f8433420f17290d6,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7304400832674086336, guid: ad4b6c68b3d3f394f8433420f17290d6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -56004,6 +56009,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: HidePortionBubbles (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 7304400832546844554, guid: ad4b6c68b3d3f394f8433420f17290d6,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7304400832674086336, guid: ad4b6c68b3d3f394f8433420f17290d6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -68838,6 +68848,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: HidePortionBubbles
+      objectReference: {fileID: 0}
+    - target: {fileID: 7304400832546844554, guid: ad4b6c68b3d3f394f8433420f17290d6,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7304400832674086336, guid: ad4b6c68b3d3f394f8433420f17290d6,
         type: 3}
@@ -88581,6 +88596,51 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlatformPhantom (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 3270620921522825581, guid: ee36bdd23bc121e40a62b5164c624879,
+        type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 3270620921522825581, guid: ee36bdd23bc121e40a62b5164c624879,
+        type: 3}
+      propertyPath: ShapeModule.m_Scale.x
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3270620921522825581, guid: ee36bdd23bc121e40a62b5164c624879,
+        type: 3}
+      propertyPath: ShapeModule.m_Scale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5894637933696840419, guid: ee36bdd23bc121e40a62b5164c624879,
+        type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 5894637933696840419, guid: ee36bdd23bc121e40a62b5164c624879,
+        type: 3}
+      propertyPath: ShapeModule.m_Scale.x
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5894637933696840419, guid: ee36bdd23bc121e40a62b5164c624879,
+        type: 3}
+      propertyPath: ShapeModule.m_Scale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6679669310588280774, guid: ee36bdd23bc121e40a62b5164c624879,
+        type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 6679669310588280774, guid: ee36bdd23bc121e40a62b5164c624879,
+        type: 3}
+      propertyPath: ShapeModule.m_Scale.x
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6679669310588280774, guid: ee36bdd23bc121e40a62b5164c624879,
+        type: 3}
+      propertyPath: ShapeModule.m_Scale.y
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ee36bdd23bc121e40a62b5164c624879, type: 3}
 --- !u!4 &1533356938 stripped
@@ -106387,6 +106447,36 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlatformPhantom (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 3270620921522825581, guid: ee36bdd23bc121e40a62b5164c624879,
+        type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 3270620921522825581, guid: ee36bdd23bc121e40a62b5164c624879,
+        type: 3}
+      propertyPath: ShapeModule.m_Scale.x
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 5894637933696840419, guid: ee36bdd23bc121e40a62b5164c624879,
+        type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 5894637933696840419, guid: ee36bdd23bc121e40a62b5164c624879,
+        type: 3}
+      propertyPath: ShapeModule.m_Scale.x
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6679669310588280774, guid: ee36bdd23bc121e40a62b5164c624879,
+        type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 6679669310588280774, guid: ee36bdd23bc121e40a62b5164c624879,
+        type: 3}
+      propertyPath: ShapeModule.m_Scale.x
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ee36bdd23bc121e40a62b5164c624879, type: 3}
 --- !u!4 &1863123745 stripped
@@ -118783,6 +118873,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlatformPhantom (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 3270620921522825581, guid: ee36bdd23bc121e40a62b5164c624879,
+        type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 3270620921522825581, guid: ee36bdd23bc121e40a62b5164c624879,
+        type: 3}
+      propertyPath: ShapeModule.m_Scale.x
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 6679669310588280774, guid: ee36bdd23bc121e40a62b5164c624879,
+        type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 6679669310588280774, guid: ee36bdd23bc121e40a62b5164c624879,
+        type: 3}
+      propertyPath: ShapeModule.m_Scale.x
+      value: 15
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ee36bdd23bc121e40a62b5164c624879, type: 3}
 --- !u!4 &2039723868 stripped
@@ -120678,6 +120788,36 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlatformPhantom
+      objectReference: {fileID: 0}
+    - target: {fileID: 3270620921522825581, guid: ee36bdd23bc121e40a62b5164c624879,
+        type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 3270620921522825581, guid: ee36bdd23bc121e40a62b5164c624879,
+        type: 3}
+      propertyPath: ShapeModule.m_Scale.x
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 5894637933696840419, guid: ee36bdd23bc121e40a62b5164c624879,
+        type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 5894637933696840419, guid: ee36bdd23bc121e40a62b5164c624879,
+        type: 3}
+      propertyPath: ShapeModule.m_Scale.x
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 6679669310588280774, guid: ee36bdd23bc121e40a62b5164c624879,
+        type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 6679669310588280774, guid: ee36bdd23bc121e40a62b5164c624879,
+        type: 3}
+      propertyPath: ShapeModule.m_Scale.x
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ee36bdd23bc121e40a62b5164c624879, type: 3}

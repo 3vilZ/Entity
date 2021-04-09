@@ -567,6 +567,23 @@ public class PlayerControllerV3 : MonoBehaviour
     
     public void AnimDeath()
     {
+        bChargingShoot = false;
+        fChargeMinTimeControl = fChargeShootMinTime;
+        fChargeMaxTimeControl = fChargeShootMaxTime;
+        lineRenderer.positionCount = 0;
+
+        if (bBallOn)
+        {
+            bBallOn = false;
+        }
+
+        if (bDashDone)
+        {
+            rbPlayer.gravityScale = fNormalGravity;
+            fDashCapMoveTimeControl = fDashCapMoveTime;
+            bDashDone = false;
+        }
+
         Particles(2);
     }
     public void BoolDeath()

@@ -10,7 +10,9 @@ public class Collectable : MonoBehaviour
     [SerializeField] float fSpeed;
     [SerializeField] float fDistance;
 
-    
+    [Tooltip("Tres números: mundo + nivel + #coleccionable del nivel. ej: 311")]
+    public int collectableID;
+
     Vector3 v3StartPos;
     Vector3 v3Direction;
     [HideInInspector] public bool bCollecting = false;
@@ -24,6 +26,8 @@ public class Collectable : MonoBehaviour
 
     private void Start()
     {
+        GameManager.Instance.CheckCollectable(collectableID, this);
+
         v3StartPos = transform.position;
         psMain = ps.main;
         psRot = ps.rotationOverLifetime;
@@ -82,7 +86,7 @@ public class Collectable : MonoBehaviour
 
             if (!ps.IsAlive())
             {
-                GameManager.Instance.GetCollectable();
+                GameManager.Instance.GetCollectable(collectableID);
                 GameManager.Instance.GoPlayer.GetComponent<PlayerControllerV3>().bCollecting = false;
 
                 if (!b2Once)

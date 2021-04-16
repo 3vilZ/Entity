@@ -28,6 +28,17 @@ public class GameManager : MonoBehaviour
     int iSpawn;
     //Vector2 tDeathPos;
 
+    //Keep Info Lists
+    [HideInInspector] public List<ButtonInteract> listButtonInteract = new List<ButtonInteract>();
+    [HideInInspector] public List<Fragile> listFragile = new List<Fragile>();
+    [HideInInspector] public List<PlatformMove> listPlatformMove = new List<PlatformMove>();
+    [HideInInspector] public List<Magma> listMagma = new List<Magma>();
+    [HideInInspector] public List<Fire> listFire = new List<Fire>();
+    [HideInInspector] public List<PlatformFall> listPlatformFall = new List<PlatformFall>();
+
+    //Collectable Lists
+    [HideInInspector] public List<int> listCollectableID = new List<int>();
+
     public bool[] BSkill { get => bSkill; set => bSkill = value; }
     public Vector2 TCurrentCheckPointPos { get => tCurrentCheckPointPos; set => tCurrentCheckPointPos = value; }
     public GameObject GoPlayer { get => goPlayer; set => goPlayer = value; }
@@ -181,7 +192,13 @@ public class GameManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             Application.Quit();
-        } 
+        }
+
+        if (Input.GetKeyDown(KeyCode.U))
+        {
+            LookAheadSmoothing(false);
+            LookAheadTime(false);
+        }
     }
     
     public void GetSkill(int value)
@@ -197,9 +214,22 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void GetCollectable()
+    public void GetCollectable(int ID)
     {
         iCollectables++;
+
+        if (!listCollectableID.Contains(ID))
+        {
+            listCollectableID.Add(ID);
+        }
+    }
+
+    public void CheckCollectable(int ID, Collectable info)
+    {
+        if (listCollectableID.Contains(ID))
+        {
+            Destroy(info.gameObject);
+        }
     }
 
     public void SetCheckPoint(Vector2 newPosition)
@@ -243,18 +273,26 @@ public class GameManager : MonoBehaviour
 
     public void LookAheadSmoothing (bool bDisable)
     {
-        
         if(bDisable)
         {
-            //goCurrentVirtualCamera.GetComponent<CinemachineVirtualCamera>().GetCinemachineComponent<CinemachineFramingTransposer>().m_LookaheadTime = 0;
             goCurrentVirtualCamera.GetComponent<CinemachineVirtualCamera>().GetCinemachineComponent<CinemachineFramingTransposer>().m_LookaheadSmoothing = 0;
         }
         else
         {
-            //goCurrentVirtualCamera.GetComponent<CinemachineVirtualCamera>().GetCinemachineComponent<CinemachineFramingTransposer>().m_LookaheadTime = 0.4f;
             goCurrentVirtualCamera.GetComponent<CinemachineVirtualCamera>().GetCinemachineComponent<CinemachineFramingTransposer>().m_LookaheadSmoothing = 10;
         }
-        
+    }
+
+    public void LookAheadTime(bool bDisable)
+    {
+        if (bDisable)
+        {
+            goCurrentVirtualCamera.GetComponent<CinemachineVirtualCamera>().GetCinemachineComponent<CinemachineFramingTransposer>().m_LookaheadTime = 0f;
+        }
+        else
+        {
+            goCurrentVirtualCamera.GetComponent<CinemachineVirtualCamera>().GetCinemachineComponent<CinemachineFramingTransposer>().m_LookaheadTime = 0.4f;
+        }
     }
 
     public void Death1()
@@ -319,15 +357,6 @@ public class GameManager : MonoBehaviour
             SceneManager.LoadScene(levelName);
         }
     }
-
-
-
-    [HideInInspector] public List<ButtonInteract> listButtonInteract = new List<ButtonInteract>();
-    [HideInInspector] public List<Fragile> listFragile = new List<Fragile>();
-    [HideInInspector] public List<PlatformMove> listPlatformMove = new List<PlatformMove>();
-    [HideInInspector] public List<Magma> listMagma = new List<Magma>();
-    [HideInInspector] public List<Fire> listFire = new List<Fire>();
-    [HideInInspector] public List<PlatformFall> listPlatformFall = new List<PlatformFall>();
 
     public void KeepInfo()
     {

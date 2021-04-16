@@ -51,28 +51,31 @@ public class DK : MonoBehaviour
             }
         }
 
+        /*
         if(GameManager.Instance.ScriptPlayer.bDK == true)
         {
             fCapMoveControl -= Time.deltaTime;
             if(fCapMoveControl <= 0)
             {
-                fCapMoveControl = fCapMoveTime;              
+                fCapMoveControl = fCapMoveTime;
                 GameManager.Instance.ScriptPlayer.bDK = false;
             }
         }
+        */
     }
 
     void Launch()
     {
         if (bPlayerIn)
         {
+            GameManager.Instance.LookAheadSmoothing(false);
+
             GameManager.Instance.ScriptPlayer.bDK = true;
             GameManager.Instance.ScriptPlayer.bInteracting = false;
             GameManager.Instance.GoPlayer.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
             GameManager.Instance.GoPlayer.GetComponent<Rigidbody2D>().velocity = v2direction * fPlayerSpeed;
             fPlayerLoadControl = fLoadTime;
-            bPlayerIn = false;
-
+            bPlayerIn = false;    
         }
         if (bBallIn)
         {
@@ -105,7 +108,8 @@ public class DK : MonoBehaviour
             GameManager.Instance.ScriptPlayer.bInteracting = true;
             GameManager.Instance.GoPlayer.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Kinematic;
             fBallLoadControl = fLoadTime;
-            GameManager.Instance.LookAheadSmoothing(false);
+
+            //GameManager.Instance.LookAheadSmoothing(false);
             bPlayerIn = true;
             
         }

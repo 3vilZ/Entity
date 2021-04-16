@@ -163,6 +163,8 @@ public class PlayerControllerV3 : MonoBehaviour
 
     //LevelMechanics
     [HideInInspector] public bool bDK = false;
+    float DKMoveCapTime = 1;
+    float DKMoveCapTimeControl = 1;
 
     [HideInInspector] public bool bDeadDone = false;
     [HideInInspector] public bool bDead = false;
@@ -288,16 +290,14 @@ public class PlayerControllerV3 : MonoBehaviour
         {
             WallJump();
             Jump();
-
-            
-            
         }
         
         UpdatePlayerAndBallState();
         BallDetection();
         Collecting();
+        DKMoveCap();
 
-        if(!bDeadDone && !bInteracting)
+        if (!bDeadDone && !bInteracting)
         {
             if (GameManager.Instance.BSkill[0])
             {
@@ -361,6 +361,20 @@ public class PlayerControllerV3 : MonoBehaviour
             if(bGrounded)
             {
                 goCurrentCollectable.GetComponent<Collectable>().bRDY1 = true;
+            }
+        }
+    }
+
+    public void DKMoveCap()
+    {
+        if(bDK)
+        {
+            DKMoveCapTimeControl -= Time.deltaTime;
+
+            if (DKMoveCapTimeControl <= 0)
+            {
+                DKMoveCapTimeControl = DKMoveCapTime;
+                bDK = false;
             }
         }
     }

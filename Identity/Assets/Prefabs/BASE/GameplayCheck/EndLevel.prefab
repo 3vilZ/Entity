@@ -150,7 +150,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   iNextSpawn: 0
-  strNextLevel: Lobby_1
+  strNextLevel: Lobby_1_Art
   tSpawnPoint: {fileID: 8952586648998430359}
   bLevelTransition: 0
 --- !u!61 &7817237417848685676

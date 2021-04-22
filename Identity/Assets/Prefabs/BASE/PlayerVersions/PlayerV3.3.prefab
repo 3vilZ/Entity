@@ -19103,7 +19103,6 @@ GameObject:
   - component: {fileID: 1417720872053266611}
   - component: {fileID: 2567960037349834549}
   - component: {fileID: 8603509683065695501}
-  - component: {fileID: 1426928236}
   - component: {fileID: 1426928237}
   m_Layer: 13
   m_Name: Main Camera
@@ -19119,8 +19118,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1417720872053266615}
-  m_LocalRotation: {x: 0.010471772, y: -0, z: -0, w: 0.99994516}
-  m_LocalPosition: {x: 569.23004, y: 36.15277, z: -599.8092}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 472.49997, y: -0.97204304, z: -600}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1417720873242113992}
@@ -19149,7 +19148,7 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 2
+  near clip plane: 0.1
   far clip plane: 6000
   field of view: 2.7
   orthographic: 0
@@ -19283,29 +19282,6 @@ MonoBehaviour:
   m_CameraActivatedEvent:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &1426928236
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1417720872053266615}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 15e8fc05344791f49885c0e5c06f01f3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  downsampleFactor: 1
-  renderVolumetricClouds: 1
-  render2DFallback: 0
-  lightSampleCount: 1
-  highQualityClouds: 0
-  downsample2DClouds: 0
-  renderAtmosphere: 1
-  renderScatteringMask: 1
-  includeCascadedShadows: 1
-  scatteringMaskSamples: 2
-  renderRainMask: 0
 --- !u!114 &1426928237
 MonoBehaviour:
   m_ObjectHideFlags: 0

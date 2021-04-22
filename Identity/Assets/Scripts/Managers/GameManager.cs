@@ -26,6 +26,7 @@ public class GameManager : MonoBehaviour
     Vector2 tCurrentCheckPointPos;
     PlayerControllerV3 scriptPlayer;
     int iSpawn;
+    [HideInInspector] public int iSceneIndex;
     //Vector2 tDeathPos;
 
     //Keep Info Lists
@@ -99,6 +100,8 @@ public class GameManager : MonoBehaviour
             bSkill[i] = false;
         }
         */
+
+        iSceneIndex = level;
     }
 
     private void Awake()
@@ -139,7 +142,8 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         Cursor.visible = false;
-
+        Cursor.lockState = CursorLockMode.Locked;
+        
         /*
         if(bSkill[0])
         {
@@ -194,10 +198,14 @@ public class GameManager : MonoBehaviour
             Application.Quit();
         }
 
-        if (Input.GetKeyDown(KeyCode.U))
+        if (Input.GetKeyDown(KeyCode.Z))
         {
-            LookAheadSmoothing(false);
-            LookAheadTime(false);
+            SaveGame();
+        }
+        if (Input.GetKeyDown(KeyCode.X))
+        {
+            LoadGame();
+            LoadLevel(iSceneIndex);
         }
     }
     
@@ -357,6 +365,10 @@ public class GameManager : MonoBehaviour
             SceneManager.LoadScene(levelName);
         }
     }
+    public void LoadLevel(int levelIndex)
+    {
+        SceneManager.LoadScene(levelIndex);
+    }
 
     public void KeepInfo()
     {
@@ -470,5 +482,44 @@ public class GameManager : MonoBehaviour
                 }
             }
         }
+    }
+
+    public void SaveGame()
+    {
+        SaveSystem.SaveGame(this);
+    }
+
+    public void LoadGame()
+    {
+        PlayerData data = SaveSystem.LoadGame();
+
+        for (int i = 0; i < data.goLobby1.Length; i++)
+        {
+            goLobby1[i] = data.goLobby1[i];
+        }
+        for (int i = 0; i < data.goLobby2.Length; i++)
+        {
+            goLobby2[i] = data.goLobby2[i];
+        }
+        for (int i = 0; i < data.goLobby3.Length; i++)
+        {
+            goLobby3[i] = data.goLobby3[i];
+        }
+
+        ISpawn = data.iSpawn;
+
+        ICoreStart = data.iCoreStart;
+
+        ICollectables = data.iCollectables;
+
+        listCollectableID.Clear();
+
+        for (int i = 0; i < data.listCollectableID.Count; i++)
+        {
+            listCollectableID.Add(data.listCollectableID[i]);
+        }
+
+        iSceneIndex = data.iSceneIndex;
+
     }
 }

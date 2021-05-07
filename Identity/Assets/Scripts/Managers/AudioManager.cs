@@ -45,7 +45,7 @@ public class AudioManager : MonoBehaviour
         }
     }
     
-    /*
+    
     private void Start()
     {
         NextClip();
@@ -65,7 +65,7 @@ public class AudioManager : MonoBehaviour
             NextClip();
         }
     }
-    */
+    
  
     public void PlaySound(string name)
     {

@@ -111,4 +111,11 @@ public class PlayerAnim : MonoBehaviour
     {
         anim.SetTrigger("Interact");
     }
+
+    //AUDIO
+
+    public void AudioLand()
+    {
+        AudioManager.Instance.PlaySound("Land");
+    }
 }

@@ -8,7 +8,7 @@ public class DialogueTrigger : MonoBehaviour
     [SerializeField] GameObject goY;
     [SerializeField] int iEvent;
     [Space(20)]
-    public SerializeDialogue sDialogue;
+    public NarrativeDialogue sDialogue;
 
     bool bOnce = false;
 
@@ -27,13 +27,6 @@ public class DialogueTrigger : MonoBehaviour
                     GameManager.Instance.ScriptPlayer.bInteracting = true;
                     GameManager.Instance.GoPlayer.GetComponent<Rigidbody2D>().velocity = new Vector2(0, GameManager.Instance.GoPlayer.GetComponent<Rigidbody2D>().velocity.y);
 
-                    /*
-                    if (GameManager.Instance.BSkill[0])
-                    {
-                        GameManager.Instance.ScriptPlayer.CatchBall();
-                    }
-                    */
-
                     goY.SetActive(false);
                     TriggerDialogue();
                     bOnce = true;
@@ -48,9 +41,8 @@ public class DialogueTrigger : MonoBehaviour
 
     public void TriggerDialogue()
     {
-        FindObjectOfType<DialogueManager>().StartDialogue(sDialogue);
-        FindObjectOfType<DialogueManager>().SelectEvent(iEvent);
-
+        InGameCanvas.Instance.NarrativeFadeIn(sDialogue);
+        InGameCanvas.Instance.SelectEvent(iEvent);
     }
 
     private void OnDrawGizmosSelected()
@@ -58,4 +50,14 @@ public class DialogueTrigger : MonoBehaviour
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, fDistance);
     }
+}
+
+[System.Serializable]
+public class NarrativeDialogue
+{
+    public string strName;
+
+    [TextArea(3, 10)]
+    public string[] strSentence;
+
 }

@@ -75,7 +75,7 @@ public class PlayerControllerV3 : MonoBehaviour
     [SerializeField] float fBallReloadForce;
     [SerializeField] float fPlayerReloadForce;
     [SerializeField] bool bCOLLIDEOnReload;
-    [SerializeField] bool bShootDirectionForPlayer;
+    [SerializeField] bool bStandardAim;
     [HideInInspector] public bool bBallOn = false;
     bool bShootDone = false;
     bool bShootRDY = false;
@@ -157,6 +157,12 @@ public class PlayerControllerV3 : MonoBehaviour
     bool bLandDone = false;
     [HideInInspector] public  LineRenderer lineRenderer;
 
+    //AudioVariables
+    public float fFootstepsTimer;
+    float fFootstepsTimerControl;
+    AudioSource asWallDown;
+    bool bAudioReload = false;
+
     //GameObject goPlatformMove;
     [HideInInspector] public bool bPlatformMove = false;
     [HideInInspector] public GameObject goPlatformMove;
@@ -179,7 +185,6 @@ public class PlayerControllerV3 : MonoBehaviour
     float fBugTest = .5f;
     [HideInInspector] public bool bCollecting = false;
     [HideInInspector] public GameObject goCurrentCollectable;
-    public bool bBugTest;
 
     private void Awake()
     {
@@ -214,6 +219,9 @@ public class PlayerControllerV3 : MonoBehaviour
         goLimit.SetActive(false);
         goPlayerArrow.SetActive(false);
         goBallArrow.SetActive(false);
+
+        //GameManager
+        bStandardAim = GameManager.Instance.bStandardAim;
 
         switch (GameManager.Instance.ICoreStart)
         {
@@ -252,37 +260,25 @@ public class PlayerControllerV3 : MonoBehaviour
         fShootExploitTimeControl = fShootExploitTime;
         fDashExploitTimeControl = fDashExploitTime;
         fDashBeforeShootCdControl = fDashBeforeShootCd;
+
+        //Audio Setup
+        fFootstepsTimerControl = fFootstepsTimer;
+        asWallDown = AudioManager.Instance.GetSound("WallDown");
     }
 
     void Update()
     {
         LinkParticles();
 
-        if (Input.GetKeyDown(KeyCode.K))
+        if (Input.GetButtonDown("Bumper"))
         {
-            if(bShootDirectionForPlayer)
+            if(bStandardAim)
             {
-                bShootDirectionForPlayer = false;
+                bStandardAim = false;
             }
             else
             {
-                bShootDirectionForPlayer = true;
-            }
-        }
-
-        if(bBugTest)
-        {
-            if (Input.GetKeyDown(KeyCode.B))
-            {
-                BoolDeathDone();
-            }
-
-            fBugTest -= Time.deltaTime;
-            if (fBugTest <= 0)
-            {
-                //print(bDashRDY);
-
-                fBugTest = .5f;
+                bStandardAim = true;
             }
         }
 
@@ -309,9 +305,6 @@ public class PlayerControllerV3 : MonoBehaviour
                 Dash();
             }
         }
-        
-
-        //Slingshot();
     }
 
     private void FixedUpdate()
@@ -541,6 +534,13 @@ public class PlayerControllerV3 : MonoBehaviour
         goBall.transform.parent = tBallPosition.transform;
         goBall.transform.position = tBallPosition.transform.position;
 
+        //AUDIO
+        if (bReloading)
+        {
+            AudioManager.Instance.PlaySound("Catch");
+            bAudioReload = false;
+        }
+
         if (bReloading && !bGrounded && GameManager.Instance.BSkill[1] && !bDeadDone && !bInteracting)
         {
             //rbPlayer.velocity = Vector2.zero;
@@ -655,7 +655,7 @@ public class PlayerControllerV3 : MonoBehaviour
         float fHorizontalStick = Input.GetAxis("HorizontalRightStick");
         float fVerticalStick = Input.GetAxis("VerticalRightStick");
 
-        if(bShootDirectionForPlayer)
+        if(bStandardAim)
         {
             if (fHorizontalStick > 0.1f || fHorizontalStick < -0.1f || fVerticalStick > 0.1f || fVerticalStick < -0.1f)
             {
@@ -793,6 +793,9 @@ public class PlayerControllerV3 : MonoBehaviour
             
             rbPlayer.velocity = Vector2.zero;
             rbPlayer.velocity = v2PlayerToBall * fDashForce;
+
+            //AUDIO
+            AudioManager.Instance.PlaySound("Dash");
         }
 
         /*
@@ -962,6 +965,9 @@ public class PlayerControllerV3 : MonoBehaviour
                     fDashCapMoveTimeControl = fDashCapMoveTime;
                     bDashDone = false;
                 }
+
+                //AUDIO
+                AudioManager.Instance.PlaySound("Shoot");
             }
         }
 
@@ -1043,6 +1049,9 @@ public class PlayerControllerV3 : MonoBehaviour
                     fDashCapMoveTimeControl = fDashCapMoveTime;
                     bDashDone = false;
                 }
+
+                //AUDIO
+                AudioManager.Instance.PlaySound("Shoot");
             }
         }
     }
@@ -1073,6 +1082,12 @@ public class PlayerControllerV3 : MonoBehaviour
                 v2BallToPlayer.Normalize();
 
                 rbBall.velocity = v2BallToPlayer * fBallReloadForce;
+
+                if(!bAudioReload)
+                {
+                    AudioManager.Instance.PlaySound("Reload");
+                    bAudioReload = true;
+                }
             }
 
             if (Input.GetAxis("Ball") != 0)
@@ -1163,8 +1178,38 @@ public class PlayerControllerV3 : MonoBehaviour
                 }
             }
         }
-        
 
+        //AUDIO
+        if(bGrounded)
+        {
+            if (fHorizontalVelocity < -0.1f || fHorizontalVelocity > 0.1f)
+            {
+                fFootstepsTimerControl -= Time.deltaTime;
+                if (fFootstepsTimerControl <= 0)
+                {
+                    int fRandom = Random.Range(0, 3);
+                    switch (fRandom)
+                    {
+                        case 0:
+                            AudioManager.Instance.PlaySound("FootStep1");
+                            break;
+                        case 1:
+                            AudioManager.Instance.PlaySound("FootStep2");
+                            break;
+                        case 2:
+                            AudioManager.Instance.PlaySound("FootStep3");
+                            break;
+                        case 3:
+                            AudioManager.Instance.PlaySound("FootStep4");
+                            break;
+                        default:
+                            AudioManager.Instance.PlaySound("FootStep1");
+                            break;
+                    }
+                    fFootstepsTimerControl = fFootstepsTimer;
+                }
+            }
+        }
 
         /*
         if (transform.parent != null)
@@ -1231,6 +1276,9 @@ public class PlayerControllerV3 : MonoBehaviour
                     Particles(0);
                     bWallJumpRDY = false;
                 }
+
+                //AUDIO
+                AudioManager.Instance.PlaySound("WallJump");
             }
 
             /*
@@ -1258,6 +1306,15 @@ public class PlayerControllerV3 : MonoBehaviour
         if(wallDetect != null && rbPlayer.velocity.y <= -fWallGravity)
         {
             rbPlayer.velocity = new Vector2(rbPlayer.velocity.x, -fWallGravity);
+
+            if(!asWallDown.isPlaying)
+            {
+                AudioManager.Instance.PlaySound("WallDown");
+            }
+        }
+        else if(asWallDown.isPlaying)
+        {
+            asWallDown.Stop();
         }
 
         if (wallDetect != null && !bGrounded && !bWallJumpDone)
@@ -1268,6 +1325,7 @@ public class PlayerControllerV3 : MonoBehaviour
                 {
                     playerAnim.EndWall(false);
                     playerAnim.StartWall();
+                    AudioManager.Instance.PlaySound("WallEnter");
                     bWallOnce = true;
                 }
             }
@@ -1292,9 +1350,10 @@ public class PlayerControllerV3 : MonoBehaviour
         
     }
 
-
     private void Jump()
     {
+        
+
         if(bGROUNDJump)
         {
             fGroundedSecureControl -= Time.deltaTime;
@@ -1327,6 +1386,9 @@ public class PlayerControllerV3 : MonoBehaviour
                 fGroundedSecureControl = 0;
                 rbPlayer.velocity = new Vector2(rbPlayer.velocity.x, fJumpForce);
                 Particles(0);
+
+                //AUDIO
+                AudioManager.Instance.PlaySound("Jump");
             }
         }
         else
@@ -1358,8 +1420,6 @@ public class PlayerControllerV3 : MonoBehaviour
                 }
             }
         }
-        
-
         
         //Suspension
         if(!bWallJumpDone)

@@ -12,19 +12,21 @@ public class MainMenu : MonoBehaviour
 
     int iScreen;
     Animator animator;
-
-
+    bool bTransition = false;
 
     void Start()
     {
         animator = GetComponent<Animator>();
         iScreen = 0;
-
         FadeIn();
+
+        GameManager.Instance.LoadGame();
+        sSelection[0].goSelection.GetComponent<Slider>().value = GameManager.Instance.fVolumeMultiplier;
     }
 
     public void FadeOut(int i)
     {
+        bTransition = true;
         EventSystem.current.SetSelectedGameObject(null);
         animator.SetTrigger("FadeOut");
         iScreen = i;
@@ -41,6 +43,7 @@ public class MainMenu : MonoBehaviour
         //EventSystem.current.SetSelectedGameObject(null);
         EventSystem.current.SetSelectedGameObject(goFirstSelect[iScreen]);
         animator.SetTrigger("FadeIn");
+        bTransition = false;
     }
 
     void Update()
@@ -54,14 +57,42 @@ public class MainMenu : MonoBehaviour
             sSelection[0].imgSelection.SetActive(false);
         }
 
-        if (EventSystem.current.currentSelectedGameObject == sSelection[1].goSelection)
+        if(Input.GetButtonDown("Cancel") && iScreen != 0)
         {
-            sSelection[1].imgSelection.SetActive(true);
+            FadeOut(0);
         }
-        else
+        else if(Input.GetButtonDown("Cancel"))
         {
-            sSelection[1].imgSelection.SetActive(false);
+            FadeOut(3);
         }
+
+        if(!bTransition)
+        {
+            if(EventSystem.current.currentSelectedGameObject == null)
+            {
+                EventSystem.current.SetSelectedGameObject(goFirstSelect[iScreen]);
+            }
+        }
+    }
+
+    public void ContinueGame()
+    {
+        GameManager.Instance.ContinueGame();
+    }
+
+    public void VolumeMultiplier(Slider slider)
+    {
+        GameManager.Instance.fVolumeMultiplier = slider.value;
+    }
+
+    public void QuitGame()
+    {
+        GameManager.Instance.QuitGame();
+    }
+
+    public void NewGame()
+    {
+        GameManager.Instance.NewGame();
     }
 
     [System.Serializable]

@@ -83,6 +83,11 @@ public class DK : MonoBehaviour
             {
                 GameManager.Instance.GoBall.GetComponent<Rigidbody2D>().velocity = v2direction * 10f;
             }
+            else if(GameManager.Instance.GoBall.GetComponent<Ball>().currentPower == 2)
+            {
+                GameManager.Instance.ScriptPlayer.BubbleShootForce(true);
+                GameManager.Instance.GoBall.GetComponent<Rigidbody2D>().velocity = v2direction * fBallSpeed;
+            }
             else
             {
                 GameManager.Instance.GoBall.GetComponent<Rigidbody2D>().velocity = v2direction * fBallSpeed;
@@ -94,6 +99,7 @@ public class DK : MonoBehaviour
     }
     void LaunchBall()
     {
+
 
     }
 
@@ -115,6 +121,11 @@ public class DK : MonoBehaviour
         }
         if (other.gameObject.tag == "Ball" && !GameManager.Instance.GoBall.GetComponent<CircleCollider2D>().isTrigger)
         {
+            if(GameManager.Instance.GoBall.GetComponent<Ball>().currentPower == 2)
+            {
+                //other.GetComponent<Rigidbody2D>().gravityScale = 0;
+                GameManager.Instance.ScriptPlayer.BubbleShootForce(false);
+            }
             GameManager.Instance.GoBall.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
             GameManager.Instance.GoBall.transform.position = transform.position;
             //CapShootReload

@@ -74,9 +74,7 @@ public class Collectable : MonoBehaviour
         {
             if(!b1Once)
             {
-                CanvasManager.Instance.goCollectableDisplay.SetActive(true);
-                CanvasManager.Instance.txtCollectable.text = GameManager.Instance.ICollectables.ToString();
-                CanvasManager.Instance.canvasAnim.SetTrigger("Collectable1");
+                InGameCanvas.Instance.CollectableFadeIn();
                 b1Once = true;
             }
 
@@ -91,8 +89,7 @@ public class Collectable : MonoBehaviour
 
                 if (!b2Once)
                 {
-                    CanvasManager.Instance.txtCollectable.text = GameManager.Instance.ICollectables.ToString();
-                    CanvasManager.Instance.canvasAnim.SetTrigger("Collectable2");
+                    InGameCanvas.Instance.CollectableFadeOut();
                     b2Once = true;
                 }
 

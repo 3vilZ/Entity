@@ -99,12 +99,14 @@ public class GetAbility : MonoBehaviour
 
             if (Vector3.Distance(goBallSlot.transform.position, GameManager.Instance.GoPlayer.transform.position) <= 0.1f)
             {
-                GameManager.Instance.ScriptPlayer.CatchBall();
-                //GameManager.Instance.ScriptPlayer.bInteracting = false;
+                GameManager.Instance.ScriptPlayer.CatchBall();                
                 GameManager.Instance.GetSkill(iValue);
                 GameManager.Instance.ICoreStart = iValue +1;
 
-                //CanvasManager.Instance.SetCore(iValue);
+                InGameCanvas.Instance.CoreFadeIn(iValue);
+
+                /*
+                //
                 CanvasManager.Instance.goCore[iValue].SetActive(true);
 
                 switch (iValue)
@@ -125,6 +127,8 @@ public class GetAbility : MonoBehaviour
                 }
                 CanvasManager.Instance.goCoreDisplay.SetActive(true);
                 CanvasManager.Instance.canvasAnim.SetTrigger("Core");
+                //
+                */
 
                 bEnd = false;
             }

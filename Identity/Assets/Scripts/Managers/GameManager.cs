@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Cinemachine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -27,6 +28,8 @@ public class GameManager : MonoBehaviour
     PlayerControllerV3 scriptPlayer;
     int iSpawn;
     [HideInInspector] public int iSceneIndex;
+    [HideInInspector] public float fVolumeMultiplier = 1;
+    [HideInInspector] public bool bStandardAim = true;
     //Vector2 tDeathPos;
 
     //Keep Info Lists
@@ -121,66 +124,14 @@ public class GameManager : MonoBehaviour
         goPlayer = GameObject.FindGameObjectWithTag("Player");
         goBall = GameObject.FindGameObjectWithTag("Ball");
 
-        //***************** Hecho en ConfinerTransition.cs ****************************
-        //goCurrentVirtualCamera = GameObject.FindGameObjectWithTag("VirtualCamera");
-        //goOldVirtualCamera = goCurrentVirtualCamera;
-        //goCheckPointCamera = goCurrentVirtualCamera;
-
         scriptPlayer = goPlayer.GetComponent<PlayerControllerV3>();
         tCurrentCheckPointPos = goPlayer.transform.position;
-
-
-        
-        /*
-        for (int i = 0; i < bSkill.Length; i++)
-        {
-            bSkill[i] = false;
-        }
-        */
     }
 
     private void Start()
     {
         Cursor.visible = false;
-        Cursor.lockState = CursorLockMode.Locked;
-        
-        /*
-        if(bSkill[0])
-        {
-            
-            scriptPlayer.CatchBall();
-            scriptPlayer.lineRenderer = goBall.GetComponent<LineRenderer>();
-            
-        }
-        else
-        {
-            goBall.SetActive(false);
-        }
-        
-
-        
-        switch (iCoreStart)
-        {
-            case 0:
-                //goBall.SetActive(false);
-                break;
-            case 1:
-                GetSkill(0);
-                break;
-            case 2:
-                GetSkill(0);
-                GetSkill(1);
-                break;
-            case 3:
-                GetSkill(0);
-                GetSkill(1);
-                GetSkill(2);
-                break;
-            default:
-                print("PdroP");
-                break;
-        }
-        */
+        //Cursor.lockState = CursorLockMode.Locked;
     }
     
     private void Update()
@@ -200,13 +151,16 @@ public class GameManager : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Z))
         {
-            SaveGame();
+            Time.timeScale = 0;
         }
         if (Input.GetKeyDown(KeyCode.X))
         {
-            LoadGame();
-            LoadLevel(iSceneIndex);
+            Time.timeScale = 1;
         }
+        if (Input.GetKeyDown(KeyCode.C))
+        {
+            print(Application.persistentDataPath);
+        }                                                                                                  
     }
     
     public void GetSkill(int value)
@@ -484,6 +438,53 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public void VolumeMultiplier(Slider slider)
+    {
+        fVolumeMultiplier = slider.value;
+    }
+
+    public void ContinueGame()
+    {
+        LoadLevel(iSceneIndex);
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
+
+    public void NewGame()
+    {
+        for (int i = 0; i < goLobby1.Length; i++)
+        {
+            goLobby1[i] = false;
+        }
+        for (int i = 0; i < goLobby2.Length; i++)
+        {
+            goLobby2[i] = false;
+        }
+        for (int i = 0; i < goLobby3.Length; i++)
+        {
+            goLobby3[i] = false;
+        }
+
+        ISpawn = 0;
+
+        ICoreStart = 0;
+
+        ICollectables = 0;
+
+        listCollectableID.Clear();
+
+        iSceneIndex = 1;
+
+        //fVolumeMultiplier = 1;
+
+        bStandardAim = true;
+
+        LoadLevel(iSceneIndex);
+    }
+
     public void SaveGame()
     {
         SaveSystem.SaveGame(this);
@@ -521,5 +522,8 @@ public class GameManager : MonoBehaviour
 
         iSceneIndex = data.iSceneIndex;
 
+        fVolumeMultiplier = data.fVolumeMultiplier;
+
+        bStandardAim = data.bStandardAim;
     }
 }

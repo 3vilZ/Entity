@@ -168,7 +168,8 @@ public class Ball : MonoBehaviour
             }
         }
 
-
+        //AUDIO
+        AudioManager.Instance.PlaySound("Hit");
 
         //ParticleSystem j = Instantiate(BallPS, collision.GetContact(0).point, targetRot);
     }

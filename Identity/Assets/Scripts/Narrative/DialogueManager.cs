@@ -6,6 +6,8 @@ using TMPro;
 
 public class DialogueManager : MonoBehaviour
 {
+    public static DialogueManager Instance;
+
     TextMeshProUGUI txtName;
     TextMeshProUGUI txtSentence;
     GameObject goNarrativeDisplay;
@@ -18,6 +20,11 @@ public class DialogueManager : MonoBehaviour
     string strCurrentSentence;
     int iEvent;
     public GameObject[] goEvent;
+
+    private void Awake()
+    {
+        Instance = this;
+    }
 
     void Start()
     {
@@ -67,7 +74,7 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
-    public void StartDialogue(SerializeDialogue dialogue)
+    public void StartDialogue(NarrativeDialogue dialogue)
     {
         Debug.Log("Starting conversation with " + dialogue.strName);
 

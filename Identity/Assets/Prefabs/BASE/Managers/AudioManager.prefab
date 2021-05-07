@@ -1,0 +1,171 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &118415916806469927
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 118415916806469921}
+  - component: {fileID: 118415916806469926}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &118415916806469921
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 118415916806469927}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 62.16577, y: 1.3621261, z: -485.75787}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &118415916806469926
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 118415916806469927}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 254ec9dc845644b48a07318aefe3e7bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  arrayNum: 2
+  mainMusic:
+  - audioMusic:
+    - clip: {fileID: 8300000, guid: 791e0eebf25d5bc468e782980fd7521f, type: 3}
+      name: 
+      volume: 1
+      source: {fileID: 0}
+    - clip: {fileID: 8300000, guid: bdaa10d4befedf44aafbe63cb1514a6c, type: 3}
+      name: 
+      volume: 1
+      source: {fileID: 0}
+    - clip: {fileID: 8300000, guid: 45b8aed8992d4194aa9c96d0465b8fa6, type: 3}
+      name: 
+      volume: 1
+      source: {fileID: 0}
+    - clip: {fileID: 8300000, guid: 5c49e91249c1e2a46bd97597147ac350, type: 3}
+      name: 
+      volume: 1
+      source: {fileID: 0}
+  - audioMusic:
+    - clip: {fileID: 8300000, guid: 791e0eebf25d5bc468e782980fd7521f, type: 3}
+      name: 
+      volume: 1
+      source: {fileID: 0}
+    - clip: {fileID: 8300000, guid: bdaa10d4befedf44aafbe63cb1514a6c, type: 3}
+      name: 
+      volume: 1
+      source: {fileID: 0}
+    - clip: {fileID: 8300000, guid: 45b8aed8992d4194aa9c96d0465b8fa6, type: 3}
+      name: 
+      volume: 1
+      source: {fileID: 0}
+    - clip: {fileID: 8300000, guid: 5c49e91249c1e2a46bd97597147ac350, type: 3}
+      name: 
+      volume: 1
+      source: {fileID: 0}
+    - clip: {fileID: 8300000, guid: cdac6b452caacd14b8103657fce08bbb, type: 3}
+      name: 
+      volume: 1
+      source: {fileID: 0}
+    - clip: {fileID: 8300000, guid: cab45e4b20dfb9f4bbc413c617bb7241, type: 3}
+      name: 
+      volume: 1
+      source: {fileID: 0}
+    - clip: {fileID: 8300000, guid: 1a804bf4451d4b14a8bb61a715136a6a, type: 3}
+      name: 
+      volume: 1
+      source: {fileID: 0}
+    - clip: {fileID: 8300000, guid: 9a7edb9eed4f1884193534f1e57667e2, type: 3}
+      name: 
+      volume: 1
+      source: {fileID: 0}
+  - audioMusic:
+    - clip: {fileID: 8300000, guid: cd0725998df761341a6a9e1b554d3cee, type: 3}
+      name: 
+      volume: 1
+      source: {fileID: 0}
+    - clip: {fileID: 8300000, guid: 69180c4b776cf0b48bc410214d4fda30, type: 3}
+      name: 
+      volume: 1
+      source: {fileID: 0}
+    - clip: {fileID: 8300000, guid: 5f46db5c187d1084ab112b1d301b6e32, type: 3}
+      name: 
+      volume: 1
+      source: {fileID: 0}
+    - clip: {fileID: 8300000, guid: 7bbd9cc544640a64b8b815c5c5e37122, type: 3}
+      name: 
+      volume: 1
+      source: {fileID: 0}
+  audioFx:
+  - clip: {fileID: 8300000, guid: 3c4f5392db1713e40a79a75199324249, type: 3}
+    name: FootStep1
+    volume: 0.5
+    source: {fileID: 0}
+  - clip: {fileID: 8300000, guid: a1ed64b85eee65647915cbe5b0fabec9, type: 3}
+    name: FootStep2
+    volume: 0.5
+    source: {fileID: 0}
+  - clip: {fileID: 8300000, guid: 7d264c3a2a14fda4fb52e888c9cddc6e, type: 3}
+    name: FootStep3
+    volume: 0.5
+    source: {fileID: 0}
+  - clip: {fileID: 8300000, guid: a1ed64b85eee65647915cbe5b0fabec9, type: 3}
+    name: FootStep4
+    volume: 0.5
+    source: {fileID: 0}
+  - clip: {fileID: 8300000, guid: afa118b87d9013e4582c103d6f090d9b, type: 3}
+    name: Jump
+    volume: 1
+    source: {fileID: 0}
+  - clip: {fileID: 8300000, guid: cf70f56596714aa478a25023b1745ba3, type: 3}
+    name: Land
+    volume: 1
+    source: {fileID: 0}
+  - clip: {fileID: 8300000, guid: a5dbcd005c83d7e49b84f53a31a56c50, type: 3}
+    name: WallEnter
+    volume: 1
+    source: {fileID: 0}
+  - clip: {fileID: 8300000, guid: 2e976e51907032b4abf7fedf4ffcc5ee, type: 3}
+    name: WallDown
+    volume: 1
+    source: {fileID: 0}
+  - clip: {fileID: 8300000, guid: afa118b87d9013e4582c103d6f090d9b, type: 3}
+    name: WallJump
+    volume: 1
+    source: {fileID: 0}
+  - clip: {fileID: 8300000, guid: d80651204de73b34d984449ac27da106, type: 3}
+    name: Shoot
+    volume: 1
+    source: {fileID: 0}
+  - clip: {fileID: 8300000, guid: 6613140db9513ee4887df2eb27dd5b12, type: 3}
+    name: Reload
+    volume: 1
+    source: {fileID: 0}
+  - clip: {fileID: 8300000, guid: fe6722301b469714cb2aa428823ca7b7, type: 3}
+    name: Catch
+    volume: 1
+    source: {fileID: 0}
+  - clip: {fileID: 8300000, guid: 5d8c94819b40bab43a5d801ff4e474fb, type: 3}
+    name: Hit
+    volume: 1
+    source: {fileID: 0}
+  - clip: {fileID: 8300000, guid: f0ede2256bd4cf54dbf27173406dc159, type: 3}
+    name: Dash
+    volume: 1
+    source: {fileID: 0}

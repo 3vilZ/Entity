@@ -19,6 +19,10 @@ public class PlayerData
 
     public int iSceneIndex;
 
+    public float fVolumeMultiplier;
+
+    public bool bStandardAim;
+
     public PlayerData (GameManager gm)
     {
         goLobby1 = new bool[gm.goLobby1.Length];
@@ -50,5 +54,9 @@ public class PlayerData
         }
 
         iSceneIndex = gm.iSceneIndex;
+
+        fVolumeMultiplier = gm.fVolumeMultiplier;
+
+        bStandardAim = gm.bStandardAim;
     } 
 }

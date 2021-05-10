@@ -9,19 +9,54 @@ public class MainMenu : MonoBehaviour
     public GameObject[] goScreens;
     public GameObject[] goFirstSelect;
     public SettingsSelection[] sSelection;
+    public GameObject goTransition;
 
     int iScreen;
     Animator animator;
     bool bTransition = false;
+    bool bOnce = false;
 
     void Start()
     {
         animator = GetComponent<Animator>();
-        iScreen = 0;
-        FadeIn();
+
+        goTransition.SetActive(true);
+        StartCoroutine(OutTransition());
 
         GameManager.Instance.LoadGame();
         sSelection[0].goSelection.GetComponent<Slider>().value = GameManager.Instance.fVolumeMultiplier;
+    }
+
+    IEnumerator OutTransition()
+    {
+        yield return new WaitForSeconds(2.1f);
+        goTransition.SetActive(false);
+        iScreen = 0;
+        FadeIn();
+        StopCoroutine(OutTransition());
+    }
+
+    IEnumerator InTransition(int iAction)
+    {
+        goTransition.SetActive(true);
+        goTransition.GetComponent<Animator>().SetTrigger("In");
+        yield return new WaitForSeconds(2.5f);
+        switch(iAction)
+        {
+            case 0:
+                GameManager.Instance.QuitGame();
+                break;
+            case 1:
+                GameManager.Instance.NewGame();
+                break;
+            case 2:
+                GameManager.Instance.ContinueGame();
+                break;
+            default:
+                print("PdroP");
+                break;
+        }
+        StopCoroutine(InTransition(3));
     }
 
     public void FadeOut(int i)
@@ -40,7 +75,7 @@ public class MainMenu : MonoBehaviour
         }
 
         goScreens[iScreen].SetActive(true);
-        //EventSystem.current.SetSelectedGameObject(null);
+        EventSystem.current.SetSelectedGameObject(null);
         EventSystem.current.SetSelectedGameObject(goFirstSelect[iScreen]);
         animator.SetTrigger("FadeIn");
         bTransition = false;
@@ -75,11 +110,6 @@ public class MainMenu : MonoBehaviour
         }
     }
 
-    public void ContinueGame()
-    {
-        GameManager.Instance.ContinueGame();
-    }
-
     public void VolumeMultiplier(Slider slider)
     {
         GameManager.Instance.fVolumeMultiplier = slider.value;
@@ -87,12 +117,33 @@ public class MainMenu : MonoBehaviour
 
     public void QuitGame()
     {
-        GameManager.Instance.QuitGame();
+        if(!bOnce)
+        {
+            StartCoroutine(InTransition(0));
+            bOnce = true;
+        }
+        
+        //GameManager.Instance.QuitGame();
     }
 
     public void NewGame()
     {
-        GameManager.Instance.NewGame();
+        if (!bOnce)
+        {
+            StartCoroutine(InTransition(1));
+            bOnce = true;
+        }
+        //GameManager.Instance.NewGame();
+    }
+
+    public void ContinueGame()
+    {
+        if (!bOnce)
+        {
+            StartCoroutine(InTransition(2));
+            bOnce = true;
+        }
+        //GameManager.Instance.ContinueGame();
     }
 
     [System.Serializable]

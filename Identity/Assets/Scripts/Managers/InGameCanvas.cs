@@ -49,7 +49,11 @@ public class InGameCanvas : MonoBehaviour
     public GameObject goCollectableDisplay;
     public TextMeshProUGUI txtCollectable;
     Animator collectableAnimator;
-    
+
+    [Header("Transition")]
+    public GameObject goTransition;
+    bool bOnce = false;
+
 
     private void Awake()
     {
@@ -88,6 +92,29 @@ public class InGameCanvas : MonoBehaviour
         //Collectable
         goCollectableDisplay.SetActive(false);
         collectableAnimator = goCollectableDisplay.GetComponent<Animator>();
+
+        goTransition.SetActive(true);
+        StartCoroutine(OutTransition());
+    }
+
+    IEnumerator OutTransition()
+    {
+        GameManager.Instance.ScriptPlayer.bInteracting = true;
+        yield return new WaitForSeconds(2.2f);
+        goTransition.SetActive(false);
+        GameManager.Instance.ScriptPlayer.bInteracting = false;
+        StopCoroutine(OutTransition());
+    }
+
+    public IEnumerator InTransition(string strNextLevel)
+    {
+        GameManager.Instance.GoPlayer.GetComponent<PlayerAnim>().Interact();
+        GameManager.Instance.ScriptPlayer.bInteracting = true;
+        goTransition.SetActive(true);
+        goTransition.GetComponent<Animator>().SetTrigger("In");
+        yield return new WaitForSeconds(2.5f);
+        GameManager.Instance.LoadLevel(strNextLevel);
+        StopCoroutine(InTransition(strNextLevel));
     }
 
     #region PauseMenu
@@ -149,8 +176,12 @@ public class InGameCanvas : MonoBehaviour
 
     public void MainMenu()
     {
-        GameManager.Instance.SaveGame();
-        GameManager.Instance.LoadLevel(0);
+        if(!bOnce)
+        {
+            GameManager.Instance.SaveGame();
+            StartCoroutine(InTransition("MainMenu"));
+            bOnce = true;
+        }
     }
 
     public void VolumeMultiplier(Slider slider)

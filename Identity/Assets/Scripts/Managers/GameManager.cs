@@ -97,14 +97,12 @@ public class GameManager : MonoBehaviour
             
         }
 
-        /*
-        for (int i = 0; i < bSkill.Length; i++)
-        {
-            bSkill[i] = false;
-        }
-        */
-
         iSceneIndex = level;
+
+        if (SceneManager.GetActiveScene() != SceneManager.GetSceneByBuildIndex(0))
+        {
+            SaveGame();
+        }
     }
 
     private void Awake()
@@ -159,7 +157,36 @@ public class GameManager : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.C))
         {
-            print(Application.persistentDataPath);
+            for (int i = 0; i < goLobby1.Length; i++)
+            {
+                print("goLobby1: " + goLobby1[i]);
+            }
+            for (int i = 0; i < goLobby2.Length; i++)
+            {
+                print("goLobby2: " + goLobby2[i]);
+            }
+            for (int i = 0; i < goLobby3.Length; i++)
+            {
+                print("goLobby3: " + goLobby3[i]);
+            }
+
+            print("ISpawn: " + ISpawn);
+
+            print("ICoreStart: " + ICoreStart);
+
+            print("ICollectables: " + ICollectables);
+
+            for (int i = 0; i < listCollectableID.Count; i++)
+            {
+                print("listCollectableID: " + listCollectableID[i]);
+
+            }
+
+            print("iSceneIndex: " + iSceneIndex);
+
+            print("fVolumeMultiplier: " + fVolumeMultiplier);
+
+            print("bStandardAim: " + bStandardAim);
         }                                                                                                  
     }
     

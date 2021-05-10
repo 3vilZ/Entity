@@ -22,7 +22,8 @@ public class ScriptableEndLvl :MonoBehaviour
             if (other.gameObject.tag == "Player")
             {
                 GameManager.Instance.ISpawn = iNextSpawn;
-                GameManager.Instance.LoadLevel(strNextLevel);
+                //GameManager.Instance.LoadLevel(strNextLevel);
+                StartCoroutine(InGameCanvas.Instance.InTransition(strNextLevel));
             }
         }
     }

@@ -19119,7 +19119,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1417720872053266615}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 472.49997, y: -0.97204304, z: -600}
+  m_LocalPosition: {x: 0, y: 2.8279567, z: -600}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1417720873242113992}
@@ -19521,7 +19521,7 @@ MonoBehaviour:
   fBallReloadForce: 100
   fPlayerReloadForce: 20
   bCOLLIDEOnReload: 0
-  bShootDirectionForPlayer: 1
+  bStandardAim: 0
   bBallOn: 0
   fDashForce: 50
   fDashDistance: 10
@@ -19554,6 +19554,7 @@ MonoBehaviour:
   psLink: {fileID: 1359487291}
   psArc: {fileID: 1562485213}
   lineRenderer: {fileID: 0}
+  fFootstepsTimer: 0.3
   bPlatformMove: 0
   goPlatformMove: {fileID: 0}
   bDK: 0
@@ -19562,7 +19563,6 @@ MonoBehaviour:
   bInteracting: 0
   bCollecting: 0
   goCurrentCollectable: {fileID: 0}
-  bBugTest: 1
 --- !u!114 &7224575447954468581
 MonoBehaviour:
   m_ObjectHideFlags: 0

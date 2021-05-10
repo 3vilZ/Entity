@@ -1669,14 +1669,14 @@ AnimationClip:
     intParameter: 0
     messageOptions: 0
   - time: 0.31666666
-    functionName: BoolDeathDoneReset
+    functionName: Revive
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
   - time: 0.33333334
-    functionName: Revive
+    functionName: BoolDeathDoneReset
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0

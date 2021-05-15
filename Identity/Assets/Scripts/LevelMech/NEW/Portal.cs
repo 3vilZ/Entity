@@ -28,6 +28,7 @@ public class Portal : MonoBehaviour
         {
             bPlayerA = true;
             GameManager.Instance.LookAheadSmoothing(true);
+            AudioManager.Instance.PlayMechFx("PortalA");
             GameManager.Instance.GoPlayer.transform.position = tPortalB.position;
         }
 
@@ -35,6 +36,7 @@ public class Portal : MonoBehaviour
         {
             bPlayerB = true;
             GameManager.Instance.LookAheadSmoothing(true);
+            AudioManager.Instance.PlayMechFx("PortalB");
             GameManager.Instance.GoPlayer.transform.position = tPortalA.position;
         }
 
@@ -61,6 +63,7 @@ public class Portal : MonoBehaviour
         {
             bBallA = true;
             GameManager.Instance.LookAheadSmoothing(true);
+            AudioManager.Instance.PlayMechFx("PortalA");
             GameManager.Instance.GoBall.transform.position = tPortalB.position;
         }
 
@@ -68,6 +71,7 @@ public class Portal : MonoBehaviour
         {
             bBallB = true;
             GameManager.Instance.LookAheadSmoothing(true);
+            AudioManager.Instance.PlayMechFx("PortalB");
             GameManager.Instance.GoBall.transform.position = tPortalA.position;
         }
 

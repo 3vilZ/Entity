@@ -42,14 +42,17 @@ public class SecondTrue : MonoBehaviour
             if (second.timerControl > second.fSectionTime)
             {
                 second.timerControl = second.fSectionTime * 3;
+                AudioManager.Instance.PlayMechFx("Second3");
             }
             else if (second.timerControl <= second.fSectionTime && second.timerControl > 0)
             {
                 second.timerControl = second.fSectionTime * 2;
+                AudioManager.Instance.PlayMechFx("Second2");
             }
             else
             {
                 second.timerControl = second.fSectionTime;
+                AudioManager.Instance.PlayMechFx("Second1");
             }
         }
     }

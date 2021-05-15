@@ -100,6 +100,8 @@ public class PowerCell : MonoBehaviour
 
             GetComponent<Collider2D>().enabled = false;
 
+            AudioManager.Instance.PlayMechFx("PowerCell");
+
             bTaken = true;
             
         }

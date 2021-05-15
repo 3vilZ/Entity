@@ -22,6 +22,8 @@ public class Trampoline : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             GameManager.Instance.GoPlayer.GetComponent<Rigidbody2D>().velocity = new Vector2(GameManager.Instance.GoPlayer.GetComponent<Rigidbody2D>().velocity.x, fPlayerSpeed);
+            AudioManager.Instance.PlaySound("Jump");
+            AudioManager.Instance.PlayMechFx("Trampoline");
         }
         if (other.gameObject.tag == "Ball")
         {
@@ -33,6 +35,8 @@ public class Trampoline : MonoBehaviour
             {
                 GameManager.Instance.GoBall.GetComponent<Rigidbody2D>().velocity = new Vector2(GameManager.Instance.GoBall.GetComponent<Rigidbody2D>().velocity.x, fBallSpeed);
             }
+            AudioManager.Instance.PlaySound("Shoot");
+            AudioManager.Instance.PlayMechFx("Trampoline");
         }
     }
 }

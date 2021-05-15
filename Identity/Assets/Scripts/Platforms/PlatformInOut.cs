@@ -60,16 +60,24 @@ public class PlatformInOut : MonoBehaviour
                     fTimeToOutControl = fTimeToOut;
                     fTimeToIncontrol = fTimeToIn;
 
+                    AudioManager.Instance.PlayMechFx("InOutOn");
                     bOut = false;
                 }
             }
         }
     }
 
+    IEnumerator SoundOff()
+    {
+        yield return new WaitForSeconds(fTimeToOut);
+        AudioManager.Instance.PlayMechFx("InOutOff");
+    }
+
     private void OnCollisionEnter2D(Collision2D other)
     {
         if (other.gameObject.tag == "Player" || other.gameObject.tag == "Ball" || other.gameObject.tag == "Bullet")
         {
+            StartCoroutine(SoundOff());
             bOut = true;
         }
     }

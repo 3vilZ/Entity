@@ -7,6 +7,7 @@ public class RuneKey : MonoBehaviour
     [SerializeField] RuneDoor runeDoor;
     [SerializeField] float fSpeed;
     [SerializeField] float fDistance;
+    [SerializeField] ParticleSystem psKey;
 
     [HideInInspector] public bool bFollowing;
     Vector3 v3Direction;
@@ -34,6 +35,8 @@ public class RuneKey : MonoBehaviour
     {
         if(other.gameObject.tag == "Player")
         {
+            psKey.Play();
+            AudioManager.Instance.PlayMechFx("RuneKey");
             bFollowing = true;
             GetComponent<Collider2D>().enabled = false;
         }

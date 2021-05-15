@@ -20,6 +20,9 @@ public class PlatformMove : MonoBehaviour
 
     [HideInInspector] public bool bKeepInfo = false;
 
+    AudioSource asMove;
+    AudioSource asLoop;
+
     void Start()
     {
         iCurrentPoint = 1;
@@ -33,6 +36,9 @@ public class PlatformMove : MonoBehaviour
         {
             lineRenderer.SetPosition(i, tPoints[i].transform.position);
         }
+
+        asMove = AudioManager.Instance.GetMechFx("PlatformMove");
+        asLoop = AudioManager.Instance.GetMechFx("PlatformMoveLoop");
     }
 
     
@@ -40,6 +46,15 @@ public class PlatformMove : MonoBehaviour
     {
         if (bMoving)
         {
+            if (!asLoop.isPlaying)
+            {
+                AudioManager.Instance.PlayMechFx("PlatformMoveLoop");
+            }
+            if (!asMove.isPlaying)
+            {
+                
+            }
+
             if (!bBackward)
             {
                 v3CurrentVector = tPoints[iCurrentPoint].position - transform.position;
@@ -89,6 +104,10 @@ public class PlatformMove : MonoBehaviour
                 }
             }
         }
+        else
+        {
+            asLoop.Stop();
+        }
     }
 
     public void Reset()
@@ -108,6 +127,7 @@ public class PlatformMove : MonoBehaviour
         if(other.gameObject.tag == "Player" && !bMoving || other.gameObject.tag == "Ball" && !bMoving || other.gameObject.tag == "Bullet" && !bMoving)
         {
             GameManager.Instance.KeepInfo(this);
+            //AudioManager.Instance.PlayMechFx("PlatformMove");
             bMoving = true;
         }
     }
@@ -115,6 +135,7 @@ public class PlatformMove : MonoBehaviour
     {
         if (other.gameObject.tag == "Player" && !bMoving)
         {
+            //AudioManager.Instance.PlayMechFx("PlatformMove");
             bMoving = true;
         }
     }

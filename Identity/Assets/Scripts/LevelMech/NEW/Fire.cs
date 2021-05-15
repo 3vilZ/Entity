@@ -5,12 +5,24 @@ using UnityEngine;
 public class Fire : MonoBehaviour
 {
     [HideInInspector] public bool bKeepInfo = false;
+    [SerializeField] float fMaxDistance;
+    float fPlayerDistance;
+    AudioSource asFire;
+    bool bCrash = false;
+    float asFireVolume;
+
+    private void Start()
+    {
+        asFire = AudioManager.Instance.asFireLoop;
+        asFireVolume = asFire.volume;
+    }
 
     public void Crash()
     {
         GameManager.Instance.KeepInfo(this);
         GetComponent<SpriteRenderer>().enabled = false;
         GetComponent<Collider2D>().enabled = false;
+        bCrash = true;
     }
 
     public void Reset()
@@ -22,7 +34,30 @@ public class Fire : MonoBehaviour
         }          
     }
 
-    
+    private void Update()
+    {
+        fPlayerDistance = Vector2.Distance(GameManager.Instance.GoPlayer.transform.position, transform.position);
+        if (fPlayerDistance < fMaxDistance)
+        {
+            if(!asFire.isPlaying && !bCrash)
+            {
+                AudioManager.Instance.PlayMechFx("Fire");
+                //asFire.volume = asFireVolume * ((fPlayerDistance * 0.1f) / (fMaxDistance * 5f));
+            }
+            else if(bCrash)
+            {
+                asFire.Stop();
+            }
+
+        }
+        else
+        {
+            if (asFire.isPlaying)
+            {
+                asFire.Stop();
+            }
+        }
+    }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -38,5 +73,11 @@ public class Fire : MonoBehaviour
             GameManager.Instance.ScriptPlayer.BoolDeathDone();
             GameManager.Instance.Death1();
         }
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, fMaxDistance);
     }
 }

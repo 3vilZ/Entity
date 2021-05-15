@@ -20,6 +20,7 @@ public class HidePortionBubbles : MonoBehaviour
     {
         if (other.gameObject.tag == "Player" || other.gameObject.tag == "Ball")
         {
+            AudioManager.Instance.PlayMechFx("HidePortion");
             for (int i = 0; i < goChilds.Length; i++)
             {
                 goChilds[i].GetComponent<Animator>().SetTrigger("FadeOut");

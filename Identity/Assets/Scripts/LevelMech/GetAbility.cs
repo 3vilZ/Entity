@@ -13,11 +13,17 @@ public class GetAbility : MonoBehaviour
     [SerializeField] GameObject goAnimPlace;
     [SerializeField] GameObject[] goParts;
     [SerializeField] ParticleSystem[] ps;
+    [SerializeField] float fSoundDistance;
 
     Animator animAbility;
     bool bOnce = false;
     bool bStart = false;
     bool bEnd = false;
+
+    AudioSource asAbility;
+    float asAbilityVolume;
+    bool bAbilityStart = false;
+    bool bAbilityEnd = false;
 
     private void Start()
     {
@@ -42,10 +48,34 @@ public class GetAbility : MonoBehaviour
             goParts[0].SetActive(true);
             goBallHalo.SetActive(false);
         }
+
+        asAbility = AudioManager.Instance.asAbility;
     }
 
     private void Update()
     {
+        if (bAbilityStart)
+        {
+            if(!asAbility.isPlaying && !bAbilityEnd)
+            {
+                asAbility.Play();
+            }
+        }
+        else
+        {
+            if (Vector2.Distance(GameManager.Instance.GoPlayer.transform.position, transform.position) <= fSoundDistance)
+            {
+                //Audio
+                asAbilityVolume = asAbility.volume;
+                asAbility.volume = 0;
+                asAbility.Play();
+                StartCoroutine(AudioManager.Instance.FadeSound(asAbility, 2, asAbilityVolume));
+                AudioManager.Instance.FadeOut();
+                //Audio
+                bAbilityStart = true;
+            }
+        }
+
         if(!bOnce)
         {
             if (Vector2.Distance(GameManager.Instance.GoPlayer.transform.position, transform.position) <= fDistance)
@@ -64,6 +94,8 @@ public class GetAbility : MonoBehaviour
                         goBallSlot.transform.position = GameManager.Instance.GoBall.transform.position;
                         GameManager.Instance.GoBall.transform.parent = goBallSlot.transform;
                     }
+
+                    
 
                     bStart = true;
                     goY.SetActive(false);
@@ -105,6 +137,13 @@ public class GetAbility : MonoBehaviour
 
                 InGameCanvas.Instance.CoreFadeIn(iValue);
 
+                //Audio
+                StartCoroutine(AudioManager.Instance.FadeSound(asAbility, 2, 0, asAbilityVolume));
+                AudioManager.Instance.FadeIn();
+                bAbilityEnd = true;
+                //Audio
+
+
                 /*
                 //
                 CanvasManager.Instance.goCore[iValue].SetActive(true);
@@ -135,6 +174,7 @@ public class GetAbility : MonoBehaviour
         }
     }
 
+
     public void Particles()
     {
         for (int i = 0; i < ps.Length; i++)
@@ -160,5 +200,7 @@ public class GetAbility : MonoBehaviour
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, fDistance);
+        Gizmos.color = Color.blue;
+        Gizmos.DrawWireSphere(transform.position, fSoundDistance);
     }
 }

@@ -32,6 +32,7 @@ public class GameManager : MonoBehaviour
     [HideInInspector] public bool bStandardAim = true;
     //Vector2 tDeathPos;
 
+
     //Keep Info Lists
     [HideInInspector] public List<ButtonInteract> listButtonInteract = new List<ButtonInteract>();
     [HideInInspector] public List<Fragile> listFragile = new List<Fragile>();
@@ -149,11 +150,11 @@ public class GameManager : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Z))
         {
-            Time.timeScale = 0;
+            //Time.timeScale = 0;
         }
         if (Input.GetKeyDown(KeyCode.X))
         {
-            Time.timeScale = 1;
+            //Time.timeScale = 1;
         }
         if (Input.GetKeyDown(KeyCode.C))
         {
@@ -293,8 +294,8 @@ public class GameManager : MonoBehaviour
         goPlayer.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
         goPlayer.GetComponent<BoxCollider2D>().enabled = false;
         //tDeathPos = goPlayer.transform.position;
+        AudioManager.Instance.PlaySound("Death");
 
-        
     }
     public void Death2()
     {
@@ -314,6 +315,7 @@ public class GameManager : MonoBehaviour
         }
 
         goPlayer.GetComponent<Animator>().SetTrigger("Revive");
+        //AudioManager.Instance.PlaySound("Revive");
 
         //Vector3 delta = tCurrentCheckPointPos - tDeathPos;
         //goVirtualCamera.GetComponent<CinemachineVirtualCamera>().enabled = false;

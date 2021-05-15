@@ -43,7 +43,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 254ec9dc845644b48a07318aefe3e7bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  arrayNum: 2
+  arrayNum: 0
   mainMusic:
   - audioMusic:
     - clip: {fileID: 8300000, guid: 791e0eebf25d5bc468e782980fd7521f, type: 3}
@@ -137,27 +137,27 @@ MonoBehaviour:
     name: Land
     volume: 1
     source: {fileID: 0}
-  - clip: {fileID: 8300000, guid: a5dbcd005c83d7e49b84f53a31a56c50, type: 3}
+  - clip: {fileID: 8300000, guid: ddfab5e8f5305d64d9ef63517572218c, type: 3}
     name: WallEnter
-    volume: 1
+    volume: 0.6
     source: {fileID: 0}
   - clip: {fileID: 8300000, guid: 2e976e51907032b4abf7fedf4ffcc5ee, type: 3}
     name: WallDown
     volume: 1
     source: {fileID: 0}
-  - clip: {fileID: 8300000, guid: afa118b87d9013e4582c103d6f090d9b, type: 3}
+  - clip: {fileID: 8300000, guid: bddbbc1917a18024787d4ef33e6e798f, type: 3}
     name: WallJump
-    volume: 1
+    volume: 0.6
     source: {fileID: 0}
-  - clip: {fileID: 8300000, guid: d80651204de73b34d984449ac27da106, type: 3}
+  - clip: {fileID: 8300000, guid: 791f414f5a39d8b47996d7b7b22555f4, type: 3}
     name: Shoot
     volume: 1
     source: {fileID: 0}
-  - clip: {fileID: 8300000, guid: 6613140db9513ee4887df2eb27dd5b12, type: 3}
+  - clip: {fileID: 8300000, guid: db5d409606cdf544e88ad6438c1a98b4, type: 3}
     name: Reload
     volume: 1
     source: {fileID: 0}
-  - clip: {fileID: 8300000, guid: fe6722301b469714cb2aa428823ca7b7, type: 3}
+  - clip: {fileID: 8300000, guid: ac4531ab57c12b84caeb2d9d7d183025, type: 3}
     name: Catch
     volume: 1
     source: {fileID: 0}
@@ -165,7 +165,155 @@ MonoBehaviour:
     name: Hit
     volume: 1
     source: {fileID: 0}
-  - clip: {fileID: 8300000, guid: f0ede2256bd4cf54dbf27173406dc159, type: 3}
+  - clip: {fileID: 8300000, guid: 32c072d1336b4544da17af0b59775096, type: 3}
     name: Dash
     volume: 1
     source: {fileID: 0}
+  - clip: {fileID: 8300000, guid: 640c3b0e856abe4469b43773d99bf287, type: 3}
+    name: Death
+    volume: 1
+    source: {fileID: 0}
+  - clip: {fileID: 8300000, guid: ebb08a8415dc7cc4c860c2ad742d91e3, type: 3}
+    name: Revive
+    volume: 1
+    source: {fileID: 0}
+  mechFx:
+  - clip: {fileID: 8300000, guid: 153af695d6c579a4d8e56427cf24f0bf, type: 3}
+    name: Hint
+    volume: 0.5
+    source: {fileID: 0}
+  - clip: {fileID: 8300000, guid: 5ad63151157f50e41a2570a74896ca38, type: 3}
+    name: HidePortion
+    volume: 1
+    source: {fileID: 0}
+  - clip: {fileID: 8300000, guid: b87addeb595cbdf4abc30a6d1023514c, type: 3}
+    name: PowerCell
+    volume: 1
+    source: {fileID: 0}
+  - clip: {fileID: 8300000, guid: 3d51359c2d644474e97a4751bb90a62b, type: 3}
+    name: Fragile
+    volume: 0.6
+    source: {fileID: 0}
+  - clip: {fileID: 8300000, guid: c27f4c375d137b8489f31988ce832b53, type: 3}
+    name: FallCrash
+    volume: 1
+    source: {fileID: 0}
+  - clip: {fileID: 8300000, guid: 653fe8450ff1bfb4fa7c8e571d2a744b, type: 3}
+    name: FallGround
+    volume: 1
+    source: {fileID: 0}
+  - clip: {fileID: 8300000, guid: 3e971d7abcd41bc4ebadbf5015339818, type: 3}
+    name: BulletShoot
+    volume: 0.2
+    source: {fileID: 0}
+  - clip: {fileID: 8300000, guid: d1fb9cf57a9082b4281d3284449147e9, type: 3}
+    name: BulletDestroy
+    volume: 0.5
+    source: {fileID: 0}
+  - clip: {fileID: 8300000, guid: 19cde398d4b3b4d43aacf96a9be7f345, type: 3}
+    name: ProjectileDestroy
+    volume: 1
+    source: {fileID: 0}
+  - clip: {fileID: 8300000, guid: b1d9f5e0ab5fa4d4fafa4ca83fbf01a5, type: 3}
+    name: ButtonClick
+    volume: 1
+    source: {fileID: 0}
+  - clip: {fileID: 8300000, guid: 96730e6c7caca6440b81b44c0df6f84f, type: 3}
+    name: ButtonOpen
+    volume: 0.8
+    source: {fileID: 0}
+  - clip: {fileID: 8300000, guid: c007aa189bcc4124cab221519c41e89e, type: 3}
+    name: ButtonReset
+    volume: 1
+    source: {fileID: 0}
+  - clip: {fileID: 8300000, guid: b148bf2a48968ef4c9dd22ae9d7fe207, type: 3}
+    name: DKIn
+    volume: 1
+    source: {fileID: 0}
+  - clip: {fileID: 8300000, guid: dfb5cc3e8457bae409fdfa34395f6fc4, type: 3}
+    name: DKLaunch
+    volume: 1
+    source: {fileID: 0}
+  - clip: {fileID: 8300000, guid: 00a1a0148fc85fb449b668e825020ad2, type: 3}
+    name: Fire
+    volume: 1
+    source: {fileID: 0}
+  - clip: {fileID: 8300000, guid: 99c7b661de7c69b4b9be86d6a887cac7, type: 3}
+    name: InOutOff
+    volume: 1
+    source: {fileID: 0}
+  - clip: {fileID: 8300000, guid: 791c6ac85651a1946add45ce8e971a68, type: 3}
+    name: InOutOn
+    volume: 1
+    source: {fileID: 0}
+  - clip: {fileID: 8300000, guid: 34d757dea8e56214c85bf933242c56a6, type: 3}
+    name: PlatformMove
+    volume: 1
+    source: {fileID: 0}
+  - clip: {fileID: 8300000, guid: 3cf162f5e1c814240828e1ce7e8b0a2c, type: 3}
+    name: PortalA
+    volume: 1
+    source: {fileID: 0}
+  - clip: {fileID: 8300000, guid: dd9e325f7f3983844b1e989a21ef06f7, type: 3}
+    name: PortalB
+    volume: 1
+    source: {fileID: 0}
+  - clip: {fileID: 8300000, guid: 4f2f831680a320e4781df9a913375460, type: 3}
+    name: SecondOff
+    volume: 1
+    source: {fileID: 0}
+  - clip: {fileID: 8300000, guid: 7e806edaac2cced40adaf540a0d578a4, type: 3}
+    name: Second1
+    volume: 1
+    source: {fileID: 0}
+  - clip: {fileID: 8300000, guid: aa0e1031302447d459833fe3b0c50ea7, type: 3}
+    name: Second2
+    volume: 1
+    source: {fileID: 0}
+  - clip: {fileID: 8300000, guid: 20a178ad64f381549b5f3b0a609be320, type: 3}
+    name: Second3
+    volume: 1
+    source: {fileID: 0}
+  - clip: {fileID: 8300000, guid: 603c4a8bfc0bfae4694d5378698541a9, type: 3}
+    name: TicTacTop
+    volume: 0.5
+    source: {fileID: 0}
+  - clip: {fileID: 8300000, guid: fcb74c60d6ed9864e8f20a05388de432, type: 3}
+    name: TicTacBot
+    volume: 0.5
+    source: {fileID: 0}
+  - clip: {fileID: 8300000, guid: 09a682f724925614c8d20593cac84593, type: 3}
+    name: FireOff
+    volume: 1
+    source: {fileID: 0}
+  - clip: {fileID: 8300000, guid: 5d8fc26dbbded5240903a6876b9b347d, type: 3}
+    name: PlatformMoveLoop
+    volume: 1
+    source: {fileID: 0}
+  - clip: {fileID: 8300000, guid: b7e8d0f6afd98784eb866f7200211339, type: 3}
+    name: HintUp
+    volume: 0.7
+    source: {fileID: 0}
+  - clip: {fileID: 8300000, guid: f9a0a746c2665424fb2975cafafe9ba0, type: 3}
+    name: CollectableLoop
+    volume: 0.3
+    source: {fileID: 0}
+  - clip: {fileID: 8300000, guid: bffdef6bd5f77874496f0def53177e98, type: 3}
+    name: CollectableEnd
+    volume: 0.3
+    source: {fileID: 0}
+  - clip: {fileID: 8300000, guid: 6613140db9513ee4887df2eb27dd5b12, type: 3}
+    name: RuneKey
+    volume: 1
+    source: {fileID: 0}
+  - clip: {fileID: 8300000, guid: 59b5fd8a4244a754e87dbf183decb613, type: 3}
+    name: Trampoline
+    volume: 0.4
+    source: {fileID: 0}
+  - clip: {fileID: 8300000, guid: 524bb2b42c55cc7429c37ab6e31a5149, type: 3}
+    name: Ability
+    volume: 0.4
+    source: {fileID: 0}
+  asCollectableLoop: {fileID: 0}
+  asFireLoop: {fileID: 0}
+  asAbility: {fileID: 0}

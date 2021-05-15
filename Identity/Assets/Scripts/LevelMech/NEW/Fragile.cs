@@ -25,5 +25,6 @@ public class Fragile : MonoBehaviour
         GetComponent<BoxCollider2D>().enabled = false;
         transform.GetChild(0).GetComponent<Collider2D>().enabled = false;
         transform.GetChild(1).GetComponent<Collider2D>().enabled = false;
+        AudioManager.Instance.PlayMechFx("Fragile");
     }
 }

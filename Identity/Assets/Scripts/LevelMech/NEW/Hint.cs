@@ -57,9 +57,14 @@ public class Hint : MonoBehaviour
             }
         }
     }
+    public void Sound()
+    {
+        AudioManager.Instance.PlayMechFx("HintUp");
+    }
 
     IEnumerator Grow()
     {
+        AudioManager.Instance.PlayMechFx("Hint");
         yield return new WaitForSeconds(1);
         animator.SetTrigger("Up");
     }

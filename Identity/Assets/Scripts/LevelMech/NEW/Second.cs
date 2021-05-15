@@ -10,10 +10,11 @@ public class Second : MonoBehaviour
 
     [HideInInspector] public float timerControl = 0;
     bool bPhysical = false;
+    public bool bOnce ;
 
     void Start()
     {
-        
+        bOnce = true;
     }
 
     // Update is called once per frame
@@ -23,11 +24,18 @@ public class Second : MonoBehaviour
         {
             goTrue.SetActive(false);
             goFalse.SetActive(true);
+
+            if(!bOnce)
+            {
+                AudioManager.Instance.PlayMechFx("SecondOff");
+                bOnce = true;
+            }
         }
         else
         {
             goTrue.SetActive(true);
             goFalse.SetActive(false);
+            bOnce = false;
         }
 
         if(timerControl > 0)

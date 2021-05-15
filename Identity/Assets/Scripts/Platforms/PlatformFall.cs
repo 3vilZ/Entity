@@ -90,6 +90,9 @@ public class PlatformFall : MonoBehaviour
             GetComponent<WallJump>().colRight.enabled = false;
 
             goBot.SetActive(true);
+
+            AudioManager.Instance.PlayMechFx("FallGround");
+
             bStart = false;
         }
     }

@@ -60,6 +60,9 @@ public class ButtonInteract : MonoBehaviour
                 arrayButtons[i].psClick.Play();
                 arrayButtons[i].GetComponent<Collider2D>().enabled = true;
             }
+
+            AudioManager.Instance.PlayMechFx("ButtonReset");
+            AudioManager.Instance.PlayMechFx("ButtonOpen");
         }     
     }
 
@@ -74,6 +77,7 @@ public class ButtonInteract : MonoBehaviour
             }
         }
         bActivated = true;
+        AudioManager.Instance.PlayMechFx("ButtonOpen");
         return;
     }
 

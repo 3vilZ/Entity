@@ -323,6 +323,7 @@ public class InGameCanvas : MonoBehaviour
             if (iEvent >= 0)
             {
                 goEvent[iEvent].GetComponent<Animator>().SetTrigger("Start");
+                AudioManager.Instance.PlayMechFx("ButtonOpen");
             }
 
         }

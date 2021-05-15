@@ -96,6 +96,8 @@ public class DK : MonoBehaviour
             fBallLoadControl = fLoadTime;
             bBallIn = false;
         }
+
+        AudioManager.Instance.PlayMechFx("DKLaunch");
     }
     void LaunchBall()
     {
@@ -116,6 +118,7 @@ public class DK : MonoBehaviour
             fBallLoadControl = fLoadTime;
 
             //GameManager.Instance.LookAheadSmoothing(false);
+            AudioManager.Instance.PlayMechFx("DKIn");
             bPlayerIn = true;
             
         }
@@ -128,6 +131,7 @@ public class DK : MonoBehaviour
             }
             GameManager.Instance.GoBall.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
             GameManager.Instance.GoBall.transform.position = transform.position;
+            AudioManager.Instance.PlayMechFx("DKIn");
             //CapShootReload
             bBallIn = true;
             

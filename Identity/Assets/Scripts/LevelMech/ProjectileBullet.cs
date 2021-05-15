@@ -15,5 +15,6 @@ public class ProjectileBullet : MonoBehaviour
     {
         //Destroy(gameObject);
         projectile.RemoveGameObject(gameObject);
+        AudioManager.Instance.PlayMechFx("BulletDestroy");
     }
 }

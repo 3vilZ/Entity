@@ -16,6 +16,7 @@ public class TicTacStarter : MonoBehaviour
     {
         //fTimer = tictacNormal[0].fCooldown * 0.5f;
         fTimerControl = fTimer;
+        tictacNormal[0].bIsAudio = true;
     }
 
     private void Update()

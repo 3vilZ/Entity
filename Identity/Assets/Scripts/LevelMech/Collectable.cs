@@ -24,6 +24,8 @@ public class Collectable : MonoBehaviour
     ParticleSystem.MainModule psMain;
     ParticleSystem.RotationOverLifetimeModule psRot;
 
+    AudioSource asCollectableLoop;
+
     private void Start()
     {
         GameManager.Instance.CheckCollectable(collectableID, this);
@@ -32,6 +34,7 @@ public class Collectable : MonoBehaviour
         psMain = ps.main;
         psRot = ps.rotationOverLifetime;
 
+        asCollectableLoop = AudioManager.Instance.asCollectableLoop;
     }
 
     private void Update()
@@ -44,6 +47,10 @@ public class Collectable : MonoBehaviour
             {
                 transform.position += v3Direction * fSpeed * Time.deltaTime;
             }
+            if (!asCollectableLoop.isPlaying)
+            {
+                asCollectableLoop.Play();
+            }
         }
         else
         {           
@@ -54,6 +61,8 @@ public class Collectable : MonoBehaviour
             if (Vector3.Distance(v3StartPos, transform.position) >= 0.1f)
             {
                 transform.position += v3Direction * fSpeed * Time.deltaTime;
+
+                asCollectableLoop.Stop();
             }
 
             bRDY1 = false;
@@ -72,9 +81,11 @@ public class Collectable : MonoBehaviour
 
         if (bRDY2)
         {
-            if(!b1Once)
+            asCollectableLoop.Stop();
+            if (!b1Once)
             {
                 InGameCanvas.Instance.CollectableFadeIn();
+                AudioManager.Instance.PlayMechFx("CollectableEnd");
                 b1Once = true;
             }
 

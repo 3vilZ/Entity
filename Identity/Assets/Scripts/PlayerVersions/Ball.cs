@@ -101,6 +101,7 @@ public class Ball : MonoBehaviour
             {
                 GameManager.Instance.ScriptPlayer.BubbleForceReload();
                 other.gameObject.GetComponent<Fire>().Crash();
+                AudioManager.Instance.PlayMechFx("FireOff");
             }
         }
     }
@@ -114,7 +115,9 @@ public class Ball : MonoBehaviour
             }
             else if(other.gameObject.tag == "Fall")
             {
+
                 other.gameObject.GetComponent<PlatformFall>().Crash();
+                AudioManager.Instance.PlayMechFx("FallCrash");
             }
             else if (other.gameObject.tag == "Arrow")
             {
@@ -169,7 +172,28 @@ public class Ball : MonoBehaviour
         }
 
         //AUDIO
-        AudioManager.Instance.PlaySound("Hit");
+        int fRandom = Random.Range(0, 4);
+        switch (fRandom)
+        {
+            case 0:
+                AudioManager.Instance.PlaySound("Hit1");
+                break;
+            case 1:
+                AudioManager.Instance.PlaySound("Hit2");
+                break;
+            case 2:
+                AudioManager.Instance.PlaySound("Hit3");
+                break;
+            case 3:
+                AudioManager.Instance.PlaySound("Hit4");
+                break;
+            case 4:
+                AudioManager.Instance.PlaySound("Hit5");
+                break;
+            default:
+                AudioManager.Instance.PlaySound("Hit1");
+                break;
+        }
 
         //ParticleSystem j = Instantiate(BallPS, collision.GetContact(0).point, targetRot);
     }

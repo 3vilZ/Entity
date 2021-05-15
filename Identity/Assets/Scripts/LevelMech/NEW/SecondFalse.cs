@@ -16,6 +16,7 @@ public class SecondFalse : MonoBehaviour
         if(other.gameObject.tag == "Ball")
         {
             second.timerControl = second.fSectionTime;
+            AudioManager.Instance.PlayMechFx("Second1");
         }
     }
 }

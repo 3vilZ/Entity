@@ -15,6 +15,9 @@ public class ButtonPoint : MonoBehaviour
             psClick.Play();
             buttonInteract.SetButton();
             GetComponent<Collider2D>().enabled = false;
+
+            AudioManager.Instance.PlayMechFx("ButtonClick");
+
             /*
             bActivated = true;
             colButton.enabled = false;

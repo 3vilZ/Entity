@@ -20,6 +20,7 @@ public class MagmaNew : MonoBehaviour
     {
         GetComponent<SpriteRenderer>().enabled = false;
         goGround.SetActive(false);
+        transform.localPosition = new Vector3(transform.localPosition.x, transform.localPosition.y, -0.05f);
     }
 
     public void Crash()

@@ -18,6 +18,7 @@ public class MagmaNew : MonoBehaviour
     }
     private void Start()
     {
+        GetComponent<SpriteRenderer>().enabled = false;
         goGround.SetActive(false);
     }
 

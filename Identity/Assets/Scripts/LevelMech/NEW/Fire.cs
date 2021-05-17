@@ -39,20 +39,13 @@ public class Fire : MonoBehaviour
         fPlayerDistance = Vector2.Distance(GameManager.Instance.GoPlayer.transform.position, transform.position);
         if (fPlayerDistance < fMaxDistance)
         {
-            if(!asFire.isPlaying && !bCrash)
+            asFire.volume = asFireVolume * ((fPlayerDistance * (-0.036f)) + 1.18f);
+            if (!asFire.isPlaying && !bCrash)
             {
                 AudioManager.Instance.PlayMechFx("Fire");
-                //asFire.volume = asFireVolume * ((fPlayerDistance * 0.1f) / (fMaxDistance * 5f));
+                
             }
             else if(bCrash)
-            {
-                asFire.Stop();
-            }
-
-        }
-        else
-        {
-            if (asFire.isPlaying)
             {
                 asFire.Stop();
             }

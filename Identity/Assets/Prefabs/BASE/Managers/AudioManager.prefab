@@ -127,7 +127,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - clip: {fileID: 8300000, guid: a1ed64b85eee65647915cbe5b0fabec9, type: 3}
     name: FootStep4
-    volume: 0.5
+    volume: 0.3
     source: {fileID: 0}
   - clip: {fileID: 8300000, guid: afa118b87d9013e4582c103d6f090d9b, type: 3}
     name: Jump
@@ -161,10 +161,6 @@ MonoBehaviour:
     name: Catch
     volume: 1
     source: {fileID: 0}
-  - clip: {fileID: 8300000, guid: 5d8c94819b40bab43a5d801ff4e474fb, type: 3}
-    name: Hit
-    volume: 1
-    source: {fileID: 0}
   - clip: {fileID: 8300000, guid: 32c072d1336b4544da17af0b59775096, type: 3}
     name: Dash
     volume: 1
@@ -176,6 +172,26 @@ MonoBehaviour:
   - clip: {fileID: 8300000, guid: ebb08a8415dc7cc4c860c2ad742d91e3, type: 3}
     name: Revive
     volume: 1
+    source: {fileID: 0}
+  - clip: {fileID: 8300000, guid: de421a9ea65bd9e4082cb0c041bbb46c, type: 3}
+    name: Hit1
+    volume: 0.2
+    source: {fileID: 0}
+  - clip: {fileID: 8300000, guid: 68afafe9ba9b0f94d91a7f9651c6b255, type: 3}
+    name: Hit2
+    volume: 0.2
+    source: {fileID: 0}
+  - clip: {fileID: 8300000, guid: c54c3c59609782745a7ac71d1af6fe88, type: 3}
+    name: Hit3
+    volume: 0.2
+    source: {fileID: 0}
+  - clip: {fileID: 8300000, guid: 16448c98fba85644c9fe6698bbea570e, type: 3}
+    name: Hit4
+    volume: 0.2
+    source: {fileID: 0}
+  - clip: {fileID: 8300000, guid: 25d2dac685a0a5f49825c059901f34bd, type: 3}
+    name: Hit5
+    volume: 0.2
     source: {fileID: 0}
   mechFx:
   - clip: {fileID: 8300000, guid: 153af695d6c579a4d8e56427cf24f0bf, type: 3}
@@ -314,6 +330,7 @@ MonoBehaviour:
     name: Ability
     volume: 0.4
     source: {fileID: 0}
+  bMainMenu: 0
   asCollectableLoop: {fileID: 0}
   asFireLoop: {fileID: 0}
   asAbility: {fileID: 0}

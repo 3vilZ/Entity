@@ -37,7 +37,8 @@ public class GameManager : MonoBehaviour
     [HideInInspector] public List<ButtonInteract> listButtonInteract = new List<ButtonInteract>();
     [HideInInspector] public List<Fragile> listFragile = new List<Fragile>();
     [HideInInspector] public List<PlatformMove> listPlatformMove = new List<PlatformMove>();
-    [HideInInspector] public List<Magma> listMagma = new List<Magma>();
+    //[HideInInspector] public List<Magma> listMagma = new List<Magma>();
+    [HideInInspector] public List<MagmaNew> listMagmaNew = new List<MagmaNew>();
     [HideInInspector] public List<Fire> listFire = new List<Fire>();
     [HideInInspector] public List<PlatformFall> listPlatformFall = new List<PlatformFall>();
 
@@ -100,8 +101,14 @@ public class GameManager : MonoBehaviour
 
         iSceneIndex = level;
 
-        if (SceneManager.GetActiveScene() != SceneManager.GetSceneByBuildIndex(0))
+        
+        if (SceneManager.GetActiveScene().buildIndex == 0)
         {
+            AudioManager.Instance.bMainMenu = true;
+        }
+        else
+        {
+            AudioManager.Instance.bMainMenu = false;
             SaveGame();
         }
     }
@@ -125,6 +132,15 @@ public class GameManager : MonoBehaviour
 
         scriptPlayer = goPlayer.GetComponent<PlayerControllerV3>();
         tCurrentCheckPointPos = goPlayer.transform.position;
+
+        if(SceneManager.GetActiveScene().buildIndex == 0)
+        {
+            AudioManager.Instance.bMainMenu = true;
+        }
+        else
+        {
+            AudioManager.Instance.bMainMenu = false;
+        }
     }
 
     private void Start()
@@ -190,6 +206,20 @@ public class GameManager : MonoBehaviour
             print("bStandardAim: " + bStandardAim);
         }                                                                                                  
     }
+
+    public void ChangeAim()
+    {
+        if (bStandardAim)
+        {
+            bStandardAim = false;
+            scriptPlayer.bStandardAim = false;
+        }
+        else
+        {
+            bStandardAim = true;
+            scriptPlayer.bStandardAim = true;
+        }
+    }
     
     public void GetSkill(int value)
     {
@@ -239,14 +269,19 @@ public class GameManager : MonoBehaviour
                 {
                     listFragile[i].bKeepInfo = true;
                 }
-
                 for (int i = 0; i < listPlatformMove.Count; i++)
                 {
                     listPlatformMove[i].bKeepInfo = true;
                 }
+                /*
                 for (int i = 0; i < listMagma.Count; i++)
                 {
                     listMagma[i].bKeepInfo = true;
+                }
+                */
+                for (int i = 0; i < listMagmaNew.Count; i++)
+                {
+                    listMagmaNew[i].bKeepInfo = true;
                 }
                 for (int i = 0; i < listFire.Count; i++)
                 {
@@ -367,9 +402,15 @@ public class GameManager : MonoBehaviour
         {
             listPlatformMove[i].Reset();
         }
+        /*
         for (int i = 0; i < listMagma.Count; i++)
         {
             listMagma[i].Reset();
+        }
+        */
+        for (int i = 0; i < listMagmaNew.Count; i++)
+        {
+            listMagmaNew[i].Reset();
         }
         for (int i = 0; i < listFire.Count; i++)
         {
@@ -383,7 +424,8 @@ public class GameManager : MonoBehaviour
         listButtonInteract.Clear();
         listFragile.Clear();
         listPlatformMove.Clear();
-        listMagma.Clear();
+        //listMagma.Clear();
+        listMagmaNew.Clear();
         listFire.Clear();
         listPlatformFall.Clear();
     }
@@ -408,11 +450,20 @@ public class GameManager : MonoBehaviour
             listPlatformMove.Add(info);
         }
     }
+    /*
     public void KeepInfo(Magma info)
     {
         if (!listMagma.Contains(info))
         {
             listMagma.Add(info);
+        }
+    }
+    */
+    public void KeepInfo(MagmaNew info)
+    {
+        if (!listMagmaNew.Contains(info))
+        {
+            listMagmaNew.Add(info);
         }
     }
     public void KeepInfo(Fire info)

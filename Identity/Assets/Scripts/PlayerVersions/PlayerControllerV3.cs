@@ -75,7 +75,7 @@ public class PlayerControllerV3 : MonoBehaviour
     [SerializeField] float fBallReloadForce;
     [SerializeField] float fPlayerReloadForce;
     [SerializeField] bool bCOLLIDEOnReload;
-    [SerializeField] bool bStandardAim;
+    [SerializeField] public bool bStandardAim;
     [HideInInspector] public bool bBallOn = false;
     bool bShootDone = false;
     bool bShootRDY = false;
@@ -272,14 +272,7 @@ public class PlayerControllerV3 : MonoBehaviour
 
         if (Input.GetButtonDown("Bumper"))
         {
-            if(bStandardAim)
-            {
-                bStandardAim = false;
-            }
-            else
-            {
-                bStandardAim = true;
-            }
+            GameManager.Instance.ChangeAim();
         }
 
         if(!bDeadDone && !bInteracting)

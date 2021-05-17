@@ -144,7 +144,9 @@ public class Ball : MonoBehaviour
             else if (other.gameObject.tag == "Magma")
             {
                 GameManager.Instance.ScriptPlayer.BubbleForceReload();
-                other.gameObject.GetComponent<Magma>().Crash();
+                //other.gameObject.GetComponent<Magma>().Crash();
+                other.gameObject.GetComponent<MagmaNew>().Crash();
+                AudioManager.Instance.PlayMechFx("FireOff");
             }
             //Fire and Laser on his own code
         }

@@ -15,7 +15,7 @@ public class Magma : MonoBehaviour
 
     public void Crash()
     {
-        GameManager.Instance.KeepInfo(this);
+        //GameManager.Instance.KeepInfo(this);
         GetComponent<SpriteRenderer>().enabled = false;
         GetComponent<Collider2D>().enabled = false;
         goPlatform.SetActive(true);

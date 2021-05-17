@@ -13,6 +13,7 @@ public class AudioManager : MonoBehaviour
     public AudioSerializable[] audioFx;
     public AudioSerializable[] mechFx;
 
+    [HideInInspector] public bool bMainMenu;
     AudioSource currentAudiosource;
     bool bMusic = true;
     float fcurrentvolume;
@@ -117,8 +118,11 @@ public class AudioManager : MonoBehaviour
 
     public void PlaySound(string name)
     {
-        AudioSerializable audio = Array.Find(audioFx, sound => sound.name == name);
-        audio.source.Play();
+        if(!bMainMenu)
+        {
+            AudioSerializable audio = Array.Find(audioFx, sound => sound.name == name);
+            audio.source.Play();
+        }
     }
 
     public void PlayMechFx(string name)
@@ -140,6 +144,8 @@ public class AudioManager : MonoBehaviour
     }
 
     #endregion
+
+    #region Fades
 
     public void FadeOut()
     {
@@ -193,6 +199,8 @@ public class AudioManager : MonoBehaviour
 
         yield break;
     }
+
+    #endregion
 }
 
 [System.Serializable]

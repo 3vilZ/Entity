@@ -378,10 +378,20 @@ public class InGameCanvas : MonoBehaviour
 
             if (Input.GetButtonDown("Cancel") && iScreen != 0)
             {
+                if (!bTransition)
+                {
+                    GetComponent<AudioSource>().Play();
+                }
+
                 FadeOut(0);
             }
             else if (Input.GetButtonDown("Cancel"))
             {
+                if (!bTransition)
+                {
+                    GetComponent<AudioSource>().Play();
+                }
+
                 PauseGame();
             }
 

@@ -18,6 +18,7 @@ public class Projectile : MonoBehaviour
     public List<GameObject> goCarcajList = new List<GameObject>();
 
     bool bCrash = false;
+    bool bCrashOnce = false;
 
     void Start()
     {
@@ -31,8 +32,13 @@ public class Projectile : MonoBehaviour
 
     public void Crash()
     {
-        bCrash = true;
-        AudioManager.Instance.PlayMechFx("ProjectileDestroy");
+        if(!bCrashOnce)
+        {
+            bCrash = true;
+            AudioManager.Instance.PlayMechFx("ProjectileDestroy");
+            bCrashOnce = true;
+        }
+        
     }
 
     void Update()

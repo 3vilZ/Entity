@@ -302,9 +302,9 @@ MonoBehaviour:
     name: FireOff
     volume: 1
     source: {fileID: 0}
-  - clip: {fileID: 8300000, guid: 5d8fc26dbbded5240903a6876b9b347d, type: 3}
+  - clip: {fileID: 8300000, guid: fb3c0ec90c7baa04b864c94714e8e90a, type: 3}
     name: PlatformMoveLoop
-    volume: 1
+    volume: 0.3
     source: {fileID: 0}
   - clip: {fileID: 8300000, guid: b7e8d0f6afd98784eb866f7200211339, type: 3}
     name: HintUp

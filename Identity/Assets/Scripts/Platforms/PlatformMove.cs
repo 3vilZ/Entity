@@ -20,7 +20,7 @@ public class PlatformMove : MonoBehaviour
 
     [HideInInspector] public bool bKeepInfo = false;
 
-    AudioSource asMove;
+    //AudioSource asMove;
     AudioSource asLoop;
 
     void Start()
@@ -37,12 +37,10 @@ public class PlatformMove : MonoBehaviour
             lineRenderer.SetPosition(i, tPoints[i].transform.position);
         }
 
-        asMove = AudioManager.Instance.GetMechFx("PlatformMove");
+        //asMove = AudioManager.Instance.GetMechFx("PlatformMove");
         asLoop = AudioManager.Instance.GetMechFx("PlatformMoveLoop");
     }
-
-    
-    void FixedUpdate()
+    private void Update()
     {
         if (bMoving)
         {
@@ -50,11 +48,14 @@ public class PlatformMove : MonoBehaviour
             {
                 AudioManager.Instance.PlayMechFx("PlatformMoveLoop");
             }
-            if (!asMove.isPlaying)
-            {
-                
-            }
+        }
 
+    }
+
+    void FixedUpdate()
+    {
+        if (bMoving)
+        {
             if (!bBackward)
             {
                 v3CurrentVector = tPoints[iCurrentPoint].position - transform.position;
@@ -103,10 +104,6 @@ public class PlatformMove : MonoBehaviour
                     }
                 }
             }
-        }
-        else
-        {
-            asLoop.Stop();
         }
     }
 

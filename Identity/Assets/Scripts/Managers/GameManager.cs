@@ -126,14 +126,20 @@ public class GameManager : MonoBehaviour
 
         DontDestroyOnLoad(gameObject);
 
-    
         goPlayer = GameObject.FindGameObjectWithTag("Player");
         goBall = GameObject.FindGameObjectWithTag("Ball");
 
         scriptPlayer = goPlayer.GetComponent<PlayerControllerV3>();
         tCurrentCheckPointPos = goPlayer.transform.position;
 
-        if(SceneManager.GetActiveScene().buildIndex == 0)
+        
+    }
+
+    private void Start()
+    {
+        Cursor.visible = false;
+        //Cursor.lockState = CursorLockMode.Locked;
+        if (SceneManager.GetActiveScene().buildIndex == 0)
         {
             AudioManager.Instance.bMainMenu = true;
         }
@@ -141,12 +147,6 @@ public class GameManager : MonoBehaviour
         {
             AudioManager.Instance.bMainMenu = false;
         }
-    }
-
-    private void Start()
-    {
-        Cursor.visible = false;
-        //Cursor.lockState = CursorLockMode.Locked;
     }
     
     private void Update()

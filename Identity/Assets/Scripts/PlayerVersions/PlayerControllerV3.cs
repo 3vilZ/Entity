@@ -138,7 +138,7 @@ public class PlayerControllerV3 : MonoBehaviour
 
     [Header("General")]
     [SerializeField] GameObject goPlayerArrow;
-    [SerializeField] Transform tModel;
+    [SerializeField] public Transform tModel;
     [SerializeField] Transform tPlayerAttackPos;
     [SerializeField] Transform tPlayerAttackPivot;
     [SerializeField] Transform tBallPosition;

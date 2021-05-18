@@ -5,6 +5,7 @@ using UnityEngine;
 public class Fire : MonoBehaviour
 {
     [HideInInspector] public bool bKeepInfo = false;
+    [SerializeField] GameObject goParticles;
     [SerializeField] float fMaxDistance;
     float fPlayerDistance;
     AudioSource asFire;
@@ -20,7 +21,8 @@ public class Fire : MonoBehaviour
     public void Crash()
     {
         GameManager.Instance.KeepInfo(this);
-        GetComponent<SpriteRenderer>().enabled = false;
+        goParticles.SetActive(false);
+        //GetComponent<SpriteRenderer>().enabled = false;
         GetComponent<Collider2D>().enabled = false;
         bCrash = true;
     }
@@ -29,7 +31,8 @@ public class Fire : MonoBehaviour
     {
         if (!bKeepInfo)
         {
-            GetComponent<SpriteRenderer>().enabled = true;
+            goParticles.SetActive(true);
+            //GetComponent<SpriteRenderer>().enabled = true;
             GetComponent<Collider2D>().enabled = true;
         }          
     }

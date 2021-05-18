@@ -34,6 +34,7 @@ public class DK : MonoBehaviour
         if(bPlayerIn)
         {
             GameManager.Instance.ScriptPlayer.DKReload();
+            GameManager.Instance.ScriptPlayer.tModel.gameObject.SetActive(false);
             fPlayerLoadControl -= Time.deltaTime;
 
             if(fPlayerLoadControl <= 0)
@@ -70,6 +71,7 @@ public class DK : MonoBehaviour
         {
             GameManager.Instance.LookAheadSmoothing(false);
 
+            GameManager.Instance.ScriptPlayer.tModel.gameObject.SetActive(true);
             GameManager.Instance.ScriptPlayer.bDK = true;
             GameManager.Instance.ScriptPlayer.bInteracting = false;
             GameManager.Instance.GoPlayer.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;

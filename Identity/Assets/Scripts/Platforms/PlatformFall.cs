@@ -57,7 +57,6 @@ public class PlatformFall : MonoBehaviour
     {
         if(!bKeepInfo)
         {
-            print("olis");
             bStart = false;
             animator.ResetTrigger("Crash");
             animator.ResetTrigger("Fall");

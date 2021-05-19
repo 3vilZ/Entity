@@ -26,6 +26,7 @@ public class HidePortionBubbles : MonoBehaviour
                 goChilds[i].GetComponent<Animator>().SetTrigger("FadeOut");
             }
             GetComponent<PolygonCollider2D>().enabled = false;
+            //GetComponent<ParticleSystem>().main.loop = false;
         }
     }
 }

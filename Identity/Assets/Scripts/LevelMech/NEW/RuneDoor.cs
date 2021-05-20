@@ -8,7 +8,9 @@ public class RuneDoor : MonoBehaviour
     [SerializeField] GameObject goKey;
     [SerializeField] float fSpeed;
     [SerializeField] float fDistance;
-    [SerializeField] Transform tDestiny;
+    [SerializeField] Transform tBlockDestiny;
+    [SerializeField] Transform tKeyDestiny;
+
 
     bool bUnlock = false;
     bool bActivated = false;
@@ -32,9 +34,9 @@ public class RuneDoor : MonoBehaviour
 
         if(bUnlock)
         {
-            goKey.transform.position = Vector3.MoveTowards(goKey.transform.position, goBlock.transform.position, fSpeed * Time.deltaTime);
+            goKey.transform.position = Vector3.MoveTowards(goKey.transform.position, tKeyDestiny.position, fSpeed * Time.deltaTime);
 
-            if (Vector3.Distance(goKey.transform.position, goBlock.transform.position) <= 0.01)
+            if (Vector3.Distance(goKey.transform.position, tKeyDestiny.position) <= 0.01)
             {
                 goKey.SetActive(false);
                 bActivated = true;
@@ -47,9 +49,9 @@ public class RuneDoor : MonoBehaviour
 
         if (bActivated)
         {
-            goBlock.transform.position = Vector3.MoveTowards(goBlock.transform.position, tDestiny.position, fSpeed * Time.deltaTime);
+            goBlock.transform.position = Vector3.MoveTowards(goBlock.transform.position, tBlockDestiny.position, fSpeed * Time.deltaTime);
 
-            if (Vector3.Distance(goBlock.transform.position, tDestiny.position) <= 0.01)
+            if (Vector3.Distance(goBlock.transform.position, tBlockDestiny.position) <= 0.01)
             {
                 bActivated = false;
             }

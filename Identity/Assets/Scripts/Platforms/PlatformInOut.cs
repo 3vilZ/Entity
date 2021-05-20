@@ -4,11 +4,15 @@ using UnityEngine;
 
 public class PlatformInOut : MonoBehaviour
 {
-    [SerializeField] SpriteRenderer sprModel;
+    //[SerializeField] SpriteRenderer sprModel;
     [SerializeField] float fTimeToOut;
     [SerializeField] float fTimeToIn;
-    Color colorIn;
-    [SerializeField] Color colorOut;
+    public MeshRenderer meshModel;
+    public Material[] matNormal;
+    public Material matOff;
+    Material[] matOffArray;
+    //Color colorIn;
+    //[SerializeField] Color colorOut;
 
     WallJump scriptWallJump;
     Collider2D colGround;
@@ -27,7 +31,13 @@ public class PlatformInOut : MonoBehaviour
         fTimeToIncontrol = fTimeToIn;
 
         //Anim
-        colorIn = sprModel.GetComponent<SpriteRenderer>().color;
+        //colorIn = sprModel.GetComponent<SpriteRenderer>().color;
+
+        matOffArray = new Material[3];
+        for (int i = 0; i < 3; i++)
+        {
+            matOffArray[i] = matOff;
+        }
     }
 
     
@@ -46,7 +56,10 @@ public class PlatformInOut : MonoBehaviour
                 scriptWallJump.colRight.enabled = false;
 
                 //Anim
-                sprModel.GetComponent<SpriteRenderer>().color = colorOut;
+                //sprModel.GetComponent<SpriteRenderer>().color = colorOut;
+                meshModel.materials = matOffArray;
+
+                
 
                 if (fTimeToIncontrol <= 0)
                 {
@@ -55,7 +68,8 @@ public class PlatformInOut : MonoBehaviour
                     scriptWallJump.colRight.enabled = true;
 
                     //Anim
-                    sprModel.GetComponent<SpriteRenderer>().color = colorIn;
+                    //sprModel.GetComponent<SpriteRenderer>().color = colorIn;
+                    meshModel.materials = matNormal;
 
                     fTimeToOutControl = fTimeToOut;
                     fTimeToIncontrol = fTimeToIn;

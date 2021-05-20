@@ -59,6 +59,7 @@ public class ButtonInteract : MonoBehaviour
                 arrayButtons[i].GetComponent<Animator>().SetTrigger("Reverse");
                 arrayButtons[i].psClick.Play();
                 arrayButtons[i].GetComponent<Collider2D>().enabled = true;
+                arrayButtons[i].meshClick.material = arrayButtons[i].matNormal;
             }
 
             AudioManager.Instance.PlayMechFx("ButtonReset");

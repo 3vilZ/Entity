@@ -6,6 +6,9 @@ public class ButtonPoint : MonoBehaviour
 {
     public ButtonInteract buttonInteract;
     [SerializeField] public ParticleSystem psClick;
+    public MeshRenderer meshClick;
+    public Material matNormal;
+    public Material matPressed;
 
     private void OnCollisionEnter2D(Collision2D other)
     {
@@ -15,6 +18,7 @@ public class ButtonPoint : MonoBehaviour
             psClick.Play();
             buttonInteract.SetButton();
             GetComponent<Collider2D>().enabled = false;
+            meshClick.material = matPressed;
 
             AudioManager.Instance.PlayMechFx("ButtonClick");
 

@@ -34,7 +34,7 @@ public class PlatformMove : MonoBehaviour
 
         for (int i = 0; i < tPoints.Length; i++)
         {
-            lineRenderer.SetPosition(i, tPoints[i].transform.position);
+            lineRenderer.SetPosition(i, new Vector3(tPoints[i].transform.position.x, tPoints[i].transform.position.y, tPoints[i].transform.position.z + 10));
         }
 
         //asMove = AudioManager.Instance.GetMechFx("PlatformMove");

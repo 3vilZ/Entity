@@ -7,8 +7,13 @@ public class Trampoline : MonoBehaviour
     [SerializeField] float fPlayerSpeed;
     [SerializeField] float fBallSpeed;
     [SerializeField] bool bInverse = false;
+
+    Animator animator;
+
     private void Start()
     {
+        animator = GetComponent<Animator>();
+
         if(bInverse)
         {
             fPlayerSpeed = -fPlayerSpeed;
@@ -21,13 +26,15 @@ public class Trampoline : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
+            animator.SetTrigger("Push");
             GameManager.Instance.GoPlayer.GetComponent<Rigidbody2D>().velocity = new Vector2(GameManager.Instance.GoPlayer.GetComponent<Rigidbody2D>().velocity.x, fPlayerSpeed);
             AudioManager.Instance.PlaySound("Jump");
             AudioManager.Instance.PlayMechFx("Trampoline");
         }
         if (other.gameObject.tag == "Ball")
         {
-            if(GameManager.Instance.GoBall.GetComponent<Ball>().currentPower == 3)
+            animator.SetTrigger("Push");
+            if (GameManager.Instance.GoBall.GetComponent<Ball>().currentPower == 3)
             {
                 GameManager.Instance.GoBall.GetComponent<Rigidbody2D>().velocity = new Vector2(GameManager.Instance.GoBall.GetComponent<Rigidbody2D>().velocity.x, 10f);
             }

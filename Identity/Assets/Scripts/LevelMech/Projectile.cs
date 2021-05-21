@@ -22,12 +22,14 @@ public class Projectile : MonoBehaviour
 
     void Start()
     {
-        v3BulletDirection = tAttackPos.position - transform.position;
+        v3BulletDirection = tAttackPos.right;
         v3BulletDirection.Normalize();
         Physics2D.IgnoreCollision(goBullet.GetComponent<Collider2D>(), GetComponent<Collider2D>());
-        
+
         //goBullet.GetComponent<ProjectileBullet>().v3Direction = v3BulletDirection;
         //goBullet.GetComponent<ProjectileBullet>().fSpeed = fBulletSpeed;
+
+        RemoveGameObject(goBullet);
     }
 
     public void Crash()

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3302973988303793920}
   - component: {fileID: 3302973988303793927}
   - component: {fileID: 3302973988303793926}
+  - component: {fileID: 829692905}
   m_Layer: 0
   m_Name: Trampoline
   m_TagString: Untagged
@@ -127,6 +128,25 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!95 &829692905
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3302973988303793925}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a41c94f0cc646c142a72abbec58e8ff2, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &3414937331010299383
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -355,7 +375,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4502938603528546, guid: 026434067d9524b23bac964935bebca7, type: 3}
       propertyPath: m_LocalScale.y
-      value: 3.2879872
+      value: 3.287987
       objectReference: {fileID: 0}
     - target: {fileID: 4502938603528546, guid: 026434067d9524b23bac964935bebca7, type: 3}
       propertyPath: m_LocalScale.x

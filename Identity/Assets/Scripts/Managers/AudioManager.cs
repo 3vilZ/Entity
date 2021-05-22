@@ -9,6 +9,7 @@ public class AudioManager : MonoBehaviour
     public static AudioManager Instance;
 
     public int arrayNum;
+    public float fMainMusicVolume = 0.2f;
     public MainMusic[] mainMusic;
     public AudioSerializable[] audioFx;
     public AudioSerializable[] mechFx;
@@ -25,21 +26,23 @@ public class AudioManager : MonoBehaviour
 
     private void OnLevelWasLoaded(int level)
     {
-        if(level == 0 || level == 1 || level == 2 || level == 3)
+        switch(level)
         {
-            arrayNum = 0;
-        }
-        else if (level == 4)
-        {
-            arrayNum = 1;
-        }
-        else if (level == 5)
-        {
-            arrayNum = 2;
-        }
-        else
-        {
-            arrayNum = 0;
+            case 0: arrayNum = 0; break;
+            case 1: arrayNum = 0; break;
+            case 2: arrayNum = 0; break;
+            case 3: arrayNum = 0; break;
+            case 4: arrayNum = 1; break;
+            case 5: arrayNum = 2; break;
+            case 6: arrayNum = 3; break;
+            case 7: arrayNum = 3; break;
+            case 8: arrayNum = 4; break;
+            case 9: arrayNum = 5; break;
+            case 10: arrayNum = 6; break;
+            case 11: arrayNum = 6; break;
+            case 12: arrayNum = 7; break;
+            case 13: arrayNum = 8; break;
+            default: arrayNum = 0; break;
         }
     }
 
@@ -62,7 +65,7 @@ public class AudioManager : MonoBehaviour
             {
                 audio.source = gameObject.AddComponent<AudioSource>();
                 audio.source.clip = audio.clip;
-                audio.source.volume = 0.1f;
+                audio.source.volume = fMainMusicVolume;
             }
         }
 

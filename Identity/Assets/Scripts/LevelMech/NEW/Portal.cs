@@ -7,6 +7,8 @@ public class Portal : MonoBehaviour
     [SerializeField] Transform tPortalA;
     [SerializeField] Transform tPortalB;
     [SerializeField] float fDistance;
+    [SerializeField] GameObject[] goParticles;
+    [SerializeField] bool bBlueColor;
 
     bool bPlayerA = false;
     bool bPlayerB = false;
@@ -16,7 +18,20 @@ public class Portal : MonoBehaviour
 
     void Start()
     {
-        
+        if(bBlueColor)
+        {
+            goParticles[0].SetActive(true);
+            goParticles[1].SetActive(true);
+            goParticles[2].SetActive(false);
+            goParticles[3].SetActive(false);
+        }
+        else
+        {
+            goParticles[0].SetActive(false);
+            goParticles[1].SetActive(false);
+            goParticles[2].SetActive(true);
+            goParticles[3].SetActive(true);
+        }
     }
 
     // Update is called once per frame

@@ -7,12 +7,10 @@ public class PlatformInOut : MonoBehaviour
     //[SerializeField] SpriteRenderer sprModel;
     [SerializeField] float fTimeToOut;
     [SerializeField] float fTimeToIn;
-    public MeshRenderer meshModel;
+    [SerializeField] GameObject goModel;
+    MeshRenderer[] meshModel;
     public Material[] matNormal;
-    public Material matOff;
-    Material[] matOffArray;
-    //Color colorIn;
-    //[SerializeField] Color colorOut;
+    public Material[] matOff;
 
     WallJump scriptWallJump;
     Collider2D colGround;
@@ -33,10 +31,11 @@ public class PlatformInOut : MonoBehaviour
         //Anim
         //colorIn = sprModel.GetComponent<SpriteRenderer>().color;
 
-        matOffArray = new Material[3];
-        for (int i = 0; i < 3; i++)
+        meshModel = new MeshRenderer[goModel.transform.childCount];
+
+        for (int i = 0; i < meshModel.Length; i++)
         {
-            matOffArray[i] = matOff;
+            meshModel[i] = goModel.transform.GetChild(i).GetComponent<MeshRenderer>();
         }
     }
 
@@ -57,7 +56,11 @@ public class PlatformInOut : MonoBehaviour
 
                 //Anim
                 //sprModel.GetComponent<SpriteRenderer>().color = colorOut;
-                meshModel.materials = matOffArray;
+                for (int i = 0; i < meshModel.Length; i++)
+                {
+                    meshModel[i].materials = matOff;
+                }
+                
 
                 
 
@@ -69,7 +72,10 @@ public class PlatformInOut : MonoBehaviour
 
                     //Anim
                     //sprModel.GetComponent<SpriteRenderer>().color = colorIn;
-                    meshModel.materials = matNormal;
+                    for (int i = 0; i < meshModel.Length; i++)
+                    {
+                        meshModel[i].materials = matNormal;
+                    }
 
                     fTimeToOutControl = fTimeToOut;
                     fTimeToIncontrol = fTimeToIn;

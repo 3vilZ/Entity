@@ -960,7 +960,7 @@ public class PlayerControllerV3 : MonoBehaviour
                 }
 
                 //AUDIO
-                AudioManager.Instance.PlaySound("Shoot");
+                ShootAudio();
             }
         }
 
@@ -1044,8 +1044,28 @@ public class PlayerControllerV3 : MonoBehaviour
                 }
 
                 //AUDIO
-                AudioManager.Instance.PlaySound("Shoot");
+                ShootAudio();
             }
+        }
+    }
+
+    void ShootAudio()
+    {
+        int fRandom = Random.Range(0, 2);
+        switch (fRandom)
+        {
+            case 0:
+                AudioManager.Instance.PlaySound("Shoot1");
+                break;
+            case 1:
+                AudioManager.Instance.PlaySound("Shoot2");
+                break;
+            case 2:
+                AudioManager.Instance.PlaySound("Shoot3");
+                break;
+            default:
+                AudioManager.Instance.PlaySound("Shoot1");
+                break;
         }
     }
 

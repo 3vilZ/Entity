@@ -23,8 +23,8 @@ public class Laser : MonoBehaviour
 
     void Start()
     {
-        v2LaserDirection = goBase.transform.position - transform.position;
-        v2LaserDirection.Normalize();
+        v2LaserDirection = goBase.transform.right;
+        //v2LaserDirection.Normalize();
         
         //lineRenderer = GetComponent<LineRenderer>();
         lineRenderer.positionCount = 2;

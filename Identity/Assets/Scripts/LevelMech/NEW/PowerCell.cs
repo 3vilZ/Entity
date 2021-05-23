@@ -54,9 +54,7 @@ public class PowerCell : MonoBehaviour
             */
             if(fReaparitionControl <= 0)
             {
-                goPowers[(int)currentPower].GetComponent<SpriteRenderer>().color = new Color(goPowers[(int)currentPower].GetComponent<SpriteRenderer>().color.r,
-                goPowers[(int)currentPower].GetComponent<SpriteRenderer>().color.g,
-                goPowers[(int)currentPower].GetComponent<SpriteRenderer>().color.b, 1f);
+                goPowers[(int)currentPower].SetActive(true);
 
                 GetComponent<Collider2D>().enabled = true;
                 fReaparitionControl = fReaparition;
@@ -71,32 +69,9 @@ public class PowerCell : MonoBehaviour
     {
         if(other.gameObject.tag == "Ball")
         {
-            /*
-            switch ((int)currentPower)
-            {
-                case 0:
-                    print("0");
-                    break;
-                case 1:
-                    print("1");
-                    break;
-                case 2:
-                    print("2");
-                    break;
-                case 3:
-                    print("3");
-                    break;
-                default:
-                    print("PowerBug");
-                    break;
-            }
-            */
-
             GameManager.Instance.GoBall.GetComponent<Ball>().GetPowerID((int)currentPower);
 
-            goPowers[(int)currentPower].GetComponent<SpriteRenderer>().color = new Color(goPowers[(int)currentPower].GetComponent<SpriteRenderer>().color.r,
-            goPowers[(int)currentPower].GetComponent<SpriteRenderer>().color.g,
-            goPowers[(int)currentPower].GetComponent<SpriteRenderer>().color.b, 0.2f);
+            goPowers[(int)currentPower].SetActive(false);
 
             GetComponent<Collider2D>().enabled = false;
 

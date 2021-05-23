@@ -19,6 +19,11 @@ public class AudioManager : MonoBehaviour
     bool bMusic = true;
     float fcurrentvolume;
 
+    List<AudioSave> _MainMusic = new List<AudioSave>();
+    List<AudioSave> _AudioFx = new List<AudioSave>();
+    List<AudioSave> _MechFx = new List<AudioSave>();
+    
+
     //AS Específicos
     [HideInInspector] public AudioSource asCollectableLoop;
     [HideInInspector] public AudioSource asFireLoop;
@@ -66,6 +71,9 @@ public class AudioManager : MonoBehaviour
                 audio.source = gameObject.AddComponent<AudioSource>();
                 audio.source.clip = audio.clip;
                 audio.source.volume = fMainMusicVolume;
+
+                AudioSave _AudioSave = new AudioSave(audio.source, audio.source.volume);
+                _MainMusic.Add(_AudioSave);
             }
         }
 
@@ -74,6 +82,9 @@ public class AudioManager : MonoBehaviour
             audio.source = gameObject.AddComponent<AudioSource>();
             audio.source.clip = audio.clip;
             audio.source.volume = audio.volume;
+
+            AudioSave _AudioSave = new AudioSave(audio.source, audio.source.volume);
+            _AudioFx.Add(_AudioSave);
         }
 
         foreach (AudioSerializable audio in mechFx)
@@ -81,6 +92,9 @@ public class AudioManager : MonoBehaviour
             audio.source = gameObject.AddComponent<AudioSource>();
             audio.source.clip = audio.clip;
             audio.source.volume = audio.volume;
+
+            AudioSave _AudioSave = new AudioSave(audio.source, audio.source.volume);
+            _MechFx.Add(_AudioSave);
         }
 
         //GetSources
@@ -93,6 +107,31 @@ public class AudioManager : MonoBehaviour
     {
         NextClip();
     }
+
+    #region ChangeVolume
+
+    public void ChangeVolumeMusic(float fValue)
+    {
+        for (int i = 0; i < _MainMusic.Count; i++)
+        {
+            _MainMusic[i]._source.volume = _MainMusic[i]._volume * fValue;
+        }
+    }
+
+    public void ChangeVolumeSound(float fValue)
+    {
+        for (int i = 0; i < _AudioFx.Count; i++)
+        {
+            _AudioFx[i]._source.volume = _AudioFx[i]._volume * fValue;
+        }
+
+        for (int i = 0; i < _MechFx.Count; i++)
+        {
+            _MechFx[i]._source.volume = _MechFx[i]._volume * fValue;
+        }
+    }
+
+    #endregion
 
     public void NextClip()
     {
@@ -219,4 +258,17 @@ public class AudioSerializable
 public class MainMusic
 {
     public AudioSerializable[] audioMusic;
+}
+
+[System.Serializable]
+public class AudioSave
+{
+    public AudioSource _source;
+    public float _volume;
+
+    public AudioSave(AudioSource conSource, float conVolume)
+    {
+        _source = conSource;
+        _volume = conVolume;
+    }
 }

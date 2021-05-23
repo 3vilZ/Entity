@@ -19,7 +19,9 @@ public class PlayerData
 
     public int iSceneIndex;
 
-    public float fVolumeMultiplier;
+    public float fVolumeMusic;
+
+    public float fVolumeSound;
 
     public bool bStandardAim;
 
@@ -55,7 +57,9 @@ public class PlayerData
 
         iSceneIndex = gm.iSceneIndex;
 
-        fVolumeMultiplier = gm.fVolumeMultiplier;
+        fVolumeMusic = gm.fVolumeMusic;
+
+        fVolumeSound = gm.fVolumeSound;
 
         bStandardAim = gm.bStandardAim;
     } 

@@ -18,7 +18,7 @@ public class InGameCanvas : MonoBehaviour
     int iScreen;
     Animator animator;
     Animator panelAnimator;
-    bool bTransition = false;
+    bool bFading = false;
     bool bPause = false;
 
     [Header("CoreDisplay")]
@@ -52,7 +52,9 @@ public class InGameCanvas : MonoBehaviour
 
     [Header("Transition")]
     public GameObject goTransition;
+    bool bTransition = false;
     bool bOnce = false;
+
 
 
     private void Awake()
@@ -73,7 +75,8 @@ public class InGameCanvas : MonoBehaviour
         }
         goPanel.SetActive(false);
 
-        sSelection[0].goSelection.GetComponent<Slider>().value = GameManager.Instance.fVolumeMultiplier;
+        sSelection[0].goSelection.GetComponent<Slider>().value = GameManager.Instance.fVolumeMusic;
+        sSelection[1].goSelection.GetComponent<Slider>().value = GameManager.Instance.fVolumeSound;
 
         //Core
         goCoreDisplay.SetActive(false);
@@ -93,6 +96,8 @@ public class InGameCanvas : MonoBehaviour
         goCollectableDisplay.SetActive(false);
         collectableAnimator = goCollectableDisplay.GetComponent<Animator>();
 
+        //Transition
+        bTransition = true;
         goTransition.SetActive(true);
         StartCoroutine(OutTransition());
     }
@@ -103,6 +108,7 @@ public class InGameCanvas : MonoBehaviour
         yield return new WaitForSeconds(2.2f);
         goTransition.SetActive(false);
         GameManager.Instance.ScriptPlayer.bInteracting = false;
+        bTransition = false;
         StopCoroutine(OutTransition());
     }
 
@@ -110,6 +116,7 @@ public class InGameCanvas : MonoBehaviour
     {
         GameManager.Instance.GoPlayer.GetComponent<PlayerAnim>().Interact();
         GameManager.Instance.ScriptPlayer.bInteracting = true;
+        bTransition = true;
         goTransition.SetActive(true);
         goTransition.GetComponent<Animator>().SetTrigger("In");
         yield return new WaitForSeconds(2.5f);
@@ -121,7 +128,7 @@ public class InGameCanvas : MonoBehaviour
 
     public void FadeOut(int i)
     {
-        bTransition = true;
+        bFading = true;
         EventSystem.current.SetSelectedGameObject(null);
         animator.SetTrigger("FadeOut");
         iScreen = i;
@@ -138,10 +145,8 @@ public class InGameCanvas : MonoBehaviour
         EventSystem.current.SetSelectedGameObject(null);
         EventSystem.current.SetSelectedGameObject(goFirstSelect[iScreen]);
         animator.SetTrigger("FadeIn");
-        bTransition = false;
+        bFading = false;
     }
-
-
 
     public void PauseGame()
     {
@@ -149,6 +154,7 @@ public class InGameCanvas : MonoBehaviour
         {
             animator.SetTrigger("Resume");
             panelAnimator.SetTrigger("FadeOut");
+            bPause = false;
         }
         else
         {
@@ -159,9 +165,10 @@ public class InGameCanvas : MonoBehaviour
             FadeIn();
             goPanel.SetActive(true);
             panelAnimator.SetTrigger("FadeIn");
+            bPause = true;
         }
 
-        bPause = !bPause;
+        //bPause = !bPause;
     }
 
     public void ResumeGame()
@@ -184,9 +191,16 @@ public class InGameCanvas : MonoBehaviour
         }
     }
 
-    public void VolumeMultiplier(Slider slider)
+    public void VolumeMusic(Slider slider)
     {
-        GameManager.Instance.fVolumeMultiplier = slider.value;
+        GameManager.Instance.fVolumeMusic = slider.value;
+        AudioManager.Instance.ChangeVolumeMusic(slider.value);
+    }
+    
+    public void VolumeSound(Slider slider)
+    {
+        GameManager.Instance.fVolumeSound = slider.value;
+        AudioManager.Instance.ChangeVolumeSound(slider.value);
     }
 
     #endregion
@@ -375,10 +389,18 @@ public class InGameCanvas : MonoBehaviour
             {
                 sSelection[0].imgSelection.SetActive(false);
             }
+            if (EventSystem.current.currentSelectedGameObject == sSelection[1].goSelection)
+            {
+                sSelection[1].imgSelection.SetActive(true);
+            }
+            else
+            {
+                sSelection[1].imgSelection.SetActive(false);
+            }
 
             if (Input.GetButtonDown("Cancel") && iScreen != 0)
             {
-                if (!bTransition)
+                if (!bFading)
                 {
                     GetComponent<AudioSource>().Play();
                 }
@@ -387,7 +409,7 @@ public class InGameCanvas : MonoBehaviour
             }
             else if (Input.GetButtonDown("Cancel"))
             {
-                if (!bTransition)
+                if (!bFading)
                 {
                     GetComponent<AudioSource>().Play();
                 }
@@ -395,7 +417,7 @@ public class InGameCanvas : MonoBehaviour
                 PauseGame();
             }
 
-            if (!bTransition)
+            if (!bFading)
             {
                 if (EventSystem.current.currentSelectedGameObject == null)
                 {
@@ -404,12 +426,10 @@ public class InGameCanvas : MonoBehaviour
             }
         }
 
-        if (Input.GetButtonDown("Pause"))
+        if (Input.GetButtonDown("Pause") && !bTransition)
         {
             PauseGame();
         }
-
-
     }
 
     [System.Serializable]

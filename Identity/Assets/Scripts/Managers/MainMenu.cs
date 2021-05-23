@@ -16,6 +16,11 @@ public class MainMenu : MonoBehaviour
     bool bTransition = false;
     bool bOnce = false;
 
+    private void Awake()
+    {
+        GameManager.Instance.LoadGame();
+    }
+
     void Start()
     {
         animator = GetComponent<Animator>();
@@ -23,8 +28,8 @@ public class MainMenu : MonoBehaviour
         goTransition.SetActive(true);
         StartCoroutine(OutTransition());
 
-        GameManager.Instance.LoadGame();
-        sSelection[0].goSelection.GetComponent<Slider>().value = GameManager.Instance.fVolumeMultiplier;
+        sSelection[0].goSelection.GetComponent<Slider>().value = GameManager.Instance.fVolumeMusic;
+        sSelection[1].goSelection.GetComponent<Slider>().value = GameManager.Instance.fVolumeSound;
     }
 
     IEnumerator OutTransition()
@@ -91,8 +96,16 @@ public class MainMenu : MonoBehaviour
         {
             sSelection[0].imgSelection.SetActive(false);
         }
+        if (EventSystem.current.currentSelectedGameObject == sSelection[1].goSelection)
+        {
+            sSelection[1].imgSelection.SetActive(true);
+        }
+        else
+        {
+            sSelection[1].imgSelection.SetActive(false);
+        }
 
-        if(Input.GetButtonDown("Cancel") && iScreen != 0)
+        if (Input.GetButtonDown("Cancel") && iScreen != 0)
         {
             if(!bTransition)
             {
@@ -120,9 +133,16 @@ public class MainMenu : MonoBehaviour
         }
     }
 
-    public void VolumeMultiplier(Slider slider)
+    public void VolumeMusic(Slider slider)
     {
-        GameManager.Instance.fVolumeMultiplier = slider.value;
+        GameManager.Instance.fVolumeMusic = slider.value;
+        AudioManager.Instance.ChangeVolumeMusic(slider.value);
+    }
+
+    public void VolumeSound(Slider slider)
+    {
+        GameManager.Instance.fVolumeSound = slider.value;
+        AudioManager.Instance.ChangeVolumeSound(slider.value);
     }
 
     public void QuitGame()

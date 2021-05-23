@@ -380,17 +380,17 @@ MonoBehaviour:
     name: WallJump
     volume: 0.6
     source: {fileID: 0}
-  - clip: {fileID: 8300000, guid: 4c2f2f10fee459646bbf42a1b2cd7a61, type: 3}
+  - clip: {fileID: 8300000, guid: 82d8fe76433c6aa4bbea3c860dfb16a3, type: 3}
     name: Shoot1
-    volume: 1
+    volume: 0.5
     source: {fileID: 0}
-  - clip: {fileID: 8300000, guid: 4c2f2f10fee459646bbf42a1b2cd7a61, type: 3}
+  - clip: {fileID: 8300000, guid: 945d0ebd6b832e248a6294a16fa88f95, type: 3}
     name: Shoot2
-    volume: 1
+    volume: 0.5
     source: {fileID: 0}
-  - clip: {fileID: 8300000, guid: 4c2f2f10fee459646bbf42a1b2cd7a61, type: 3}
+  - clip: {fileID: 8300000, guid: e2f6e5b827a08fc4fb7cc5f76f9d1433, type: 3}
     name: Shoot3
-    volume: 1
+    volume: 0.5
     source: {fileID: 0}
   - clip: {fileID: 8300000, guid: 7f3c1eca48332624d9a0ca64353d93e0, type: 3}
     name: Reload

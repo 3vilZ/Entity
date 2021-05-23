@@ -28,7 +28,8 @@ public class GameManager : MonoBehaviour
     PlayerControllerV3 scriptPlayer;
     int iSpawn;
     [HideInInspector] public int iSceneIndex;
-    [HideInInspector] public float fVolumeMultiplier = 1;
+    [HideInInspector] public float fVolumeMusic = 0.5f;
+    [HideInInspector] public float fVolumeSound = 0.5f;
     [HideInInspector] public bool bStandardAim = true;
     //Vector2 tDeathPos;
 
@@ -147,6 +148,8 @@ public class GameManager : MonoBehaviour
         {
             AudioManager.Instance.bMainMenu = false;
         }
+
+        AudioManager.Instance.ChangeVolumeMusic(fVolumeMusic);
     }
     
     private void Update()
@@ -158,10 +161,6 @@ public class GameManager : MonoBehaviour
                 iSpawn = 0;
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
             }
-        }
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            Application.Quit();
         }
 
         if (Input.GetKeyDown(KeyCode.Z))
@@ -201,7 +200,9 @@ public class GameManager : MonoBehaviour
 
             print("iSceneIndex: " + iSceneIndex);
 
-            print("fVolumeMultiplier: " + fVolumeMultiplier);
+            print("fVolumeMusic: " + fVolumeMusic);
+
+            print("fVolumeSound: " + fVolumeSound);
 
             print("bStandardAim: " + bStandardAim);
         }                                                                                                  
@@ -518,11 +519,6 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void VolumeMultiplier(Slider slider)
-    {
-        fVolumeMultiplier = slider.value;
-    }
-
     public void ContinueGame()
     {
         LoadLevel(iSceneIndex);
@@ -602,7 +598,9 @@ public class GameManager : MonoBehaviour
 
         iSceneIndex = data.iSceneIndex;
 
-        fVolumeMultiplier = data.fVolumeMultiplier;
+        fVolumeMusic = data.fVolumeMusic;
+
+        fVolumeSound = data.fVolumeSound;
 
         bStandardAim = data.bStandardAim;
     }

@@ -9,6 +9,7 @@ public class MainMenu : MonoBehaviour
     public GameObject[] goScreens;
     public GameObject[] goFirstSelect;
     public SettingsSelection[] sSelection;
+    public Image[] imgLevel;
     public GameObject goTransition;
 
     int iScreen;
@@ -30,6 +31,32 @@ public class MainMenu : MonoBehaviour
 
         sSelection[0].goSelection.GetComponent<Slider>().value = GameManager.Instance.fVolumeMusic;
         sSelection[1].goSelection.GetComponent<Slider>().value = GameManager.Instance.fVolumeSound;
+
+
+        imgLevel[0].enabled = false;
+        imgLevel[1].enabled = true;
+        imgLevel[2].enabled = false;
+
+        /*
+        if(GameManager.Instance.iSceneIndex < 6)
+        {
+            imgLevel[0].enabled = true;
+            imgLevel[1].enabled = false;
+            imgLevel[2].enabled = false;
+        }
+        else if(GameManager.Instance.iSceneIndex < 10)
+        {
+            imgLevel[0].enabled = false;
+            imgLevel[1].enabled = true;
+            imgLevel[2].enabled = false;
+        }
+        else
+        {
+            imgLevel[0].enabled = false;
+            imgLevel[1].enabled = false;
+            imgLevel[2].enabled = true;
+        }
+        */
     }
 
     IEnumerator OutTransition()

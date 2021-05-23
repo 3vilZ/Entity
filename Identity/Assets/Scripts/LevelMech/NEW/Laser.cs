@@ -6,6 +6,7 @@ public class Laser : MonoBehaviour
 {
     [SerializeField] float fPlayerDistance;
     [SerializeField] GameObject goBase;
+    [SerializeField] ParticleSystem psLoop;
 
     [SerializeField] LayerMask layerWithBall;
     [SerializeField] LayerMask layerWithNoBall;
@@ -33,6 +34,7 @@ public class Laser : MonoBehaviour
     public void Crash()
     {
         bCrash = true;
+        psLoop.Stop();
     }
 
     void Update()

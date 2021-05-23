@@ -62,14 +62,14 @@ public class Projectile : MonoBehaviour
                 {
                     goCarcajList[0].SetActive(true);
                     goBulletList.Add(goCarcajList[0]);
-                    AudioManager.Instance.PlayMechFx("BulletShoot");
+                    //AudioManager.Instance.PlayMechFx("BulletShoot");
                     goCarcajList.Remove(goCarcajList[0]);
                     fbulletCdControl = fBulletCd;
                 }
                 else
                 {
                     goBulletList.Add(Instantiate(goBullet, tAttackPos.position, tAttackPos.rotation, goCarcaj.transform));
-                    AudioManager.Instance.PlayMechFx("BulletShoot");
+                    //AudioManager.Instance.PlayMechFx("BulletShoot");
                     fbulletCdControl = fBulletCd;
                 }
             }

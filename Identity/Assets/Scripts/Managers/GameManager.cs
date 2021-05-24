@@ -482,7 +482,7 @@ public class GameManager : MonoBehaviour
 
     public void CheckIfLobby(GameObject go)
     {
-        if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("Lobby_1"))
+        if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("Lobby_1_Art"))
         {
             for (int i = 0; i < FindObjectOfType<LobbyManager>().goLobby.Length; i++)
             {
@@ -493,7 +493,7 @@ public class GameManager : MonoBehaviour
                 }
             }
         }
-        if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("Lobby_2"))
+        if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("Lobby_2_Art"))
         {
             for (int i = 0; i < FindObjectOfType<LobbyManager>().goLobby.Length; i++)
             {
@@ -504,7 +504,7 @@ public class GameManager : MonoBehaviour
                 }
             }
         }
-        if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("Lobby_1"))
+        if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("Lobby_3_Art"))
         {
             for (int i = 0; i < FindObjectOfType<LobbyManager>().goLobby.Length; i++)
             {

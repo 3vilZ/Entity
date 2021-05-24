@@ -46,8 +46,15 @@ MonoBehaviour:
   iCoreStart: 2
   goLobby1: 000000
   goLobby2: 000000
+  goLobby3: 0000
+  iSceneIndex: 0
+  fVolumeMusic: 0.5
+  fVolumeSound: 0.5
+  bStandardAim: 1
   listButtonInteract: []
   listFragile: []
   listPlatformMove: []
-  listMagma: []
+  listMagmaNew: []
   listFire: []
+  listPlatformFall: []
+  listCollectableID: 

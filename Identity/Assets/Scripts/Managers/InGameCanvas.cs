@@ -163,7 +163,7 @@ public class InGameCanvas : MonoBehaviour
             GameManager.Instance.ScriptPlayer.bInteracting = true;
             GameManager.Instance.GoPlayer.GetComponent<Rigidbody2D>().velocity = new Vector2(0, GameManager.Instance.GoPlayer.GetComponent<Rigidbody2D>().velocity.y);
             txtCollectablePause.text = GameManager.Instance.ICollectables.ToString();
-            iScreen = 0;
+            iScreen = 0;c
             FadeIn();
             goPanel.SetActive(true);
             panelAnimator.SetTrigger("FadeIn");

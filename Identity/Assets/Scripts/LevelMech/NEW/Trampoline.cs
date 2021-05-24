@@ -42,7 +42,7 @@ public class Trampoline : MonoBehaviour
             {
                 GameManager.Instance.GoBall.GetComponent<Rigidbody2D>().velocity = new Vector2(GameManager.Instance.GoBall.GetComponent<Rigidbody2D>().velocity.x, fBallSpeed);
             }
-            AudioManager.Instance.PlaySound("Shoot");
+            AudioManager.Instance.PlaySound("Shoot1");
             AudioManager.Instance.PlayMechFx("Trampoline");
         }
     }

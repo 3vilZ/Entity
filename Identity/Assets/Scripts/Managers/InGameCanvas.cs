@@ -15,6 +15,7 @@ public class InGameCanvas : MonoBehaviour
     public GameObject[] goScreens;
     public GameObject[] goFirstSelect;
     public InGameSettingsSelection[] sSelection;
+    public TextMeshProUGUI txtCollectablePause;
     int iScreen;
     Animator animator;
     Animator panelAnimator;
@@ -161,6 +162,7 @@ public class InGameCanvas : MonoBehaviour
             GameManager.Instance.GoPlayer.GetComponent<PlayerAnim>().Interact();
             GameManager.Instance.ScriptPlayer.bInteracting = true;
             GameManager.Instance.GoPlayer.GetComponent<Rigidbody2D>().velocity = new Vector2(0, GameManager.Instance.GoPlayer.GetComponent<Rigidbody2D>().velocity.y);
+            txtCollectablePause.text = GameManager.Instance.ICollectables.ToString();
             iScreen = 0;
             FadeIn();
             goPanel.SetActive(true);
@@ -334,10 +336,22 @@ public class InGameCanvas : MonoBehaviour
 
         if (goEvent.Length > 0)
         {
-            if (iEvent >= 0)
+            if (iEvent == 0)
             {
                 goEvent[iEvent].GetComponent<Animator>().SetTrigger("Start");
                 AudioManager.Instance.PlayMechFx("ButtonOpen");
+            }
+            else if (iEvent == 1)
+            {
+                if(GameManager.Instance.ICollectables >= 20)
+                {
+                    goEvent[iEvent].GetComponent<Animator>().SetTrigger("Start");
+                    AudioManager.Instance.PlayMechFx("ButtonOpen");
+                }
+            }
+            else if (iEvent == 2)
+            {
+                goEvent[iEvent].GetComponent<Godess>().bEvent = true;
             }
 
         }

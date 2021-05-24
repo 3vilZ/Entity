@@ -99,9 +99,6 @@ public class GameManager : MonoBehaviour
         {
             
         }
-
-        iSceneIndex = level;
-
         
         if (SceneManager.GetActiveScene().buildIndex == 0)
         {
@@ -109,6 +106,7 @@ public class GameManager : MonoBehaviour
         }
         else
         {
+            iSceneIndex = level;
             AudioManager.Instance.bMainMenu = false;
             SaveGame();
         }

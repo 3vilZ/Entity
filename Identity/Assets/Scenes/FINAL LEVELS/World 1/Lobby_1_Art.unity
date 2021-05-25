@@ -33195,7 +33195,7 @@ PrefabInstance:
     - target: {fileID: 1721704562556813198, guid: 9a41d2ccca9354e4b8ce321445c29e42,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2630137349254235347, guid: 9a41d2ccca9354e4b8ce321445c29e42,
         type: 3}
@@ -79179,7 +79179,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   iNextSpawn: 0
-  strNextLevel: Tutorial_Art
+  strNextLevel: Lobby_2_Art
   tSpawnPoint: {fileID: 1465418890}
   bLevelTransition: 0
 --- !u!1001 &1786666472

@@ -34,6 +34,7 @@ public class Laser : MonoBehaviour
     public void Crash()
     {
         bCrash = true;
+        AudioManager.Instance.PlayMechFx("ProjectileDestroy");
         psLoop.Stop();
     }
 

@@ -19,11 +19,12 @@ public class MainMenu : MonoBehaviour
 
     private void Awake()
     {
-        GameManager.Instance.LoadGame();
+        //GameManager.Instance.LoadGame();
     }
 
     void Start()
     {
+        GameManager.Instance.LoadGame();
         animator = GetComponent<Animator>();
 
         goTransition.SetActive(true);

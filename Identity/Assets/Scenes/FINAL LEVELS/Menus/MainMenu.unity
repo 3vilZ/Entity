@@ -4759,7 +4759,7 @@ GameObject:
   - component: {fileID: 456457137}
   - component: {fileID: 456457138}
   m_Layer: 5
-  m_Name: LevelImg (1)
+  m_Name: 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4811,7 +4811,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: e61a550a7ddc3304fbfe0a01919efe9c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: fd8c866d6f9b2f64da57fea5af8d745b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -10071,6 +10071,16 @@ PrefabInstance:
       propertyPath: fMainMusicVolume
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 118415916806469926, guid: 9c74cc343bb18114a8ee1e4deee26c5d,
+        type: 3}
+      propertyPath: mechFx.Array.data[3].volume
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 118415916806469926, guid: 9c74cc343bb18114a8ee1e4deee26c5d,
+        type: 3}
+      propertyPath: mechFx.Array.data[10].volume
+      value: 0.6
+      objectReference: {fileID: 0}
     - target: {fileID: 118415916806469927, guid: 9c74cc343bb18114a8ee1e4deee26c5d,
         type: 3}
       propertyPath: m_Name
@@ -14508,7 +14518,7 @@ GameObject:
   - component: {fileID: 1679323595}
   - component: {fileID: 1679323594}
   m_Layer: 5
-  m_Name: LevelImg (2)
+  m_Name: 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14533,7 +14543,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: b38799ec28c47044ab7d0a3911eb967f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: be98911e2fad2d541805d399db8af5eb, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -16287,7 +16297,7 @@ GameObject:
   - component: {fileID: 1889655216}
   - component: {fileID: 1889655215}
   m_Layer: 5
-  m_Name: LevelImg
+  m_Name: 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16331,7 +16341,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: f09084be56fe0d347878e6faa93527bb, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0756280ead2e2fb4391ccdf6f8d5b45f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

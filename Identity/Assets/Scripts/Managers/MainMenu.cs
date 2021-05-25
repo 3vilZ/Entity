@@ -32,12 +32,6 @@ public class MainMenu : MonoBehaviour
         sSelection[0].goSelection.GetComponent<Slider>().value = GameManager.Instance.fVolumeMusic;
         sSelection[1].goSelection.GetComponent<Slider>().value = GameManager.Instance.fVolumeSound;
 
-
-        imgLevel[0].enabled = false;
-        imgLevel[1].enabled = true;
-        imgLevel[2].enabled = false;
-
-        /*
         if(GameManager.Instance.iSceneIndex < 6)
         {
             imgLevel[0].enabled = true;
@@ -56,7 +50,7 @@ public class MainMenu : MonoBehaviour
             imgLevel[1].enabled = false;
             imgLevel[2].enabled = true;
         }
-        */
+
     }
 
     IEnumerator OutTransition()

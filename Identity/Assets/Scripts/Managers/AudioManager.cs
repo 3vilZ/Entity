@@ -47,6 +47,7 @@ public class AudioManager : MonoBehaviour
             case 11: arrayNum = 6; break;
             case 12: arrayNum = 7; break;
             case 13: arrayNum = 8; break;
+            case 14: arrayNum = 2; break;
             default: arrayNum = 0; break;
         }
     }

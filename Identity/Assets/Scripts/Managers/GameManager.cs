@@ -27,7 +27,7 @@ public class GameManager : MonoBehaviour
     Vector2 tCurrentCheckPointPos;
     PlayerControllerV3 scriptPlayer;
     int iSpawn;
-    [HideInInspector] public int iSceneIndex;
+    [HideInInspector] public int iSceneIndex = 1;
     [HideInInspector] public float fVolumeMusic = 0.5f;
     [HideInInspector] public float fVolumeSound = 0.5f;
     [HideInInspector] public bool bStandardAim = true;
@@ -130,8 +130,6 @@ public class GameManager : MonoBehaviour
 
         scriptPlayer = goPlayer.GetComponent<PlayerControllerV3>();
         tCurrentCheckPointPos = goPlayer.transform.position;
-
-        
     }
 
     private void Start()
@@ -568,38 +566,41 @@ public class GameManager : MonoBehaviour
     {
         PlayerData data = SaveSystem.LoadGame();
 
-        for (int i = 0; i < data.goLobby1.Length; i++)
+        if(data != null)
         {
-            goLobby1[i] = data.goLobby1[i];
+            for (int i = 0; i < data.goLobby1.Length; i++)
+            {
+                goLobby1[i] = data.goLobby1[i];
+            }
+            for (int i = 0; i < data.goLobby2.Length; i++)
+            {
+                goLobby2[i] = data.goLobby2[i];
+            }
+            for (int i = 0; i < data.goLobby3.Length; i++)
+            {
+                goLobby3[i] = data.goLobby3[i];
+            }
+
+            ISpawn = data.iSpawn;
+
+            ICoreStart = data.iCoreStart;
+
+            ICollectables = data.iCollectables;
+
+            listCollectableID.Clear();
+
+            for (int i = 0; i < data.listCollectableID.Count; i++)
+            {
+                listCollectableID.Add(data.listCollectableID[i]);
+            }
+
+            iSceneIndex = data.iSceneIndex;
+
+            fVolumeMusic = data.fVolumeMusic;
+
+            fVolumeSound = data.fVolumeSound;
+
+            bStandardAim = data.bStandardAim;
         }
-        for (int i = 0; i < data.goLobby2.Length; i++)
-        {
-            goLobby2[i] = data.goLobby2[i];
-        }
-        for (int i = 0; i < data.goLobby3.Length; i++)
-        {
-            goLobby3[i] = data.goLobby3[i];
-        }
-
-        ISpawn = data.iSpawn;
-
-        ICoreStart = data.iCoreStart;
-
-        ICollectables = data.iCollectables;
-
-        listCollectableID.Clear();
-
-        for (int i = 0; i < data.listCollectableID.Count; i++)
-        {
-            listCollectableID.Add(data.listCollectableID[i]);
-        }
-
-        iSceneIndex = data.iSceneIndex;
-
-        fVolumeMusic = data.fVolumeMusic;
-
-        fVolumeSound = data.fVolumeSound;
-
-        bStandardAim = data.bStandardAim;
     }
 }
